@@ -5,10 +5,8 @@ name: RerwiteREADME
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the main branch
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  schedule:
+    - cron: "0 0 * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,10 +28,10 @@ jobs:
         uses: github-actions-x/commit@v2.6
         with:
            github-token: ${{ secrets.GITHUB_TOKEN }}
-           push-branch: 'master'
-           commit-message: 'publish'
+           push-branch: 'main'
+           commit-message: 'Update README.md'
            force-add: 'true'
-           files: a.txt b.txt c.txt dirA/ dirB/ dirC/a.txt
-           name: commiter name
-           email: my.github@email.com 
+           files: README.md
+           name: Ahmed Salah Mohamed
+           email: ahmed007boss@hotmail.com
    
