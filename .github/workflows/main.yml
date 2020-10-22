@@ -26,7 +26,14 @@ jobs:
         uses: seed-of-apricot/issue-list-readme@v1.1.0
         with:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-          pattern: '<!-- issueTable -->' # suffixing "Demo" for this readme
-          
-    # you need to add, commit and push here
-    # otherwise the changes will not be pushed back into master
+      - name: push
+        uses: github-actions-x/commit@v2.6
+        with:
+           github-token: ${{ secrets.GITHUB_TOKEN }}
+           push-branch: 'master'
+           commit-message: 'publish'
+           force-add: 'true'
+           files: a.txt b.txt c.txt dirA/ dirB/ dirC/a.txt
+           name: commiter name
+           email: my.github@email.com 
+   
