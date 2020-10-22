@@ -449,11 +449,13 @@ namespace Fomantic.Blazor.Docs.Shared
             await base.OnAfterRenderAsync(firstRender);
             if (firstRender)
             {
-               
 
-                ParentGroup?.Children?.Add(this);
+                if (!ParentGroup?.Children?.Any(d => d == this) ?? false)
+                {
+                    ParentGroup?.Children?.Add(this);
+                }
             }
-            
+
             await RefreshCode();
             Task.Run(async () => { await InnerInitilize(); });
         }
@@ -474,8 +476,8 @@ namespace Fomantic.Blazor.Docs.Shared
                 }
                 initilized = true;
                 this.StateHasChanged();
-                
-              
+
+
 
                 for (int i = 0; i < ComponentsTypes.Count; i++)
                 {
@@ -486,19 +488,7 @@ namespace Fomantic.Blazor.Docs.Shared
                 isLoading = false;
 
                 this.StateHasChanged();
-                //if (Parent != null)
-                //{
-                //    Parent.Refresh();
-                //}
-                //else if (ParentGroup != null)
-                //{
-                //    ParentGroup.Refresh();
-                //}
-                //else
-                //{
-                //    this.StateHasChanged();
-                //}
-             
+               
             }
         }
 
@@ -571,7 +561,7 @@ namespace Fomantic.Blazor.Docs.Shared
         public async void Open()
         {
             currentComponent = null;
-          
+
             await JsRuntime.InvokeVoidAsync("window.demo.togglePropSheet", sideMenu1, sideMenu2, DotNetObjectReference.Create(this));
         }
         public async void Select(SampleComponent x)

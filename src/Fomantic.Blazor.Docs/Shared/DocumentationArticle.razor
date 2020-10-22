@@ -44,9 +44,9 @@
 
                 <div class="ui two item stackable tabs menu">
 
-                    <a @onclick='d=>CurrentTab="Features Showcases"' class='@(CurrentTab=="Features Showcases"?"active":"") item'>Features Showcases</a>
+                    <a @onclick='d=>SwichTab("Features Showcases")' class='@(CurrentTab=="Features Showcases"?"active":"") item'>Features Showcases</a>
 
-                    <a @onclick='d=>CurrentTab="Api Documation"' class='@(CurrentTab=="Api Documation"?"active":"") item'>Api Documation</a>
+                    <a @onclick='d=>SwichTab(CurrentTab="Api Documation")' class='@(CurrentTab=="Api Documation"?"active":"") item'>Api Documation</a>
 
 
                 </div>
@@ -172,7 +172,13 @@
     {
         this.StateHasChanged();
     }
+    async void  SwichTab(string tabName)
+    {
+        Children = new List<DocumentationArticleGroup>();
+        CurrentTab = tabName;
+        await JsRuntime.InvokeVoidAsync("window.semantic.ready");
 
+    }
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
         await base.OnAfterRenderAsync(firstRender);

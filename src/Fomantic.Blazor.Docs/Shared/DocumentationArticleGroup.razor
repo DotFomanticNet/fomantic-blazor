@@ -24,11 +24,15 @@
     [Parameter]
     public RenderFragment ChildContent { get; set; }
 
-    protected  override Task OnAfterRenderAsync(bool firstRender)
+    protected override Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            Parent?.Children?.Add(this);
+            if (!Parent?.Children?.Any(d => d == this) ?? false)
+            {
+                Parent?.Children?.Add(this);
+            }
+
 
 
             if (Parent != null)
