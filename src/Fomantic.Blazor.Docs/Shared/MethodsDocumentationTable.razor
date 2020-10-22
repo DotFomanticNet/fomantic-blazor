@@ -1,0 +1,94 @@
+﻿@if (isLoading)
+{
+    <div class="ui active inverted dimmer">
+        <div class="ui text loader">Loading</div>
+    </div>
+
+}
+else
+{
+    <table class="ui celled definition table">
+        <thead>
+            <tr>
+                <th class="three wide"></th>
+                <th class="four wide">Paramters</th>
+                <th class="">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Docs)
+            {
+                <tr>
+                    <td class="method-area-top" rowspan="@(item.Item3.Count() + (item.Item3.Any()?2:1))">@item.Item1</td>
+                    <td class="method-area-top" colspan="2">@item.Item2</td>
+                </tr>
+                if (item.Item3.Any())
+                {
+                    <tr>
+                        <td colspan="2">Method Paramters</td>
+                    </tr>
+                }
+
+                foreach (var parm in item.Item3)
+                {
+                    <tr>
+                        <td><TypeViewer Type="@parm.Item2"></TypeViewer> @parm.Item1</td>
+                        <td>@parm.Item3</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    if (EnableShowAllLink)
+    {
+        <Segment SegmentStyle="SegmentStyle.Basic" ContentAlignment="ContentAlignment.Center"><TypeViewer Type="Type" Color="Color.Blue" Text='@("See All "+(Type?.Name.Contains("`")??false?Type?.Name.Substring(0,Type?.Name.IndexOf("`")??0):Type?.Name)+" Documentation")'></TypeViewer></Segment>
+    }
+
+}
+
+@code {
+    bool isLoading = true;
+    [Parameter]
+    public bool EnableShowAllLink { get; set; }
+    [Parameter]
+    public Func<IEnumerable<System.Reflection.MethodInfo>, IEnumerable<System.Reflection.MethodInfo>> Filter { get; set; }
+    [Parameter]
+    public Type Type { get; set; }
+
+    public List<Tuple<string, string, List<Tuple<string, Type, string>>>> Docs { get; set; } = new List<Tuple<string, string, List<Tuple<string, Type, string>>>>();
+    protected async override Task OnInitializedAsync()
+    {
+        if (Type != null)
+        {
+            Task.Run(async () =>
+            {
+                var props = Type.GetMethods().Where(d => d.Name != "Dispose" && !d.Name.StartsWith("add_") && !d.Name.StartsWith("remove_") && !d.Name.StartsWith("set_") && !d.Name.StartsWith("get_") && d.DeclaringType.FullName.StartsWith("Fomantic"));
+                if (Filter != null)
+                {
+                    props = Filter(props);
+                }
+                foreach (var item in props)
+                {
+                    string currentdoc = "";
+                    currentdoc = await item.GetSummary();
+
+                    var paramters = new List<Tuple<string, Type, string>>();
+                    foreach (var paramter in item.GetParameters())
+                    {
+                        var desc = await item.GetParamSummary(paramter.Name);
+                        paramters.Add(new Tuple<string, Type, string>(paramter.Name, paramter.ParameterType, desc));
+                    }
+
+                    Docs.Add(new Tuple<string, string, List<Tuple<string, Type, string>>>(item.Name, currentdoc, paramters));
+                }
+
+
+                Docs = Docs.OrderBy(d => d.Item1).ToList();
+                isLoading = false;
+                this.StateHasChanged();
+            });
+        }
+        await base.OnInitializedAsync();
+    }
+}

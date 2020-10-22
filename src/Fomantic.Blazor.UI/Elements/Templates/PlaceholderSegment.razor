@@ -1,0 +1,47 @@
+﻿@namespace Fomantic
+@using Fomantic.Blazor.UI
+@inherits SegmentBase
+@code{
+    public PlaceholderSegment()
+    {
+        IsPlaceholder = true;
+    }
+
+    public HeaderWithIcon Header { get; private set; }
+
+    [Parameter]
+    public IconList Icon { get; set; }
+    [Parameter]
+    public Color? IconColor { get; set; }
+    [Parameter]
+    public Color? HeaderColor { get; set; }
+    [Parameter]
+    public bool IsIconCircular { get; set; }
+    [Parameter]
+    public RenderFragment HeaderWithIconElementTemplate { get; set; }
+
+    [Parameter]
+    public RenderFragment ButtonTemplate { get; set; }
+}
+
+<div @ref="RootElement" @attributes='InputAttributes.GetMainElementAttributes()' class="@CssClass">
+
+    @if (HeaderWithIconElementTemplate == null)
+    {
+        <HeaderWithIcon  @ref="Header" @attributes='InputAttributes.GetMainElementAttributes("Header")' Icon="Icon" IsIconCircular="IsIconCircular" Color="HeaderColor??Color" IconColor="IconColor??Color" IsDisabled="IsDisabled" IsInverted="IsInverted">
+            @ChildContent
+        </HeaderWithIcon>
+    }
+    else
+    {
+        @HeaderWithIconElementTemplate
+    }
+
+    @if (ButtonTemplate != null)
+    {
+        <div class="inline">
+            @ButtonTemplate
+        </div>
+    }
+
+</div>

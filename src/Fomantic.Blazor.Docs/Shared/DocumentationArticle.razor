@@ -1,0 +1,187 @@
+﻿@inject IJSRuntime JsRuntime
+@inject NavigationManager NavigationManager
+<div class="article">
+    <div class="ui masthead vertical tab segment">
+        <div class="ui container">
+            <div class="introduction">
+
+                <h1 class="ui header">
+                    @Title
+
+                    <div class="sub header">
+                        @Description
+                    </div>
+                </h1>
+
+                <div class="ui hidden divider"></div>
+
+                <div class="ui right floated main menu">
+                  
+                    <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/ahmed007boss/fomantic-blazor/issues/new?body=%23%20Bug%20Report%0A%0A%3C!--%0ATitle%20Format%0A%20%20%5BScope%5D%20Summary%20of%20what%20is%20broken%0A--%3E%0A%0A%23%23%20Steps%20to%20reproduce%0A1.%0A2.%0A3.%0A%0A%23%23%20Expected%20result%0A%0A%23%23%20Actual%20result%0A%0A%23%23%20Testcase%0A%3C!--%20Fork%20https%3A%2F%2Fjsfiddle.net%2F31d6y7mn%20--%3E%0A%0A%23%23%20Screenshot%20(when%20possible)%0A!%5B%5D()%0A%0A%23%23%20Version%0Ax.x.x">
+                        <i class="bug icon"></i>
+                    </a>
+
+                    <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/ahmed007boss/fomantic-blazor/">
+                        <i class="alternate github icon"></i>
+                    </a>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+            @if (Type != null)
+            {
+
+
+
+                <div class="ui two item stackable tabs menu">
+
+                    <a @onclick='d=>CurrentTab="Features Showcases"' class='@(CurrentTab=="Features Showcases"?"active":"") item'>Features Showcases</a>
+
+                    <a @onclick='d=>CurrentTab="Api Documation"' class='@(CurrentTab=="Api Documation"?"active":"") item'>Api Documation</a>
+
+
+                </div>
+            }
+        </div>
+    </div>
+    @if (CurrentTab == "Features Showcases")
+    {
+        <div class="main ui container">
+            <div class="ui dividing right rail">
+                <div class="ui sticky">
+                    <h3 class="ui header">@Title</h3>
+                    <div class="ui vertical following fluid accordion text menu">
+                        @foreach (var item in Children)
+                        {
+
+                            <div class="item">
+                                <a class="title"><i class="dropdown icon"></i> <b>@((item as DocumentationArticleGroup)?.Title)</b></a>
+                                <div class="content menu">
+                                    @if ((item as DocumentationArticleGroup)?.Children != null)
+                                    {
+                                        @foreach (var inneritem in (item as DocumentationArticleGroup)?.Children)
+                                        {
+                                            if (inneritem is Sample)
+                                            {
+                                                <a class="item" data-for="@inneritem.Id" @onclick='async d=> { await inneritem.ElementRef.JumpToTopOf(JsRuntime);await JsRuntime.InvokeVoidAsync("window.demo.applyHash",inneritem.Id); }'>@((inneritem as Sample)?.Title)</a>
+                                            }
+                                        }
+                                    }
+
+                                </div>
+                            </div>
+
+
+
+
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <CascadingValue Value=this IsFixed="true">
+                @ChildContent
+            </CascadingValue>
+
+        </div>
+    }
+    else if (CurrentTab == "Api Documation")
+    {
+<div class="main ui container">
+    @if (Type != null)
+    {
+        <div class="ui instructive  attached segment">
+            <Header Type="HeaderType.H4">
+                Base Interfaces and classes
+            </Header>
+            <BaseInterfacesDocumentationTable Type="Type">
+
+            </BaseInterfacesDocumentationTable>
+        </div>
+        <div class="ui instructive  attached segment">
+            <Header Type="HeaderType.H4">
+                Paramters and Properties
+            </Header>
+
+            <PropertiesDocumentationTable Type="Type">
+
+            </PropertiesDocumentationTable>
+
+        </div>
+        <div class="ui instructive  attached segment">
+            <Header Type="HeaderType.H4">
+                Methods
+            </Header>
+
+            <MethodsDocumentationTable Type="Type">
+
+            </MethodsDocumentationTable>
+
+        </div>
+        <div class="ui instructive  attached segment">
+            <Header Type="HeaderType.H4">
+                Events
+            </Header>
+
+            <EventsDocumentationTable Type="Type">
+
+            </EventsDocumentationTable>
+
+        </div>
+
+    }
+</div>
+    }
+
+    <Footer />
+
+</div>
+
+@code{
+
+    public string CurrentTab { get; set; } = "Features Showcases";
+    public List<DocumentationArticleGroup> Children { get; set; } = new List<DocumentationArticleGroup>();
+
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public Type Type { get; set; }
+
+    //[Parameter]
+    //public RenderFragment DescriptionTemplate { get; set; }
+
+    [Parameter]
+    public string Description { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string PageUri { get; set; }
+
+    public void Refresh()
+    {
+        this.StateHasChanged();
+    }
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            await JsRuntime.InvokeVoidAsync("window.semantic.ready");
+
+
+        }
+
+    }
+}

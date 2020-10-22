@@ -1,0 +1,77 @@
+﻿@inject IJSRuntime JsRuntime
+<button @onclick="d=>Open()" class="ui green button">
+    <i class="code icon"></i>
+    Edit Content 
+</button>
+<div @ref="modalElement" class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Edit HTML Content
+    </div>
+    <div class="content">
+        <div style="min-height:500px" @ref="editorElement">
+
+
+        </div>
+    </div>
+    <div class="actions">
+        <div @onclick="d=>Cancel()" class="ui black deny button">
+            Cancel
+        </div>
+        <div @onclick="d=>Ok()" class="ui positive right labeled icon button">
+            Done
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    ElementReference editorElement;
+    ElementReference modalElement;
+    IJSObjectReference editor;
+    IJSObjectReference modal;
+
+    [Parameter]
+    public string Code { get; set; }
+    [Parameter]
+    public EventCallback<string> CodeChanged { get; set; }
+
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            modal = await JsRuntime.InvokeAsync<IJSObjectReference>("$", modalElement);
+            await modal.InvokeVoidAsync("modal");
+            editor = await JsRuntime.InvokeAsync<IJSObjectReference>("window.demo.codeEditorInit", editorElement);
+            SetValue();
+        }
+    }
+
+    async void SetValue()
+    {
+        await editor.InvokeVoidAsync("setValue", Code);
+    }
+    async void Ok()
+    {
+        await UpdateValue();
+        await modal.InvokeVoidAsync("modal", "hide");
+    }
+    async void Cancel()
+    {
+        await modal.InvokeVoidAsync("modal", "hide");
+    }
+    public async void Open()
+    {
+
+        await modal.InvokeVoidAsync("modal", "show");
+    }
+    async Task UpdateValue()
+    {
+        var code = await editor.InvokeAsync<string>("getValue");
+        Code = code;
+        await CodeChanged.InvokeAsync(Code);
+    }
+}

@@ -1,0 +1,44 @@
+﻿
+<table class="ui celled definition table">
+    <thead>
+        <tr>
+            <th class="three wide"></th>
+            <th class="">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Docs)
+        {
+            <tr>
+                <td><Text Color="@Color.Teal">@item.Item1</Text></td>
+                <td>@item.Item2 </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    [Parameter]
+    public Type Type { get; set; }
+    public List<Tuple<string, string>> Docs { get; set; } = new List<Tuple<string, string>>();
+    protected async override Task OnInitializedAsync()
+    {
+        if (Type != null && Type.IsEnum)
+        {
+
+            foreach (var item in Type.GetEnumNames())
+            {
+                var currentdoc = await Type.GetSummaryOfEnum(item);
+
+                Docs.Add(new Tuple<string, string>(Type.Name + "." + item, currentdoc));
+            }
+
+
+
+
+        }
+        await base.OnInitializedAsync();
+    }
+}

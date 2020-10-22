@@ -1,0 +1,1048 @@
+﻿@page "/elements/Segmant"
+@using Fomantic.Blazor.Docs.Helpers
+@inject IJSRuntime jSRuntime
+
+    <DocumentationArticle Type="typeof(Fomantic.Segment)" PageUri="@PageUri" Title="Segmant" Description="A segment is used to create a grouping of related content">
+        <DocumentationArticleGroup Title="Types">
+            <Sample PageUri="@PageUri" Id="Segment" ComponentsTypes="SegmantSampleData">
+                <Title>
+                    Segmant
+                </Title>
+                <DescriptionTemplate>
+                    A segment of content
+                </DescriptionTemplate>
+                
+            </Sample>
+            <Sample PageUri="@PageUri" Id="Segment" ComponentsTypes="NestedSegmantSampleData">
+                <Title>
+                    Nested Segmants
+                </Title>
+                <DescriptionTemplate>
+                    A segment can be nested
+                </DescriptionTemplate>
+                
+            </Sample>
+            <Sample PageUri="@PageUri" Id="PlaceHolderSegmant" ComponentsTypes="PlaceHolderSegmantSampleData">
+                <Title>
+                    Placeholder Segment
+                </Title>
+                <DescriptionTemplate>
+                    A segment can be used to reserve space for conditionally displayed content.
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="IsPlaceholder").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="PlaceHolderSegmantTemplate" ComponentsTypes="PlaceHolderSegmantTemplateSampleData">
+                <Title>
+                    Placeholder Segment Template
+                </Title>
+                <DescriptionTemplate>
+                    A segment can be used to reserve space for conditionally displayed content and structured to contain icon header and buttons
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="Icon"||s.Name=="IconColor"||s.Name=="HeaderColor"||s.Name=="Header"||s.Name=="HeaderColor"||s.Name=="ButtonTemplate"||s.Name=="HeaderWithIconElementTemplate"||s.Name=="IsIconCircular"||s.Name=="ChildContent").ToList()' Type="typeof(PlaceholderSegment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="RaisedSegmant" ComponentsTypes="RasiedSegmantSampleData">
+                <Title>
+                    Raised Segment
+                </Title>
+                <DescriptionTemplate>
+                    A segment may be formatted to raise above the page.
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="SegmentStyle").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="StackedSegmant" ComponentsTypes="StackedSegmantSampleData">
+                <Title>
+                    Stacked Segment
+                </Title>
+                <DescriptionTemplate>
+                    A segment can be formatted to show it contains multiple pages
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="SegmentStyle").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="PiledSegmant" ComponentsTypes="PiledSegmantSampleData">
+                <Title>
+                    Piled Segment
+                </Title>
+                <DescriptionTemplate>
+                    A segment can be formatted to look like a pile of pages
+                    <div class="ui ignored warning message">
+                        Piled segments use <b>negative z-index</b> to format the additional pages below the segment. In order for them to appear correctly, your segment's offset container must have a z-index declared.
+                    </div>
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="SegmentStyle").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="BasicSegmant" ComponentsTypes="BasicSegmentSampleData">
+                <Title>
+                    Basic Segment
+                </Title>
+                <DescriptionTemplate>
+                    A basic segment has no special formatting
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="SegmentStyle").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+
+        </DocumentationArticleGroup>
+
+        
+        <DocumentationArticleGroup Title="States">
+            <Sample PageUri="@PageUri" Id="DisabledSegment" ComponentsTypes="DisabledSegmantSampleData">
+                <Title>
+                    Disabled
+                </Title>
+                <DescriptionTemplate>
+                    A segment may show its content is disabled
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="IsDisabled").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="LoadingSegment" ComponentsTypes="LoadingSegmantSampleData">
+                <Title>
+                    Loading
+                </Title>
+                <DescriptionTemplate>
+                    A segment may show its content is being loaded
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="IsLoading").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="HiddenSegment" ComponentsTypes="HiddenSegmantSampleData">
+                <Title>
+                    Hidden
+                </Title>
+                <DescriptionTemplate>
+                    A segment may be hidden from the viewport (below sample contains hidden segment can you see it ?)
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="IsHidden").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="HideShowActionSegmant" ComponentsTypes="HideShowActionSegmantSampleData">
+                <Title>
+                    Hide Show Segmant
+                </Title>
+                <DescriptionTemplate>
+                    Hide Show Segmant
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Animation Methods
+                        </Header>
+                        <MethodsDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="ToggleVisibility"||s.Name=="Show"||s.Name=="Hide")' Type="typeof(Segment)">
+
+                        </MethodsDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+        </DocumentationArticleGroup>
+        <DocumentationArticleGroup Title="Variations">
+            <Sample PageUri="@PageUri" Id="ColoredSegment" ComponentsTypes="ColoredSegmentSampleData">
+                <Title>
+                    Colored
+                </Title>
+                <DescriptionTemplate>
+                    A segment can be colored
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="Color").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="InvertedSegment" ComponentsTypes="InvertedSegmentSampleData">
+                <Title>
+                    Inverted
+                </Title>
+                <DescriptionTemplate>
+                    A segment can have its colors inverted for contrast
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable  EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="Color"||s.Name=="IsInverted").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="FittedSegment" ComponentsTypes="FittedSegmentSampleData">
+                <Title>
+                    Fitted
+                </Title>
+                <DescriptionTemplate>
+                    A segment can remove its padding, vertically or horizontally
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="ContentSpace").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="PaddedSegment" ComponentsTypes="PaddedSegmentSampleData">
+                <Title>
+                    Padded
+                </Title>
+                <DescriptionTemplate>
+                    A segment can increase its padding
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable  EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="ContentSpace").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="AttachedSegment" ComponentsTypes="AttachedSegmentSampleData">
+                <Title>
+                    Attached
+                </Title>
+                <DescriptionTemplate>
+                    A segment can be attached to other content on a page
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable  EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="Attaching").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="CompactSegment" ComponentsTypes="CompactSegmentSampleData">
+                <Title>
+                    Compact
+                </Title>
+                <DescriptionTemplate>
+                    A segment may take up only as much space as is necessary
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable  EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="IsCompact").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="TextAlignmentSegment" ComponentsTypes="TextAlignmentSegmentSampleData">
+                <Title>
+                    Text Alignment
+                </Title>
+                <DescriptionTemplate>
+                    A segment can have its text aligned to a side
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="ContentAlignment").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="CircularSegment" ComponentsTypes="CircularSegmentSampleData">
+                <Title>
+                    Circular
+                </Title>
+                <DescriptionTemplate>
+                    A segment can be circular
+                    
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="IsCircular").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+        </DocumentationArticleGroup>
+        <DocumentationArticleGroup Title="Animations">
+
+            <Sample PageUri="@PageUri" Id="TransitionEntryAnimationSegment" IsPlayed="false" ComponentsTypes="TransitionEntryAnimationSegmentSampleData">
+                <Title>
+                    Enter Animation
+                </Title>
+                <DescriptionTemplate>
+                    A segment can be animated when enter the view port
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Properties
+                        </Header>
+                        <PropertiesDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.Name=="EnterTransition"||s.Name=="EnterTransitionDuration").ToList()' Type="typeof(Segment)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+
+            </Sample>
+
+
+            <Sample PageUri="@PageUri" Id="TransitionAnimationSegment" ComponentsTypes="TransitionAnimationSegmentSampleData">
+                <Title>
+                    Transition Animation
+                </Title>
+                <DescriptionTemplate>
+                    A segment can animated to show or hide with set of different animation
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Animation Methods
+                        </Header>
+                        <MethodsDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(d=>d.GetMethodFullname().Contains("Transition"))' Type="typeof(FomanticComponentAnimator<Segment>)">
+
+                        </MethodsDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="StaticAnimationSegment" ComponentsTypes="StaticAnimationSegmentSampleData">
+                <Title>
+                    Static Animation
+                </Title>
+                <DescriptionTemplate>
+                    A segment can animated to draw attention to itself
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Animation Methods
+                        </Header>
+                        <MethodsDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(s=>s.GetMethodFullname().Contains("Static"))' Type="typeof(FomanticComponentAnimator<Segment>)">
+
+                        </MethodsDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+        </DocumentationArticleGroup>
+        <DocumentationArticleGroup Title="Miscellaneous">
+            <Sample PageUri="@PageUri" Id="JumpToSegment" ComponentsTypes="JumpToSegmentSampleData">
+                <Title>
+                    Jump To the Component
+                </Title>
+                <DescriptionTemplate>
+                    Method Jump() can be called to set set a view port to top of the segment
+                </DescriptionTemplate>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            JQuery Helpers Methods
+                        </Header>
+                        <MethodsDocumentationTable EnableShowAllLink="true" Filter='d=>d.Where(d=>d.GetMethodFullname().Contains("Jump"))' Type="typeof(JQueryHelpers)">
+
+                        </MethodsDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="JqueryInterop" ComponentsTypes="JqueryInteropSegmentSampleData">
+                <Title>
+                    Jquery Interop
+                </Title>
+                <DescriptionTemplate>
+                    A segment has an object (JQueryElementRef) which reference jquery of segmant
+                </DescriptionTemplate>
+
+            </Sample>
+        </DocumentationArticleGroup>
+        <DocumentationArticleGroup Title="Customization">
+            <Sample PageUri="@PageUri" Id="SegmentDefaults" SampleCodeLanguage="csharp" SampleCode="@segmentDefaultsSampleCode" IsCodeHidden="false">
+                <Title>
+                    Customize segment creation defaults
+                </Title>
+                <DescriptionTemplate>
+                    You can customize most of default values of created segmants <br />
+                    In some cases like if your app is RTL you may want to set default content alignment of any segmant to right by setting <Text Color="Color.Teal">ContentAlignmentDefault</Text> in <TypeViewer Type="typeof(SegmentDefaults)"></TypeViewer> to  right in startup of the app as below sample
+                </DescriptionTemplate>
+                <SampleBody>
+
+                </SampleBody>
+                <ApiDocumentation>
+                    <div class="ui instructive  attached segment">
+                        <Header Type="HeaderType.H4">
+                            Segment Default Values
+                        </Header>
+                        <PropertiesDocumentationTable Type="typeof(SegmentDefaults)">
+
+                        </PropertiesDocumentationTable>
+                    </div>
+                </ApiDocumentation>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="SegmentCustomization" SampleCode="@segmentCustomizationSampleCode" IsCodeHidden="false">
+                <Title>
+                    Create your own segmant component
+                </Title>
+                <DescriptionTemplate>
+                    You can create your custom segmant component by
+                    <br />
+                    <div class="ui bulleted list">
+                        <div class="item">Create new blazor component</div>
+                        <div class="item">Add the below code to it</div>
+                        <div class="item">Start adding custom code to it</div>
+                        <div class="item">Your Custom component should inherits <TypeViewer Type="typeof(Fomantic.SegmentBase)"></TypeViewer></div>
+                    </div>
+                </DescriptionTemplate>
+                <SampleBody>
+                    <Segment SegmentStyle="SegmentStyle.Basic">
+                        <div class="ui link" @onclick='d=>jSRuntime.SaveAs("YourCustomSegmantComponent.razor",segmentCustomizationSampleCode)'>
+                            <Icon Color="Color.Primary" Icon="IconList.File"></Icon>
+                            <Text Color="Color.Primary"> YourCustomSegmantComponent.razor</Text> (click to download)
+                        </div>
+                    </Segment>
+                </SampleBody>
+            </Sample>
+            <Sample PageUri="@PageUri" Id="SegmentCustomization" SampleCode="@segmentWitIconCustomizationSampleCode" IsCodeHidden="false">
+                <Title>
+                    Segmant With Icon Customization Sample
+                </Title>
+                <DescriptionTemplate>
+                    Below Sample of Segmant customization creating component that implements  <TypeViewer Type="typeof(Fomantic.SegmentBase)"></TypeViewer> and add icon before segmant content
+                </DescriptionTemplate>
+                <SampleBody>
+                    <Segment SegmentStyle="SegmentStyle.Basic">
+                        <div class="ui link" @onclick='d=>jSRuntime.SaveAs("SegmantWithIcon.razor",segmentWitIconCustomizationSampleCode)'>
+                            <Icon Color="Color.Primary" Icon="IconList.File"></Icon>
+                            <Text Color="Color.Primary">SegmantWithIcon.razor</Text>
+                            (click to download)
+                        </div>
+
+                        <SegmantWithIcon Icon="IconList.Fly">This is the <Text Color="Color.Purple">SegmantWithIcon</Text> customized sample output </SegmantWithIcon>
+                    </Segment>
+                </SampleBody>
+            </Sample>
+        </DocumentationArticleGroup>
+    </DocumentationArticle>
+
+
+
+@code{
+    public bool Initialized { get; set; }
+    public string PageUri { get; set; } = "/elements/Segmant";
+
+    //Types
+    public List<SampleComponent> SegmantSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> NestedSegmantSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> PlaceHolderSegmantSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> PlaceHolderSegmantTemplateSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> RasiedSegmantSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> StackedSegmantSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> PiledSegmantSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> BasicSegmentSampleData { get; set; } = new List<SampleComponent>();
+
+    //States
+    public List<SampleComponent> LoadingSegmantSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> DisabledSegmantSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> HiddenSegmantSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> HideShowActionSegmantSampleData { get; set; } = new List<SampleComponent>();
+
+    //ColoredSegment
+    public List<SampleComponent> ColoredSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> InvertedSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> FittedSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> PaddedSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> AttachedSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> CompactSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> TextAlignmentSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> CircularSegmentSampleData { get; set; } = new List<SampleComponent>();
+
+    //Animations
+    public List<SampleComponent> TransitionEntryAnimationSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> TransitionAnimationSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> StaticAnimationSegmentSampleData { get; set; } = new List<SampleComponent>();
+
+    //Miscellaneous
+    public List<SampleComponent> JumpToSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> JqueryInteropSegmentSampleData { get; set; } = new List<SampleComponent>();
+
+    //Customization
+    string segmentCustomizationSampleCode;
+    string segmentWitIconCustomizationSampleCode;
+    string segmentDefaultsSampleCode;
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        #region Types
+        //SegmantSampleData
+        SegmantSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null) { HtmlContent = new MarkupString(@"The segement content is here ") });
+        //NestedSegmantSampleData
+
+        var rootSegmant = new SampleComponentWithChildren<Segment>(null);
+        var middleSegmant = new SampleComponentWithChildren<Segment>(rootSegmant);
+        middleSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Segment>(middleSegmant) { HtmlContent = new MarkupString(@"The inner segement content is here ") });
+        rootSegmant.InternalComponents.Add(middleSegmant);
+        NestedSegmantSampleData.Add(rootSegmant);
+
+        //PlaceHolderSegmantSampleData
+        PlaceHolderSegmantSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.IsPlaceholder = true,
+            HtmlContent = new MarkupString(@"This Is Placeholder Segment")
+        });
+        //PlaceHolderSegmantTemplateSampleData
+        PlaceHolderSegmantTemplateSampleData.Add(new SampleComponentWithHtmlContent<PlaceholderSegment>(null)
+        {
+            OnComponentCreate = d => d.Icon = IconList.Tasks,
+            HtmlContent = new MarkupString(@"No New Tasks")
+        });
+        //RasiedSegmantSampleData
+        RasiedSegmantSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.SegmentStyle = SegmentStyle.Raised,
+            HtmlContent = new MarkupString(@"Rasied Segmant content , Did you notice the segmant shadow")
+        });
+        //StackedSegmantSampleData
+        StackedSegmantSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.SegmentStyle = SegmentStyle.Stacked,
+            HtmlContent = new MarkupString(@"Stacked Segmant content , Did you notice the segmant style")
+        });
+        StackedSegmantSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.SegmentStyle = SegmentStyle.TallStacked,
+            HtmlContent = new MarkupString(@"Tall Stacked Segmant content , Did you notice the segmant style")
+        });
+        //PiledSegmantSampleData
+        PiledSegmantSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.SegmentStyle = SegmentStyle.Piled,
+            HtmlContent = new MarkupString(@"Piled Segmant content , Did you notice the segmant style")
+        });
+        //BasicSegmentSampleData
+        BasicSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.SegmentStyle = SegmentStyle.Basic;
+            },
+            HtmlContent = new MarkupString(@"Basic Segmant")
+        });
+        #endregion
+        #region States
+        //LoadingSegmantSampleData
+        LoadingSegmantSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.IsLoading = true,
+            HtmlContent = new MarkupString(@"Loading Segmant content , Now the segment content is loading")
+        });
+        //DisabledSegmantSampleData
+        DisabledSegmantSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.IsDisabled = true,
+            HtmlContent = new MarkupString(@"Disabled Segmant content , The segment content is disabled")
+        });
+        //HiddenSegmantSampleData
+        HiddenSegmantSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.IsHidden = true,
+            HtmlContent = new MarkupString(@"You cann't see me")
+        });
+        //HideShowActionSegmantSampleData
+        var x = new SampleComponentActionWithChildren<Segment>("Segmant1", null);
+        x.Actions.Add(new SampleComponentAction<Segment>() { Name = "ToggleVisibility", OnExecute = d => { d.ToggleVisibility(); this.StateHasChanged(); }, Code = "ToggleVisibility();" });
+        x.Actions.Add(new SampleComponentAction<Segment>() { Name = "Show", OnExecute = d => { d.Show(); this.StateHasChanged(); }, Code = "Show();" });
+        x.Actions.Add(new SampleComponentAction<Segment>() { Name = "Hide", OnExecute = d => { d.Hide(); this.StateHasChanged(); }, Code = "Hide();" });
+
+        x.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(x) { Content = "Content goes here" });
+        HideShowActionSegmantSampleData.Add(x);
+        #endregion
+        #region Variations
+        //ColoredSegmentSampleData
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Blue,
+            HtmlContent = new MarkupString(@"Blue")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Brown,
+            HtmlContent = new MarkupString(@"Brown")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Green,
+            HtmlContent = new MarkupString(@"Green")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Grey,
+            HtmlContent = new MarkupString(@"Grey")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Olive,
+            HtmlContent = new MarkupString(@"Olive")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Orange,
+            HtmlContent = new MarkupString(@"Orange")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Pink,
+            HtmlContent = new MarkupString(@"Pink")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Purple,
+            HtmlContent = new MarkupString(@"Purple")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Red,
+            HtmlContent = new MarkupString(@"Red")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Teal,
+            HtmlContent = new MarkupString(@"Teal")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Violet,
+            HtmlContent = new MarkupString(@"Violet")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Yellow,
+            HtmlContent = new MarkupString(@"Yellow")
+        });
+        ColoredSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.Color = Color.Black,
+            HtmlContent = new MarkupString(@"Black")
+        });
+
+        //InvertedSegmentSampleData
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => d.IsInverted = true,
+            HtmlContent = new MarkupString(@"No Color")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d => { d.IsInverted = true; d.Color = Color.Blue; },
+            HtmlContent = new MarkupString(@"Blue")
+        }); ;
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Brown;
+            },
+            HtmlContent = new MarkupString(@"Brown")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Green;
+            },
+            HtmlContent = new MarkupString(@"Green")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Grey;
+            },
+            HtmlContent = new MarkupString(@"Grey")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Olive;
+            },
+            HtmlContent = new MarkupString(@"Olive")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Orange;
+            },
+            HtmlContent = new MarkupString(@"Orange")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Pink;
+            },
+            HtmlContent = new MarkupString(@"Pink")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Purple;
+            },
+            HtmlContent = new MarkupString(@"Purple")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Red;
+            },
+            HtmlContent = new MarkupString(@"Red")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Teal;
+            },
+            HtmlContent = new MarkupString(@"Teal")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Violet;
+            },
+            HtmlContent = new MarkupString(@"Violet")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Yellow;
+            },
+            HtmlContent = new MarkupString(@"Yellow")
+        });
+        InvertedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsInverted = true; d.Color = Color.Black;
+            },
+            HtmlContent = new MarkupString(@"Black")
+        });
+
+        //FittedSegmentSampleData
+        FittedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.ContentSpace = ContentSpace.Fitted;
+            },
+            HtmlContent = new MarkupString(@"Fitted")
+        });
+        FittedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.ContentSpace = ContentSpace.HorizontallyFitted;
+            },
+            HtmlContent = new MarkupString(@"Horizontally Fitted")
+        });
+        FittedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.ContentSpace = ContentSpace.VerticallyFitted;
+            },
+            HtmlContent = new MarkupString(@"Vertically Fitted")
+        });
+
+        //PaddedSegmentSampleData
+        PaddedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.ContentSpace = ContentSpace.Padded;
+            },
+            HtmlContent = new MarkupString(@"Padded")
+        });
+        PaddedSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.ContentSpace = ContentSpace.VeryPadded;
+            },
+            HtmlContent = new MarkupString(@"Very Padded")
+        });
+        //AttachedSegmentSampleData
+
+
+        //CompactSegmentSampleData
+        CompactSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsCompact = true;
+            },
+            HtmlContent = new MarkupString(@"Here we are ")
+        });
+
+        //TextAlignmentSegmentSampleData
+        TextAlignmentSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.ContentAlignment = ContentAlignment.Center;
+            },
+            HtmlContent = new MarkupString(@"Center")
+        });
+        TextAlignmentSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.ContentAlignment = ContentAlignment.Left;
+            },
+            HtmlContent = new MarkupString(@"Left")
+        });
+        TextAlignmentSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.ContentAlignment = ContentAlignment.Right;
+            },
+            HtmlContent = new MarkupString(@"Right")
+        });
+
+        //CircularSegmentSampleData
+        CircularSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            OnComponentCreate = d =>
+            {
+                d.IsCircular = true;
+            },
+            HtmlContent = new MarkupString(@"Here we are ")
+        });
+
+
+        #endregion
+        #region  Animations
+
+        //TransitionEntryAnimationSegmentSampleData
+        TransitionEntryAnimationSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            AdditionalAttributes = new Dictionary<string, object>() {
+                        { "EnterTransition", TransitionAnimation.SlideDown },
+                       { "EnterTransitionDuration", 2000 }},
+            OnComponentCreate = d =>
+
+            {
+                d.EnterTransition = TransitionAnimation.SlideDown;
+                d.EnterTransitionDuration = 2000;
+            },
+            Content = "This Segmant entered with Slide Down"
+        });
+        TransitionEntryAnimationSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            AdditionalAttributes = new Dictionary<string, object>() {
+                        { "EnterTransition", TransitionAnimation.Zoom },
+                       { "EnterTransitionDuration", 2000 }},
+            OnComponentCreate = d =>
+
+            {
+                d.EnterTransition = TransitionAnimation.Zoom;
+                d.EnterTransitionDuration = 2000;
+            },
+            Content = "This Segmant entered with Zoom"
+        });
+        TransitionEntryAnimationSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
+        {
+            AdditionalAttributes = new Dictionary<string, object>() {
+                        { "EnterTransition", TransitionAnimation.SwingUp },
+                       { "EnterTransitionDuration", 2000 }},
+            OnComponentCreate = d =>
+
+            {
+                d.EnterTransition = TransitionAnimation.SwingUp;
+                d.EnterTransitionDuration = 2000;
+            },
+            Content = "This Segmant entered with Swing Up"
+        });
+        //TransitionAnimationSegmentSampleData
+        var TransitionAnimatedSegmant = new SampleComponentActionWithChildren<Segment>("Segmant1", null);
+        TransitionAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Fade", OnExecute = d => { d.Animator.Animate(TransitionAnimation.Fade); }, Code = "Animator.Animate(TransitionAnimation.Fade);" });
+        TransitionAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "FadeDown", OnExecute = d => { d.Animator.Animate(TransitionAnimation.FadeDown); }, Code = "Animator.Animate(TransitionAnimation.FadeDown);" });
+        TransitionAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Browse", OnExecute = d => { d.Animator.Animate(TransitionAnimation.Browse); }, Code = "Animator.Animate(TransitionAnimation.Browse);" });
+        TransitionAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Drop", OnExecute = d => { d.Animator.Animate(TransitionAnimation.Drop); }, Code = "Animator.Animate(TransitionAnimation.Drop);" });
+        TransitionAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "FlyUp", OnExecute = d => { d.Animator.Animate(TransitionAnimation.FlyUp); }, Code = "Animator.Animate(TransitionAnimation.FlyUp);" });
+        TransitionAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "HorizontalFlip", OnExecute = d => { d.Animator.Animate(TransitionAnimation.HorizontalFlip); }, Code = "Animator.Animate(TransitionAnimation.HorizontalFlip);" });
+        TransitionAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Scale", OnExecute = d => { d.Animator.Animate(TransitionAnimation.Scale); }, Code = "Animator.Animate(TransitionAnimation.Scale);" });
+        TransitionAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Zoom", OnExecute = d => { d.Animator.Animate(TransitionAnimation.Zoom); }, Code = "Animator.Animate(TransitionAnimation.Zoom);" });
+        TransitionAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "SlideUp", OnExecute = d => { d.Animator.Animate(TransitionAnimation.SlideUp); }, Code = "Animator.Animate(TransitionAnimation.SlideUp);" });
+        TransitionAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "SwingDown", OnExecute = d => { d.Animator.Animate(TransitionAnimation.SwingDown); }, Code = "Animator.Animate(TransitionAnimation.SwingDown);" });
+        TransitionAnimatedSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(TransitionAnimatedSegmant) { Content = "Content here will be animated" });
+        TransitionAnimationSegmentSampleData.Add(TransitionAnimatedSegmant);
+
+        //TransitionAnimationSegmentSampleData
+        var StaticAnimatedSegmant = new SampleComponentActionWithChildren<Segment>("Segmant1", null);
+        StaticAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Bounce", OnExecute = d => { d.Animator.Animate(StaticAnimation.Bounce); }, Code = "Animator.Animate(StaticAnimation.Bounce);" });
+        StaticAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Flash", OnExecute = d => { d.Animator.Animate(StaticAnimation.Flash); }, Code = "Animator.Animate(StaticAnimation.Flash);" });
+        StaticAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Glow", OnExecute = d => { d.Animator.Animate(StaticAnimation.Glow); }, Code = "Animator.Animate(StaticAnimation.Glow);" });
+        StaticAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Jiggle", OnExecute = d => { d.Animator.Animate(StaticAnimation.Jiggle); }, Code = "Animator.Animate(StaticAnimation.Jiggle);" });
+        StaticAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Pulse", OnExecute = d => { d.Animator.Animate(StaticAnimation.Pulse); }, Code = "Animator.Animate(StaticAnimation.Pulse);" });
+        StaticAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Shake", OnExecute = d => { d.Animator.Animate(StaticAnimation.Shake); }, Code = "Animator.Animate(StaticAnimation.Shake);" });
+        StaticAnimatedSegmant.Actions.Add(new SampleComponentAction<Segment>() { Name = "Tada", OnExecute = d => { d.Animator.Animate(StaticAnimation.Tada); }, Code = "Animator.Animate(StaticAnimation.Tada);" });
+
+        StaticAnimatedSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(StaticAnimatedSegmant) { Content = "Content here will be animated" });
+        StaticAnimationSegmentSampleData.Add(StaticAnimatedSegmant);
+        #endregion
+        #region Miscellaneous
+        //JumpToSegmentSampleData
+        var jumpToSegmenta = new SampleComponentActionWithChildren<Segment>("Segmant1", null);
+        jumpToSegmenta.Actions.Add(new SampleComponentAction<Segment>() { Name = "Jump", OnExecute = async d => { await d.Jump(); }, Code = "Jump();" });
+        jumpToSegmenta.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(jumpToSegmenta) { Content = "Content goes here" });
+        JumpToSegmentSampleData.Add(jumpToSegmenta);
+        //JqueryInteropSegmentSampleData
+        var jqueryInteropSegmenta = new SampleComponentActionWithChildren<Segment>("Segmant1", null);
+        jqueryInteropSegmenta.Actions.Add(new SampleComponentAction<Segment>() { Name = "CallJQueryCss", OnExecute = async d => { await d.JQueryElementRef.InvokeVoidAsync("css", "background-color", "yellow"); }, Code = "JQueryElementRef.InvokeVoidAsync(\"css\", \"background-color\", \"yellow\");" });
+        jqueryInteropSegmenta.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(jqueryInteropSegmenta) { Content = "Content goes here" });
+        JqueryInteropSegmentSampleData.Add(jqueryInteropSegmenta);
+
+        #endregion
+        #region Customization
+        segmentCustomizationSampleCode += "@namespace Fomantic" + Environment.NewLine;
+        segmentCustomizationSampleCode += "@using Fomantic.Blazor.UI" + Environment.NewLine;
+        segmentCustomizationSampleCode += "@inherits SegmentBase" + Environment.NewLine;
+        segmentCustomizationSampleCode += "<div @ref=\"RootElement\" @attributes='GetRootElementAttributes()' class=\"@CssClass\">" + Environment.NewLine;
+        segmentCustomizationSampleCode += "    @ChildContent" + Environment.NewLine;
+        segmentCustomizationSampleCode += "</div>" + Environment.NewLine;
+
+        segmentWitIconCustomizationSampleCode += "@namespace Fomantic" + Environment.NewLine;
+        segmentWitIconCustomizationSampleCode += "@using Fomantic.Blazor.UI" + Environment.NewLine;
+        segmentWitIconCustomizationSampleCode += "@inherits SegmentBase" + Environment.NewLine;
+        segmentWitIconCustomizationSampleCode += "<div @ref=\"RootElement\" @attributes='GetRootElementAttributes()' class=\"@CssClass\">" + Environment.NewLine;
+        segmentWitIconCustomizationSampleCode += "    <Icon Icon=\"@this.Icon\" Color=\"@base.Color\" IsInverted=\"@base.IsInverted\" />" + Environment.NewLine;
+        segmentWitIconCustomizationSampleCode += "    @ChildContent" + Environment.NewLine;
+        segmentWitIconCustomizationSampleCode += "</div>" + Environment.NewLine + Environment.NewLine;
+        segmentWitIconCustomizationSampleCode += "@code{" + Environment.NewLine + Environment.NewLine;
+        segmentWitIconCustomizationSampleCode += "    [Parameter]" + Environment.NewLine;
+        segmentWitIconCustomizationSampleCode += "    public IconList Icon { get; set; }" + Environment.NewLine + Environment.NewLine;
+        segmentWitIconCustomizationSampleCode += "}" + Environment.NewLine;
+
+
+        segmentDefaultsSampleCode += "using Fomantic;" + Environment.NewLine + Environment.NewLine;
+        segmentDefaultsSampleCode += " public class Program" + Environment.NewLine;
+        segmentDefaultsSampleCode += " {" + Environment.NewLine;
+        segmentDefaultsSampleCode += "    public static async Task Main(string[] args)" + Environment.NewLine;
+        segmentDefaultsSampleCode += "    {" + Environment.NewLine;
+        segmentDefaultsSampleCode += "         ..." + Environment.NewLine;
+        segmentDefaultsSampleCode += "          // Setting ContentAlignmentDefault to Right by Default  as the app will be RTL" + Environment.NewLine;
+        segmentDefaultsSampleCode += "          SegmentDefaults.ContentAlignmentDefault =ContentAlignment.Right;" + Environment.NewLine;
+        segmentDefaultsSampleCode += "         ..." + Environment.NewLine;
+        segmentDefaultsSampleCode += "    }" + Environment.NewLine;
+        segmentDefaultsSampleCode += " }" + Environment.NewLine;
+        #endregion
+
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+
+
+
+    }
+
+
+}

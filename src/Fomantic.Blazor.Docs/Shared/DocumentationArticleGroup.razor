@@ -1,0 +1,50 @@
+﻿<h2 class="ui dividing header">
+    @Title
+    <a id="@Id" class="anchor"></a>
+</h2>
+<div>
+    <CascadingValue Value=this IsFixed="true">
+        @ChildContent
+    </CascadingValue>
+</div>
+@code {
+
+    [CascadingParameter]
+    public DocumentationArticle Parent { get; set; }
+
+
+    [Parameter]
+    public string Id { get; set; } = Guid.NewGuid().ToString();
+
+    [Parameter]
+    public string Title { get; set; }
+
+    public List<Sample> Children { get; set; } = new List<Sample>();
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    protected  override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Parent?.Children?.Add(this);
+
+
+            if (Parent != null)
+            {
+                Parent.Refresh();
+            }
+            else
+            {
+                this.StateHasChanged();
+            }
+        }
+
+        return base.OnAfterRenderAsync(firstRender);
+    }
+    public void Refresh()
+    {
+        this.StateHasChanged();
+    }
+}

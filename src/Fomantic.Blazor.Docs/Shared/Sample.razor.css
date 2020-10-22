@@ -1,0 +1,113 @@
+﻿
+
+.add-component-item {
+    padding-top: 12px !important;
+    border-top: 1px solid rgba(34,36,38,.15) !important;
+}
+
+    .add-component-item .add.icon {
+        margin-top: 5px !important;
+    }
+
+.sample{
+    padding:10px;
+}
+.code-editor-container {
+    align-content: center;
+    margin: 50px;
+}
+
+.root.list {
+    margin-top: 5px;
+}
+
+    .root.list .item {
+        padding: 5px !important;
+        padding-left: 10px !important;
+        border-bottom: 1px solid rgba(34,36,38,.15) !important;
+    }
+
+    .root.list .angle.left.icon {
+        margin-top: 5px;
+    }
+
+
+.children.list .item {
+    padding: 5px !important;
+    padding-left: 10px !important;
+}
+
+    .children.list .item .angle.right.icon {
+        margin-top: 5px;
+    }
+
+.editor-tree {
+}
+
+    .editor-tree h4.ui.header {
+        padding: 8px;
+        border-bottom: 1px solid rgba(34,36,38,.15) !important;
+    }
+
+
+
+td.label {
+    max-width: 150px;
+}
+
+    td.label label {
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #475466;
+        letter-spacing: 0.2px;
+        -webkit-font-smoothing: antialiased;
+        cursor: default;
+        overflow: hidden;
+        -webkit-appearance: none;
+    }
+
+td.editor {
+    padding: 0px !important;
+}
+
+
+    td.editor .field {
+        padding: 0px;
+        min-height: 36px;
+    }
+
+        td.editor .field inpu, td.editor .field select {
+            border-color: white;
+            border-radius: 0px;
+            height: 100%;
+            width: 100%
+        }
+
+            td.editor .field input:hover, td.editor .field select:hover {
+                border-radius: 0px;
+            }
+
+            td.editor .field input:focus, td.editor .field select:focus {
+                border-radius: 0px;
+            }
+
+.sidebar {
+    background-color: white;
+    max-width: 340px !important;
+}
+
+.table {
+    border-radius: 0px !important;
+}
+
+span.right.floated {
+    float: right;
+}
+
+.row {
+    margin: 2em 0em;
+    padding: 2em 0em;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}

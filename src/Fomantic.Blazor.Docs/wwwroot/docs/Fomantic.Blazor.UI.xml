@@ -1,0 +1,1038 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fomantic.Blazor.UI</name>
+    </assembly>
+    <members>
+        <member name="T:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator">
+            <summary>
+            Class responsibe for animating a <see cref="T:Microsoft.AspNetCore.Components.ElementReference"/>
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.#ctor(Microsoft.JSInterop.IJSRuntime,Microsoft.AspNetCore.Components.ElementReference[])">
+            <summary>
+            Create An instant of Animator
+            </summary>
+            <param name="elementToAnimate"><see cref="T:Microsoft.AspNetCore.Components.ElementReference"/> to animate </param>
+            <param name="jsRuntime">used jsRuntime to call js animation function </param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.AnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimate``1(System.Int32,System.Tuple{``0,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate``1(System.Int32,System.Tuple{``0,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.StopAllAnimation">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.StopCurrentAnimation">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticComponentAnimator`1">
+            <summary>
+            Class responsibe for animating a <see cref="T:Fomantic.Blazor.UI.IFomanticComponent"/>
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.#ctor(`0[])">
+            <summary>
+            Create An instant of Animator
+            </summary>       
+            <param name="component">Fomantic component to animate</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Animate(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.AnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.HeaderType">
+            <summary>
+            A header type oriented to give some importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.Content">
+            <summary>
+            Content header oriented to give the lowest importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H1">
+            <summary>
+            H1 header oriented to give the most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H2">
+            <summary>
+            H1 header oriented to give the secound most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H3">
+            <summary>
+            H1 header oriented to give the third most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H4">
+            <summary>
+            H1 header oriented to give the forth most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H5">
+            <summary>
+            H1 header oriented to give the fifth most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H6">
+            <summary>
+            H1 header oriented to give the sixth most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.SegmentStyle">
+            <summary>
+            A segment or segment group may be formatted to be in different style 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Normal">
+            <summary>
+            Normal Style of segment or segment group 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Basic">
+            <summary>
+            A basic segment or segment group has no special formatting
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Raised">
+            <summary>
+            A segment or segment group may be formatted to raise above the page.
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Stacked">
+            <summary>
+            A segment or segment group can be formatted to show it contains multiple pages
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.TallStacked">
+            <summary>
+            A segment can be formatted to show it contains multiple pages
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Piled">
+            <summary>
+            A segment can be formatted to look like a pile of pages
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticComponentBase">
+            <summary>
+            Base class for all Fomantic Component
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.GetRootElementAttributes">
+            <summary>
+            Return the Component Attributes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibilityUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverseUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverseUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverseUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverseUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverseUpdatedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnClassChangedEvent">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.JsRuntime">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.JQueryElementRef">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.RootElement">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Extensions">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Animator">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.ViewportVisibility">
+            <summary>
+             Object responsible for Viewport Visibility tracking
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.CssClass">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ConstractClasses">
+            <summary>
+            Used to add inherited components classes 
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnAfterRender(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnAfterRenderAsync(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Attributes">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.InputAttributes">
+            <summary>
+            List of all arbitrary attributes
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverseUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverseUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverseUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverseUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverseUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibilityUpdated">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnClassChanged">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.EnterTransition">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.IsHidden">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.EnterTransitionDuration">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.CssClasses">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Show">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Hide">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ToggleVisibility">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticComponentWithContentBase">
+            <summary>
+            Base class for all Fomantic Component
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentWithContentBase.ChildContent">
+            <summary>
+            Content of the component  
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentWithContentBase.Content">
+            <summary>
+            Content of the component  
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ViewPortCalculation">
+            <summary>
+            Contains all element viewport calculation
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.BottomPassed">
+            <summary>
+            Is  parent element of the component bottom not visibile on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.BottomVisible">
+            <summary>
+            Is parent element of the component bottom visibile on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Fits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Height">
+            <summary>
+            Height value of the parent element of the component 
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.OffScreen">
+            <summary>
+            Is the parent element of the component not visibile on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.OnScreen">
+            <summary>
+            Is the parent element of the component visibile on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Passing">
+            <summary>
+            Is the parent element of the component passing on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.PercentagePassed">
+            <summary>
+            A distance from the top of parent element of the component content has been passed as percentage
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.PixelsPassed">
+            <summary>
+            A distance from the top of parent element of the component content has been passed as pixels
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.TopVisible">
+            <summary>
+            Is parent element of the component top visibile on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.TopPassed">
+            <summary>
+             Is parent element of the component top passed on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Top">
+            <summary>
+             css top value of the parent element of the component 
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Width">
+            <summary>
+             Width value of the parent element of the component 
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ViewportVisibility">
+            <summary>
+            Implementation Responsible for Viewport Visibility tracking
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewportVisibility.Calculation">
+            <summary>
+            Current View Port Calculations
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.#ctor(System.Func{Microsoft.AspNetCore.Components.ElementReference},Microsoft.JSInterop.IJSRuntime)">
+            <summary>
+            Create new Viewport Visibility
+            </summary>
+            <param name="elementToSubscripeFunc">function to get element to track Visibility</param>
+            <param name="jsRuntime">js run time to execute javascript interops</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnUpdate(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger Visibility Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.UpdateSubscribed">
+            <summary>
+            Method determine if visibility updated event Subscribed or not
+            </summary>
+            <returns>whether visibility updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisible(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger On Top Visible Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleSubscribed">
+            <summary>
+            Method determine if On Top Visible updated event Subscribed or not
+            </summary>
+            <returns>whether On Top Visible updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassed(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger On Top Passed Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedSubscribed">
+            <summary>
+            Method determine if On Top Passed updated event Subscribed or not
+            </summary>
+            <returns>whether On Top Passed updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisible(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger On Bottom Visible Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleSubscribed">
+            <summary>
+            Method determine if On Bottom Visible updated event Subscribed or not
+            </summary>
+            <returns>whether  On Bottom Visible updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassing(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger On Passing Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingSubscribed">
+            <summary>
+            Method determine if On Passing updated event Subscribed or not
+            </summary>
+            <returns>whether On Passing updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassed(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger On Bottom Passed Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedSubscribed">
+            <summary>
+            Method determine if On Bottom Passed updated event Subscribed or not
+            </summary>
+            <returns>whether On Bottom Passed updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverse(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger On TopVisibl Reverse Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverseSubscribed">
+            <summary>
+            Method determine if On Top Visible Reverse updated event Subscribed or not
+            </summary>
+            <returns>whether On Top Visible Reverse updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverse(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger On Top Passed Reverse Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverseSubscribed">
+            <summary>
+            Method determine if On Top Passed Reverse updated event Subscribed or not
+            </summary>
+            <returns>whether  On Top Passed Reverse updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverse(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger On Bottom Visible Reverse Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverseSubscribed">
+            <summary>
+            Method determine if On Bottom Visible Reverse updated event Subscribed or not
+            </summary>
+            <returns>whether On Bottom Visible Reverse updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverse(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger On Passing Reverse Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverseSubscribed">
+            <summary>
+            Method determine if On Passing Reverse updated event Subscribed or not
+            </summary>
+            <returns>whether  On Passing Reverse updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverse(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Method executed by Javascript to trigger On Bottom Passed Reverse Updated events
+            </summary>
+            <param name="calculation">new calculation after update</param>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverseSubscribed">
+            <summary>
+            Method determine if On Bottom Passed Reverse updated event Subscribed or not
+            </summary>
+            <returns>whether  On Bottom Passed Reverse updated event Subscribed or not</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ISegmantGroupHelpers">
+            <summary>
+            Helper Utitities for <see cref="T:Fomantic.Blazor.UI.IFomanticGroupComponent`1" />  as T is  <see cref="T:Fomantic.Blazor.UI.ISegmantGroupChild"/>
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ISegmantGroupHelpers.GetChildrenSegments(Fomantic.Blazor.UI.IFomanticGroupComponent{Fomantic.Blazor.UI.ISegmantGroupChild})">
+            <summary>
+            Get list of children segments inside a segmant group
+            </summary>
+            <param name="segmantGroup">Parent segmant group</param>
+            <returns>list of children segments</returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ISegmantGroupHelpers.GetChildrenSegmentGroups(Fomantic.Blazor.UI.IFomanticGroupComponent{Fomantic.Blazor.UI.ISegmantGroupChild})">
+            <summary>
+            Get list of children segment groups inside a segmant group
+            </summary>
+            <param name="segmantGroup">Parent segmant group</param>
+            <returns>list of children segment groups</returns>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ISegmantGroupChild">
+            <summary>
+            Base interface for all fomantic component that has parent segmant group
+            </summary>
+        </member>
+        <member name="T:Fomantic.HeaderBase">
+            <summary>
+            A text is used to style some inline text with a simple color
+            </summary>
+             <remarks>
+             <para>Reference : </para>
+            <para><see href="https://fomantic-ui.com/elements/text.html">https://fomantic-ui.com/elements/text.html</see></para>
+            </remarks>
+        </member>
+        <member name="M:Fomantic.HeaderBase.ConstractClasses">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.HeaderBase.IsDisabled">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/header.html#disabled"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.HeaderBase.Color">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/header.html#colored"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.HeaderBase.IsInverted">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/header.html#inverted"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.HeaderBase.IsUnselectable">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.HeaderBase.Alignment">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/header.html#floating"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.HeaderBase.ContentAlignment">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/header.html#text-alignmentg"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.HeaderBase.Type">
+            <summary>
+            Determinte header type which oriented to give some importance of a section in the context of the content that surrounds it
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/elements/header.html#page-headers"></see></para>
+            </remarks>
+        </member>
+        <member name="P:Fomantic.HeaderBase.IsDividing">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/header.html#dividing"></see></para>
+             </remarks>    
+        </member>
+        <member name="P:Fomantic.HeaderBase.Attaching">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/header.html#attached"></see></para>
+             </remarks>
+        </member>
+        <member name="T:Fomantic.IconBase">
+            <summary>
+            An icon is a glyph used to represent something else
+            </summary>
+             <remarks>
+             <para>Reference : </para>
+            <para><see href="https://fomantic-ui.com/elements/icon.html">https://fomantic-ui.com/elements/icon.html</see></para>
+            </remarks>
+        </member>
+        <member name="M:Fomantic.IconBase.OnAfterRender(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.IconBase.ConstractClasses">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.IconBase.IsCircular">
+            <inheritdoc/>
+             <remarks>
+             A circular segment will most likely have to have its content manually sized to be equal width and height, otherwise it will flow to the size of your content.
+             <para>Reference : </para>
+             <para><see href="https://fomantic-ui.com/elements/icon.html#circular">https://fomantic-ui.com/elements/icon.html#circular</see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.IconBase.Size">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/icon.html#size"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.IconBase.Color">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/icon.html#colored"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.IconBase.Icon">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/icon.html#/icon"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.IconBase.IsInverted">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/icon.html#inverted"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.IconBase.IsDisabled">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/icon.html#disabled"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.IconBase.IsFitted">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/icon.html#fitted"></see></para>
+             </remarks>
+        </member>
+        <member name="T:Fomantic.SegmentBase">
+            <summary>
+            A segment is used to create a grouping of related content
+            <para><see href="https://fomantic-ui.com/elements/segment.html">https://fomantic-ui.com/elements/segment.html</see></para>
+            </summary>
+        </member>
+        <member name="M:Fomantic.SegmentBase.OnInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.SegmentBase.ConstractClasses">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.SegmentBase.OnAfterRender(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentBase.ParentGroup">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentBase.IsPlaceholder">
+            <summary>
+            Determine if the component should be used to reserve space for conditionally displayed content.
+            </summary>
+            <remarks>
+             <para>Reference : </para>
+            <para><see href="https://fomantic-ui.com/elements/segment.html#placeholder-segment">https://fomantic-ui.com/elements/segment.html#placeholder-segment</see></para>
+            </remarks>
+        </member>
+        <member name="P:Fomantic.SegmentBase.IsCircular">
+            <inheritdoc/>
+             <remarks>
+             A circular segment will most likely have to have its content manually sized to be equal width and height, otherwise it will flow to the size of your content.
+             <para>Reference : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#circular">https://fomantic-ui.com/elements/segment.html#circular</see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.SegmentBase.Color">
+            <inheritdoc/>
+             <remarks>
+             <para>Reference : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#colored">https://fomantic-ui.com/elements/segment.html#colored</see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.SegmentBase.SegmentStyle">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#raised">https://fomantic-ui.com/elements/segment.html#raised</see></para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#stacked">https://fomantic-ui.com/elements/segment.html#stacked</see></para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#piled">https://fomantic-ui.com/elements/segment.html#piled</see></para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#basic">https://fomantic-ui.com/elements/segment.html#basic</see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.SegmentBase.IsInverted">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#inverted"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.SegmentBase.IsDisabled">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#disabled"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.SegmentBase.IsLoading">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#loading"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.SegmentBase.ContentAlignment">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentBase.ContentSpace">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentBase.IsCompact">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#compact"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.SegmentBase.Attaching">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#attached"></see></para>
+             </remarks>
+        </member>
+        <member name="T:Fomantic.TextBase">
+            <summary>
+            A text is used to style some inline text with a simple color
+            </summary>
+             <remarks>
+             <para>Reference : </para>
+            <para><see href="https://fomantic-ui.com/elements/text.html">https://fomantic-ui.com/elements/text.html</see></para>
+            </remarks>
+        </member>
+        <member name="M:Fomantic.TextBase.OnInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.TextBase.OnAfterRender(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.TextBase.ConstractClasses">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.Size">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/text.html#size"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.TextBase.Color">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/text.html#text"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.TextBase.IsInverted">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/text.html#text"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.TextBase.IsUnselectable">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.IsTooltipHidden">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.IsTooltipBasicFormat">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.IsTooltipInverted">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.TooltipText">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.TooltipPosition">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.TooltipSize">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fomantic.SegmentDefaults">
+            <summary>
+            Contains default values for the segmant creation
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.ColorDefault">
+            <summary>
+            Default segment color assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.ContentAlignmentDefault">
+            <summary>
+            Default segment content alignment assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.ContentSpaceDefault">
+            <summary>
+            Default segment content space assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.EnterTransitionDefault">
+            <summary>
+            Default segment enter transition assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.EnterTransitionDurationDefault">
+            <summary>
+            Default segment enter transition duration assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.AttachingDefault">
+            <summary>
+            Default segment attaching value assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.IsCircularDefault">
+            <summary>
+            Default segment is circular value assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.IsCompactDefault">
+            <summary>
+            Default segment is compact value assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.IsDisabledDefault">
+            <summary>
+            Default segment is disabled value assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.IsInvertedDefault">
+            <summary>
+            Default segment is inverted value assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.IsLoadingDefault">
+            <summary>
+            Default segment is loading value assgined when creating any segment
+            </summary>
+        </member>
+        <member name="P:Fomantic.SegmentDefaults.IsPlaceholderDefault">
+            <summary>
+            Default segment is placeholder value assgined when creating any segment
+            </summary>
+        </member>
+        <member name="T:Fomantic.Segment">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Segment.#ctor">
+            <summary>
+            Create new Segment
+            </summary>
+        </member>
+        <member name="T:Fomantic.SegmentGroupBase">
+            <summary>
+            A Container group of segments can be formatted to appear together and could be nested
+            </summary>
+             <remarks>
+             <para>Reference : </para>
+            <para><see href="https://fomantic-ui.com/elements/segment.html#segments">https://fomantic-ui.com/elements/segment.html#segments</see></para>
+            </remarks>
+        </member>
+        <member name="M:Fomantic.SegmentGroupBase.OnInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.SegmentGroupBase.OnAfterRender(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.SegmentGroupBase.ConstractClasses">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.ParentGroup">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.SegmentStyle">
+            <inheritdoc/>
+             <remarks> 
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#raised-segments">https://fomantic-ui.com/elements/segment.html#raised-segments"></see></para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#stacked-segments">https://fomantic-ui.com/elements/segment.html#stacked-segments"></see></para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#piled-segments">https://fomantic-ui.com/elements/segment.html#piled-segments"></see></para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#segments">https://fomantic-ui.com/elements/segment.html#segments"></see></para>
+             </remarks>
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.StackDirection">
+            <summary>
+            Determine if the segment group should appear horizontally or Verticaly 
+            </summary>
+            <remarks> 
+            <para>A horizontal segment group can automatically stack on smaller screens</para>
+            <para>Reference : </para>
+            <para><see href="https://fomantic-ui.com/elements/segment.html#horizontal-segments"></see></para>
+            </remarks>
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.Children">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.ChildrenAnimator">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fomantic.Segments">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fomantic.ISegmentStyledFomanticComponent">
+            <summary>
+            Base interface for all Fomantic Blazor Segment Components that can be be in different segment style  
+            </summary>
+        </member>
+        <member name="F:Fomantic.ISegmentStyledFomanticComponent.RaisedClass">
+            <summary>
+            class given to make segment styled raised
+            </summary>
+        </member>
+        <member name="F:Fomantic.ISegmentStyledFomanticComponent.StackedClass">
+            <summary>
+            class given to make segment styled stacked
+            </summary>
+        </member>
+        <member name="F:Fomantic.ISegmentStyledFomanticComponent.TallStackedClass">
+            <summary>
+            class given to make segment styled tall stacked
+            </summary>
+        </member>
+        <member name="F:Fomantic.ISegmentStyledFomanticComponent.PiledClass">
+            <summary>
+            class given to make segment styled piled
+            </summary>
+        </member>
+        <member name="F:Fomantic.ISegmentStyledFomanticComponent.BasicClass">
+            <summary>
+            class given to make segment styled basic
+            </summary>
+        </member>
+        <member name="P:Fomantic.ISegmentStyledFomanticComponent.SegmentStyle">
+            <summary>
+            Determine how the segment should be styled
+            </summary>
+        </member>
+        <member name="M:Fomantic.ISegmentStyledFomanticComponent.ToClass(Fomantic.Blazor.UI.SegmentStyle)">
+            <summary>
+            Convert <see cref="T:Fomantic.Blazor.UI.SegmentStyle"/> to given class
+            </summary>
+            <param name="style">ContentSpace Value</param>
+            <returns>Given class from <paramref name="style"/> </returns>
+        </member>
+    </members>
+</doc>

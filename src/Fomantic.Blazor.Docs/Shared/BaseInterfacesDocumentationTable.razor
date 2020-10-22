@@ -1,0 +1,65 @@
+﻿@if (isLoading)
+{
+    <div class="ui active inverted dimmer">
+        <div class="ui text loader">Loading</div>
+    </div>
+
+}
+else
+{
+    <table class="ui celled definition table">
+        <thead>
+            <tr>
+                <th class="three wide"></th>
+                <th class="">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Docs)
+            {
+                <tr>
+                    <td><TypeViewer Type="@item.Item1"></TypeViewer></td>
+                    <td>@item.Item2 </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    [Parameter]
+    public Type Type { get; set; }
+    public List<Tuple<Type, string>> Docs { get; set; } = new List<Tuple<Type, string>>();
+    bool isLoading = true;
+    protected async override Task OnInitializedAsync()
+    {
+        if (Type != null)
+        {
+            Task.Run(async () =>
+            {
+                foreach (var item in Type.GetInterfaces().Where(d => d.FullName.StartsWith("Fomantic")))
+                {
+                    var currentdoc = await item.GetSummary();
+
+                    Docs.Add(new Tuple<Type, string>(item, currentdoc));
+                }
+
+
+                Docs = Docs.OrderBy(d => d.Item1.Name).ToList();
+
+                if (Type.BaseType != null && Type.BaseType.FullName.StartsWith("Fomantic"))
+                {
+                    //var currentdoc = "";
+                    var currentdoc = await Type.BaseType.GetSummary();
+                    Docs.Insert(0, new Tuple<Type, string>(Type.BaseType, currentdoc));
+                }
+
+                isLoading = false;
+                this.StateHasChanged();
+
+            });
+        }
+        await base.OnInitializedAsync();
+    }
+}

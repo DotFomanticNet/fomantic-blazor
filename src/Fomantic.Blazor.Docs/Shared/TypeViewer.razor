@@ -1,0 +1,169 @@
+﻿@inject IJSRuntime JsRuntime
+@if (Type.IsGenericType && Type.GetGenericTypeDefinition().Name == "Nullable`1")
+{
+    @GetInner(Type.GetGenericArguments()[0], isnullable: true)
+}
+else if (!string.IsNullOrEmpty(Text))
+{
+    <a @onclick="d=>Open(Type)">
+        <Text TooltipText="@Type?.FullName" Color="Color??UI.Color.Blue">@Text</Text>
+    </a>
+}
+else if (Type.IsGenericType)
+{
+    <Text>
+    <Text Size="Size.Small" Color="Color??UI.Color.Teal">@(Type.GetGenericTypeDefinition().Name.Substring(0, Type.GetGenericTypeDefinition().Name.LastIndexOf("`")) +"<")</Text>
+    </Text>
+    foreach (var item in Type.GetGenericArguments())
+    {
+        if (item != Type.GetGenericArguments().FirstOrDefault())
+        {
+            @(",")
+        }
+        @GetInner(item, Size.Small);
+    }
+    <Text>
+    <Text Size="Size.Small" Color="Color??UI.Color.Teal">@(">")</Text>
+    </Text>
+}
+else
+{
+    @GetInner(Type, isnullable: false)
+}
+<div @ref="modal" class="ui longer fullscreen modal">
+    <i class="close icon"></i>
+    <div class="header">
+        @SubType?.Name @(SubType?.IsEnum??false? "Enum" : (SubType?.IsInterface ?? false ? "Interface": (SubType?.IsDelegate() ?? false ? "Delegate" : "Class")))
+        <div class="sub header"><Text Size="Size.Small" Color="UI.Color.Grey">@SubType?.FullName</Text></div>
+    </div>
+    <div class="content">
+        @if (SubType != null)
+        {
+            if (SubType.IsEnum)
+            {
+                <EnumPropertiesDocumentationTable Type="SubType"></EnumPropertiesDocumentationTable>
+            }
+            if (SubType.IsDelegate())
+            {
+                <DelegateDocumentationTable Type="SubType"></DelegateDocumentationTable>
+            }
+            else
+            {
+                <PropertiesDocumentationTable Type="SubType"></PropertiesDocumentationTable>
+            }
+
+        }
+    </div>
+    <div class="actions">
+        <div @onclick="d=>Cancel()" class="ui button">Done</div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Type Type { get; set; }
+
+    [Parameter]
+    public string Text { get; set; }
+
+    [Parameter]
+    public Color? Color { get; set; }
+
+    public Type SubType { get; set; }
+
+    ElementReference modal;
+    IJSObjectReference jqModal;
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            jqModal = await JsRuntime.InvokeAsync<IJSObjectReference>("$", modal);
+            await jqModal.InvokeVoidAsync("modal", new { observeChanges = true });
+
+        }
+    }
+
+    async void Cancel()
+    {
+        SubType = null;
+        await jqModal.InvokeVoidAsync("modal", "hide");
+    }
+    public async void Open(Type type)
+    {
+        SubType = type;
+        await jqModal.InvokeVoidAsync("modal", "show");
+    }
+
+
+    RenderFragment GetInner(Type thistype, Size size = Size.Medium, bool isnullable = false)
+    {
+        return __builder =>
+        {
+        @if (thistype == typeof(int))
+            {
+            <Text>
+            <Text Size="size" Color="Color??UI.Color.Blue">int@(isnullable?"?":"")</Text>
+            </Text>
+            }
+            else if (thistype == typeof(string))
+            {
+            <Text>
+            <Text Size="size" Color="Color??UI.Color.Blue">string</Text>
+            </Text>
+            }
+            else if (thistype == typeof(bool))
+            {
+            <Text>
+            <Text Size="size" Color="Color??UI.Color.Blue">bool@(isnullable?"?":"")</Text>
+            </Text>
+            }
+            else if (thistype == typeof(double))
+            {
+            <Text>
+            <Text Size="size" Color="Color??UI.Color.Blue">double@(isnullable?"?":"")</Text>
+            </Text>
+            }
+            else if (thistype == typeof(float))
+            {
+            <Text>
+            <Text Size="size" Color="Color??UI.Color.Blue">float@(isnullable?"?":"")</Text>
+            </Text>
+            }
+            else if (thistype.Name.ToLower() == "object")
+            {
+            <Text>
+            <Text Size="size" Color="Color??UI.Color.Blue">object</Text>
+            </Text>
+            }
+            else if (thistype.IsEnum)
+            {
+            <Text>
+            <a @onclick="d=>Open(thistype)">
+                <Text Size="size" TooltipText="@thistype.FullName" Color="Color??UI.Color.Blue">@thistype.Name@(isnullable?"?":"")</Text>
+            </a>
+            </Text>
+            }
+            else
+            {
+
+            @if (!thistype.FullName.StartsWith("Fomantic"))
+                {
+                <Text>
+
+                <Text Size="size" TooltipText="@thistype.FullName" Color="Color??UI.Color.Black">@(string.IsNullOrEmpty(Text)? thistype.Name :Text)</Text>
+                </Text>
+                }
+                else
+                {
+                <Text>
+                <a @onclick="d=>Open(thistype)">
+                    <Text Size="size" TooltipText="@thistype.FullName" Color="Color??UI.Color.Violet">@(string.IsNullOrEmpty(Text)? thistype.Name :Text)</Text>
+                </a>
+                </Text>
+                }
+            }
+
+        };
+    }
+}

@@ -1,0 +1,66 @@
+﻿@using System.Reflection
+<div>
+    @if (isLoading)
+    {
+        <div class="ui active inverted dimmer">
+            <div class="ui text loader">Loading</div>
+        </div>
+
+    }
+    else
+    {
+        <table class="ui celled definition table">
+            <thead>
+                <tr>
+                    <th class="three wide"></th>
+                    <th class="four wide">Paramter Type</th>
+                    <th class="">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Docs)
+                {
+                    <tr>
+                        <td>@item.Item1</td>
+                        <td><TypeViewer Type="@item.Item2"></TypeViewer> </td>
+                        <td>@item.Item3</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    bool isLoading = true;
+
+    [Parameter]
+    public Type Type { get; set; }
+    public List<Tuple<string, Type, string>> Docs { get; set; } = new List<Tuple<string, Type, string>>();
+
+    protected async override Task OnInitializedAsync()
+    {
+
+        await base.OnInitializedAsync();
+        Task.Run(async () =>
+        {
+            if (Type != null)
+            {
+                MethodInfo method = Type.GetMethod("Invoke");
+            //Console.WriteLine(method.ReturnType.Name + " (ret)");
+            foreach (ParameterInfo param in method.GetParameters())
+                {
+                    Console.WriteLine("{0} {1}", param.ParameterType.Name, param.Name);
+                    var desc = "";
+                    Docs.Add(new Tuple<string, Type, string>(param.Name, param.ParameterType, desc));
+                }
+
+                isLoading = false;
+                this.StateHasChanged();
+            }
+        });
+
+    }
+}

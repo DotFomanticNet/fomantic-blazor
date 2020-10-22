@@ -1,0 +1,47 @@
+﻿@namespace Fomantic
+@using Fomantic.Blazor.UI
+@inherits HeaderBase
+
+
+@if (this.Type == HeaderType.Content)
+{
+    <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+        @ChildContent
+    </div>
+}
+@if (this.Type == HeaderType.H1)
+{
+    <h1 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+        @ChildContent
+    </h1>
+}
+@if (this.Type == HeaderType.H2)
+{
+    <h2 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+        @ChildContent
+    </h2>
+}
+@if (this.Type == HeaderType.H3)
+{
+    <h3 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+        @ChildContent
+    </h3>
+}
+@if (this.Type == HeaderType.H4)
+{
+    <h4 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+        @ChildContent
+    </h4>
+}
+@if (this.Type == HeaderType.H5)
+{
+    <h5 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+        @ChildContent
+    </h5>
+}
+@if (this.Type == HeaderType.H6)
+{
+    <h6 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+        @ChildContent
+    </h6>
+}

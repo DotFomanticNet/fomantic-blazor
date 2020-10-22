@@ -1,0 +1,1579 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fomantic.Blazor.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Fomantic.Blazor.UI.AttachingDirection">
+            <summary>
+            Mark the attachable element type
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.AttachingDirection.Middle">
+            <summary>
+            Mark this  copmonent as attachable in its group
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.AttachingDirection.Top">
+            <summary>
+            Mark this as top/first copmonent in attachable group
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.AttachingDirection.Bottom">
+            <summary>
+            Mark this as bottom/last copmonent in attachable group
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.Color">
+            <summary>
+             Fomantic UI twelve named colors.
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Primary">
+            <summary>
+            Default Primary Color 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Secondary">
+            <summary>
+            Default Secondary Color 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Info">
+            <summary>
+            Default Info Color 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Success">
+            <summary>
+            Default Success Color 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Warning">
+            <summary>
+            Default Warning Color 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Error">
+            <summary>
+            Default Error Color 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Red">
+            <summary>
+            Default theme red Color (#DB2828)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Orange">
+            <summary>
+            Default theme orange Color (#FE9A76)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Yellow">
+            <summary>
+            Default theme yellow Color (#FFD700)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Olive">
+            <summary>
+            Default theme olive Color (#32CD32)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Green">
+            <summary>
+            Default theme green Color (#016936)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Teal">
+            <summary>
+            Default theme teal Color (#008080)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Blue">
+            <summary>
+            Default theme blue Color (#0E6EB8)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Violet">
+            <summary>
+            Default theme violet Color (#EE82EE)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Purple">
+            <summary>
+            Default theme purple Color (#B413EC)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Pink">
+            <summary>
+            Default theme pink Color (#FF1493)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Brown">
+            <summary>
+            Default  theme brown Color (#A52A2A)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Grey">
+            <summary>
+            Default theme grey Color (#A0A0A0)
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Color.Black">
+            <summary>
+            Default theme black Color (#000000)
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ContentAlignment">
+            <summary>
+             Fomantic UI content alignment
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentAlignment.Left">
+            <summary>
+            Align content to left
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentAlignment.Right">
+            <summary>
+            Align content to right
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentAlignment.Center">
+            <summary>
+            Align content in the center
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentAlignment.justified">
+            <summary>
+            Align content to be justified
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ContentSpace">
+            <summary>
+            Contol content padding
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentSpace.Padded">
+            <summary>
+            Increase padding around content 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentSpace.VeryPadded">
+            <summary>
+            More increase padding around content 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentSpace.Fitted">
+            <summary>
+            remove padding around content 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentSpace.HorizontallyFitted">
+            <summary>
+            remove horizontal padding around content 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentSpace.VerticallyFitted">
+            <summary>
+            remove vertical padding around content 
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.Direction">
+            <summary>
+            Direction
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Direction.Vertical">
+            <summary>
+             Vertical Direction
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Direction.Horizontal">
+            <summary>
+            Horizontal Direction
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FloatAlignment">
+            <summary>
+            Control the float in the container
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.FloatAlignment.Left">
+            <summary>
+            Float to left in the container 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.FloatAlignment.Right">
+            <summary>
+            Float to right in the container 
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IconList">
+            <summary>
+            List of available icon
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.Size">
+            <summary>
+            Diffrent sizes defined by Fomantic
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Size.Medium">
+            <summary>
+            Medium defined by Fomantic
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Size.Mini">
+            <summary>
+            Mini the Smalest size  defined by Fomantic
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Size.Tiny">
+            <summary>
+            Tiny defined by Fomantic
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Size.Small">
+            <summary>
+            Small defined by Fomantic
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Size.Large">
+            <summary>
+            Large defined by Fomantic
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Size.Big">
+            <summary>
+            Big defined by Fomantic
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Size.Huge">
+            <summary>
+            Huge defined by Fomantic
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Size.Massive">
+            <summary>
+            Massive defined by Fomantic
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.StaticAnimation">
+            <summary>
+            Type of animation that used to draw attention to elements/components
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.StaticAnimation.Jiggle">
+            <summary>
+            Animation makes elements/components jiggle to draw attention to its shape
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#jiggle"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.StaticAnimation.Flash">
+            <summary>
+            Animation makes elements/components flash to draw attention to itself
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#flash"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.StaticAnimation.Shake">
+            <summary>
+            Animation makes elements/components shake to draw attention to its position
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#shake"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.StaticAnimation.Pulse">
+            <summary>
+            Animation makes elements/components pulse to draw attention to its visibility
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#pulse"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.StaticAnimation.Tada">
+            <summary>
+            Animation makes elements/components give user positive feedback for an action
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#tada"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.StaticAnimation.Bounce">
+            <summary>
+            Animation makes elements/components bounce to politely remind you of itself
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#bounce"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.StaticAnimation.Glow">
+            <summary>
+            Animation makes elements/components glow to show its position in a page.
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#glow"></see></para>
+            </remarks>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.TransitionAnimation">
+            <summary>
+            Type of animation that used to hide show elements/components
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.Fade">
+            <summary>
+            Animation makes elements/components fade into or out of view descending and ascending
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#fade"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.FadeUp">
+            <summary>
+            Animation makes elements/components fade into or out of view descending and ascending
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#fade"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.FadeDown">
+            <summary>
+            Animation makes elements/components fade into or out of view descending and ascending
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#fade"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.FadeLeft">
+            <summary>
+            Animation makes elements/components fade into or out of view descending and ascending
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#fade"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.FadeRight">
+            <summary>
+            Animation makes elements/components fade into or out of view descending and ascending
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#fade"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.Scale">
+            <summary>
+            Animation makes  elements/components scale into or out of view
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#scale"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.Zoom">
+            <summary>
+            Animation makes elements/components zoom into view from far away
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#zoom"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.HorizontalFlip">
+            <summary>
+            Animation makes elements/components flip into or out of view vertically or horizontally
+            </summary>    
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#flip"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.VerticalFlip">
+            <summary>
+            Animation makes elements/components flip into or out of view vertically or horizontally
+            </summary>    
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#flip"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.Drop">
+            <summary>
+            Animation makes elements/components drop into view from above
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#drop"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.FlyUp">
+            <summary>
+            Animation makes elements/components fly in from off canvas
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#fly"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.FlyDown">
+            <summary>
+            Animation makes elements/components fly in from off canvas
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#fly"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.FlyRight">
+            <summary>
+            Animation makes elements/components fly in from off canvas
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#fly"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.FlyLeft">
+            <summary>
+            Animation makes elements/components fly in from off canvas
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#fly"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.SwingUp">
+            <summary>
+            Animation makes elements/components swing into view
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#swing"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.SwingDown">
+            <summary>
+            Animation makes elements/components swing into view
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#swing"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.SwingRight">
+            <summary>
+            Animation makes elements/components swing into view
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#swing"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.SwingLeft">
+            <summary>
+            Animation makes elements/components swing into view
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#swing"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.Browse">
+            <summary>
+            Animation makes elements/components appear and disappear as part of a series
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#browse"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.BrowseRight">
+            <summary>
+            Animation makes elements/components appear and disappear as part of a series
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#browse"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.SlideUp">
+            <summary>
+            Animation makes elements/components appear to slide in from above or below
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#slide"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.SlideDown">
+            <summary>
+            Animation makes elements/components appear to slide in from above or below
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#slide"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.SlideRight">
+            <summary>
+            Animation makes elements/components appear to slide in from above or below
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#slide"></see></para>
+            </remarks>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TransitionAnimation.SlideLeft">
+            <summary>
+            Animation makes elements/components appear to slide in from above or below
+            </summary>
+            <remarks> 
+            <para>References : </para>
+            <para><see href="https://fomantic-ui.com/modules/transition.html#slide"></see></para>
+            </remarks>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ElementClassChanged">
+            <summary>
+            Delegate of Element Class Change Event
+            </summary>
+            <param name="oldClass">The old value of css class</param>
+            <param name="currentClass">The new value of css class</param>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IViewPortCalculation">
+            <summary>
+            Contains all element viewport calculation
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.Bottom">
+            <summary>
+            css bottom value of the parent element of the component 
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.BottomPassed">
+            <summary>
+            Is  parent element of the component bottom not visibile on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.BottomVisible">
+            <summary>
+            Is parent element of the component bottom visibile on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.Fits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.Height">
+            <summary>
+            Height value of the parent element of the component 
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.OffScreen">
+            <summary>
+            Is the parent element of the component not visibile on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.OnScreen">
+            <summary>
+            Is the parent element of the component visibile on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.Passing">
+            <summary>
+            Is the parent element of the component passing on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.PercentagePassed">
+            <summary>
+            A distance from the top of parent element of the component content has been passed as percentage
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.PixelsPassed">
+            <summary>
+            A distance from the top of parent element of the component content has been passed as pixels
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.TopVisible">
+            <summary>
+            Is parent element of the component top visibile on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.TopPassed">
+            <summary>
+             Is parent element of the component top passed on the viewport
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.Top">
+            <summary>
+             css top value of the parent element of the component 
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.Width">
+            <summary>
+             Width value of the parent element of the component 
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ViewportVisibilityUpdate">
+            <summary>
+            Delegate of Element Viewport Visibility Change Event
+            </summary>
+            <param name="eventArgs"></param>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ViewPortEventArgs">
+            <summary>
+            Element Viewport Visibility Change Event Arguments 
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewPortEventArgs.#ctor(Fomantic.Blazor.UI.IViewPortCalculation)">
+            <summary>
+            Creating new Element Viewport Visibility Change Event Arguments 
+            </summary>
+            <param name="calculation">The visibility calculations after the change</param>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortEventArgs.Calculation">
+            <summary>
+            The visibility calculations after the change
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticAnimator">
+            <summary>
+            Base Interface for a Fomantic Animators
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.ScaleAnimationName">
+            <summary>
+            Given animation name to scale
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.ZoomAnimationName">
+            <summary>
+            Given animation name to zoom
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeAnimationName">
+            <summary>
+            Given animation name to fade
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeUpAnimationName">
+            <summary>
+            Given animation name to fade up
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeDownAnimationName">
+            <summary>
+            Given animation name to fade down
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeLeftAnimationName">
+            <summary>
+            Given animation name to fade left
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeRightAnimationName">
+            <summary>
+            Given animation name to fade right
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.HorizontalFlipAnimationName">
+            <summary>
+            Given animation name to horizontal flip
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.VerticalFlipAnimationName">
+            <summary>
+            Given animation name to vertical flip
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.DropAnimationName">
+            <summary>
+            Given animation name to drop
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyUpAnimationName">
+            <summary>
+            Given animation name to fly up
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyDownAnimationName">
+            <summary>
+            Given animation name to fly down
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyRightAnimationName">
+            <summary>
+            Given animation name to fly right
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyLeftAnimationName">
+            <summary>
+            Given animation name to swing left
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingUpAnimationName">
+            <summary>
+            Given animation name to swing up
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingDownAnimationName">
+            <summary>
+            Given animation name to swing down
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingRightAnimationName">
+            <summary>
+            Given animation name to swing right
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingLeftAnimationName">
+            <summary>
+            Given animation name to swing left
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.BrowseAnimationName">
+            <summary>
+            Given animation name to browse
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.BrowseRightAnimationName">
+            <summary>
+            Given animation name to browse right
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideUpAnimationName">
+            <summary>
+            Given animation name to slide up
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideDownAnimationName">
+            <summary>
+            Given animation name to slide down
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideRightAnimationName">
+            <summary>
+            Given animation name to slide right
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideLeftAnimationName">
+            <summary>
+            Given animation name to slide left
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.ToClass(Fomantic.Blazor.UI.TransitionAnimation)">
+            <summary>
+            Convert <see cref="T:Fomantic.Blazor.UI.TransitionAnimation"/> to given animation name
+            </summary>
+            <param name="animation">Animation value</param>
+            <returns> given class from <paramref name="animation"/> </returns>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.JiggleAnimationName">
+            <summary>
+            Given animation name to jiggle
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlashAnimationName">
+            <summary>
+            Given animation name to flash
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.ShakeAnimationName">
+            <summary>
+            Given animation name to shake
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.PulseAnimationName">
+            <summary>
+            Given animation name to pulse
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.BounceAnimationName">
+            <summary>
+            Given animation name to bounce
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.TadaAnimationName">
+            <summary>
+            Given animation name to tada
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.GlowAnimationName">
+            <summary>
+            Given animation name to glow
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.ToClass(Fomantic.Blazor.UI.StaticAnimation)">
+            <summary>
+            Convert <see cref="T:Fomantic.Blazor.UI.StaticAnimation"/> to given animation name
+            </summary>
+            <param name="animation">animation value</param>
+            <returns> given class from <paramref name="animation"/> </returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
+            <summary>
+            Animate the target once with a static animation into a task and it will be done once animation done
+            </summary>
+            <param name="animation">A static animation to apply in the target</param>
+            <param name="duration">The duration in MS of the animation</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
+            <summary>
+            Animate the target with a sequence of static animations into a task and it will be done all animation done
+            </summary>
+            <param name="animations">Tuples contain each static animation  to apply in the target and its duration</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <summary>
+            Animate the target once with a static animation into a task and it will be done once animation done , Once animation done element will be transit into show or hiddin  
+            </summary>
+            <param name="animation">A transition animation to apply on the target</param>
+            <param name="duration">The duration in MS of the animation</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            <summary>
+            Animate the target with a sequence of transition animations into a task and it will be done all animation done , Once animation done element will be transit into show or hiddin  
+            </summary>
+            <param name="animations">Tuples contain each transition animation to apply on the target and its duration</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate``1(System.Int32,System.Tuple{``0,System.Int32}[])">
+            <summary>
+            Animate the target with a sequence of any animations into a task and it will be done all animation done , Once animation done element will be transit into show or hiddin  
+            </summary>
+            <param name="animations">Tuples contain each transition animation to apply on the target and its duration</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
+            <summary>
+            Animate the target once with a static animation without waiting to be ended 
+            </summary>
+            <param name="animation">A transition animation to apply on the target</param>
+            <param name="duration">The duration in MS of the animation</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
+            <summary>
+            Animate the target with a sequence of static animations without waiting to be ended 
+            </summary>
+            <param name="animations">Tuples contain each static animation  on apply in the target and its duration</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <summary>
+            Animate the target once with a static animation  without waiting to be ended 
+            </summary>
+            <param name="animation">A transition animation to apply on the target</param>
+            <param name="duration">The duration in MS of the animation</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            <summary>
+            Animate the target with a sequence of transition animations without waiting to be ended 
+            </summary>
+            <param name="animations">Tuples contain each transition animation to apply on the target and its duration</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimate``1(System.Int32,System.Tuple{``0,System.Int32}[])">
+            <summary>
+            Animate the target with a sequence of any animations without waiting to be ended 
+            </summary>
+            <param name="animations">Tuples contain a list of any animation to apply on the target and its duration</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <summary>
+            Animate the target once with a static animation into a task and it will be done once animation done , Once animation done element will be showen 
+            </summary>
+            <param name="animation">A transition animation to apply on the target</param>
+            <param name="duration">The duration in MS of the animation</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <summary>
+            Animate the target once with a static animation without waiting to be ended, Once animation done element will be showen 
+            </summary>
+            <param name="animation">A transition animation to apply on the target</param>
+            <param name="duration">The duration in MS of the animation</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.AnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <summary>
+            Animate the target once with a static animation into a task and it will be done once animation done , Once animation done element will be hiddin 
+            </summary>
+            <param name="animation">A transition animation to apply on the target</param>
+            <param name="duration">The duration in MS of the animation</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <summary>
+            Animate the target once with a static animation into a task and it will be done once animation done , Once animation done element will be hiddin 
+            </summary>
+            <param name="animation">A transition animation to apply on the target</param>
+            <param name="duration">The duration in MS of the animation</param>
+            <param name="interval">Interval in MS between each elements transition</param>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.StopCurrentAnimation">
+            <summary>
+            Stop current animation and preserve queue
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.StopAllAnimation">
+            <summary>
+            Stop current animation and queued animations
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponent">
+            <summary>
+            Base interface for all Fomantic Blazor Components
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponent.JsRuntime">
+            <summary>
+            Js runtime object to run javascript interops functions
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponent.RootElement">
+            <summary>
+            Root element reference
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponent.Attributes">
+            <summary>
+            All other Html attributes on the element
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponent.Extensions">
+            <summary>
+            List Of Fomantic Component Extensions
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentExtension">
+            <summary>
+            Base interface for all Fomantic Component Extensions
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentExtension.OnAfterRender(System.Boolean,Microsoft.AspNetCore.Components.ComponentBase)">
+            <summary>
+             Method invoked after each time the component has been rendered.
+            </summary>
+            <param name="firstRender">  Set to true if this is the first time Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean) has been invoked on this component instance; otherwise false.</param>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithAlignment">
+            <summary>
+            Base interface for all Fomantic Blazor Components that can be align to its parent 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithAlignment.LeftFloatedClass">
+            <summary>
+            class given to Left Float
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithAlignment.RightFloatedClass">
+            <summary>
+            class given to Right Float
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithAlignment.Alignment">
+            <summary>
+            Determine how the component should align to its parent 
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithAlignment.ToClass(System.Nullable{Fomantic.Blazor.UI.FloatAlignment})">
+            <summary>
+            Convert <see cref="T:Fomantic.Blazor.UI.FloatAlignment"/> to given class
+            </summary>
+            <param name="alignment">Alignment Value</param>
+            <returns> given class from <paramref name="alignment"/> </returns>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithClass">
+            <summary>
+            Base interface for all Fomantic Blazor Components that has class attribute
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithClass.CssClasses">
+            <summary>
+            List of main element class
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithClass.CssClass">
+            <summary>
+            The value of main element class (this should be used to bind on ui)
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithClass.OnClassChanged">
+            <summary>
+            Occures when Css Class Changed
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IFomanticComponentWithClass.OnClassChangedEvent">
+            <summary>
+            Occures when Css Class Changed
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithColor">
+            <summary>
+            Base interface for all Fomantic Blazor Components that can be colored based on Fomantic standard colors 
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithColor.Color">
+            <summary>
+            Determine how the component should be colored
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithColor.ToClass(System.Nullable{Fomantic.Blazor.UI.Color})">
+            <summary>
+            Convert <see cref="T:Fomantic.Blazor.UI.Color"/> to given class
+            </summary>
+            <param name="color">Color Value</param>
+            <returns>Given class from <paramref name="color"/> </returns>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment">
+            <summary>
+            Base interface for all fomantic component  align thier content
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.RightAlignedClass">
+            <summary>
+            class given to make component right aligned
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.LeftAlignedClass">
+            <summary>
+            class given to make component left aligned
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.CenterAlignedClass">
+            <summary>
+            class given to make component center aligned
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.JustifiedClass">
+            <summary>
+            class given to make component justified
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.ContentAlignment">
+            <summary>
+            Determine how the component should  align its content
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentAlignment})">
+            <summary>
+            Convert <see cref="T:Fomantic.Blazor.UI.ContentAlignment"/> to given class
+            </summary>
+            <param name="contentAlignment">ContentSpace Value</param>
+            <returns>Given class from <paramref name="contentAlignment"/> </returns>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing">
+            <summary>
+            Base interface for all fomantic component that has space around its content 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.PaddedClass">
+            <summary>
+            class given to make component content padded 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.VeryPaddedClass">
+            <summary>
+            class given to make component content very padded 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.FittedClass">
+            <summary>
+            class given to remove component content padding
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.HorizontallyFittedClass">
+            <summary>
+            class given to remove component content horizontal padding only
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.VerticallyFittedClass">
+            <summary>
+            class given to remove component content vertical padding only
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.ContentSpace">
+            <summary>
+            Determine the space between  the component and its content
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentSpace})">
+            <summary>
+            Convert <see cref="T:Fomantic.Blazor.UI.ContentSpace"/> to given class
+            </summary>
+            <param name="contentSpace">ContentSpace Value</param>
+            <returns>Given class from <paramref name="contentSpace"/> </returns>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithEnterTransition">
+            <summary>
+            Base interface for all Fomantic Blazor Components that has enter and exit transition
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithEnterTransition.EnterTransition">
+            <summary>
+            Transition used to show the component after the page initilized 
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithEnterTransition.EnterTransitionDuration">
+            <summary>
+            the Duration of transition used to show the component after the page initilized 
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithJQuery">
+            <summary>
+            Base interface for all fomantic component that can interop with jquery
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithJQuery.JQueryElementRef">
+            <summary>
+            JQuery JS Object Reference , Used to call jquery methods
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithSize">
+            <summary>
+            Base interface for all fomantic component that can have many sizes
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.MiniClass">
+            <summary>
+            Determine if the component should be mini
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.TinyClass">
+            <summary>
+            Determine if the component should be tiny
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.SmallClass">
+            <summary>
+            Determine if the component should be small
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.MediumClass">
+            <summary>
+            Determine if the component should be medium
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.LargeClass">
+            <summary>
+            Determine if the component should be large
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.BigClass">
+            <summary>
+            Determine if the component should be big
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.HugeClass">
+            <summary>
+            Determine if the component should be huge
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.MassiveClass">
+            <summary>
+            Determine if the component should be massive
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithSize.Size">
+            <summary>
+            Determine the size of the component
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithSize.ToClass(Fomantic.Blazor.UI.Size)">
+            <summary>
+            Convert <see cref="T:Fomantic.Blazor.UI.Size"/> to given class
+            </summary>
+            <param name="size">Size Value</param>
+            <returns>Given class from <paramref name="size"/> </returns>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithTooltip">
+            <summary>
+            Base interface for all Fomantic Blazor Components that could have a tooltip
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithTooltip.TopLeftClass">
+            <summary>
+            Determine if the tooltop should be on top Left of the component
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithTooltip.ToClass(Fomantic.Blazor.UI.TooltipPosition)">
+            <summary>
+            Convert <see cref="T:Fomantic.Blazor.UI.TooltipPosition"/> to given class
+            </summary>
+            <param name="tooltipPosition">tooltip Position Value</param>
+            <returns>Given class from <paramref name="tooltipPosition"/> </returns>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticGroupComponent`1">
+            <summary>
+            Base interface for all fomantic component that has children component
+            </summary>
+            <typeparam name="TChild">The parent component type</typeparam>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticGroupComponent`1.Children">
+            <summary>
+            List of Children <typeparamref name="TChild"/>
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticGroupComponentChild`1">
+            <summary>
+            Base interface for all fomantic component that has parent component
+            </summary>
+            <typeparam name="TParent">The parent component type</typeparam>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticGroupComponentChild`1.ParentGroup">
+            <summary>
+            Parent Group
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticGroupComponentWithAnimatableChildren`1">
+            <summary>
+            Base interface for all fomantic component that has animatable children component
+            </summary>
+            <typeparam name="TChild">The parent component type</typeparam>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticGroupComponentWithAnimatableChildren`1.ChildrenAnimator">
+            <summary>
+            Animator responsible for animating the children components
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IVisibleFomanticComponent">
+            <summary>
+            Base interface for all Fomantic Blazor Components that Visible within view port
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IVisibleFomanticComponent.HiddenClass">
+            <summary>
+            class given to the component to invert its color
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.Animator">
+            <summary>
+            Animator responsible for animating the component
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IVisibleFomanticComponent.Show">
+            <summary>
+            Show the entire component if hidden
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IVisibleFomanticComponent.Hide">
+            <summary>
+            Hide the entire component if showen
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.IsHidden">
+            <summary>
+            Determinate if the component hidden or not
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IVisibleFomanticComponent.ToggleVisibility">
+            <summary>
+            Toggle the entire component between shown or hiddin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnViewportVisibilityUpdated">
+            <summary>
+            Occurs each time component patent element Viewport Visibility calculations are updated
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnViewportVisibilityUpdatedEvent">
+            <summary>
+            Occurs each time component patent element Viewport Visibility calculations are updated
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibilityUpdated">
+            <summary>
+            Occurs each time when component patent element's top edge has passed bottom of screen
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibilityUpdatedEvent">
+            <summary>
+            Occurs each time when component patent element's top edge has passed bottom of screen
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedUpdated">
+            <summary>
+             Occurs each time when component patent element's top edge has passed top of the screen
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedUpdatedEvent">
+            <summary>
+             Occurs each time when component patent element's top edge has passed top of the screen
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleUpdated">
+            <summary>
+             Occurs each time when component patent element's bottom edge has passed bottom of screen
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleUpdatedEvent">
+            <summary>
+             Occurs each time when component patent element's bottom edge has passed bottom of screen
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingUpdated">
+            <summary>
+             Occurs when Any part of an component patent element is visible on screen
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingUpdatedEvent">
+            <summary>
+             Occurs when Any part of an component patent element is visible on screen
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedUpdated">
+            <summary>
+             Occurs each time when component patent element's bottom edge has passed top of screen
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedUpdatedEvent">
+            <summary>
+             Occurs each time when component patent element's bottom edge has passed top of screen
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibleReverseUpdated">
+            <summary>
+             Occurs each time when component patent element's top edge has not passed bottom of screen
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibleReverseUpdatedEvent">
+            <summary>
+             Occurs each time when component patent element's top edge has not passed bottom of screen
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedReverseUpdated">
+            <summary>
+             Occurs each time when component patent element's top edge has not passed top of the screen
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedReverseUpdatedEvent">
+            <summary>
+             Occurs each time when component patent element's top edge has not passed top of the screen
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleReverseUpdated">
+            <summary>
+             Occurs each time when component patent element's bottom edge has not passed bottom of screen
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleReverseUpdatedEvent">
+            <summary>
+             Occurs each time when component patent element's bottom edge has not passed bottom of screen
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingReverseUpdated">
+            <summary>
+             Occurs each time when component patent element's top has not passed top of screen but bottom has
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingReverseUpdatedEvent">
+            <summary>
+             Occurs each time when component patent element's top has not passed top of screen but bottom has
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedReverseUpdated">
+            <summary>
+             Occurs each time when component patent element's bottom edge has not passed top of screen
+            </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedReverseUpdatedEvent">
+            <summary>
+             Occurs each time when component patent element's bottom edge has not passed top of screen
+            </summary>
+        </member>
+        <member name="T:Fomantic.IAttachableFomanticComponent">
+            <summary>
+            Base interface for all fomantic component can be attached to other content on a page
+            </summary>
+        </member>
+        <member name="F:Fomantic.IAttachableFomanticComponent.AttachedClass">
+            <summary>
+            class given to attached
+            </summary>
+        </member>
+        <member name="F:Fomantic.IAttachableFomanticComponent.TopAttachedClass">
+            <summary>
+            class given to attached
+            </summary>
+        </member>
+        <member name="F:Fomantic.IAttachableFomanticComponent.BottomAttachedClass">
+            <summary>
+            class given to attached
+            </summary>
+        </member>
+        <member name="P:Fomantic.IAttachableFomanticComponent.Attaching">
+            <summary>
+            Determine if the comonent should be attached to other content on a page
+            </summary>
+        </member>
+        <member name="M:Fomantic.IAttachableFomanticComponent.ToClass(System.Nullable{Fomantic.Blazor.UI.AttachingDirection})">
+            <summary>
+            Convert <see cref="T:Fomantic.Blazor.UI.AttachingDirection"/> to given class
+            </summary>
+            <param name="attachingDirection">attaching direction Value</param>
+            <returns> given class from <paramref name="attachingDirection"/> </returns>
+        </member>
+        <member name="T:Fomantic.IFomanticComponentCanBeDisabled">
+            <summary>
+            Base interface for all fomantic component can be disabled
+            </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentCanBeDisabled.DisabledClass">
+            <summary>
+            class given to disable component
+            </summary>
+        </member>
+        <member name="P:Fomantic.IFomanticComponentCanBeDisabled.IsDisabled">
+            <summary>
+            Determine if the component should be disabled or not
+            </summary>
+        </member>
+        <member name="T:Fomantic.IFomanticComponentCanBeUnselectable">
+            <summary>
+            Base interface for all fomantic component can be disabled
+            </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentCanBeUnselectable.UnselectableClass">
+            <summary>
+            class given to the component to make content text unselectable
+            </summary>
+        </member>
+        <member name="P:Fomantic.IFomanticComponentCanBeUnselectable.IsUnselectable">
+            <summary>
+            Determine if the content text should be selectable or not
+            </summary>
+        </member>
+        <member name="T:Fomantic.IFomanticComponentWithCircularStyle">
+            <summary>
+            Base interface for all fomantic component can be circular 
+            </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithCircularStyle.CircularClass">
+            <summary>
+            class given to make component circular
+            </summary>
+        </member>
+        <member name="P:Fomantic.IFomanticComponentWithCircularStyle.IsCircular">
+            <summary>
+            Determine if the component should be circular or not
+            </summary>
+        </member>
+        <member name="T:Fomantic.IFomanticComponentWithCompactStyle">
+            <summary>
+            Base interface for all fomantic component can be compact 
+            </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithCompactStyle.CompactClass">
+            <summary>
+            class given to make component compact
+            </summary>
+        </member>
+        <member name="P:Fomantic.IFomanticComponentWithCompactStyle.IsCompact">
+            <summary>
+            Determine if the component should be compact or not
+            </summary>
+        </member>
+        <member name="T:Fomantic.IFomanticComponentWithDividingStyle">
+            <summary>
+            Base interface for all fomantic component that can formatted to divide itself from the content below it
+            </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithDividingStyle.DividingClass">
+            <summary>
+            class given to the component to divide itself from the content below it
+            </summary>
+        </member>
+        <member name="P:Fomantic.IFomanticComponentWithDividingStyle.IsDividing">
+            <summary>
+            Determine if the component should formatted to divide itself from the content below it or not
+            </summary>
+        </member>
+        <member name="T:Fomantic.IFomanticComponentWithFittedStyle">
+            <summary>
+            Base interface for all fomantic component can be fitted 
+            </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithFittedStyle.FittedClass">
+            <summary>
+            class given to make component fitted
+            </summary>
+        </member>
+        <member name="P:Fomantic.IFomanticComponentWithFittedStyle.IsFitted">
+            <summary>
+            Determine if the component should be fitted without any space to the left or right of it.
+            </summary>
+        </member>
+        <member name="T:Fomantic.IFomanticComponentWithInvertedStyle">
+            <summary>
+            Base interface for all fomantic component that can invert its color
+            </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithInvertedStyle.InvertedClass">
+            <summary>
+            class given to the component to invert its color
+            </summary>
+        </member>
+        <member name="P:Fomantic.IFomanticComponentWithInvertedStyle.IsInverted">
+            <summary>
+            Determine if the component should has inverted color or not
+            </summary>
+        </member>
+        <member name="T:Fomantic.IFomanticComponentWithLoadingIndicator">
+            <summary>
+            Base interface for all fomantic component that can have loading indecator in it 
+            </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithLoadingIndicator.LoadingClass">
+            <summary>
+            class given to make component appear as loading
+            </summary>
+        </member>
+        <member name="P:Fomantic.IFomanticComponentWithLoadingIndicator.IsLoading">
+            <summary>
+            Determine if the component should be appear as loading or not
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,159 @@
+﻿
+<div>
+    @if (isLoading)
+    {
+        <div class="ui active inverted dimmer">
+            <div class="ui text loader">Loading</div>
+        </div>
+
+    }
+    else
+    {
+        <table class="ui celled definition table">
+            <thead>
+                <tr>
+                    <th class="three wide"></th>
+                    <th class="four wide">Type</th>
+                    <th class="">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Docs.Where(d => d.Item4 == "Parameters").Any())
+                {
+                    <tr>
+                        <td colspan="3">
+                            <Header Type="HeaderType.H4">
+                                Parameters
+                            </Header>
+                        </td>
+                    </tr>
+
+                    @foreach (var item in Docs.Where(d => d.Item4 == "Parameters"))
+                    {
+                        <tr>
+                            <td>@item.Item1</td>
+                            <td><TypeViewer Type="@item.Item2"></TypeViewer> </td>
+                            <td>@item.Item3</td>
+                        </tr>
+                    }
+                }
+                @if (Docs.Where(d => d.Item4 == "Content").Any())
+                {
+                    <tr>
+                        <td colspan="3">
+                            <Header Type="HeaderType.H4">
+                                Content
+                            </Header>
+                        </td>
+                    </tr>
+
+                    @foreach (var item in Docs.Where(d => d.Item4 == "Content"))
+                    {
+                        <tr>
+                            <td>@item.Item1</td>
+                            <td><TypeViewer Type="@item.Item2"></TypeViewer> </td>
+                            <td>@item.Item3</td>
+                        </tr>
+                    }
+                }
+                @if (Docs.Where(d => d.Item4 == "Events").Any())
+                {
+                    <tr>
+                        <td colspan="3">
+                            <Header Type="HeaderType.H4">
+                                Events
+                            </Header>
+                        </td>
+                    </tr>
+
+                    @foreach (var item in Docs.Where(d => d.Item4 == "Events"))
+                    {
+                        <tr>
+                            <td>@item.Item1</td>
+                            <td><TypeViewer Type="@item.Item2"></TypeViewer> </td>
+                            <td>@item.Item3</td>
+                        </tr>
+                    }
+                }
+                @if (Docs.Where(d => d.Item4 == "Other").Any())
+                {
+                    <tr>
+                        <td colspan="3">
+                            <Header Type="HeaderType.H4">
+                                Others
+                            </Header>
+                        </td>
+                    </tr>
+
+                    @foreach (var item in Docs.Where(d => d.Item4 == "Other"))
+                    {
+                        <tr>
+                            <td>@item.Item1</td>
+                            <td><TypeViewer Type="@item.Item2"></TypeViewer> </td>
+                            <td>@item.Item3</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        if (EnableShowAllLink)
+        {
+            <Segment SegmentStyle="SegmentStyle.Basic" ContentAlignment="ContentAlignment.Center"><TypeViewer Type="Type" Color="Color.Blue" Text='@("See All "+(Type?.Name.Contains("`")??false?Type?.Name.Substring(0,Type?.Name.IndexOf("`")??0):Type?.Name)+" Documentation")'></TypeViewer></Segment>
+        }
+    }
+</div>
+@code {
+    bool isLoading = true;
+    [Parameter]
+    public bool EnableShowAllLink { get; set; }
+    [Parameter]
+    public Type Type { get; set; }
+    [Parameter]
+    public Func<IEnumerable<System.Reflection.PropertyInfo>, IEnumerable<System.Reflection.PropertyInfo>> Filter { get; set; }
+    public List<Tuple<string, Type, string, string>> Docs { get; set; } = new List<Tuple<string, Type, string, string>>();
+    protected async override Task OnInitializedAsync()
+    {
+
+        await base.OnInitializedAsync();
+        Task.Run(async () =>
+        {
+            if (Type != null)
+            {
+
+
+                var props = Type.GetProperties().AsEnumerable();
+                if (Filter != null)
+                {
+                    props = Filter(props);
+                }
+                foreach (var item in props)
+                {
+                    var currentdoc = await item.GetSummary();
+
+                    var cat = "Other";
+                    if (Attribute.IsDefined(item, typeof(ParameterAttribute)))
+                    {
+                        cat = "Parameters";
+                    }
+                    if (item.PropertyType.Name.Contains("EventCallback"))
+                    {
+                        cat = "Events";
+                    }
+                    if (item.PropertyType.Name.Contains("RenderFragment"))
+                    {
+                        cat = "Content";
+                    }
+                    var readonlytext = item.GetSetMethod() == null || item.GetSetMethod().IsFamily ? " (readonly)" : string.Empty;
+                    Docs.Add(new Tuple<string, Type, string, string>(item.Name + readonlytext, item.PropertyType, currentdoc, cat));
+                }
+
+
+                Docs = Docs.OrderBy(d => d.Item2.Name).ToList();
+                isLoading = false;
+                this.StateHasChanged();
+            }
+        });
+
+    }
+}
+

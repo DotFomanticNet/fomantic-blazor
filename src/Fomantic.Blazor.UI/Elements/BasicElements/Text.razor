@@ -1,0 +1,7 @@
+﻿@namespace Fomantic
+@using Fomantic.Blazor.UI
+@inherits TextBase
+
+<span @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+    @ChildContent
+</span>

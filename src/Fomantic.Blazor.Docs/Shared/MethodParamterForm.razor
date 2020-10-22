@@ -1,0 +1,234 @@
+﻿@inject IJSRuntime JsRuntime
+
+<div @ref="modalElement" class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Call @Method?.Name
+    </div>
+    <div class="content">
+        @if (Method != null)
+        {
+            <div class="ui form">
+                @foreach (var parameter in Method.GetParameters())
+                {
+                    @if (parameter.ParameterType == typeof(int)
+                  || parameter.ParameterType == typeof(decimal)
+                  || parameter.ParameterType == typeof(double)
+                  )
+                    {
+
+                        <div class="field">
+                            <label for="@parameter.Name">@parameter.Name</label>
+                            <input id="@parameter.Name" @bind="currentParams[Array.IndexOf(Method.GetParameters(),parameter)]" type="number" />
+                        </div>
+
+                    }
+                    @if (parameter.ParameterType.Name == "string")
+                    {
+
+                        <div class="field">
+                            <label for="@parameter.Name">@parameter.Name</label>
+                            <input id="@parameter.Name" @bind="currentParams[Array.IndexOf(Method.GetParameters(),parameter)]" type="text" />
+                        </div>
+
+                    }
+                    @if (parameter.ParameterType.Name == "Boolean")
+                    {
+
+                        <div class="field">
+                            <div class="ui slider checkbox">
+                                <label for="@parameter.Name">@parameter.Name</label>
+                                <input type="checkbox" @bind="currentParams[Array.IndexOf(Method.GetParameters(),parameter)]" class="hidden">
+                            </div>
+                        </div>
+                    }
+                    @if (parameter.ParameterType.IsEnum)
+                    {
+
+                        <div class="field">
+                            <label for="@parameter.Name">@parameter.Name</label>
+                            <select @bind="currentParams[Array.IndexOf(Method.GetParameters(),parameter)]">
+                                @foreach (var enumValue in parameter.ParameterType.GetEnumValues())
+                                {
+                                    <option value="@enumValue">@enumValue</option>
+                                }
+                            </select>
+                        </div>
+
+                    }
+                    @if (parameter.ParameterType.IsGenericType && parameter.ParameterType.GetGenericTypeDefinition() == typeof(Nullable<>))
+                    {
+                        @if (parameter.ParameterType.GetGenericArguments()[0].IsEnum)
+                        {
+
+                            <div class="field">
+                                <label for="@parameter.Name">@parameter.Name</label>
+                                <select @bind="currentParams[Array.IndexOf(Method.GetParameters(),parameter)]">
+                                    <option value="">None</option>
+                                    @foreach (var enumValue in parameter.ParameterType.GetGenericArguments()[0].GetEnumValues())
+                                    {
+                                        <option value="@enumValue">@enumValue</option>
+                                    }
+                                </select>
+                            </div>
+
+                        }
+                    }
+                }
+            </div>
+        }
+
+    </div>
+    <div class="actions">
+        <div @onclick="d=>Cancel()" class="ui black deny button">
+            Cancel
+        </div>
+        <div @onclick="d=>Ok()" class="ui positive right labeled icon button">
+            Done
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    ElementReference modalElement;
+
+    IJSObjectReference modal;
+    string[] currentParams;
+
+    public System.Reflection.MethodInfo Method { get; set; }
+    public object Component { get; set; }
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            modal = await JsRuntime.InvokeAsync<IJSObjectReference>("$", modalElement);
+            await modal.InvokeVoidAsync("modal");
+
+
+        }
+    }
+
+
+    async void Ok()
+    {
+        object[] methodParams = new object[Method.GetParameters().Count()];
+        foreach (var item in Method.GetParameters())
+        {
+            if (item.ParameterType.IsGenericType && item.ParameterType.GetGenericTypeDefinition() == typeof(Nullable<>))
+            {
+                var type = item.ParameterType.GetGenericArguments()[0];
+                if (currentParams[Array.IndexOf(Method.GetParameters(), item)] == null || string.IsNullOrWhiteSpace(currentParams[Array.IndexOf(Method.GetParameters(), item)].ToString()))
+                {
+                    methodParams[Array.IndexOf(Method.GetParameters(), item)] = null;
+                }
+                else
+                {
+                    string currentStringValue = currentParams[Array.IndexOf(Method.GetParameters(), item)];
+
+                    if (item.ParameterType == typeof(string))
+                    {
+                        methodParams[Array.IndexOf(Method.GetParameters(), item)] = currentStringValue;
+                    }
+                    if (item.ParameterType.IsEnum)
+                    {
+                        methodParams[Array.IndexOf(Method.GetParameters(), item)] = Enum.Parse(item.ParameterType, currentStringValue);
+                    }
+                    if (item.ParameterType == typeof(bool))
+                    {
+                        methodParams[Array.IndexOf(Method.GetParameters(), item)] = bool.Parse(currentStringValue);
+                    }
+                    if (item.ParameterType == typeof(int))
+                    {
+                        methodParams[Array.IndexOf(Method.GetParameters(), item)] = int.Parse(currentStringValue);
+                    }
+                    if (item.ParameterType == typeof(double))
+                    {
+                        methodParams[Array.IndexOf(Method.GetParameters(), item)] = double.Parse(currentStringValue);
+                    }
+                    if (item.ParameterType == typeof(float))
+                    {
+                        methodParams[Array.IndexOf(Method.GetParameters(), item)] = float.Parse(currentStringValue);
+                    }
+                }
+            }
+            else
+            {
+                string currentStringValue = currentParams[Array.IndexOf(Method.GetParameters(), item)];
+
+                if (item.ParameterType == typeof(string))
+                {
+                    methodParams[Array.IndexOf(Method.GetParameters(), item)] = currentStringValue;
+                }
+                if (item.ParameterType.IsEnum)
+                {
+                    methodParams[Array.IndexOf(Method.GetParameters(), item)] = Enum.Parse(item.ParameterType, currentStringValue);
+                }
+                if (item.ParameterType == typeof(bool))
+                {
+                    methodParams[Array.IndexOf(Method.GetParameters(), item)] = bool.Parse(currentStringValue);
+                }
+                if (item.ParameterType == typeof(int))
+                {
+                    methodParams[Array.IndexOf(Method.GetParameters(), item)] = int.Parse(currentStringValue);
+                }
+                if (item.ParameterType == typeof(double))
+                {
+                    methodParams[Array.IndexOf(Method.GetParameters(), item)] = double.Parse(currentStringValue);
+                }
+                if (item.ParameterType == typeof(float))
+                {
+                    methodParams[Array.IndexOf(Method.GetParameters(), item)] = float.Parse(currentStringValue);
+                }
+            }
+
+
+
+        }
+        await modal.InvokeVoidAsync("modal", "hide");
+        await Task.Factory.StartNew(async () =>
+        {
+            await Task.Delay(1200);
+            var task = Method.Invoke(Component, methodParams);
+            if (task is Task)
+            {
+                await (task as Task);
+            }
+        });
+
+
+    }
+    async void Cancel()
+    {
+        await modal.InvokeVoidAsync("modal", "hide");
+    }
+    public async void Open(System.Reflection.MethodInfo method, object component)
+    {
+        Method = method;
+        Component = component;
+        if (Method != null && Component != null)
+        {
+
+
+            currentParams = new string[Method.GetParameters().Count()];
+            foreach (var item in Method.GetParameters())
+            {
+                if (item.IsOptional)
+                {
+                    currentParams[Array.IndexOf(Method.GetParameters(), item)] = item.DefaultValue.ToString();
+                }
+                else
+                {
+                    currentParams[Array.IndexOf(Method.GetParameters(), item)] = Activator.CreateInstance(item.ParameterType).ToString();
+                }
+            }
+            this.StateHasChanged();
+            await modal.InvokeVoidAsync("modal", "show");
+        }
+    }
+
+}

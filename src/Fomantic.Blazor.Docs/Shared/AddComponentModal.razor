@@ -1,0 +1,128 @@
+﻿@inject IJSRuntime JsRuntime
+<div @ref="modalElement" class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add New Component
+    </div>
+    <div class="content">
+        <div class="ui form">
+            <div class="inline fields">
+                <label for="component-content-type">Select component content type:</label>
+                <div class="field">
+                    <div class="ui radio checkbox checked">
+                        <input type="radio" value="Html" checked='@componentContentType=="Html"' @onchange='d=>componentContentType="Html"' name="component-content-type" tabindex="0" class="hidden">
+                        <label>Component With Html Content</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui radio checkbox">
+                        <input type="radio" value="Children" checked='@componentContentType=="Children"' @onchange='d=>componentContentType="Children"' name="component-content-type" tabindex="0" class="hidden">
+                        <label>Component With  Components Children</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="field">
+                <label>Component Type</label>
+                <div class="ui selection dropdown">
+                    <input type="hidden" @bind="componentType" name="ComponentType">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Select Component</div>
+                    <div class="menu">
+                        @foreach (var item in ComponentTypes)
+                        {
+                            <div class="item" data-value="@item.Name">@item.Name</div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="actions">
+        <div @onclick="d=>Cancel()" class="ui black deny button">
+            Cancel
+        </div>
+        <div @onclick="d=>Ok()" class="ui positive right labeled icon button">
+            Done
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    string componentContentType;
+    string componentType;
+    List<SampleComponent> addTo;
+    ElementReference modalElement;
+    Action onDone;
+    IJSObjectReference modal;
+    SampleComponent parent;
+    protected async override Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        componentContentType = "Html";
+        ComponentTypes.Add(typeof(Text));
+        ComponentTypes.Add(typeof(Header));
+        ComponentTypes.Add(typeof(HeaderWithIcon));
+        ComponentTypes.Add(typeof(Segment));
+        ComponentTypes.Add(typeof(Segments));
+        ComponentTypes.Add(typeof(PlaceholderSegment));
+        ComponentTypes.Add(typeof(Icon));
+    }
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            modal = await JsRuntime.InvokeAsync<IJSObjectReference>("$", modalElement);
+            await modal.InvokeVoidAsync("modal");
+
+            await JsRuntime.InvokeVoidAsync("window.demo.addComponentModalInit");
+        }
+    }
+    public List<Type> ComponentTypes { get; set; } = new List<Type>();
+
+    async void Ok()
+    {
+        AddComponent();
+        await modal.InvokeVoidAsync("modal", "hide");
+        componentContentType = "Html";
+    }
+    async void Cancel()
+    {
+        await modal.InvokeVoidAsync("modal", "hide");
+    }
+    public async void Open(List<SampleComponent> addTo, SampleComponent parent , Action onDone)
+    {
+        this.onDone = onDone;
+        this.addTo = addTo;
+        this.parent = parent;
+        await modal.InvokeVoidAsync("modal", "show");
+    }
+    void AddComponent()
+    {
+        if (componentContentType == "Html")
+        {
+            Type genericClass = typeof(SampleComponentWithHtmlContent<>);
+
+            Type constructedClass = genericClass.MakeGenericType(ComponentTypes.FirstOrDefault(d => d.Name == componentType));
+            object[] args = new object[] { parent, null };
+            SampleComponent created = (SampleComponent)Activator.CreateInstance(constructedClass, args);
+            addTo.Add(created);
+        }
+        else
+        {
+            Type genericClass = typeof(SampleComponentWithChildren<>);
+
+            Type constructedClass = genericClass.MakeGenericType(ComponentTypes.FirstOrDefault(d => d.Name == componentType));
+            object[] args = new object[] { parent, null };
+            SampleComponent created = (SampleComponent)Activator.CreateInstance(constructedClass, args);
+            addTo.Add(created);
+
+        }
+        onDone?.Invoke();
+    }
+}
