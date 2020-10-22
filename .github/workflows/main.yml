@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: RerwiteREADME
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the main branch
@@ -27,6 +27,6 @@ jobs:
         with:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           pattern: '<!-- issueTable -->' # suffixing "Demo" for this readme
-          labels: 'component-development'
+          
     # you need to add, commit and push here
     # otherwise the changes will not be pushed back into master
