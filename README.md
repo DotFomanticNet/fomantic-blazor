@@ -19,7 +19,6 @@ Please follow https://lively-dune-06143dd10.azurestaticapps.net/ to view showcas
 | <a href="https://github.com/ahmed007boss/fomantic-blazor/issues/4">Flag Component</a>          | :eight_spoked_asterisk: | <a href="https://github.com/ahmed007boss"><img src="https://avatars1.githubusercontent.com/u/20624652?v=4" width="20" /></a> | - [ ] Implement Component Base Class<br />- [ ] Implement Component<br />- [ ] Add Component to documentation     |
 | <a href="https://github.com/ahmed007boss/fomantic-blazor/issues/3">Image Component</a>         | :eight_spoked_asterisk: | <a href="https://github.com/ahmed007boss"><img src="https://avatars1.githubusercontent.com/u/20624652?v=4" width="20" /></a> | - [ ] Implement Component Base Class<br />- [ ] Implement Component<br />- [ ] Add Component to documentation     |
 | <a href="https://github.com/ahmed007boss/fomantic-blazor/issues/2">Text Component</a>          | :eight_spoked_asterisk: | <a href="https://github.com/ahmed007boss"><img src="https://avatars1.githubusercontent.com/u/20624652?v=4" width="20" /></a> | - [ ] Implement TextBase Class<br />- [ ] Implement Text Component<br />- [ ] Add Text Component to documentation |
-| <a href="https://github.com/ahmed007boss/fomantic-blazor/pull/1">Add text component </a>       | :eight_spoked_asterisk: | <a href="https://github.com/ahmed007boss"><img src="https://avatars1.githubusercontent.com/u/20624652?v=4" width="20" /></a> |                                                                                                                   |
 
 <!-- issueTable -->
 
