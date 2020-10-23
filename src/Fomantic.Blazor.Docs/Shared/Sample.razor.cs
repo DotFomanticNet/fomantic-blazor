@@ -261,10 +261,11 @@ namespace Fomantic.Blazor.Docs.Shared
         public string Name { get; set; }
 
         public string Code { get; set; }
+        public string CodeComment { get; set; }
     }
     public class SampleComponentActionWithChildren<T> : SampleComponent<T>, ISampleComponentWithChildren where T : ComponentBase
     {
-
+       
         public List<SampleComponentAction<T>> Actions { get; set; } = new List<SampleComponentAction<T>>();
         public SampleComponentActionWithChildren(string variableName, SampleComponent parentComponent, Action<T> onComponentCreate = null) : base(parentComponent, onComponentCreate)
         {
@@ -361,8 +362,13 @@ namespace Fomantic.Blazor.Docs.Shared
             code += $"  {typeof(T).Name} {VariableName};" + Environment.NewLine;
             foreach (var item in Actions)
             {
+               
                 code += $"  private async Task {VariableName}_{item.Name}(MouseEventArgs args)" + Environment.NewLine;
                 code += "  {" + Environment.NewLine;
+                if (!string.IsNullOrEmpty(item.CodeComment))
+                {
+                    code += $"    //{item.CodeComment}" + Environment.NewLine;
+                }
                 code += $"    { VariableName}.{item.Code}" + Environment.NewLine;
                 code += "  }" + Environment.NewLine;
             }
@@ -488,7 +494,7 @@ namespace Fomantic.Blazor.Docs.Shared
                 isLoading = false;
 
                 this.StateHasChanged();
-               
+
             }
         }
 
