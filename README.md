@@ -4,7 +4,7 @@ Integrating fomantic with Blazor 5
 
 Please follow https://lively-dune-06143dd10.azurestaticapps.net/ to view showcases and documentation 
 
-
+<details><summary>Release 1.0 Roadmap</summary>
 <!-- issueTable -->
 
 | Title                                                                                                                          |         Status          |                                                           Assignee                                                           | Body                                                                                                          |
@@ -42,3 +42,4 @@ Please follow https://lively-dune-06143dd10.azurestaticapps.net/ to view showcas
 
 <!-- issueTable -->
 
+</details>
