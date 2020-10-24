@@ -839,7 +839,12 @@ namespace Fomantic.Blazor.Docs.Shared
             prop.SetValue(currentComponent.ThisComponent, e.Value);
             this.StateHasChanged();
         }
+        public void OnStringChange(ChangeEventArgs e, PropertyInfo prop)
+        {
 
+            prop.SetValue(currentComponent.ThisComponent, e.Value);
+            this.StateHasChanged();
+        }
         public string constractCode()
         {
             var code = "";

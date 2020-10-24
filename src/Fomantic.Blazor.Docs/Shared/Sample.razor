@@ -133,14 +133,14 @@
 
                             @foreach (var item in Prop)
                             {
-                                @if (item.Item3.PropertyType.Name == "string")
+                                @if (item.Item3.PropertyType==typeof(string))
                                 {
                                     <tr>
                                         <td class="label"><label for="@item.Item3.Name">@item.Item3.Name</label> </td>
                                         <td class="editor">
 
                                             <div class="field">
-                                                <input id="@item.Item3.Name" value="@item.Item3.GetValue(item.Item2)" type="text" />
+                                                <input id="@item.Item3.Name" @onchange="d => OnStringChange(d, item.Item3)" value="@item.Item3.GetValue(item.Item2)" type="text" />
                                             </div>
                                         </td>
                                     </tr>
