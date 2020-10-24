@@ -9,7 +9,8 @@ namespace Fomantic.Blazor.UI
 {
     static class IFomanticComponentWithClassHelpers
     {
-        internal static T AddFeatures<T>(this T component) where T : FomanticComponentBase
+        //called on construct class to add/update features classess
+        internal static T UpdateComponentFeaturesClasses<T>(this T component) where T : FomanticComponentBase
         {
             if (component is IVisibleFomanticComponent visibleFomanticComponent)
             {
@@ -22,7 +23,7 @@ namespace Fomantic.Blazor.UI
             if (component is ISegmentStyledFomanticComponent segmentStyledFomanticComponent)
             {
                 segmentStyledFomanticComponent.AddSegmentStyleClass();
-            }           
+            }
             if (component is IFomanticComponentWithSize fomanticComponentWithSize)
             {
                 fomanticComponentWithSize.AddSizeClass();
@@ -75,15 +76,23 @@ namespace Fomantic.Blazor.UI
             {
                 fomanticComponentWithDividingStyle.AddDividingClass();
             }
+            return component;
+        }
+
+        //called on AfterRender to add/update features
+        internal static T UpdateComponentFeaturesAfterRender<T>(this T component) where T : FomanticComponentBase
+        {
             if (component is IFomanticComponentWithTooltip fomanticComponentWithTooltip)
             {
                 fomanticComponentWithTooltip.AddTooltip();
             }
-
             return component;
         }
 
-         static T AddTooltip<T>(this T component) where T : IFomanticComponentWithTooltip
+
+
+
+        static T AddTooltip<T>(this T component) where T : IFomanticComponentWithTooltip
         {
 
             if (component.HasTooltip())
@@ -119,7 +128,7 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
-         static T AddHiddenClass<T>(this T component, int? index = null) where T : IVisibleFomanticComponent
+        static T AddHiddenClass<T>(this T component, int? index = null) where T : IVisibleFomanticComponent
         {
             if (component.IsHidden)
             {
@@ -135,7 +144,7 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
-         static T AddColorClass<T>(this T component, int? index = null) where T : IFomanticComponentWithColor
+        static T AddColorClass<T>(this T component, int? index = null) where T : IFomanticComponentWithColor
         {
             if (index.HasValue)
             {
@@ -147,7 +156,7 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
-         static T AddSegmentStyleClass<T>(this T component, int? index = null) where T : ISegmentStyledFomanticComponent
+        static T AddSegmentStyleClass<T>(this T component, int? index = null) where T : ISegmentStyledFomanticComponent
         {
             if (index.HasValue)
             {
@@ -159,7 +168,7 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
-         static T AddSizeClass<T>(this T component, int? index = null) where T : IFomanticComponentWithSize
+        static T AddSizeClass<T>(this T component, int? index = null) where T : IFomanticComponentWithSize
         {
             if (index.HasValue)
             {
@@ -171,7 +180,7 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
-         static T AddAlignmentClass<T>(this T component, int? index = null) where T : IFomanticComponentWithAlignment
+        static T AddAlignmentClass<T>(this T component, int? index = null) where T : IFomanticComponentWithAlignment
         {
             if (index.HasValue)
             {
@@ -183,7 +192,7 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
-         static T AddContentAlignmentClass<T>(this T component, int? index = null) where T : IFomanticComponentWithContentAlignment
+        static T AddContentAlignmentClass<T>(this T component, int? index = null) where T : IFomanticComponentWithContentAlignment
         {
             if (index.HasValue)
             {
@@ -195,7 +204,7 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
-         static T AddContentSpacingClass<T>(this T component, int? index = null) where T : IFomanticComponentWithContentSpacing
+        static T AddContentSpacingClass<T>(this T component, int? index = null) where T : IFomanticComponentWithContentSpacing
         {
             if (index.HasValue)
             {
@@ -207,7 +216,7 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
-         static T AddDisabledClass<T>(this T component, int? index = null) where T : IFomanticComponentCanBeDisabled
+        static T AddDisabledClass<T>(this T component, int? index = null) where T : IFomanticComponentCanBeDisabled
         {
             if (component.IsDisabled)
             {
@@ -223,7 +232,7 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
-         static T AddInvertedClass<T>(this T component, int? index = null) where T : IFomanticComponentWithInvertedStyle
+        static T AddInvertedClass<T>(this T component, int? index = null) where T : IFomanticComponentWithInvertedStyle
         {
             if (component.IsInverted)
             {
@@ -239,7 +248,7 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
-         static T AddLoadingIndicatorClass<T>(this T component, int? index = null) where T : IFomanticComponentWithLoadingIndicator
+        static T AddLoadingIndicatorClass<T>(this T component, int? index = null) where T : IFomanticComponentWithLoadingIndicator
         {
             if (component.IsLoading)
             {
@@ -255,7 +264,7 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
-         static T AddCompactClass<T>(this T component, int? index = null) where T : IFomanticComponentWithCompactStyle
+        static T AddCompactClass<T>(this T component, int? index = null) where T : IFomanticComponentWithCompactStyle
         {
             if (component.IsCompact)
             {
@@ -271,7 +280,7 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
-         static T AddAttachClass<T>(this T component, int? index = null) where T : IAttachableFomanticComponent
+        static T AddAttachClass<T>(this T component, int? index = null) where T : IAttachableFomanticComponent
         {
             if (index.HasValue)
             {
@@ -284,7 +293,7 @@ namespace Fomantic.Blazor.UI
             return component;
 
         }
-         static T AddUnselectableClass<T>(this T component, int? index = null) where T : IFomanticComponentCanBeUnselectable
+        static T AddUnselectableClass<T>(this T component, int? index = null) where T : IFomanticComponentCanBeUnselectable
         {
             if (component.IsUnselectable)
             {
@@ -300,8 +309,7 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
-
-         static T AddFittedClass<T>(this T component, int? index = null) where T : IFomanticComponentWithFittedStyle
+        static T AddFittedClass<T>(this T component, int? index = null) where T : IFomanticComponentWithFittedStyle
         {
             if (component.IsFitted)
             {
@@ -317,8 +325,7 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
-
-         static T AddCircularClass<T>(this T component, int? index = null) where T : IFomanticComponentWithCircularStyle
+        static T AddCircularClass<T>(this T component, int? index = null) where T : IFomanticComponentWithCircularStyle
         {
             if (component.IsCircular)
             {
@@ -334,8 +341,7 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
-
-         static T AddDividingClass<T>(this T component, int? index = null) where T : IFomanticComponentWithDividingStyle
+        static T AddDividingClass<T>(this T component, int? index = null) where T : IFomanticComponentWithDividingStyle
         {
             if (component.IsDividing)
             {

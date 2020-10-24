@@ -93,7 +93,8 @@ namespace Fomantic.Blazor.UI
             get
             {
                 ConstractClasses();
-                var newCssClass = string.Join(" ", CssClasses);
+                var newCssClass = string.Join(" ", CssClasses.Where(d=>!string.IsNullOrEmpty(d)));
+               
                 if (_cssClass != newCssClass)
                 {
                     ExecuteOnClassChangedEvent(_cssClass, newCssClass);
@@ -112,11 +113,12 @@ namespace Fomantic.Blazor.UI
         internal protected virtual void ConstractClasses()
         {
             CssClasses = new List<string>();
-            this.AddFeatures();
+            this.UpdateComponentFeaturesClasses();
             if (InputAttributes.ContainsKey("class"))
             {
                 CssClasses.Add(InputAttributes["class"].ToString());
             }
+
         }
         ///<inheritdoc/>
         protected override void OnInitialized()
@@ -128,7 +130,7 @@ namespace Fomantic.Blazor.UI
                 IsHidden = true;
             }
 
-            this.AddFeatures();
+            this.UpdateComponentFeaturesAfterRender();
 
         }
         ///<inheritdoc/>
@@ -255,7 +257,7 @@ namespace Fomantic.Blazor.UI
                 });
             }
 
-
+            this.UpdateComponentFeaturesAfterRender();
 
         }
         ///<inheritdoc/>

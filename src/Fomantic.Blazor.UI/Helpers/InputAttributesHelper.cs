@@ -22,7 +22,7 @@ namespace Fomantic.Blazor.UI
             return x;
         }
 
-        internal static T AddOrUpdateAttribute<T>(this T component, string key, object value) where T : IFomanticComponentWithTooltip
+        internal static T AddOrUpdateAttribute<T>(this T component, string key, object value) where T : IFomanticComponent
         {
 
 
@@ -39,7 +39,7 @@ namespace Fomantic.Blazor.UI
             return component;
         }
 
-        internal static T RemoveAttribute<T>(this T component, string key) where T : IFomanticComponentWithTooltip
+        internal static T RemoveAttribute<T>(this T component, string key) where T : IFomanticComponent
         {
 
 
