@@ -1,8 +1,18 @@
-﻿namespace Fomantic.Blazor.UI
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Enums\HeaderType.cs
+//
+// summary:	Implements the header type class
+///-------------------------------------------------------------------------------------------------
+
+namespace Fomantic.Blazor.UI
 {
+    ///-------------------------------------------------------------------------------------------------
     /// <summary>
-    /// A header type oriented to give some importance of a section in the context of the content that surrounds it
+    /// A header type oriented to give some importance of a section in the context of the content
+    /// that surrounds it.
     /// </summary>
+    ///-------------------------------------------------------------------------------------------------
+
     public enum HeaderType
     {
         /// <summary>

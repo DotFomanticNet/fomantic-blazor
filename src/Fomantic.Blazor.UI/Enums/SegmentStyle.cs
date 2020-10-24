@@ -1,8 +1,12 @@
-﻿namespace Fomantic.Blazor.UI
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Enums\SegmentStyle.cs
+//
+// summary:	Implements the segment style class
+///-------------------------------------------------------------------------------------------------
+
+namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    /// A segment or segment group may be formatted to be in different style 
-    /// </summary>
+    /// <summary>   A segment or segment group may be formatted to be in different style. </summary>
     public enum SegmentStyle
     {
         /// <summary>

@@ -1,8 +1,12 @@
-﻿namespace Fomantic.Blazor.UI
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Enums\Color.cs
+//
+// summary:	Implements the color class
+///-------------------------------------------------------------------------------------------------
+
+namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    ///  Fomantic UI twelve named colors.
-    /// </summary>
+    /// <summary>   Fomantic UI twelve named colors. </summary>
     public enum Color
     {
         /// <summary>

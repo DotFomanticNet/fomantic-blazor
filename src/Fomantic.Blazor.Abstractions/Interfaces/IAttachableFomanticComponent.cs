@@ -1,42 +1,49 @@
-﻿
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Interfaces\IAttachableFomanticComponent.cs
+//
+// summary:	Declares the IAttachableFomanticComponent interface
+///-------------------------------------------------------------------------------------------------
+
 using Fomantic.Blazor.UI;
 using Microsoft.AspNetCore.Components;
 
 namespace Fomantic
 {
+    ///-------------------------------------------------------------------------------------------------
     /// <summary>
-    /// Base interface for all fomantic component can be attached to other content on a page
+    /// Base interface for all fomantic component can be attached to other content on a page.
     /// </summary>
+    ///-------------------------------------------------------------------------------------------------
+
     public interface IAttachableFomanticComponent : IFomanticComponentWithClass
     {
-        /// <summary>
-        /// class given to attached
-        /// </summary>
+        /// <summary>   class given to attached. </summary>
         const string AttachedClass = "attached";
 
-        /// <summary>
-        /// class given to attached
-        /// </summary>
+        /// <summary>   class given to attached. </summary>
         const string TopAttachedClass = "top attached";
 
 
-        /// <summary>
-        /// class given to attached
-        /// </summary>
+        /// <summary>   class given to attached. </summary>
         const string BottomAttachedClass = "bottom attached";
 
-        /// <summary>
-        /// Determine if the comonent should be attached to other content on a page
-        /// </summary>
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Determine if the comonent should be attached to other content on a page. </summary>
+        ///
+        /// <value> The attaching. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         [Parameter]
         AttachingDirection? Attaching { get; set; }
 
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Convert <see cref="AttachingDirection"/> to given class. </summary>
+        ///
+        /// <param name="attachingDirection">   attaching direction Value. </param>
+        ///
+        /// <returns>   given class from <paramref name="attachingDirection"/> </returns>
+        ///-------------------------------------------------------------------------------------------------
 
-        /// <summary>
-        /// Convert <see cref="AttachingDirection"/> to given class
-        /// </summary>
-        /// <param name="attachingDirection">attaching direction Value</param>
-        /// <returns> given class from <paramref name="attachingDirection"/> </returns>
         public static string ToClass(AttachingDirection? attachingDirection)
         {
             if (!attachingDirection.HasValue)

@@ -1,8 +1,12 @@
-﻿namespace Fomantic.Blazor.UI
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Enums\TransitionAnimation.cs
+//
+// summary:	Implements the transition animation class
+///-------------------------------------------------------------------------------------------------
+
+namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    /// Type of animation that used to hide show elements/components
-    /// </summary>
+    /// <summary>   Type of animation that used to hide show elements/components. </summary>
     public enum TransitionAnimation
     {
         /// <summary>

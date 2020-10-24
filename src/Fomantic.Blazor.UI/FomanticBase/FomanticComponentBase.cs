@@ -1,4 +1,10 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿///-------------------------------------------------------------------------------------------------
+// file:	FomanticBase\FomanticComponentBase.cs
+//
+// summary:	Implements the fomantic component base class
+///-------------------------------------------------------------------------------------------------
+
+using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
 using System;
@@ -8,19 +14,22 @@ using System.Threading.Tasks;
 
 namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    /// Base class for all Fomantic Component
-    /// </summary>
+    /// <summary>   Base class for all Fomantic Component. </summary>
     public abstract class FomanticComponentBase : ComponentBase,
         IFomanticComponentWithJQuery,
         IVisibleFomanticComponent,
         IFomanticComponentWithEnterTransition,
         IFomanticComponentWithClass
     {
-        /// <summary>
-        /// Return the Component Attributes
-        /// </summary>
-        /// <returns></returns>
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Return the Component Attributes. </summary>
+        ///
+        /// <returns>
+        /// An enumerator that allows foreach to be used to process the root element attributes in this
+        /// collection.
+        /// </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         protected virtual IEnumerable<KeyValuePair<string, object>> GetRootElementAttributes()
         {
             return InputAttributes.GetMainElementAttributes();
@@ -28,66 +37,148 @@ namespace Fomantic.Blazor.UI
 
 
         #region Members
+        /// <summary>   The lazy animator. </summary>
         private Lazy<FomanticComponentAnimator<FomanticComponentBase>> lazyAnimator;
+        /// <summary>   The lazy viewport visibility. </summary>
         private Lazy<ViewportVisibility> lazyViewportVisibility;
+        /// <summary>   The CSS class. </summary>
         private string _cssClass;
+        /// <summary>   True if is enter animation played, false if not. </summary>
         private bool isEnterAnimationPlayed = false;
+        /// <summary>   The input attributes. </summary>
         private Dictionary<string, object> inputAttributes = new Dictionary<string, object>();
         #endregion
 
         #region Events
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Event queue for all listeners interested in onViewportVisibilityChange events.
+        /// </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnViewportVisibilityChangeEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onTopVisible events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnTopVisibleEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onTopPassed events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnTopPassedEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onBottomVisible events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnBottomVisibleEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onPassing events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnPassingEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onBottomPassed events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnBottomPassedEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onTopVisibleReverse events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnTopVisibleReverseEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onTopPassedReverse events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnTopPassedReverseEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onBottomVisibleReverse events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnBottomVisibleReverseEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onPassingReverse events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnPassingReverseEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onBottomPassedReverse events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ViewportVisibilityUpdate OnBottomPassedReverseEvent;
-        ///<inheritdoc/>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Event queue for all listeners interested in onClassChanged events. </summary>
+        ///
+        /// ### <inheritdoc/>
+        ///-------------------------------------------------------------------------------------------------
+
         public event ElementClassChanged OnClassChangedEvent;
 
         #endregion
 
         #region Props
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Inject]
         public IJSRuntime JsRuntime { get; private set; }
 
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public IJSObjectReference JQueryElementRef { get; private set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public ElementReference RootElement { get; protected set; }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public List<IFomanticComponentExtension> Extensions { get; private set; }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [NestedParamter]
         public IFomanticAnimator Animator => lazyAnimator.Value;
 
-        /// <summary>
-        ///  Object responsible for Viewport Visibility tracking
-        /// </summary>
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Object responsible for Viewport Visibility tracking. </summary>
+        ///
+        /// <value> The viewport visibility. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         [NestedParamter]
         public ViewportVisibility ViewportVisibility => lazyViewportVisibility.Value;
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public string CssClass
         {
             get
@@ -107,9 +198,7 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region overrides
-        /// <summary>
-        /// Used to add inherited components classes 
-        /// </summary>
+        /// <summary>   Used to add inherited components classes. </summary>
         internal protected virtual void ConstractClasses()
         {
             CssClasses = new List<string>();
@@ -120,7 +209,7 @@ namespace Fomantic.Blazor.UI
             }
 
         }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         protected override void OnInitialized()
         {
             base.OnInitialized();
@@ -133,7 +222,7 @@ namespace Fomantic.Blazor.UI
             this.UpdateComponentFeaturesAfterRender();
 
         }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         protected override void OnAfterRender(bool firstRender)
         {
             base.OnAfterRender(firstRender);
@@ -260,7 +349,7 @@ namespace Fomantic.Blazor.UI
             this.UpdateComponentFeaturesAfterRender();
 
         }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         protected async override Task OnAfterRenderAsync(bool firstRender)
         {
             await base.OnAfterRenderAsync(firstRender);
@@ -299,71 +388,87 @@ namespace Fomantic.Blazor.UI
 
         #region Parameters
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public Dictionary<string, object> Attributes { get; protected set; } = new Dictionary<string, object>();
-        /// <summary>
-        /// List of all arbitrary attributes
-        /// </summary>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   List of all arbitrary attributes. </summary>
+        ///
+        /// <value> The input attributes. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         [Parameter(CaptureUnmatchedValues = true)]
         public Dictionary<string, object> InputAttributes { get => inputAttributes.Union(Attributes).ToDictionary(pair => pair.Key, pair => pair.Value); set => inputAttributes = value; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnTopPassed { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnBottomVisible { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnPassing { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnBottomPassed { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnTopVisibleReverse { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnTopPassedReverse { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnBottomVisibleReverse { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnPassingReverse { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnBottomPassedReverse { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnViewportVisibilityChange { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnTopVisible { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public EventCallback<ParamterChangedArgs<string>> OnClassChanged { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public TransitionAnimation? EnterTransition { get; set; }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public bool IsHidden { get; set; }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [Parameter]
         public int EnterTransitionDuration { get; set; }
 
 
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         protected List<string> CssClasses { get; set; } = new List<string>();
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Gets the CSS classes. </summary>
+        ///
+        /// <value> The CSS classes. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         List<string> IFomanticComponentWithClass.CssClasses { get => CssClasses; }
 
         #endregion
 
         #region Methods
 
-
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Executes the on class changed event operation. </summary>
+        ///
+        /// <param name="oldClass">     The old class. </param>
+        /// <param name="currentClass"> The current class. </param>
+        ///-------------------------------------------------------------------------------------------------
 
         async void ExecuteOnClassChangedEvent(string oldClass, string currentClass)
         {
@@ -383,28 +488,28 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region Public Methods
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [ComponentAction]
         public void Show()
         {
             // await JsRuntime.InvokeVoidAsync("window.element.show", RootElement);
             IsHidden = false;
         }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [ComponentAction]
         public void Hide()
         {
             //   await JsRuntime.InvokeVoidAsync("window.element.hide", RootElement);
             IsHidden = true;
         }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         [ComponentAction]
         public void ToggleVisibility()
         {
             //  await JsRuntime.InvokeVoidAsync("window.element.toggleVisibility", RootElement);
             IsHidden = !IsHidden;
         }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public void Dispose()
         {
             if (lazyAnimator.IsValueCreated)

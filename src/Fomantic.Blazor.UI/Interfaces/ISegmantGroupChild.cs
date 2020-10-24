@@ -1,4 +1,10 @@
-﻿using System;
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Interfaces\ISegmantGroupChild.cs
+//
+// summary:	Declares the ISegmantGroupChild interface
+///-------------------------------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,9 +13,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    /// Base interface for all fomantic component that has parent segmant group
-    /// </summary>
+    /// <summary>   Base interface for all fomantic component that has parent segmant group. </summary>
     public interface ISegmantGroupChild : IFomanticGroupComponentChild<SegmentGroup>
     {
        

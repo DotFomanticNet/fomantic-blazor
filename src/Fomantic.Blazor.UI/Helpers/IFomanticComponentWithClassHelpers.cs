@@ -1,4 +1,10 @@
-﻿using System;
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Helpers\IFomanticComponentWithClassHelpers.cs
+//
+// summary:	Declares the IFomanticComponentWithClassHelpers interface
+///-------------------------------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -7,9 +13,18 @@ using System.Threading.Tasks;
 
 namespace Fomantic.Blazor.UI
 {
+    /// <summary>   A fomantic component with class helpers. </summary>
     static class IFomanticComponentWithClassHelpers
     {
-        //called on construct class to add/update features classess
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   called on construct class to add/update features classess. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         internal static T UpdateComponentFeaturesClasses<T>(this T component) where T : FomanticComponentBase
         {
             if (component is IVisibleFomanticComponent visibleFomanticComponent)
@@ -79,7 +94,15 @@ namespace Fomantic.Blazor.UI
             return component;
         }
 
-        //called on AfterRender to add/update features
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   called on AfterRender to add/update features. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         internal static T UpdateComponentFeaturesAfterRender<T>(this T component) where T : FomanticComponentBase
         {
             if (component is IFomanticComponentWithTooltip fomanticComponentWithTooltip)
@@ -89,8 +112,14 @@ namespace Fomantic.Blazor.UI
             return component;
         }
 
-
-
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a tooltip. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
 
         static T AddTooltip<T>(this T component) where T : IFomanticComponentWithTooltip
         {
@@ -128,6 +157,17 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a hidden class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddHiddenClass<T>(this T component, int? index = null) where T : IVisibleFomanticComponent
         {
             if (component.IsHidden)
@@ -144,6 +184,17 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a color class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddColorClass<T>(this T component, int? index = null) where T : IFomanticComponentWithColor
         {
             if (index.HasValue)
@@ -156,6 +207,17 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a segment style class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddSegmentStyleClass<T>(this T component, int? index = null) where T : ISegmentStyledFomanticComponent
         {
             if (index.HasValue)
@@ -168,6 +230,17 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a size class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddSizeClass<T>(this T component, int? index = null) where T : IFomanticComponentWithSize
         {
             if (index.HasValue)
@@ -180,6 +253,17 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds an alignment class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddAlignmentClass<T>(this T component, int? index = null) where T : IFomanticComponentWithAlignment
         {
             if (index.HasValue)
@@ -192,6 +276,17 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a content alignment class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddContentAlignmentClass<T>(this T component, int? index = null) where T : IFomanticComponentWithContentAlignment
         {
             if (index.HasValue)
@@ -204,6 +299,17 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a content spacing class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddContentSpacingClass<T>(this T component, int? index = null) where T : IFomanticComponentWithContentSpacing
         {
             if (index.HasValue)
@@ -216,6 +322,17 @@ namespace Fomantic.Blazor.UI
             }
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a disabled class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddDisabledClass<T>(this T component, int? index = null) where T : IFomanticComponentCanBeDisabled
         {
             if (component.IsDisabled)
@@ -232,6 +349,17 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds an inverted class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddInvertedClass<T>(this T component, int? index = null) where T : IFomanticComponentWithInvertedStyle
         {
             if (component.IsInverted)
@@ -248,6 +376,17 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a loading indicator class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddLoadingIndicatorClass<T>(this T component, int? index = null) where T : IFomanticComponentWithLoadingIndicator
         {
             if (component.IsLoading)
@@ -264,6 +403,17 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a compact class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddCompactClass<T>(this T component, int? index = null) where T : IFomanticComponentWithCompactStyle
         {
             if (component.IsCompact)
@@ -280,6 +430,17 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds an attach class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddAttachClass<T>(this T component, int? index = null) where T : IAttachableFomanticComponent
         {
             if (index.HasValue)
@@ -293,6 +454,17 @@ namespace Fomantic.Blazor.UI
             return component;
 
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds an unselectable class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddUnselectableClass<T>(this T component, int? index = null) where T : IFomanticComponentCanBeUnselectable
         {
             if (component.IsUnselectable)
@@ -309,6 +481,17 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a fitted class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddFittedClass<T>(this T component, int? index = null) where T : IFomanticComponentWithFittedStyle
         {
             if (component.IsFitted)
@@ -325,6 +508,17 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a circular class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddCircularClass<T>(this T component, int? index = null) where T : IFomanticComponentWithCircularStyle
         {
             if (component.IsCircular)
@@ -341,6 +535,17 @@ namespace Fomantic.Blazor.UI
 
             return component;
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   A T extension method that adds a dividing class to 'index'. </summary>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="component">    The component to act on. </param>
+        /// <param name="index">        (Optional) Zero-based index of the. </param>
+        ///
+        /// <returns>   A T. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         static T AddDividingClass<T>(this T component, int? index = null) where T : IFomanticComponentWithDividingStyle
         {
             if (component.IsDividing)

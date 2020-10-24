@@ -1,8 +1,12 @@
-﻿namespace Fomantic.Blazor.UI
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Enums\Size.cs
+//
+// summary:	Implements the size class
+///-------------------------------------------------------------------------------------------------
+
+namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    /// Diffrent sizes defined by Fomantic
-    /// </summary>
+    /// <summary>   Diffrent sizes defined by Fomantic. </summary>
     public enum Size
     {   
         /// <summary>

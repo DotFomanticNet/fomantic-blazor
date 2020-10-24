@@ -1,4 +1,10 @@
-﻿using System;
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Enums\AttachingDirection.cs
+//
+// summary:	Implements the attaching direction class
+///-------------------------------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +12,7 @@ using System.Threading.Tasks;
 
 namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    /// Mark the attachable element type
-    /// </summary>
+    /// <summary>   Mark the attachable element type. </summary>
     public enum AttachingDirection
     {
         /// <summary>

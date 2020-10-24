@@ -1,35 +1,64 @@
-﻿using System;
+﻿///-------------------------------------------------------------------------------------------------
+// file:	FomanticBase\ViewportVisibility\ViewportVisibility.cs
+//
+// summary:	Implements the viewport visibility class
+///-------------------------------------------------------------------------------------------------
+
+using System;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
 namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    /// Implementation Responsible for Viewport Visibility tracking
-    /// </summary>
+    /// <summary>   Implementation Responsible for Viewport Visibility tracking. </summary>
     public class ViewportVisibility : IDisposable
     {
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Gets the element to subscripe function. </summary>
+        ///
+        /// <value> A function delegate that yields an ElementReference. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         internal Func<ElementReference> ElementToSubscripeFunc { get; }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Gets the js runtime. </summary>
+        ///
+        /// <value> The js runtime. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         internal IJSRuntime JsRuntime { get; }
 
-        /// <summary>
-        /// Current View Port Calculations
-        /// </summary>
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Current View Port Calculations. </summary>
+        ///
+        /// <value> The calculation. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         public ViewPortCalculation Calculation { get; private set; } = new ViewPortCalculation();
 
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Create new Viewport Visibility. </summary>
+        ///
+        /// <param name="elementToSubscripeFunc">   function to get element to track Visibility. </param>
+        /// <param name="jsRuntime">                js run time to execute javascript interops. </param>
+        ///-------------------------------------------------------------------------------------------------
 
-        /// <summary>
-        /// Create new Viewport Visibility
-        /// </summary>
-        /// <param name="elementToSubscripeFunc">function to get element to track Visibility</param>
-        /// <param name="jsRuntime">js run time to execute javascript interops</param>
         public ViewportVisibility(Func<ElementReference> elementToSubscripeFunc, IJSRuntime jsRuntime)
         {
             ElementToSubscripeFunc = elementToSubscripeFunc;
             JsRuntime = jsRuntime;
 
         }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Gets or sets the element. </summary>
+        ///
+        /// <value> The element. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         private ElementReference? Element { get; set; }
+        /// <summary>   Applies this.  </summary>
         internal async void Apply()
         {
             Element = ElementToSubscripeFunc?.Invoke();
@@ -44,12 +73,15 @@ namespace Fomantic.Blazor.UI
 
 
         #region OnUpdate
+        /// <summary>   Event queue for all listeners interested in OnVisibilityUpdated events. </summary>
         internal event ViewportVisibilityUpdate OnVisibilityUpdated;
 
-        /// <summary>
-        /// Method executed by Javascript to trigger Visibility Updated events
-        /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method executed by Javascript to trigger Visibility Updated events. </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnUpdate()
         {
@@ -63,10 +95,12 @@ namespace Fomantic.Blazor.UI
            // Console.WriteLine("Visibility Updated");
         }
 
-        /// <summary>
-        /// Method determine if visibility updated event Subscribed or not
-        /// </summary>
-        /// <returns>whether visibility updated event Subscribed or not</returns>
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method determine if visibility updated event Subscribed or not. </summary>
+        ///
+        /// <returns>   whether visibility updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool UpdateSubscribed()
         {
@@ -75,12 +109,15 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region OnTopVisible
+        /// <summary>   Event queue for all listeners interested in OnTopVisibleUpdated events. </summary>
         internal event ViewportVisibilityUpdate OnTopVisibleUpdated;
 
-        /// <summary>
-        /// Method executed by Javascript to trigger On Top Visible Updated events
-        /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method executed by Javascript to trigger On Top Visible Updated events. </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnTopVisible()
         {
@@ -92,10 +129,13 @@ namespace Fomantic.Blazor.UI
                 OnTopVisibleUpdated?.Invoke(eventArgs);
             }
         }
-        /// <summary>
-        /// Method determine if On Top Visible updated event Subscribed or not
-        /// </summary>
-        /// <returns>whether On Top Visible updated event Subscribed or not</returns>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method determine if On Top Visible updated event Subscribed or not. </summary>
+        ///
+        /// <returns>   whether On Top Visible updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool OnTopVisibleSubscribed()
         {
@@ -104,12 +144,15 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region OnTopPassed
+        /// <summary>   Event queue for all listeners interested in OnTopPassedUpdated events. </summary>
         internal event ViewportVisibilityUpdate OnTopPassedUpdated;
 
-        /// <summary>
-        /// Method executed by Javascript to trigger On Top Passed Updated events
-        /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method executed by Javascript to trigger On Top Passed Updated events. </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnTopPassed()
         {
@@ -121,10 +164,13 @@ namespace Fomantic.Blazor.UI
                 OnTopPassedUpdated?.Invoke(eventArgs);
             }
         }
-        /// <summary>
-        /// Method determine if On Top Passed updated event Subscribed or not
-        /// </summary>
-        /// <returns>whether On Top Passed updated event Subscribed or not</returns>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method determine if On Top Passed updated event Subscribed or not. </summary>
+        ///
+        /// <returns>   whether On Top Passed updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool OnTopPassedSubscribed()
         {
@@ -135,12 +181,15 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region OnBottomVisible
+        /// <summary>   Event queue for all listeners interested in OnBottomVisibleUpdated events. </summary>
         internal event ViewportVisibilityUpdate OnBottomVisibleUpdated;
 
-        /// <summary>
-        /// Method executed by Javascript to trigger On Bottom Visible Updated events
-        /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method executed by Javascript to trigger On Bottom Visible Updated events. </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnBottomVisible()
         {
@@ -152,10 +201,13 @@ namespace Fomantic.Blazor.UI
                 OnBottomVisibleUpdated?.Invoke(eventArgs);
             }
         }
-        /// <summary>
-        /// Method determine if On Bottom Visible updated event Subscribed or not
-        /// </summary>
-        /// <returns>whether  On Bottom Visible updated event Subscribed or not</returns>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method determine if On Bottom Visible updated event Subscribed or not. </summary>
+        ///
+        /// <returns>   whether  On Bottom Visible updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool OnBottomVisibleSubscribed()
         {
@@ -166,11 +218,15 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region OnPassing
+        /// <summary>   Event queue for all listeners interested in OnPassingUpdated events. </summary>
         internal event ViewportVisibilityUpdate OnPassingUpdated;
-        /// <summary>
-        /// Method executed by Javascript to trigger On Passing Updated events
-        /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method executed by Javascript to trigger On Passing Updated events. </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnPassing()
         {
@@ -182,10 +238,13 @@ namespace Fomantic.Blazor.UI
                 OnPassingUpdated?.Invoke(eventArgs);
             }
         }
-        /// <summary>
-        /// Method determine if On Passing updated event Subscribed or not
-        /// </summary>
-        /// <returns>whether On Passing updated event Subscribed or not</returns>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method determine if On Passing updated event Subscribed or not. </summary>
+        ///
+        /// <returns>   whether On Passing updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool OnPassingSubscribed()
         {
@@ -196,11 +255,15 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region OnBottomPassed
+        /// <summary>   Event queue for all listeners interested in OnBottomPassedUpdated events. </summary>
         internal event ViewportVisibilityUpdate OnBottomPassedUpdated;
-        /// <summary>
-        /// Method executed by Javascript to trigger On Bottom Passed Updated events
-        /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method executed by Javascript to trigger On Bottom Passed Updated events. </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnBottomPassed()
         {
@@ -212,10 +275,13 @@ namespace Fomantic.Blazor.UI
                 OnBottomPassedUpdated?.Invoke(eventArgs);
             }
         }
-        /// <summary>
-        /// Method determine if On Bottom Passed updated event Subscribed or not
-        /// </summary>
-        /// <returns>whether On Bottom Passed updated event Subscribed or not</returns>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method determine if On Bottom Passed updated event Subscribed or not. </summary>
+        ///
+        /// <returns>   whether On Bottom Passed updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool OnBottomPassedSubscribed()
         {
@@ -226,11 +292,23 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region OnTopVisibleReverse
-        internal event ViewportVisibilityUpdate OnTopVisibleReverseUpdated;
+
+        ///-------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Method executed by Javascript to trigger On TopVisibl Reverse Updated events
+        /// Event queue for all listeners interested in OnTopVisibleReverseUpdated events.
         /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+        ///-------------------------------------------------------------------------------------------------
+
+        internal event ViewportVisibilityUpdate OnTopVisibleReverseUpdated;
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Method executed by Javascript to trigger On TopVisibl Reverse Updated events.
+        /// </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnTopVisibleReverse()
         {
@@ -242,10 +320,15 @@ namespace Fomantic.Blazor.UI
                 OnTopVisibleReverseUpdated?.Invoke(eventArgs);
             }
         }
+
+        ///-------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Method determine if On Top Visible Reverse updated event Subscribed or not
+        /// Method determine if On Top Visible Reverse updated event Subscribed or not.
         /// </summary>
-        /// <returns>whether On Top Visible Reverse updated event Subscribed or not</returns>
+        ///
+        /// <returns>   whether On Top Visible Reverse updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool OnTopVisibleReverseSubscribed()
         {
@@ -256,11 +339,23 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region OnTopPassedReverse
-        internal event ViewportVisibilityUpdate OnTopPassedReverseUpdated;
+
+        ///-------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Method executed by Javascript to trigger On Top Passed Reverse Updated events
+        /// Event queue for all listeners interested in OnTopPassedReverseUpdated events.
         /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+        ///-------------------------------------------------------------------------------------------------
+
+        internal event ViewportVisibilityUpdate OnTopPassedReverseUpdated;
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Method executed by Javascript to trigger On Top Passed Reverse Updated events.
+        /// </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnTopPassedReverse()
         {
@@ -272,10 +367,13 @@ namespace Fomantic.Blazor.UI
                 OnTopPassedReverseUpdated?.Invoke(eventArgs);
             }
         }
-        /// <summary>
-        /// Method determine if On Top Passed Reverse updated event Subscribed or not
-        /// </summary>
-        /// <returns>whether  On Top Passed Reverse updated event Subscribed or not</returns>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method determine if On Top Passed Reverse updated event Subscribed or not. </summary>
+        ///
+        /// <returns>   whether  On Top Passed Reverse updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool OnTopPassedReverseSubscribed()
         {
@@ -286,11 +384,23 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region OnBottomVisibleReverse
-        internal event ViewportVisibilityUpdate OnBottomVisibleReverseUpdated;
+
+        ///-------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Method executed by Javascript to trigger On Bottom Visible Reverse Updated events
+        /// Event queue for all listeners interested in OnBottomVisibleReverseUpdated events.
         /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+        ///-------------------------------------------------------------------------------------------------
+
+        internal event ViewportVisibilityUpdate OnBottomVisibleReverseUpdated;
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Method executed by Javascript to trigger On Bottom Visible Reverse Updated events.
+        /// </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnBottomVisibleReverse()
         {
@@ -302,10 +412,15 @@ namespace Fomantic.Blazor.UI
                 OnBottomVisibleReverseUpdated?.Invoke(eventArgs);
             }
         }
+
+        ///-------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Method determine if On Bottom Visible Reverse updated event Subscribed or not
+        /// Method determine if On Bottom Visible Reverse updated event Subscribed or not.
         /// </summary>
-        /// <returns>whether On Bottom Visible Reverse updated event Subscribed or not</returns>
+        ///
+        /// <returns>   whether On Bottom Visible Reverse updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool OnBottomVisibleReverseSubscribed()
         {
@@ -316,11 +431,23 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region OnPassingReverse
-        internal event ViewportVisibilityUpdate OnPassingReverseUpdated;
+
+        ///-------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Method executed by Javascript to trigger On Passing Reverse Updated events
+        /// Event queue for all listeners interested in OnPassingReverseUpdated events.
         /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+        ///-------------------------------------------------------------------------------------------------
+
+        internal event ViewportVisibilityUpdate OnPassingReverseUpdated;
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Method executed by Javascript to trigger On Passing Reverse Updated events.
+        /// </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnPassingReverse()
         {
@@ -332,10 +459,13 @@ namespace Fomantic.Blazor.UI
                 OnPassingReverseUpdated?.Invoke(eventArgs);
             }
         }
-        /// <summary>
-        /// Method determine if On Passing Reverse updated event Subscribed or not
-        /// </summary>
-        /// <returns>whether  On Passing Reverse updated event Subscribed or not</returns>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Method determine if On Passing Reverse updated event Subscribed or not. </summary>
+        ///
+        /// <returns>   whether  On Passing Reverse updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool OnPassingReverseSubscribed()
         {
@@ -346,11 +476,23 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region OnBottomPassedReverse
-        internal event ViewportVisibilityUpdate OnBottomPassedReverseUpdated;
+
+        ///-------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Method executed by Javascript to trigger On Bottom Passed Reverse Updated events
+        /// Event queue for all listeners interested in OnBottomPassedReverseUpdated events.
         /// </summary>
-        /// <param name="calculation">new calculation after update</param>
+        ///-------------------------------------------------------------------------------------------------
+
+        internal event ViewportVisibilityUpdate OnBottomPassedReverseUpdated;
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Method executed by Javascript to trigger On Bottom Passed Reverse Updated events.
+        /// </summary>
+        ///
+        /// ### <param name="calculation">  new calculation after update. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public  void OnBottomPassedReverse()
         {
@@ -362,10 +504,15 @@ namespace Fomantic.Blazor.UI
                 OnBottomPassedReverseUpdated?.Invoke(eventArgs);
             }
         }
+
+        ///-------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Method determine if On Bottom Passed Reverse updated event Subscribed or not
+        /// Method determine if On Bottom Passed Reverse updated event Subscribed or not.
         /// </summary>
-        /// <returns>whether  On Bottom Passed Reverse updated event Subscribed or not</returns>
+        ///
+        /// <returns>   whether  On Bottom Passed Reverse updated event Subscribed or not. </returns>
+        ///-------------------------------------------------------------------------------------------------
+
         [JSInvokable]
         public bool OnBottomPassedReverseSubscribed()
         {
@@ -374,7 +521,7 @@ namespace Fomantic.Blazor.UI
 
 
         #endregion
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async void Dispose()
         {
             if (Element.HasValue)

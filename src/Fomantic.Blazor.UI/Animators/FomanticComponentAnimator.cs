@@ -1,26 +1,44 @@
-﻿using System;
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Animators\FomanticComponentAnimator.cs
+//
+// summary:	Implements the fomantic component animator class
+///-------------------------------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    /// Class responsibe for animating a <see cref="IFomanticComponent"/>
-    /// </summary>
+    ///-------------------------------------------------------------------------------------------------
+    /// <summary>   Class responsibe for animating a <see cref="IFomanticComponent"/> </summary>
+    ///
+    /// <typeparam name="TFomanticComponent">   Type of the fomantic component. </typeparam>
+    ///-------------------------------------------------------------------------------------------------
+
     public class FomanticComponentAnimator<TFomanticComponent> : ElementReferenceFomanticAnimator where TFomanticComponent : IFomanticComponent
     {
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Gets the components. </summary>
+        ///
+        /// <value> The components. </value>
+        ///-------------------------------------------------------------------------------------------------
+
         public List<TFomanticComponent> Components { get;  }
-        /// <summary>
-        /// Create An instant of Animator
-        /// </summary>       
-        /// <param name="component">Fomantic component to animate</param>
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Create An instant of Animator. </summary>
+        ///
+        /// <param name="component">    Fomantic component to animate. </param>
+        ///-------------------------------------------------------------------------------------------------
+
         public FomanticComponentAnimator(params TFomanticComponent[] component) : base(component?.FirstOrDefault()?.JsRuntime, component?.Select(d => d.RootElement)?.ToArray())
         {
             Components = component.ToList();
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async override Task Animate(int interval = 200, params Tuple<TransitionAnimation, int>[] animations)
         {
             await base.Animate(interval, animations);
@@ -33,7 +51,7 @@ namespace Fomantic.Blazor.UI
 
             }
         }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async override Task Animate(TransitionAnimation animation, int duration = 800, int interval = 200)
         {
             await base.Animate(animation, duration, interval);
@@ -47,7 +65,7 @@ namespace Fomantic.Blazor.UI
             }
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async override Task AnimatedHide(TransitionAnimation animation, int duration = 800, int interval = 200)
         {
             await base.AnimatedHide(animation, duration, interval);
@@ -60,7 +78,7 @@ namespace Fomantic.Blazor.UI
 
             }
         }
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async override Task AnimatedShow(TransitionAnimation animation, int duration = 800, int interval = 200)
         {
             await base.AnimatedShow(animation, duration, interval);

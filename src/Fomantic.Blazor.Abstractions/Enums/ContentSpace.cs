@@ -1,8 +1,12 @@
-﻿namespace Fomantic.Blazor.UI
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Enums\ContentSpace.cs
+//
+// summary:	Implements the content space class
+///-------------------------------------------------------------------------------------------------
+
+namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    /// Contol content padding
-    /// </summary>
+    /// <summary>   Contol content padding. </summary>
     public enum ContentSpace
     {
         /// <summary>

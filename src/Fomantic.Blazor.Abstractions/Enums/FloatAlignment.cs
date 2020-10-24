@@ -1,7 +1,18 @@
-﻿namespace Fomantic.Blazor.UI
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Enums\FloatAlignment.cs
+//
+// summary:	Implements the float alignment class
+///-------------------------------------------------------------------------------------------------
+
+namespace Fomantic.Blazor.UI
 {/// <summary>
-/// Control the float in the container
-/// </summary>
+    ///-------------------------------------------------------------------------------------------------
+    /// <summary>
+    /// Control the float in the container
+    /// </summary>
+    /// </summary>
+    ///-------------------------------------------------------------------------------------------------
+
     public enum FloatAlignment
     {
         /// <summary>

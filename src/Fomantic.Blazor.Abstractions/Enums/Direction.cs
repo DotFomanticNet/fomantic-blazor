@@ -1,8 +1,12 @@
-﻿namespace Fomantic.Blazor.UI
+﻿///-------------------------------------------------------------------------------------------------
+// file:	Enums\Direction.cs
+//
+// summary:	Implements the direction class
+///-------------------------------------------------------------------------------------------------
+
+namespace Fomantic.Blazor.UI
 {
-    /// <summary>
-    /// Direction
-    /// </summary>
+    /// <summary>   Direction. </summary>
     public enum Direction
     {
         /// <summary>
