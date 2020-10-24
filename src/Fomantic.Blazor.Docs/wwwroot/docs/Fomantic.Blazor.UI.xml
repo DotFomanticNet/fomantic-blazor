@@ -1551,6 +1551,15 @@
         <member name="P:Fomantic.TextBase.TooltipSize">
             <inheritdoc/>
         </member>
+        <member name="P:Fomantic.TextBase.IsBold">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.TextDecoration">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.IsItalic">
+            <inheritdoc/>
+        </member>
         <member name="T:Fomantic.SegmentDefaults">
             <summary>   Contains default values for the segmant creation. </summary>
         </member>

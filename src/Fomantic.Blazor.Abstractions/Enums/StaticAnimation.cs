@@ -6,6 +6,8 @@
 
 namespace Fomantic.Blazor.UI
 {
+
+
     /// <summary>   Type of animation that used to draw attention to elements/components. </summary>
     public enum StaticAnimation
     {

@@ -5,6 +5,7 @@
 ///-------------------------------------------------------------------------------------------------
 
 using Fomantic.Blazor.UI;
+
 using Microsoft.AspNetCore.Components;
 
 namespace Fomantic

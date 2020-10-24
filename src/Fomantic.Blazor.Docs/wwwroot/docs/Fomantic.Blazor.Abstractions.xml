@@ -6094,6 +6094,29 @@
             <para><see href="https://fomantic-ui.com/modules/transition.html#glow"></see></para>
             </remarks>
         </member>
+        <member name="T:Fomantic.Blazor.UI.TextDecoration">
+            <summary>   Type of text decoration that used to style text components. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TextDecoration.OverLine">
+             <summary>
+            Decorat text with  over line 
+             </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TextDecoration.LineThrough">
+             <summary>
+            Decorat text with  line through
+             </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TextDecoration.UnderLine">
+            <summary>
+             Decorat text with under  line  
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.TextDecoration.UnderLineOverline">
+            <summary>
+            Decorat text with  under and over line 
+            </summary>
+        </member>
         <member name="T:Fomantic.Blazor.UI.TooltipPosition">
             <summary>   Values that represent tooltip positions. </summary>
         </member>
@@ -7614,6 +7637,57 @@
              <summary>   Determine if the component should be appear as loading or not. </summary>
             
              <value> True if this  is loading, false if not. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.IFomanticComponentWithTextStyle">
+            <summary>   Base interface for all fomantic component can be with text style. </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithTextStyle.BoldClass">
+            <summary>   class given to make component bold. </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithTextStyle.TextOverLine">
+            <summary>   class given to make component bold. </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithTextStyle.TextlineThrough">
+            <summary>   class given to make component bold. </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithTextStyle.Textunderline">
+            <summary>   class given to make component bold. </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithTextStyle.TextUnderOverline">
+            <summary>   class given to make component bold. </summary>
+        </member>
+        <member name="F:Fomantic.IFomanticComponentWithTextStyle.ItalicClass">
+            <summary>   class given to make component bold. </summary>
+        </member>
+        <member name="P:Fomantic.IFomanticComponentWithTextStyle.IsBold">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Determine if the component font should be bold  or not. </summary>
+            
+             <value> True if this  is bold, false if not. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.IFomanticComponentWithTextStyle.IsItalic">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Determine if the component font should be italic  or not. </summary>
+            
+             <value> True if this  is italic, false if not. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.IFomanticComponentWithTextStyle.TextDecoration">
+            -------------------------------------------------------------------------------------------------
+             <summary>  Determine what kind of text decoration apply  on text  </summary>
+            
+             <value> Type of decuration  should be applied</value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.IFomanticComponentWithTextStyle.ToClass(System.Nullable{Fomantic.Blazor.UI.TextDecoration})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.TextDecoration"/> to given class. </summary>
+            
+             <param name="textDecoration"> Text decoration Value. </param>
+            
+             <returns>   Given class from <paramref name="textDecoration"/> </returns>
             -------------------------------------------------------------------------------------------------
         </member>
     </members>
