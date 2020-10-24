@@ -31,6 +31,10 @@ namespace Fomantic.Blazor.UI
             {
                 fomanticComponentWithAlignment.AddAlignmentClass();
             }
+            if (component is IFomanticComponentWithContentAlignment fomanticComponentWithContentAlignment)
+            {
+                fomanticComponentWithContentAlignment.AddContentAlignmentClass();
+            }
             if (component is IFomanticComponentWithContentSpacing fomanticComponentWithContentSpacing)
             {
                 fomanticComponentWithContentSpacing.AddContentSpacingClass();
