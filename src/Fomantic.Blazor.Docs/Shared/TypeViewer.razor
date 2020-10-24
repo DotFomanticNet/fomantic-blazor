@@ -60,6 +60,17 @@ else
 </div>
 
 @code {
+
+    public static Dictionary<string, string> TypesWithLink { get; set; } = new Dictionary<string, string>() {
+        {"KeyboardEventArgs","https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.web.keyboardeventargs?view=aspnetcore-3.1" },
+        {"MouseEventArgs","https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.web.mouseeventargs?view=aspnetcore-3.1" },
+        {"ChangeEventArgs","https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.changeeventargs?view=aspnetcore-3.1" },
+        {"EventArgs","https://docs.microsoft.com/en-us/dotnet/api/system.eventargs?view=netcore-3.1" },
+        {"DragEventArgs","https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.web.drageventargs?view=aspnetcore-3.1" },
+        {"ClipboardEventArgs","https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.web.clipboardeventargs?view=aspnetcore-3.1" },
+        {"WheelEventArgs","https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.web.wheeleventargs?view=aspnetcore-3.1" }
+    };
+
     [Parameter]
     public Type Type { get; set; }
 
@@ -71,6 +82,7 @@ else
 
     public Type SubType { get; set; }
 
+    public string Link { get; set; }
     ElementReference modal;
     IJSObjectReference jqModal;
     protected async override Task OnAfterRenderAsync(bool firstRender)
@@ -93,6 +105,9 @@ else
     {
         SubType = type;
         await jqModal.InvokeVoidAsync("modal", "show");
+
+
+
     }
 
 
@@ -149,10 +164,21 @@ else
 
             @if (!thistype.FullName.StartsWith("Fomantic"))
                 {
-                <Text>
 
-                <Text Size="size" TooltipText="@thistype.FullName" Color="Color??UI.Color.Black">@(string.IsNullOrEmpty(Text)? thistype.Name :Text)</Text>
-                </Text>
+                @if (TypesWithLink.ContainsKey(Type?.Name))
+                    {
+                    <Text>
+                    <a href="@TypesWithLink[Type.Name]" target="_blank">  <Text Size="size" TooltipText="@thistype.FullName" Color="Color??UI.Color.Blue">@(string.IsNullOrEmpty(Text)? thistype.Name :Text)</Text></a>
+                    </Text>
+                    }
+                    else
+                    {
+                    <Text>
+                    <Text Size="size" TooltipText="@thistype.FullName" Color="Color??UI.Color.Black">@(string.IsNullOrEmpty(Text)? thistype.Name :Text)</Text>
+                    </Text>
+                    }
+
+
                 }
                 else
                 {

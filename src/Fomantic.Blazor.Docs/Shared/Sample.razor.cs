@@ -57,6 +57,10 @@ namespace Fomantic.Blazor.Docs.Shared
         public abstract string GetContentCode();
         public override string GetHtmlCode()
         {
+            return GetHtmlCode();
+        }
+        public virtual string GetHtmlCode(Dictionary<string, string> extraattr = null)
+        {
             if (Component == null)
             {
                 return "";
@@ -69,6 +73,14 @@ namespace Fomantic.Blazor.Docs.Shared
             {
                 code += $" @ref='{VariableName}'";
             }
+            if (extraattr != null)
+            {
+                foreach (var item in extraattr)
+                {
+                    code += $" {item.Key}='{item.Value}'";
+                }
+            }
+
             foreach (var prop in itemProp)
             {
                 if (!prop.PropertyType.IsClass)
@@ -291,10 +303,10 @@ namespace Fomantic.Blazor.Docs.Shared
             get => elementRef;
             set
             {
-              
+
                 if (Animator == null && value.Context != null)
                 {
-                   
+
                     Animator = new ElementReferenceFomanticAnimator(jSRuntime, value);
                 }
                 elementRef = value;
@@ -489,14 +501,12 @@ namespace Fomantic.Blazor.Docs.Shared
                 return "";
             }
             string code = "";
-            //string code = "<div class=\"ui row padding buttons\">" + Environment.NewLine; ;
-
-            //foreach (var item in Actions)
-            //{
-            //    code += $"   <button class=\"ui button\" @onclick=\"{VariableName}_{item.Name}\">{item.Name}</button>" + Environment.NewLine; ;
-            //}
-            //code += "</div>" + Environment.NewLine; ;
-            code += base.GetHtmlCode();
+            Dictionary<string, string> attr = new Dictionary<string, string>();
+            foreach (var ev in Events)
+            {
+                attr.Add("@"+ev.Name, $"{VariableName}_{ev.Name}");
+            }
+            code += base.GetHtmlCode(attr);
             return code;
         }
         public override string GetContentCode()
@@ -537,7 +547,7 @@ namespace Fomantic.Blazor.Docs.Shared
             foreach (var item in Events)
             {
 
-                code += $"  private async Task {VariableName}_{item.Name}(todo addPArams)" + Environment.NewLine;
+                code += $"  private async Task {VariableName}_{item.Name}({item.Type.Name} eventArg)" + Environment.NewLine;
                 code += "  {" + Environment.NewLine;
                 if (!string.IsNullOrEmpty(item.CodeComment))
                 {
