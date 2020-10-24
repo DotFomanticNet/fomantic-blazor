@@ -1052,7 +1052,7 @@
         clickableSegmant.Events.Add(new SampleComponentEvent<MouseEventArgs>() { Name = "onmousemove" });
         clickableSegmant.Events.Add(new SampleComponentEvent<MouseEventArgs>() { Name = "onmouseout" });
 
-        clickableSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(clickableSegmant) { Content = "Content goes here" });
+        clickableSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(clickableSegmant) { Content = "Click Me" });
         MouseEventsSegmentSampleData.Add(clickableSegmant);
 
         //DragEventsSegmentSampleData
@@ -1069,7 +1069,7 @@
 
 
 
-        dragableSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(dragableSegmant) { Content = "Content goes here" });
+        dragableSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(dragableSegmant) { Content = "Drag me" });
         DragEventsSegmentSampleData.Add(dragableSegmant);
 
 
@@ -1081,7 +1081,7 @@
         clipboardSegmant.Events.Add(new SampleComponentEvent<ClipboardEventArgs>() { Name = "onpaste" });
 
 
-        clipboardSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(clipboardSegmant) { Content = "Content goes here" });
+        clipboardSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(clipboardSegmant) { Content = "Copy Cut Or Paste here" });
         ClipboardEventsSegmentSampleData.Add(clipboardSegmant);
 
         //ViewPortEventsSegmentSampleData
@@ -1101,7 +1101,7 @@
         ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnBottomPassedReverse" });
 
 
-        ohterEventSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(ohterEventSegmant) { Content = "Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content <br>Content <br>Content <br>Content <br>Content <br>Content <br>" });
+        ohterEventSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(ohterEventSegmant) { Content = "Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events<br>Scroll to trigger the events <br>Scroll to trigger the events <br>Scroll to trigger the events <br>Scroll to trigger the events <br>Scroll to trigger the events <br>Scroll to trigger the events <br>" });
         ViewPortEventsSegmentSampleData.Add(ohterEventSegmant);
         #endregion
         #region Miscellaneous
