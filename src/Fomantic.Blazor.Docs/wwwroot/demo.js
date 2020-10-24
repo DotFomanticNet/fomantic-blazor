@@ -4,6 +4,7 @@
         $(elemnt)
             .sidebar({
                 transition: "overlay",
+                silent: true,
                 dimPage: false,
                 onHidden: async function () {
 
@@ -15,6 +16,7 @@
             .sidebar({
                 transition: "overlay",
                 dimPage: false,
+                silent: true,
                 onHidden: async function () {
 
                     await sampleComponent.invokeMethodAsync("Close");
@@ -109,12 +111,14 @@ window.semantic = {
 
             $('.ui.sticky')
                 .sticky({
+                    silent: true,
                     offset: 30
                 });
             $('.ui.accordion').accordion();
 
             $('.example').visibility({
                 once: false,
+                silent:true,
                 onTopPassed: function (calculations) {
                     var id = $(this).attr('id');
 
