@@ -41,7 +41,7 @@
 
                     <a @onclick='d=>SwichTab("Features Showcases")' class='@(CurrentTab=="Features Showcases"?"active":"") item'>Features Showcases</a>
 
-                    <a @onclick='d=>SwichTab(CurrentTab="Api Documentation ")' class='@(CurrentTab=="Api Documation"?"active":"") item'>Api Documation</a>
+                    <a @onclick='d=>SwichTab(CurrentTab="Api Documentation ")' class='@(CurrentTab=="Api Documentation"?"active":"") item'>API Documentation</a>
 
 
                 </div>
@@ -86,14 +86,33 @@
 
     </div>
 
-
+    @code{
+        ElementReference BaseInterfacesandclasses;
+        ElementReference ParamtersAndProperties;
+        ElementReference Methods;
+        ElementReference Events;
+    }
 
     <div class="main ui container@(CurrentTab == "Api Documentation "?" ":" transition hidden")">
-        @if (secoundTabInit)
+
+        @if (Type != null)
         {
-            @if (Type != null)
+            <div class="ui dividing right rail">
+                <div class="ui sticky">
+                    <h3 class="ui header">@Title</h3>
+                    <div class="ui vertical following fluid accordion text menu">
+                        <div class="content menu active">
+                            <a class="item" @onclick='async d=> { await BaseInterfacesandclasses.JumpToTopOf(JsRuntime); }'> <b>Base Interfaces and classes</b></a>
+                            <a class="item" @onclick='async d=> { await ParamtersAndProperties.JumpToTopOf(JsRuntime); }'> <b>Paramters and Properties</b></a>
+                            <a class="item" @onclick='async d=> { await Methods.JumpToTopOf(JsRuntime); }'> <b>Methods</b></a>
+                            <a class="item" @onclick='async d=> { await Events.JumpToTopOf(JsRuntime); }'> <b>Events</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @if (secoundTabInit)
             {
-                <div class="ui instructive  attached segment">
+                <div @ref="BaseInterfacesandclasses" class="ui instructive  attached segment">
                     <Header Type="HeaderType.H4">
                         Base Interfaces and classes
                     </Header>
@@ -101,7 +120,7 @@
 
                     </BaseInterfacesDocumentationTable>
                 </div>
-                <div class="ui instructive  attached segment">
+                <div @ref="ParamtersAndProperties" class="ui instructive  attached segment">
                     <Header Type="HeaderType.H4">
                         Paramters and Properties
                     </Header>
@@ -111,7 +130,7 @@
                     </PropertiesDocumentationTable>
 
                 </div>
-                <div class="ui instructive  attached segment">
+                <div @ref="Methods" class="ui instructive  attached segment">
                     <Header Type="HeaderType.H4">
                         Methods
                     </Header>
@@ -121,7 +140,7 @@
                     </MethodsDocumentationTable>
 
                 </div>
-                <div class="ui instructive  attached segment">
+                <div @ref="Events" class="ui instructive  attached segment">
                     <Header Type="HeaderType.H4">
                         Events
                     </Header>
@@ -171,8 +190,9 @@
     {
 
         CurrentTab = tabName;
-        secoundTabInit = true;
         await JsRuntime.InvokeVoidAsync("window.semantic.ready");
+        secoundTabInit = true;
+
 
     }
     protected async override Task OnAfterRenderAsync(bool firstRender)
