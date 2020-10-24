@@ -15,7 +15,7 @@ namespace Fomantic.Blazor.UI
         /// <summary>
         /// Current View Port Calculations
         /// </summary>
-        public IViewPortCalculation Calculation { get; private set; } = new ViewPortCalculation();
+        public ViewPortCalculation Calculation { get; private set; } = new ViewPortCalculation();
 
 
         /// <summary>
@@ -51,10 +51,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnUpdate(IViewPortCalculation calculation)
+        public  void OnUpdate()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnVisibilityUpdated != null)
             {
@@ -82,10 +82,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnTopVisible(IViewPortCalculation calculation)
+        public  void OnTopVisible()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnTopVisibleUpdated != null)
             {
@@ -111,10 +111,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnTopPassed(IViewPortCalculation calculation)
+        public  void OnTopPassed()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnTopPassedUpdated != null)
             {
@@ -142,10 +142,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnBottomVisible(IViewPortCalculation calculation)
+        public  void OnBottomVisible()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnBottomVisibleUpdated != null)
             {
@@ -172,10 +172,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnPassing(IViewPortCalculation calculation)
+        public  void OnPassing()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnPassingUpdated != null)
             {
@@ -202,10 +202,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnBottomPassed(IViewPortCalculation calculation)
+        public  void OnBottomPassed()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnBottomPassedUpdated != null)
             {
@@ -232,10 +232,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnTopVisibleReverse(IViewPortCalculation calculation)
+        public  void OnTopVisibleReverse()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnTopVisibleReverseUpdated != null)
             {
@@ -262,10 +262,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnTopPassedReverse(IViewPortCalculation calculation)
+        public  void OnTopPassedReverse()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnTopPassedReverseUpdated != null)
             {
@@ -292,10 +292,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnBottomVisibleReverse(IViewPortCalculation calculation)
+        public  void OnBottomVisibleReverse()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnBottomVisibleReverseUpdated != null)
             {
@@ -322,10 +322,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnPassingReverse(IViewPortCalculation calculation)
+        public  void OnPassingReverse()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnPassingReverseUpdated != null)
             {
@@ -352,10 +352,10 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         /// <param name="calculation">new calculation after update</param>
         [JSInvokable]
-        public  void OnBottomPassedReverse(IViewPortCalculation calculation)
+        public  void OnBottomPassedReverse()
         {
-            Calculation = calculation;
-            var eventArgs = new ViewPortEventArgs(calculation);
+           
+            var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnBottomPassedReverseUpdated != null)
             {

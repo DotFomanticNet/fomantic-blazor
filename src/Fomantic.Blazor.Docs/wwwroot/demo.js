@@ -139,13 +139,7 @@ window.semantic = {
                 }
             });
 
-            $(".jump").click(function (e) {
-                var id = $(this).attr('href');
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $(id).offset().top
-                }, 600);
-                e.preventDefault();
-            });
-        }, 1500);
+          
+        }, 300);
     }
 };

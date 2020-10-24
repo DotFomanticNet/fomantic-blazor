@@ -231,14 +231,7 @@ namespace Fomantic.Blazor.UI
       
         Task Animate(int interval = 200,params Tuple<TransitionAnimation, int>[] animations);
 
-        /// <summary>
-        /// Animate the target with a sequence of any animations into a task and it will be done all animation done , Once animation done element will be transit into show or hiddin  
-        /// </summary>
-        /// <param name="animations">Tuples contain each transition animation to apply on the target and its duration</param>
-        /// <param name="interval">Interval in MS between each elements transition</param>
-        /// <returns></returns>
-      
-        Task Animate<T>(int interval = 200, params Tuple<T, int>[] animations) where T : System.Enum;
+       
 
         /// <summary>
         /// Animate the target once with a static animation without waiting to be ended 
@@ -277,14 +270,7 @@ namespace Fomantic.Blazor.UI
      
         void QueueAnimation(int interval = 200, params Tuple<TransitionAnimation, int>[] animations);
 
-        /// <summary>
-        /// Animate the target with a sequence of any animations without waiting to be ended 
-        /// </summary>
-        /// <param name="animations">Tuples contain a list of any animation to apply on the target and its duration</param>
-        /// <param name="interval">Interval in MS between each elements transition</param>
-        /// <returns></returns>
-      
-        void QueueAnimate<T>(int interval = 200, params Tuple<T, int>[] animations) where T : System.Enum;
+       
 
         /// <summary>
         /// Animate the target once with a static animation into a task and it will be done once animation done , Once animation done element will be showen 

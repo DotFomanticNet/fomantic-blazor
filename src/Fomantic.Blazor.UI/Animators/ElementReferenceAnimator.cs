@@ -30,12 +30,15 @@ namespace Fomantic.Blazor.UI
         [ComponentAction]
         public virtual async Task Animate(StaticAnimation animation, int duration = 800, int interval = 200)
         {
+           
             if (ElementToAnimate.Count() > 1)
             {
+
                 await JsRuntime.InvokeVoidAsync("window.animator.animateElements", ElementToAnimate, IFomanticAnimator.ToClass(animation), duration, interval);
             }
             else
             {
+           
                 await JsRuntime.InvokeVoidAsync("window.animator.animate", ElementToAnimate[0], IFomanticAnimator.ToClass(animation), duration);
             }
 
@@ -99,6 +102,7 @@ namespace Fomantic.Blazor.UI
         [ComponentAction]
         public virtual void QueueAnimation(StaticAnimation animation, int duration = 800, int interval = 200)
         {
+            
             Task.Run(() => Animate(animation, duration, interval));
         }
         ///<inheritdoc/>
@@ -119,12 +123,7 @@ namespace Fomantic.Blazor.UI
         {
             Task.Run(() => Animate(interval, animations));
         }
-        ///<inheritdoc/>
-        [ComponentAction]
-        public virtual void QueueAnimate<T>(int interval = 200, params Tuple<T, int>[] animations) where T : System.Enum
-        {
-            Task.Run(() => Animate(interval, animations));
-        }
+
 
         ///<inheritdoc/>
         [ComponentAction]
@@ -139,19 +138,7 @@ namespace Fomantic.Blazor.UI
                 await JsRuntime.InvokeVoidAsync("window.animator.animateMultible", ElementToAnimate[0], animations.Select(d => new { animation = IFomanticAnimator.ToClass(d.Item1), duration = d.Item2 }));
             }
         }
-        ///<inheritdoc/>
-        [ComponentAction]
-        public virtual async Task Animate<T>(int interval = 200, params Tuple<T, int>[] animations) where T : System.Enum
-        {
-            if (ElementToAnimate.Length > 1)
-            {
-                await JsRuntime.InvokeVoidAsync("window.animator.animateElementsMultible", ElementToAnimate, animations.Select(d => new { animation = d.Item1.ToString().ToLower(), duration = d.Item2 }), interval);
-            }
-            else
-            {
-                await JsRuntime.InvokeVoidAsync("window.animator.animateMultible", ElementToAnimate[0], animations.Select(d => new { animation = d.Item1.ToString().ToLower(), duration = d.Item2 }));
-            }
-        }
+
 
         ///<inheritdoc/>
         [ComponentAction]

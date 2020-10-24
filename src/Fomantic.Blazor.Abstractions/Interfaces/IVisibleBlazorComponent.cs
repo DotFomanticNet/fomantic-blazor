@@ -47,116 +47,116 @@ namespace Fomantic.Blazor.UI
         void ToggleVisibility();
 
         /// <summary>
-        /// Occurs each time component patent element Viewport Visibility calculations are updated
+        /// Occurs each time component patent element Viewport Visibility calculations are 
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnViewportVisibilityUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnViewportVisibilityChange { get; set; }
         /// <summary>
-        /// Occurs each time component patent element Viewport Visibility calculations are updated
+        /// Occurs each time component patent element Viewport Visibility calculations are 
         /// </summary>
-        public event ViewportVisibilityUpdate OnViewportVisibilityUpdatedEvent;
+        public event ViewportVisibilityUpdate OnViewportVisibilityChangeEvent;
 
 
         /// <summary>
         /// Occurs each time when component patent element's top edge has passed bottom of screen
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnTopVisibilityUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnTopVisible { get; set; }
         /// <summary>
         /// Occurs each time when component patent element's top edge has passed bottom of screen
         /// </summary>
-        public event ViewportVisibilityUpdate OnTopVisibilityUpdatedEvent;
+        public event ViewportVisibilityUpdate OnTopVisibleEvent;
 
 
         /// <summary>
         ///  Occurs each time when component patent element's top edge has passed top of the screen
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnTopPassedUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnTopPassed { get; set; }
         /// <summary>
         ///  Occurs each time when component patent element's top edge has passed top of the screen
         /// </summary>
-        public event ViewportVisibilityUpdate OnTopPassedUpdatedEvent;
+        public event ViewportVisibilityUpdate OnTopPassedEvent;
 
         /// <summary>
         ///  Occurs each time when component patent element's bottom edge has passed bottom of screen
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnBottomVisibleUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnBottomVisible { get; set; }
         /// <summary>
         ///  Occurs each time when component patent element's bottom edge has passed bottom of screen
         /// </summary>
-        public event ViewportVisibilityUpdate OnBottomVisibleUpdatedEvent;
+        public event ViewportVisibilityUpdate OnBottomVisibleEvent;
 
 
         /// <summary>
         ///  Occurs when Any part of an component patent element is visible on screen
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnPassingUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnPassing { get; set; }
         /// <summary>
         ///  Occurs when Any part of an component patent element is visible on screen
         /// </summary>
-        public event ViewportVisibilityUpdate OnPassingUpdatedEvent;
+        public event ViewportVisibilityUpdate OnPassingEvent;
 
         /// <summary>
         ///  Occurs each time when component patent element's bottom edge has passed top of screen
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnBottomPassedUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnBottomPassed { get; set; }
         /// <summary>
         ///  Occurs each time when component patent element's bottom edge has passed top of screen
         /// </summary>
-        public event ViewportVisibilityUpdate OnBottomPassedUpdatedEvent;
+        public event ViewportVisibilityUpdate OnBottomPassedEvent;
 
         /// <summary>
         ///  Occurs each time when component patent element's top edge has not passed bottom of screen
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnTopVisibleReverseUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnTopVisibleReverse { get; set; }
         /// <summary>
         ///  Occurs each time when component patent element's top edge has not passed bottom of screen
         /// </summary>
-        public event ViewportVisibilityUpdate OnTopVisibleReverseUpdatedEvent;
+        public event ViewportVisibilityUpdate OnTopVisibleReverseEvent;
 
         /// <summary>
         ///  Occurs each time when component patent element's top edge has not passed top of the screen
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnTopPassedReverseUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnTopPassedReverse { get; set; }
         /// <summary>
         ///  Occurs each time when component patent element's top edge has not passed top of the screen
         /// </summary>
-        public event ViewportVisibilityUpdate OnTopPassedReverseUpdatedEvent;
+        public event ViewportVisibilityUpdate OnTopPassedReverseEvent;
 
         /// <summary>
         ///  Occurs each time when component patent element's bottom edge has not passed bottom of screen
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnBottomVisibleReverseUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnBottomVisibleReverse { get; set; }
         /// <summary>
         ///  Occurs each time when component patent element's bottom edge has not passed bottom of screen
         /// </summary>
-        public event ViewportVisibilityUpdate OnBottomVisibleReverseUpdatedEvent;
+        public event ViewportVisibilityUpdate OnBottomVisibleReverseEvent;
 
         /// <summary>
         ///  Occurs each time when component patent element's top has not passed top of screen but bottom has
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnPassingReverseUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnPassingReverse { get; set; }
         /// <summary>
         ///  Occurs each time when component patent element's top has not passed top of screen but bottom has
         /// </summary>
-        public event ViewportVisibilityUpdate OnPassingReverseUpdatedEvent;
+        public event ViewportVisibilityUpdate OnPassingReverseEvent;
 
         /// <summary>
         ///  Occurs each time when component patent element's bottom edge has not passed top of screen
         /// </summary>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnBottomPassedReverseUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnBottomPassedReverse { get; set; }
         /// <summary>
         ///  Occurs each time when component patent element's bottom edge has not passed top of screen
         /// </summary>
-        public event ViewportVisibilityUpdate OnBottomPassedReverseUpdatedEvent;
+        public event ViewportVisibilityUpdate OnBottomPassedReverseEvent;
     }
 }

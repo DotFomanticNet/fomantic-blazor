@@ -418,6 +418,46 @@
             </ApiDocumentation>
         </Sample>
     </DocumentationArticleGroup>
+    <DocumentationArticleGroup Title="Events">
+
+
+        <Sample PageUri="@PageUri" Id="MouseEvents" ComponentsTypes="MouseEventsSegmentSampleData">
+            <Title>
+                Mouse Events
+            </Title>
+            <DescriptionTemplate>
+                A segment has an object (JQueryElementRef) which reference jquery of segmant
+            </DescriptionTemplate>
+
+        </Sample>
+        <Sample PageUri="@PageUri" Id="DragEvents" ComponentsTypes="DragEventsSegmentSampleData">
+            <Title>
+                Drag Events
+            </Title>
+            <DescriptionTemplate>
+                A segment has an object (JQueryElementRef) which reference jquery of segmant
+            </DescriptionTemplate>
+
+        </Sample>
+        <Sample PageUri="@PageUri" Id="ClipboardEvents" ComponentsTypes="ClipboardEventsSegmentSampleData">
+            <Title>
+                Clipboard Events
+            </Title>
+            <DescriptionTemplate>
+                A segment has an object (JQueryElementRef) which reference jquery of segmant
+            </DescriptionTemplate>
+
+        </Sample>
+        <Sample PageUri="@PageUri" Id="OtherEvents" ComponentsTypes="ViewPortEventsSegmentSampleData">
+            <Title>
+                Viewport Events
+            </Title>
+            <DescriptionTemplate>
+                A segment has an object (JQueryElementRef) which reference jquery of segmant
+            </DescriptionTemplate>
+
+        </Sample>
+    </DocumentationArticleGroup>
     <DocumentationArticleGroup Title="Miscellaneous">
         <Sample PageUri="@PageUri" Id="JumpToSegment" ComponentsTypes="JumpToSegmentSampleData">
             <Title>
@@ -446,6 +486,7 @@
             </DescriptionTemplate>
 
         </Sample>
+
     </DocumentationArticleGroup>
     <DocumentationArticleGroup Title="Customization">
         <Sample PageUri="@PageUri" Id="SegmentDefaults" SampleCodeLanguage="csharp" SampleCode="@segmentDefaultsSampleCode" IsCodeHidden="false">
@@ -552,9 +593,16 @@
     public List<SampleComponent> TransitionAnimationSegmentSampleData { get; set; } = new List<SampleComponent>();
     public List<SampleComponent> StaticAnimationSegmentSampleData { get; set; } = new List<SampleComponent>();
 
+    //Events
+    public List<SampleComponent> MouseEventsSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> DragEventsSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> ClipboardEventsSegmentSampleData { get; set; } = new List<SampleComponent>();
+    public List<SampleComponent> ViewPortEventsSegmentSampleData { get; set; } = new List<SampleComponent>();
+
     //Miscellaneous
     public List<SampleComponent> JumpToSegmentSampleData { get; set; } = new List<SampleComponent>();
     public List<SampleComponent> JqueryInteropSegmentSampleData { get; set; } = new List<SampleComponent>();
+
 
     //Customization
     string segmentCustomizationSampleCode;
@@ -988,6 +1036,74 @@
         StaticAnimatedSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(StaticAnimatedSegmant) { Content = "Content here will be animated" });
         StaticAnimationSegmentSampleData.Add(StaticAnimatedSegmant);
         #endregion
+        #region Events
+        //MouseEventsSegmentSampleData
+        var clickableSegmant = new SampleComponentEventWithChildren<Segment>("Segmant1", null);
+
+        clickableSegmant.Events.Add(new SampleComponentEvent<WheelEventArgs>() { Name = "onmousewheel" });
+        clickableSegmant.Events.Add(new SampleComponentEvent<WheelEventArgs>() { Name = "onwheel" });
+
+        clickableSegmant.Events.Add(new SampleComponentEvent<MouseEventArgs>() { Name = "onclick" });
+        clickableSegmant.Events.Add(new SampleComponentEvent<MouseEventArgs>() { Name = "oncontextmenu" });
+        clickableSegmant.Events.Add(new SampleComponentEvent<MouseEventArgs>() { Name = "ondblclick" });
+        clickableSegmant.Events.Add(new SampleComponentEvent<MouseEventArgs>() { Name = "onmousedown" });
+        clickableSegmant.Events.Add(new SampleComponentEvent<MouseEventArgs>() { Name = "onmouseup" });
+        clickableSegmant.Events.Add(new SampleComponentEvent<MouseEventArgs>() { Name = "onmouseover" });
+        clickableSegmant.Events.Add(new SampleComponentEvent<MouseEventArgs>() { Name = "onmousemove" });
+        clickableSegmant.Events.Add(new SampleComponentEvent<MouseEventArgs>() { Name = "onmouseout" });
+
+        clickableSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(clickableSegmant) { Content = "Content goes here" });
+        MouseEventsSegmentSampleData.Add(clickableSegmant);
+
+        //DragEventsSegmentSampleData
+        var dragableSegmant = new SampleComponentEventWithChildren<Segment>("Segmant1", null) { AdditionalAttributes = new Dictionary<string, object> { { "draggable", "true" } } };
+
+        dragableSegmant.Events.Add(new SampleComponentEvent<DragEventArgs>() { Name = "ondrag" });
+        dragableSegmant.Events.Add(new SampleComponentEvent<DragEventArgs>() { Name = "ondragstart" });
+        dragableSegmant.Events.Add(new SampleComponentEvent<DragEventArgs>() { Name = "ondragenter" });
+        dragableSegmant.Events.Add(new SampleComponentEvent<DragEventArgs>() { Name = "ondragleave" });
+        dragableSegmant.Events.Add(new SampleComponentEvent<DragEventArgs>() { Name = "ondragover" });
+        dragableSegmant.Events.Add(new SampleComponentEvent<DragEventArgs>() { Name = "ondrop" });
+        dragableSegmant.Events.Add(new SampleComponentEvent<DragEventArgs>() { Name = "ondragend" });
+
+
+
+
+        dragableSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(dragableSegmant) { Content = "Content goes here" });
+        DragEventsSegmentSampleData.Add(dragableSegmant);
+
+
+        //ClipboardEventsSegmentSampleData
+        var clipboardSegmant = new SampleComponentEventWithChildren<Segment>("Segmant1", null);
+
+        clipboardSegmant.Events.Add(new SampleComponentEvent<ClipboardEventArgs>() { Name = "oncut" });
+        clipboardSegmant.Events.Add(new SampleComponentEvent<ClipboardEventArgs>() { Name = "oncopy" });
+        clipboardSegmant.Events.Add(new SampleComponentEvent<ClipboardEventArgs>() { Name = "onpaste" });
+
+
+        clipboardSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(clipboardSegmant) { Content = "Content goes here" });
+        ClipboardEventsSegmentSampleData.Add(clipboardSegmant);
+
+        //ViewPortEventsSegmentSampleData
+        var ohterEventSegmant = new SampleComponentEventWithChildren<Segment>("Segmant1", null,d=> { var t = d.ViewportVisibility.Calculation; });
+
+        ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnTopVisible" });
+        ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnTopPassed" });
+        ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnBottomVisible" });
+        ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnPassing" });
+        ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnBottomPassed" });
+
+
+        ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnTopVisibleReverse" });
+        ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnTopPassedReverse" });
+        ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnBottomVisibleReverse" });
+        ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnPassingReverse" });
+        ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnBottomPassedReverse" });
+
+
+        ohterEventSegmant.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(ohterEventSegmant) { Content = "Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content <br>Content <br>Content <br>Content <br>Content <br>Content <br>" });
+        ViewPortEventsSegmentSampleData.Add(ohterEventSegmant);
+        #endregion
         #region Miscellaneous
         //JumpToSegmentSampleData
         var jumpToSegmenta = new SampleComponentActionWithChildren<Segment>("Segmant1", null);
@@ -1005,6 +1121,7 @@
         });
         jqueryInteropSegmenta.InternalComponents.Add(new SampleComponentWithHtmlContent<Text>(jqueryInteropSegmenta) { Content = "Content goes here" });
         JqueryInteropSegmentSampleData.Add(jqueryInteropSegmenta);
+
 
         #endregion
         #region Customization
@@ -1040,7 +1157,6 @@
         segmentDefaultsSampleCode += "    }" + Environment.NewLine;
         segmentDefaultsSampleCode += " }" + Environment.NewLine;
         #endregion
-
     }
     protected override void OnAfterRender(bool firstRender)
     {

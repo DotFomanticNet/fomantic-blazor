@@ -8,58 +8,58 @@
         /// <summary>
         /// css bottom value of the parent element of the component 
         /// </summary>
-        int Bottom { get;  }
+      //  long? Bottom { get; }
         /// <summary>
         /// Is  parent element of the component bottom not visibile on the viewport
         /// </summary>
-        bool BottomPassed { get;  }
+        bool? BottomPassed { get; }
         /// <summary>
         /// Is parent element of the component bottom visibile on the viewport
         /// </summary>
-        bool BottomVisible { get;  }
+        bool? BottomVisible { get; }
         /// <summary>
         /// 
         /// </summary>
-        bool Fits { get; }
+        bool? Fits { get; }
         /// <summary>
         /// Height value of the parent element of the component 
         /// </summary>
-        int Height { get;  }
+        long? Height { get; }
         /// <summary>
         /// Is the parent element of the component not visibile on the viewport
         /// </summary>
-        bool OffScreen { get;  }
+        bool? OffScreen { get; }
         /// <summary>
         /// Is the parent element of the component visibile on the viewport
         /// </summary>
-        bool OnScreen { get;  }
+        bool? OnScreen { get; }
         /// <summary>
         /// Is the parent element of the component passing on the viewport
         /// </summary>
-        bool Passing { get;  }
+        bool? Passing { get; }
         /// <summary>
         /// A distance from the top of parent element of the component content has been passed as percentage
         /// </summary>
-        double PercentagePassed { get;  }
+        double? PercentagePassed { get; }
         /// <summary>
         /// A distance from the top of parent element of the component content has been passed as pixels
         /// </summary>
-        int PixelsPassed { get; }
+        long? PixelsPassed { get; }
         /// <summary>
         /// Is parent element of the component top visibile on the viewport
         /// </summary>
-        bool TopVisible { get; }
+        bool? TopVisible { get; }
         /// <summary>
         ///  Is parent element of the component top passed on the viewport
         /// </summary>
-        bool TopPassed { get; }
+        bool? TopPassed { get; }
         /// <summary>
         ///  css top value of the parent element of the component 
         /// </summary>
-        int Top { get;  }
+       // long? Top { get; }
         /// <summary>
         ///  Width value of the parent element of the component 
         /// </summary>
-        int Width { get; }
+        long? Width { get; }
     }
 }

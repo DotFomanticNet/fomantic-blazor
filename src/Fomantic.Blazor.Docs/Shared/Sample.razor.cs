@@ -1,8 +1,9 @@
 ﻿using Fomantic.Blazor.UI;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
-
+using Microsoft.JSInterop.WebAssembly;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace Fomantic.Blazor.Docs.Shared
         public abstract RenderFragment GetRenderFragment(SampleComponent selectedSampleComponent);
         public abstract string GetHtmlCode();
         public abstract string GetCsharpCode();
-
+        public bool IsInitilized { get; set; }
         public abstract List<string> GetNamespaces();
         public abstract void InitComponent();
 
@@ -49,6 +50,7 @@ namespace Fomantic.Blazor.Docs.Shared
             if (Component != null)
             {
                 OnComponentCreate?.Invoke(Component);
+                // Component.GetType().GetMethod("StateHasChanged").Invoke(Component,null);
             }
 
         }
@@ -263,9 +265,63 @@ namespace Fomantic.Blazor.Docs.Shared
         public string Code { get; set; }
         public string CodeComment { get; set; }
     }
+
+    public interface ISampleComponentEvent
+    {
+        IJSRuntime jSRuntime { get; set; }
+        ElementReference ElementRef { get; set; }
+        Type Type { get; set; }
+        Action OnOccured { get; set; }
+        int TimeCalled { get; set; }
+
+        Action<int, RenderTreeBuilder> AddEventSub { get; }
+
+        string Name { get; set; }
+
+        //public string Code { get; set; }
+        string CodeComment { get; set; }
+    }
+    public class SampleComponentEvent<T> : ISampleComponentEvent
+    {
+        public IJSRuntime jSRuntime { get; set; }
+        public ElementReferenceFomanticAnimator Animator { get; set; }
+
+        public ElementReference ElementRef
+        {
+            get => elementRef;
+            set
+            {
+              
+                if (Animator == null && value.Context != null)
+                {
+                   
+                    Animator = new ElementReferenceFomanticAnimator(jSRuntime, value);
+                }
+                elementRef = value;
+            }
+        }
+        public Type Type { get; set; }
+        public Action OnOccured { get; set; }
+        public int TimeCalled { get; set; } = 0;
+        EventCallback<T> callback;
+        private ElementReference elementRef;
+
+        public Action<int, RenderTreeBuilder> AddEventSub { get; set; }
+        public SampleComponentEvent()
+        {
+            Type = typeof(T);
+            callback = EventCallback.Factory.Create<T>(this, d => { TimeCalled++; OnOccured?.Invoke(); Animator?.QueueAnimation(StaticAnimation.Glow); });
+            AddEventSub = (x, d) => d.AddAttribute(x, Name, callback);
+        }
+
+        public string Name { get; set; }
+
+        //public string Code { get; set; }
+        public string CodeComment { get; set; }
+    }
     public class SampleComponentActionWithChildren<T> : SampleComponent<T>, ISampleComponentWithChildren where T : ComponentBase
     {
-       
+
         public List<SampleComponentAction<T>> Actions { get; set; } = new List<SampleComponentAction<T>>();
         public SampleComponentActionWithChildren(string variableName, SampleComponent parentComponent, Action<T> onComponentCreate = null) : base(parentComponent, onComponentCreate)
         {
@@ -362,7 +418,7 @@ namespace Fomantic.Blazor.Docs.Shared
             code += $"  {typeof(T).Name} {VariableName};" + Environment.NewLine;
             foreach (var item in Actions)
             {
-               
+
                 code += $"  private async Task {VariableName}_{item.Name}(MouseEventArgs args)" + Environment.NewLine;
                 code += "  {" + Environment.NewLine;
                 if (!string.IsNullOrEmpty(item.CodeComment))
@@ -370,6 +426,124 @@ namespace Fomantic.Blazor.Docs.Shared
                     code += $"    //{item.CodeComment}" + Environment.NewLine;
                 }
                 code += $"    { VariableName}.{item.Code}" + Environment.NewLine;
+                code += "  }" + Environment.NewLine;
+            }
+            foreach (var item in InternalComponents)
+            {
+                code += item.GetCsharpCode();
+            }
+            return code;
+        }
+        public override List<string> GetNamespaces()
+        {
+            return new List<string>() { "Fomantic", "Fomantic.Blazor.UI" };
+        }
+    }
+
+    public interface ISampleComponentEvents
+    {
+
+        List<ISampleComponentEvent> Events { get; set; }
+    }
+    public class SampleComponentEventWithChildren<T> : SampleComponent<T>, ISampleComponentEvents, ISampleComponentWithChildren where T : ComponentBase
+    {
+        public List<ISampleComponentEvent> Events { get; set; } = new List<ISampleComponentEvent>();
+        public SampleComponentEventWithChildren(string variableName, SampleComponent parentComponent, Action<T> onComponentCreate = null) : base(parentComponent, onComponentCreate)
+        {
+            VariableName = variableName;
+        }
+        public List<SampleComponent> InternalComponents { get; set; } = new List<SampleComponent>();
+
+        public override RenderFragment GetRenderFragment(SampleComponent selectedSampleComponent)
+        {
+            return new RenderFragment(builder =>
+            {
+
+                int x = 0;
+
+                builder.OpenComponent<T>(++x);
+                foreach (var item in Events)
+                {
+                    item.AddEventSub(++x, builder);
+                    //  builder.AddAttribute(++x, item.Name, (EventCallback<>)item.Callback);
+                }
+                builder.AddAttribute(++x, "class", selectedSampleComponent == this ? "editable selected" : "");
+
+                if (GetInternalComponents(selectedSampleComponent) != null)
+                {
+                    builder.AddAttribute(++x, "ChildContent", GetInternalComponents(selectedSampleComponent));
+                }
+                builder.AddComponentReferenceCapture(++x, d => Component = (T)d);
+                builder.CloseComponent();
+            });
+        }
+        public int GetChildrenCount()
+        {
+            return InternalComponents?.Count ?? 0;
+        }
+
+        public override string GetHtmlCode()
+        {
+            if (Component == null)
+            {
+                return "";
+            }
+            string code = "";
+            //string code = "<div class=\"ui row padding buttons\">" + Environment.NewLine; ;
+
+            //foreach (var item in Actions)
+            //{
+            //    code += $"   <button class=\"ui button\" @onclick=\"{VariableName}_{item.Name}\">{item.Name}</button>" + Environment.NewLine; ;
+            //}
+            //code += "</div>" + Environment.NewLine; ;
+            code += base.GetHtmlCode();
+            return code;
+        }
+        public override string GetContentCode()
+        {
+            if (Component == null)
+            {
+                return "";
+            }
+            string code = "";
+            foreach (var item in InternalComponents)
+            {
+                code += item.GetHtmlCode();
+            }
+            return code;
+        }
+
+        public override RenderFragment GetInternalComponents(SampleComponent selectedSampleComponent)
+        {
+            return new RenderFragment(builder =>
+            {
+                int i = 0;
+                foreach (var item in InternalComponents)
+                {
+                    builder.AddContent(i++, item.GetRenderFragment(selectedSampleComponent));
+                }
+            });
+        }
+
+        List<SampleComponent> ISampleComponentWithChildren.GetInternalComponents()
+        {
+            return InternalComponents;
+        }
+
+        public override string GetCsharpCode()
+        {
+            string code = "";
+            code += $"  {typeof(T).Name} {VariableName};" + Environment.NewLine;
+            foreach (var item in Events)
+            {
+
+                code += $"  private async Task {VariableName}_{item.Name}(todo addPArams)" + Environment.NewLine;
+                code += "  {" + Environment.NewLine;
+                if (!string.IsNullOrEmpty(item.CodeComment))
+                {
+                    code += $"    //{item.CodeComment}" + Environment.NewLine;
+                }
+                code += $"    Console.WriteLine(\"{ VariableName} event {item.Name} occured\")" + Environment.NewLine;
                 code += "  }" + Environment.NewLine;
             }
             foreach (var item in InternalComponents)
@@ -453,47 +627,45 @@ namespace Fomantic.Blazor.Docs.Shared
         protected async override Task OnAfterRenderAsync(bool firstRender)
         {
             await base.OnAfterRenderAsync(firstRender);
-            if (firstRender)
-            {
 
-                if (!ParentGroup?.Children?.Any(d => d == this) ?? false)
-                {
-                    ParentGroup?.Children?.Add(this);
-                }
-            }
 
             await RefreshCode();
-            Task.Run(async () => { await InnerInitilize(); });
-        }
 
-        private async Task InnerInitilize()
+        }
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+            ParentGroup.Children.Add(this);
+        }
+        public void LoadSample()
         {
             if (!initilized)
             {
-                if (NavigationManager.Uri.Contains("#"))
-                {
-                    var id = NavigationManager.Uri.Substring(NavigationManager.Uri.LastIndexOf("#"), NavigationManager.Uri.Length - NavigationManager.Uri.LastIndexOf("#"));
-                    id = id.Replace("#", "");
-                    if (!string.IsNullOrEmpty(id) && id == Id)
-                    {
-                        await ElementRef.JumpToTopOf(JsRuntime);
-                    }
 
-                }
                 initilized = true;
                 this.StateHasChanged();
 
-
-
                 for (int i = 0; i < ComponentsTypes.Count; i++)
                 {
+
                     ComponentsTypes[i]?.InitComponent();
                 }
-
-                editor = await JsRuntime.InvokeAsync<IJSObjectReference>("window.demo.editorInit", codeArea, SampleCodeLanguage);
                 isLoading = false;
-
                 this.StateHasChanged();
+                Task.Run(async () =>
+                {
+                    editor = await JsRuntime.InvokeAsync<IJSObjectReference>("window.demo.editorInit", codeArea, SampleCodeLanguage);
+
+                    foreach (ISampleComponentEvents item in this.ComponentsTypes.OfType<ISampleComponentEvents>())
+                    {
+                        foreach (var ev in item.Events)
+                        {
+                            ev.jSRuntime = JsRuntime;
+                            ev.OnOccured = () => this.StateHasChanged();
+                        }
+                    }
+                });
+
 
             }
         }
@@ -646,18 +818,9 @@ namespace Fomantic.Blazor.Docs.Shared
             {
                 prop.SetValue(currentComponent.ThisComponent, Enum.Parse(prop.PropertyType, e.Value.ToString()));
             }
-            if (Parent != null)
-            {
-                Parent.Refresh();
-            }
-            else if (ParentGroup != null)
-            {
-                ParentGroup.Refresh();
-            }
-            else
-            {
-                this.StateHasChanged();
-            }
+
+            this.StateHasChanged();
+
 
         }
         public void OnBooleanChange(ChangeEventArgs e, PropertyInfo prop)

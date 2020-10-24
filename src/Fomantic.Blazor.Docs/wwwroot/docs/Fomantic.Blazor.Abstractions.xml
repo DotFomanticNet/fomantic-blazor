@@ -560,11 +560,6 @@
             Contains all element viewport calculation
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.Bottom">
-            <summary>
-            css bottom value of the parent element of the component 
-            </summary>
-        </member>
         <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.BottomPassed">
             <summary>
             Is  parent element of the component bottom not visibile on the viewport
@@ -618,11 +613,6 @@
         <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.TopPassed">
             <summary>
              Is parent element of the component top passed on the viewport
-            </summary>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.Top">
-            <summary>
-             css top value of the parent element of the component 
             </summary>
         </member>
         <member name="P:Fomantic.Blazor.UI.IViewPortCalculation.Width">
@@ -860,14 +850,6 @@
             <param name="interval">Interval in MS between each elements transition</param>
             <returns></returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate``1(System.Int32,System.Tuple{``0,System.Int32}[])">
-            <summary>
-            Animate the target with a sequence of any animations into a task and it will be done all animation done , Once animation done element will be transit into show or hiddin  
-            </summary>
-            <param name="animations">Tuples contain each transition animation to apply on the target and its duration</param>
-            <param name="interval">Interval in MS between each elements transition</param>
-            <returns></returns>
-        </member>
         <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
             <summary>
             Animate the target once with a static animation without waiting to be ended 
@@ -899,14 +881,6 @@
             Animate the target with a sequence of transition animations without waiting to be ended 
             </summary>
             <param name="animations">Tuples contain each transition animation to apply on the target and its duration</param>
-            <param name="interval">Interval in MS between each elements transition</param>
-            <returns></returns>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimate``1(System.Int32,System.Tuple{``0,System.Int32}[])">
-            <summary>
-            Animate the target with a sequence of any animations without waiting to be ended 
-            </summary>
-            <param name="animations">Tuples contain a list of any animation to apply on the target and its duration</param>
             <param name="interval">Interval in MS between each elements transition</param>
             <returns></returns>
         </member>
@@ -1313,112 +1287,112 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnViewportVisibilityUpdated">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnViewportVisibilityChange">
             <summary>
-            Occurs each time component patent element Viewport Visibility calculations are updated
+            Occurs each time component patent element Viewport Visibility calculations are 
             </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnViewportVisibilityUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnViewportVisibilityChangeEvent">
             <summary>
-            Occurs each time component patent element Viewport Visibility calculations are updated
+            Occurs each time component patent element Viewport Visibility calculations are 
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibilityUpdated">
-            <summary>
-            Occurs each time when component patent element's top edge has passed bottom of screen
-            </summary>
-        </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibilityUpdatedEvent">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisible">
             <summary>
             Occurs each time when component patent element's top edge has passed bottom of screen
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedUpdated">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibleEvent">
+            <summary>
+            Occurs each time when component patent element's top edge has passed bottom of screen
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassed">
             <summary>
              Occurs each time when component patent element's top edge has passed top of the screen
             </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedEvent">
             <summary>
              Occurs each time when component patent element's top edge has passed top of the screen
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleUpdated">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisible">
             <summary>
              Occurs each time when component patent element's bottom edge has passed bottom of screen
             </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleEvent">
             <summary>
              Occurs each time when component patent element's bottom edge has passed bottom of screen
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingUpdated">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassing">
             <summary>
              Occurs when Any part of an component patent element is visible on screen
             </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingEvent">
             <summary>
              Occurs when Any part of an component patent element is visible on screen
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedUpdated">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassed">
             <summary>
              Occurs each time when component patent element's bottom edge has passed top of screen
             </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedEvent">
             <summary>
              Occurs each time when component patent element's bottom edge has passed top of screen
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibleReverseUpdated">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibleReverse">
             <summary>
              Occurs each time when component patent element's top edge has not passed bottom of screen
             </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibleReverseUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibleReverseEvent">
             <summary>
              Occurs each time when component patent element's top edge has not passed bottom of screen
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedReverseUpdated">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedReverse">
             <summary>
              Occurs each time when component patent element's top edge has not passed top of the screen
             </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedReverseUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedReverseEvent">
             <summary>
              Occurs each time when component patent element's top edge has not passed top of the screen
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleReverseUpdated">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleReverse">
             <summary>
              Occurs each time when component patent element's bottom edge has not passed bottom of screen
             </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleReverseUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleReverseEvent">
             <summary>
              Occurs each time when component patent element's bottom edge has not passed bottom of screen
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingReverseUpdated">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingReverse">
             <summary>
              Occurs each time when component patent element's top has not passed top of screen but bottom has
             </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingReverseUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingReverseEvent">
             <summary>
              Occurs each time when component patent element's top has not passed top of screen but bottom has
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedReverseUpdated">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedReverse">
             <summary>
              Occurs each time when component patent element's bottom edge has not passed top of screen
             </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedReverseUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedReverseEvent">
             <summary>
              Occurs each time when component patent element's bottom edge has not passed top of screen
             </summary>

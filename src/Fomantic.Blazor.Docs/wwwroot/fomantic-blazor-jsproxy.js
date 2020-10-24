@@ -1,7 +1,7 @@
 ﻿
 window.animator = {
     animate: async function (element, animation, duration) {
-
+        console.log('aaa')
         let promise = new Promise((resolve, reject) => {
             $(element)
                 .transition({
@@ -12,7 +12,7 @@ window.animator = {
                     }
                 });
         });
-
+       
         await promise;
     },
     animateMultible: async function (element, animations) {

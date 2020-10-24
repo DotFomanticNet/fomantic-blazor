@@ -296,33 +296,72 @@
                 </div>
 
             </div>
+            <div class="ui equal width grid">
 
-            @if (IsPlayed)
-            {
-                @if (SampleBody != null)
-                {
-                    @SampleBody
-                }
-                else
-                {
-                    <div class="sample">
-
-                        @foreach (var item in ComponentsTypes)
+                <div class="column">
+                    @if (IsPlayed)
+                    {
+                        @if (SampleBody != null)
                         {
-
-                            @(item.GetRenderFragment(currentComponent))
-
+                            @SampleBody
                         }
+                        else
+                        {
+                            <div class="sample">
+
+                                @foreach (var item in ComponentsTypes)
+                                {
+                                   
+
+                                        @(item.GetRenderFragment(currentComponent))
+
+                                    
+                                }
+                            </div>
+                        }
+
+                    }
+                    else
+                    {
+                        <Segment ContentSpace="ContentSpace.VeryPadded" ContentAlignment="ContentAlignment.Center">
+                            <button @onclick="d=>IsPlayed=true" class="ui button">Play</button>
+                        </Segment>
+                    }
+                </div>
+                @if (this.ComponentsTypes.Any(d => d is ISampleComponentEvents))
+                {
+                    <div class="column">
+                        <table class="ui celled table">
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>EventArg Type</th>
+                                    <th>Number of calls</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in ComponentsTypes.OfType<ISampleComponentEvents>())
+                                {
+                                    if (item is ISampleComponentEvents s)
+                                    {
+                                        foreach (var cevent in s.Events)
+                                        {
+
+                                            <tr @ref="cevent.ElementRef">
+                                                <td  data-label="Name"> @cevent.Name</td>
+                                                <td data-label="Arg Type"> <TypeViewer Type="cevent.Type"></TypeViewer></td>
+                                                <td data-label="Age">@cevent.TimeCalled</td>
+                                            </tr>
+
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
                     </div>
                 }
 
-            }
-            else
-            {
-                <Segment ContentSpace="ContentSpace.VeryPadded" ContentAlignment="ContentAlignment.Center">
-                    <button @onclick="d=>IsPlayed=true" class="ui button">Play</button>
-                </Segment>
-            }
+            </div>
             @if (ApiReferenceHidden && ApiDocumentation != null)
             {
                 @ApiDocumentation

@@ -46,13 +46,7 @@
         <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
             <inheritdoc/>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimate``1(System.Int32,System.Tuple{``0,System.Int32}[])">
-            <inheritdoc/>
-        </member>
         <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate``1(System.Int32,System.Tuple{``0,System.Int32}[])">
             <inheritdoc/>
         </member>
         <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
@@ -176,37 +170,37 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityChangeEvent">
             <inheritdoc/>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibilityUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleEvent">
             <inheritdoc/>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedEvent">
             <inheritdoc/>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleEvent">
             <inheritdoc/>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingEvent">
             <inheritdoc/>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedEvent">
             <inheritdoc/>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverseUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverseEvent">
             <inheritdoc/>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverseUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverseEvent">
             <inheritdoc/>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverseUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverseEvent">
             <inheritdoc/>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverseUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverseEvent">
             <inheritdoc/>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverseUpdatedEvent">
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverseEvent">
             <inheritdoc/>
         </member>
         <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnClassChangedEvent">
@@ -257,37 +251,37 @@
             List of all arbitrary attributes
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassed">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisible">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnPassing">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassed">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverseUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverse">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverseUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverse">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverseUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverse">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverseUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverse">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverseUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverse">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityChange">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibilityUpdated">
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisible">
             <inheritdoc/>
         </member>
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnClassChanged">
@@ -392,11 +386,6 @@
              Is parent element of the component top passed on the viewport
             </summary>
         </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Top">
-            <summary>
-             css top value of the parent element of the component 
-            </summary>
-        </member>
         <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Width">
             <summary>
              Width value of the parent element of the component 
@@ -419,7 +408,7 @@
             <param name="elementToSubscripeFunc">function to get element to track Visibility</param>
             <param name="jsRuntime">js run time to execute javascript interops</param>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnUpdate(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnUpdate">
             <summary>
             Method executed by Javascript to trigger Visibility Updated events
             </summary>
@@ -431,7 +420,7 @@
             </summary>
             <returns>whether visibility updated event Subscribed or not</returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisible(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisible">
             <summary>
             Method executed by Javascript to trigger On Top Visible Updated events
             </summary>
@@ -443,7 +432,7 @@
             </summary>
             <returns>whether On Top Visible updated event Subscribed or not</returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassed(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassed">
             <summary>
             Method executed by Javascript to trigger On Top Passed Updated events
             </summary>
@@ -455,7 +444,7 @@
             </summary>
             <returns>whether On Top Passed updated event Subscribed or not</returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisible(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisible">
             <summary>
             Method executed by Javascript to trigger On Bottom Visible Updated events
             </summary>
@@ -467,7 +456,7 @@
             </summary>
             <returns>whether  On Bottom Visible updated event Subscribed or not</returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassing(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassing">
             <summary>
             Method executed by Javascript to trigger On Passing Updated events
             </summary>
@@ -479,7 +468,7 @@
             </summary>
             <returns>whether On Passing updated event Subscribed or not</returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassed(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassed">
             <summary>
             Method executed by Javascript to trigger On Bottom Passed Updated events
             </summary>
@@ -491,7 +480,7 @@
             </summary>
             <returns>whether On Bottom Passed updated event Subscribed or not</returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverse(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverse">
             <summary>
             Method executed by Javascript to trigger On TopVisibl Reverse Updated events
             </summary>
@@ -503,7 +492,7 @@
             </summary>
             <returns>whether On Top Visible Reverse updated event Subscribed or not</returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverse(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverse">
             <summary>
             Method executed by Javascript to trigger On Top Passed Reverse Updated events
             </summary>
@@ -515,7 +504,7 @@
             </summary>
             <returns>whether  On Top Passed Reverse updated event Subscribed or not</returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverse(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverse">
             <summary>
             Method executed by Javascript to trigger On Bottom Visible Reverse Updated events
             </summary>
@@ -527,7 +516,7 @@
             </summary>
             <returns>whether On Bottom Visible Reverse updated event Subscribed or not</returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverse(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverse">
             <summary>
             Method executed by Javascript to trigger On Passing Reverse Updated events
             </summary>
@@ -539,7 +528,7 @@
             </summary>
             <returns>whether  On Passing Reverse updated event Subscribed or not</returns>
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverse(Fomantic.Blazor.UI.IViewPortCalculation)">
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverse">
             <summary>
             Method executed by Javascript to trigger On Bottom Passed Reverse Updated events
             </summary>

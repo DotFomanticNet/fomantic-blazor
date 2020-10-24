@@ -9,6 +9,9 @@
 </div>
 @code {
 
+
+
+
     [CascadingParameter]
     public DocumentationArticle Parent { get; set; }
 
@@ -24,31 +27,19 @@
     [Parameter]
     public RenderFragment ChildContent { get; set; }
 
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        Parent.Children.Add(this);
+
+    }
+
     protected override Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
-        {
-            if (!Parent?.Children?.Any(d => d == this) ?? false)
-            {
-                Parent?.Children?.Add(this);
-            }
 
-
-
-            if (Parent != null)
-            {
-                Parent.Refresh();
-            }
-            else
-            {
-                this.StateHasChanged();
-            }
-        }
 
         return base.OnAfterRenderAsync(firstRender);
     }
-    public void Refresh()
-    {
-        this.StateHasChanged();
-    }
+
 }

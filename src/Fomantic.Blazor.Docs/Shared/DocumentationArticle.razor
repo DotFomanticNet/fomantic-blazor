@@ -57,16 +57,15 @@
                     {
 
                         <div class="item">
-                            <a class="title"><i class="dropdown icon"></i> <b>@((item as DocumentationArticleGroup)?.Title)</b></a>
+                            <a class="title"><i class="dropdown icon"></i> <b>@(item.Title)</b></a>
                             <div class="content menu">
-                                @if ((item as DocumentationArticleGroup)?.Children != null)
+                                @if (item.Children != null)
                                 {
-                                    @foreach (var inneritem in (item as DocumentationArticleGroup)?.Children)
+                                    @foreach (var inneritem in item?.Children)
                                     {
-                                        if (inneritem is Sample)
-                                        {
-                                            <a class="item" data-for="@inneritem.Id" @onclick='async d=> { await inneritem.ElementRef.JumpToTopOf(JsRuntime);await JsRuntime.InvokeVoidAsync("window.demo.applyHash",inneritem.Id); }'>@((inneritem as Sample)?.Title)</a>
-                                        }
+
+                                        <a class="item" data-for="@inneritem.Id" @onclick='async d=> { await inneritem.ElementRef.JumpToTopOf(JsRuntime);await JsRuntime.InvokeVoidAsync("window.demo.applyHash",inneritem.Id); }'>@(inneritem.Title)</a>
+
                                     }
                                 }
 
@@ -90,47 +89,50 @@
 
 
     <div class="main ui container@(CurrentTab == "Api Documentation "?" ":" transition hidden")">
-        @if (Type != null)
+        @if (secoundTabInit)
         {
-            <div class="ui instructive  attached segment">
-                <Header Type="HeaderType.H4">
-                    Base Interfaces and classes
-                </Header>
-                <BaseInterfacesDocumentationTable Type="Type">
+            @if (Type != null)
+            {
+                <div class="ui instructive  attached segment">
+                    <Header Type="HeaderType.H4">
+                        Base Interfaces and classes
+                    </Header>
+                    <BaseInterfacesDocumentationTable Type="Type">
 
-                </BaseInterfacesDocumentationTable>
-            </div>
-            <div class="ui instructive  attached segment">
-                <Header Type="HeaderType.H4">
-                    Paramters and Properties
-                </Header>
+                    </BaseInterfacesDocumentationTable>
+                </div>
+                <div class="ui instructive  attached segment">
+                    <Header Type="HeaderType.H4">
+                        Paramters and Properties
+                    </Header>
 
-                <PropertiesDocumentationTable Type="Type">
+                    <PropertiesDocumentationTable Type="Type">
 
-                </PropertiesDocumentationTable>
+                    </PropertiesDocumentationTable>
 
-            </div>
-            <div class="ui instructive  attached segment">
-                <Header Type="HeaderType.H4">
-                    Methods
-                </Header>
+                </div>
+                <div class="ui instructive  attached segment">
+                    <Header Type="HeaderType.H4">
+                        Methods
+                    </Header>
 
-                <MethodsDocumentationTable Type="Type">
+                    <MethodsDocumentationTable Type="Type">
 
-                </MethodsDocumentationTable>
+                    </MethodsDocumentationTable>
 
-            </div>
-            <div class="ui instructive  attached segment">
-                <Header Type="HeaderType.H4">
-                    Events
-                </Header>
+                </div>
+                <div class="ui instructive  attached segment">
+                    <Header Type="HeaderType.H4">
+                        Events
+                    </Header>
 
-                <EventsDocumentationTable Type="Type">
+                    <EventsDocumentationTable Type="Type">
 
-                </EventsDocumentationTable>
+                    </EventsDocumentationTable>
 
-            </div>
+                </div>
 
+            }
         }
     </div>
 
@@ -140,7 +142,7 @@
 </div>
 
 @code{
-
+    bool secoundTabInit;
     public string CurrentTab { get; set; } = "Features Showcases";
     public List<DocumentationArticleGroup> Children { get; set; } = new List<DocumentationArticleGroup>();
 
@@ -167,19 +169,37 @@
     }
     async void SwichTab(string tabName)
     {
-        Children = new List<DocumentationArticleGroup>();
+
         CurrentTab = tabName;
+        secoundTabInit = true;
         await JsRuntime.InvokeVoidAsync("window.semantic.ready");
 
     }
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
         await base.OnAfterRenderAsync(firstRender);
+        Console.WriteLine(Children.Count);
         if (firstRender)
         {
+            var samples = Children.SelectMany(d => d.Children);
+            if (NavigationManager.Uri.Contains("#"))
+            {
+                var id = NavigationManager.Uri.Substring(NavigationManager.Uri.LastIndexOf("#"), NavigationManager.Uri.Length - NavigationManager.Uri.LastIndexOf("#"));
+                id = id.Replace("#", "");
+                var currentSample = samples.FirstOrDefault(d => !string.IsNullOrEmpty(id) && id == d.Id);
+                if (currentSample != null)
+                {
+                    await currentSample.ElementRef.JumpToTopOf(JsRuntime, 0, 0);
+                }
+
+            }
             await JsRuntime.InvokeVoidAsync("window.semantic.ready");
 
-
+            foreach (var item in samples)
+            {
+                item.LoadSample();
+            }
+            this.StateHasChanged();
         }
 
     }

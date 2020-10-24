@@ -37,27 +37,27 @@ namespace Fomantic.Blazor.UI
 
         #region Events
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnViewportVisibilityUpdatedEvent;
+        public event ViewportVisibilityUpdate OnViewportVisibilityChangeEvent;
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnTopVisibilityUpdatedEvent;
+        public event ViewportVisibilityUpdate OnTopVisibleEvent;
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnTopPassedUpdatedEvent;
+        public event ViewportVisibilityUpdate OnTopPassedEvent;
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnBottomVisibleUpdatedEvent;
+        public event ViewportVisibilityUpdate OnBottomVisibleEvent;
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnPassingUpdatedEvent;
+        public event ViewportVisibilityUpdate OnPassingEvent;
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnBottomPassedUpdatedEvent;
+        public event ViewportVisibilityUpdate OnBottomPassedEvent;
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnTopVisibleReverseUpdatedEvent;
+        public event ViewportVisibilityUpdate OnTopVisibleReverseEvent;
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnTopPassedReverseUpdatedEvent;
+        public event ViewportVisibilityUpdate OnTopPassedReverseEvent;
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnBottomVisibleReverseUpdatedEvent;
+        public event ViewportVisibilityUpdate OnBottomVisibleReverseEvent;
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnPassingReverseUpdatedEvent;
+        public event ViewportVisibilityUpdate OnPassingReverseEvent;
         ///<inheritdoc/>
-        public event ViewportVisibilityUpdate OnBottomPassedReverseUpdatedEvent;
+        public event ViewportVisibilityUpdate OnBottomPassedReverseEvent;
         ///<inheritdoc/>
         public event ElementClassChanged OnClassChangedEvent;
 
@@ -143,107 +143,107 @@ namespace Fomantic.Blazor.UI
                     var x = new ViewportVisibility(() => RootElement, JsRuntime);
 
                     #region Viewport Visibility Events
-                    if (OnViewportVisibilityUpdatedEvent != null)
+                    if (OnViewportVisibilityChangeEvent != null)
                     {
-                        x.OnVisibilityUpdated += OnViewportVisibilityUpdatedEvent;
+                        x.OnVisibilityUpdated += OnViewportVisibilityChangeEvent;
 
                     }
-                    if (OnViewportVisibilityUpdated.HasDelegate)
+                    if (OnViewportVisibilityChange.HasDelegate)
                     {
-                        x.OnVisibilityUpdated += d => OnViewportVisibilityUpdated.InvokeAsync(d);
+                        x.OnVisibilityUpdated += d => OnViewportVisibilityChange.InvokeAsync(d);
                     }
 
-                    if (OnTopVisibilityUpdatedEvent != null)
+                    if (OnTopVisibleEvent != null)
                     {
-                        x.OnTopVisibleUpdated += OnTopVisibilityUpdatedEvent;
+                        x.OnTopVisibleUpdated += OnTopVisibleEvent;
                     }
-                    if (OnTopVisibilityUpdated.HasDelegate)
+                    if (OnTopVisible.HasDelegate)
                     {
-                        x.OnTopVisibleUpdated += d => OnTopVisibilityUpdated.InvokeAsync(d);
-                    }
-
-                    if (OnTopPassedUpdatedEvent != null)
-                    {
-                        x.OnTopPassedUpdated += OnTopPassedUpdatedEvent;
-                    }
-                    if (OnTopPassedUpdated.HasDelegate)
-                    {
-                        x.OnTopPassedUpdated += d => OnTopPassedUpdated.InvokeAsync(d);
+                        x.OnTopVisibleUpdated += d => OnTopVisible.InvokeAsync(d);
                     }
 
-                    if (OnBottomVisibleUpdatedEvent != null)
+                    if (OnTopPassedEvent != null)
                     {
-                        x.OnBottomVisibleUpdated += OnBottomVisibleUpdatedEvent;
+                        x.OnTopPassedUpdated += OnTopPassedEvent;
                     }
-                    if (OnBottomVisibleUpdated.HasDelegate)
+                    if (OnTopPassed.HasDelegate)
                     {
-                        x.OnBottomVisibleUpdated += d => OnBottomVisibleUpdated.InvokeAsync(d);
-                    }
-
-                    if (OnPassingUpdatedEvent != null)
-                    {
-                        x.OnPassingUpdated += OnPassingUpdatedEvent;
-                    }
-                    if (OnPassingUpdated.HasDelegate)
-                    {
-                        x.OnPassingUpdated += d => OnPassingUpdated.InvokeAsync(d);
+                        x.OnTopPassedUpdated += d => OnTopPassed.InvokeAsync(d);
                     }
 
-                    if (OnBottomPassedUpdatedEvent != null)
+                    if (OnBottomVisibleEvent != null)
                     {
-                        x.OnBottomPassedUpdated += OnBottomPassedUpdatedEvent;
+                        x.OnBottomVisibleUpdated += OnBottomVisibleEvent;
                     }
-                    if (OnBottomPassedUpdated.HasDelegate)
+                    if (OnBottomVisible.HasDelegate)
                     {
-                        x.OnBottomPassedUpdated += d => OnBottomPassedUpdated.InvokeAsync(d);
-                    }
-
-                    if (OnTopVisibleReverseUpdatedEvent != null)
-                    {
-                        x.OnTopVisibleReverseUpdated += OnTopVisibleReverseUpdatedEvent;
-                    }
-                    if (OnTopVisibleReverseUpdated.HasDelegate)
-                    {
-                        x.OnTopVisibleReverseUpdated += d => OnTopVisibleReverseUpdated.InvokeAsync(d);
+                        x.OnBottomVisibleUpdated += d => OnBottomVisible.InvokeAsync(d);
                     }
 
-
-                    if (OnTopPassedReverseUpdatedEvent != null)
+                    if (OnPassingEvent != null)
                     {
-                        x.OnTopPassedReverseUpdated += OnTopPassedReverseUpdatedEvent;
+                        x.OnPassingUpdated += OnPassingEvent;
                     }
-                    if (OnTopPassedReverseUpdated.HasDelegate)
+                    if (OnPassing.HasDelegate)
                     {
-                        x.OnTopPassedReverseUpdated += d => OnTopPassedReverseUpdated.InvokeAsync(d);
+                        x.OnPassingUpdated += d => OnPassing.InvokeAsync(d);
+                    }
+
+                    if (OnBottomPassedEvent != null)
+                    {
+                        x.OnBottomPassedUpdated += OnBottomPassedEvent;
+                    }
+                    if (OnBottomPassed.HasDelegate)
+                    {
+                        x.OnBottomPassedUpdated += d => OnBottomPassed.InvokeAsync(d);
+                    }
+
+                    if (OnTopVisibleReverseEvent != null)
+                    {
+                        x.OnTopVisibleReverseUpdated += OnTopVisibleReverseEvent;
+                    }
+                    if (OnTopVisibleReverse.HasDelegate)
+                    {
+                        x.OnTopVisibleReverseUpdated += d => OnTopVisibleReverse.InvokeAsync(d);
                     }
 
 
-                    if (OnBottomVisibleReverseUpdatedEvent != null)
+                    if (OnTopPassedReverseEvent != null)
                     {
-                        x.OnBottomVisibleReverseUpdated += OnBottomVisibleReverseUpdatedEvent;
+                        x.OnTopPassedReverseUpdated += OnTopPassedReverseEvent;
                     }
-                    if (OnBottomVisibleReverseUpdated.HasDelegate)
+                    if (OnTopPassedReverse.HasDelegate)
                     {
-                        x.OnBottomVisibleReverseUpdated += d => OnBottomVisibleReverseUpdated.InvokeAsync(d);
+                        x.OnTopPassedReverseUpdated += d => OnTopPassedReverse.InvokeAsync(d);
+                    }
+
+
+                    if (OnBottomVisibleReverseEvent != null)
+                    {
+                        x.OnBottomVisibleReverseUpdated += OnBottomVisibleReverseEvent;
+                    }
+                    if (OnBottomVisibleReverse.HasDelegate)
+                    {
+                        x.OnBottomVisibleReverseUpdated += d => OnBottomVisibleReverse.InvokeAsync(d);
                     }
 
 
-                    if (OnPassingReverseUpdatedEvent != null)
+                    if (OnPassingReverseEvent != null)
                     {
-                        x.OnPassingReverseUpdated += OnPassingReverseUpdatedEvent;
+                        x.OnPassingReverseUpdated += OnPassingReverseEvent;
                     }
-                    if (OnPassingReverseUpdated.HasDelegate)
+                    if (OnPassingReverse.HasDelegate)
                     {
-                        x.OnPassingReverseUpdated += d => OnPassingReverseUpdated.InvokeAsync(d);
+                        x.OnPassingReverseUpdated += d => OnPassingReverse.InvokeAsync(d);
                     }
 
-                    if (OnBottomPassedReverseUpdatedEvent != null)
+                    if (OnBottomPassedReverseEvent != null)
                     {
-                        x.OnBottomPassedReverseUpdated += OnBottomPassedReverseUpdatedEvent;
+                        x.OnBottomPassedReverseUpdated += OnBottomPassedReverseEvent;
                     }
-                    if (OnBottomPassedReverseUpdated.HasDelegate)
+                    if (OnBottomPassedReverse.HasDelegate)
                     {
-                        x.OnBottomPassedReverseUpdated += d => OnBottomPassedReverseUpdated.InvokeAsync(d);
+                        x.OnBottomPassedReverseUpdated += d => OnBottomPassedReverse.InvokeAsync(d);
                     }
 
 
@@ -267,7 +267,7 @@ namespace Fomantic.Blazor.UI
                 //if (EnterTransition.HasValue )//to do add paramter
                 //{
                 //    ViewportVisibility.Apply();
-                //    OnTopVisibilityUpdatedEvent += async d =>
+                //    OnTopVisibilityEvent += async d =>
                 //    {
                 //        Console.WriteLine("Should Play Animation");
                 //        if (!isEnterAnimationPlayed)
@@ -305,37 +305,37 @@ namespace Fomantic.Blazor.UI
         public Dictionary<string, object> InputAttributes { get => inputAttributes.Union(Attributes).ToDictionary(pair => pair.Key, pair => pair.Value); set => inputAttributes = value; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnTopPassedUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnTopPassed { get; set; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnBottomVisibleUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnBottomVisible { get; set; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnPassingUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnPassing { get; set; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnBottomPassedUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnBottomPassed { get; set; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnTopVisibleReverseUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnTopVisibleReverse { get; set; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnTopPassedReverseUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnTopPassedReverse { get; set; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnBottomVisibleReverseUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnBottomVisibleReverse { get; set; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnPassingReverseUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnPassingReverse { get; set; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnBottomPassedReverseUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnBottomPassedReverse { get; set; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnViewportVisibilityUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnViewportVisibilityChange { get; set; }
         ///<inheritdoc/>
         [Parameter]
-        public EventCallback<ViewPortEventArgs> OnTopVisibilityUpdated { get; set; }
+        public EventCallback<ViewPortEventArgs> OnTopVisible { get; set; }
         ///<inheritdoc/>
         [Parameter]
         public EventCallback<ParamterChangedArgs<string>> OnClassChanged { get; set; }
