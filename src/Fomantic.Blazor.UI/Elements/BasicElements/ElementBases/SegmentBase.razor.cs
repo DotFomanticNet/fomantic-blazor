@@ -139,12 +139,12 @@ namespace Fomantic
         public bool IsInverted { get; set; } = false;
 
         ///-------------------------------------------------------------------------------------------------
+        /// <inheritdoc/>
         /// <remarks>
         /// <para>References : </para>
         /// <para><see href="https://fomantic-ui.com/elements/segment.html#disabled"></see></para>
         /// </remarks>
         ///
-        /// <inheritdoc/>
         ///-------------------------------------------------------------------------------------------------
 
         [Parameter]

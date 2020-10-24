@@ -1437,12 +1437,12 @@
         </member>
         <member name="P:Fomantic.SegmentBase.IsDisabled">
             -------------------------------------------------------------------------------------------------
+             <inheritdoc/>
              <remarks>
              <para>References : </para>
              <para><see href="https://fomantic-ui.com/elements/segment.html#disabled"></see></para>
              </remarks>
             
-             <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="P:Fomantic.SegmentBase.IsLoading">
