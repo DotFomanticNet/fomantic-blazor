@@ -30,7 +30,8 @@ namespace Fomantic
         IFomanticComponentWithSize,
         IFomanticComponentCanBeUnselectable,
         IFomanticComponentWithInvertedStyle,
-        IFomanticComponentWithTooltip
+        IFomanticComponentWithTooltip, 
+        IFomanticComponentWithTextStyle
     {
         /// <inheritdoc/>
         protected override void OnInitialized()
@@ -114,5 +115,15 @@ namespace Fomantic
         /// <inheritdoc/>
         [Parameter]
         public Size TooltipSize { get; set; }
+        /// <inheritdoc/>
+        [Parameter] 
+        public bool IsBold { get; set; }
+        /// <inheritdoc/>
+        [Parameter] 
+        public TextDecoration? TextDecoration { get; set; }
+
+        /// <inheritdoc/>
+        [Parameter]
+        public bool IsItalic{ get; set; }
     }
 }

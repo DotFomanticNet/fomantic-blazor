@@ -91,6 +91,11 @@ namespace Fomantic.Blazor.UI
             {
                 fomanticComponentWithDividingStyle.AddDividingClass();
             }
+            if (component is IFomanticComponentWithTextStyle fomanticComponentWithTextStyle)
+            {
+                fomanticComponentWithTextStyle.AddTextStyleClass();
+            }
+            
             return component;
         }
 
@@ -182,6 +187,44 @@ namespace Fomantic.Blazor.UI
                 }
             }
 
+            return component;
+        }
+
+        static T AddTextStyleClass<T>(this T component, int? index = null) where T : IFomanticComponentWithTextStyle
+        {
+            if (component.IsBold)
+            {
+                if (index.HasValue)
+                {
+                    component.CssClasses.Insert(index.Value, IFomanticComponentWithTextStyle.BoldClass);
+                }
+                else
+                {
+                    component.CssClasses.Add(IFomanticComponentWithTextStyle.BoldClass);
+                }
+            }
+            if (component.TextDecoration.HasValue)
+            {
+                if (index.HasValue)
+                {
+                    component.CssClasses.Insert(index.Value, IFomanticComponentWithTextStyle.ToClass(component.TextDecoration));
+                }
+                else
+                {
+                    component.CssClasses.Add(IFomanticComponentWithTextStyle.ToClass(component.TextDecoration));
+                }
+            }
+            if (component.IsItalic)
+            {
+                if (index.HasValue)
+                {
+                    component.CssClasses.Insert(index.Value, IFomanticComponentWithTextStyle.ItalicClass);
+                }
+                else
+                {
+                    component.CssClasses.Add(IFomanticComponentWithTextStyle.ItalicClass);
+                }
+            }
             return component;
         }
 

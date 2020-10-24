@@ -4,3 +4,29 @@
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
+span.bold {
+    font-weight: bold;
+}
+
+
+span.textoverline {
+    text-decoration: overline;
+}
+
+span.textlinethrough {
+    text-decoration: line-through;
+}
+
+span.textunderline {
+    text-decoration: underline;
+}
+span.textunderoverline {
+    text-decoration: underline overline
+}
+
+
+span.italic {
+    font-style: italic;
+}
+
+    

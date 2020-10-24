@@ -4,9 +4,20 @@
 
 <DocumentationArticle Type="typeof(Fomantic.Text)" PageUri="@PageUri" Title="Text" Description="A text is used to style some inline text">
     <DocumentationArticleGroup Title="Types">
-
+        <Sample Id="TextStyleSample" PageUri="@PageUri" ComponentsTypes="TextStyleSampleData">
+            <Title>
+                aaaaa
+            </Title>
+            <DescriptionTemplate>
+                aaaaa
+            </DescriptionTemplate>
+        </Sample>
     </DocumentationArticleGroup>
 </DocumentationArticle>
 @code{
     public string PageUri { get; set; } = "/elements/Text";
+
+    public List<SampleComponent> TextStyleSampleData { get; set; } = new List<SampleComponent>();
+
+
 }
