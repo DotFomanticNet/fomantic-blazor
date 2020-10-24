@@ -15,13 +15,13 @@ namespace Fomantic
         /// <summary>   class given to disable component. </summary>
         const string DisabledClass = "disabled";
 
-         ///-------------------------------------------------------------------------------------------------
-         /// <summary>  Determine if the component should be disabled or not. </summary>
-         ///
-         /// <value>    True if this  is disabled, false if not. </value>
-         ///-------------------------------------------------------------------------------------------------
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>  Determine if the component should be disabled or not. </summary>
+        ///
+        /// <value>    True if this  is disabled, false if not. </value>
+        ///-------------------------------------------------------------------------------------------------
 
         [Parameter]
-         bool IsDisabled { get; set; } 
+        bool IsDisabled { get; set; }
     }
 }
