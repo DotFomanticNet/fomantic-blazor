@@ -46,10 +46,11 @@ namespace Fomantic
         ///<inheritdoc/>
         protected internal override void ConstractClasses()
         {
+           
+          
             base.ConstractClasses();
-            CssClasses.Insert(0, "ui");
             CssClasses.Insert(1, StackDirection.ToString().ToLower());
-            this.AddISegmentStyleClass(1);
+            CssClasses.Insert(0, "ui");
             CssClasses.Add("segments");
         }
 

@@ -35,24 +35,14 @@ namespace Fomantic
         ///<inheritdoc/>
         protected internal override void ConstractClasses()
         {
+           
+          
             base.ConstractClasses();
-            CssClasses.Insert(0, "ui");
             if (IsPlaceholder)
             {
                 CssClasses.Insert(1, PlaceholderClass);
             }
-           
-
-            this.AddContentSpacingClass(1).
-                AddLoadingIndicatorClass(1).
-                AddDisabledClass(1).
-                AddContentAlignmentClass(1).
-                AddCompactClass(1).
-                AddAttachClass(1).
-                AddCircularClass(1).
-                AddISegmentStyleClass(1).
-                AddInvertedClass(1).
-                AddColorClass(1);
+            CssClasses.Insert(0, "ui");
             CssClasses.Add("segment");
         }
         ///<inheritdoc/>

@@ -29,22 +29,22 @@ namespace Fomantic
         protected override void OnInitialized()
         {
             base.OnInitialized();
-            this.AddHiddenClass();
-            this.AddTooltip();
+          
+         
         }
         ///<inheritdoc/>
         protected override void OnAfterRender(bool firstRender)
         {
             base.OnAfterRender(firstRender);
-            this.AddTooltip();
+           
         }
 
         ///<inheritdoc/>
         protected internal override void ConstractClasses()
-        {
+        {         
+           
             base.ConstractClasses();
-            CssClasses.Insert(0, "ui");              
-            this.AddInvertedClass(1).AddUnselectableClass(1).AddSizeClass(1).AddColorClass(1);
+            CssClasses.Insert(0, "ui");
             CssClasses.Add("text");
         }
 

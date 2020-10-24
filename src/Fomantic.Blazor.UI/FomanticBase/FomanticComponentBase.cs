@@ -112,7 +112,7 @@ namespace Fomantic.Blazor.UI
         internal protected virtual void ConstractClasses()
         {
             CssClasses = new List<string>();
-            this.AddHiddenClass();
+            this.AddFeatures();
             if (InputAttributes.ContainsKey("class"))
             {
                 CssClasses.Add(InputAttributes["class"].ToString());
@@ -122,12 +122,13 @@ namespace Fomantic.Blazor.UI
         protected override void OnInitialized()
         {
             base.OnInitialized();
+
             if (EnterTransition.HasValue)
             {
                 IsHidden = true;
             }
 
-
+            this.AddFeatures();
 
         }
         ///<inheritdoc/>

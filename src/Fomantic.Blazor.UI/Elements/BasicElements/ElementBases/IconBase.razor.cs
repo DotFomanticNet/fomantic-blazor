@@ -24,25 +24,24 @@ namespace Fomantic
         IFomanticComponentWithSize,
         IFomanticComponentCanBeDisabled,
         IFomanticComponentWithInvertedStyle,
-        IFomanticComponentWithFittedStyle, 
+        IFomanticComponentWithFittedStyle,
         IFomanticComponentWithCircularStyle
-        
+
 
     {
         ///<inheritdoc/>
         protected override void OnAfterRender(bool firstRender)
         {
             base.OnAfterRender(firstRender);
-        
+
         }
 
         ///<inheritdoc/>
         protected internal override void ConstractClasses()
         {
+
             base.ConstractClasses();
-            CssClasses.Insert(0, Icon.ToCssClass());
-            this.AddDisabledClass(0).AddCircularClass(0).AddFittedClass(0).AddSizeClass(0).AddInvertedClass(0).AddColorClass(0);
-         
+            CssClasses.Add(Icon.ToCssClass());
             CssClasses.Add("icon");
         }
 
@@ -102,6 +101,6 @@ namespace Fomantic
         public bool IsFitted { get; set; }
 
 
-    
+
     }
 }

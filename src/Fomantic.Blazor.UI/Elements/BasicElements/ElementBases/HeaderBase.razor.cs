@@ -32,17 +32,10 @@ namespace Fomantic
 
         ///<inheritdoc/>
         protected internal override void ConstractClasses()
-        {
+        {           
+           
             base.ConstractClasses();
             CssClasses.Insert(0, "ui");
-            this.AddDisabledClass(1)
-                .AddAlignmentClass(1)
-                .AddContentAlignmentClass(1)
-                .AddAttachClass(1)
-                .AddDividingClass(1)
-                .AddUnselectableClass(1)
-                .AddInvertedClass(1)
-                .AddColorClass(1);
             CssClasses.Add("header");
         }
 
