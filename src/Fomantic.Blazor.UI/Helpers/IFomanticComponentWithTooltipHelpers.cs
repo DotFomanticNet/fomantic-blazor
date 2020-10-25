@@ -1,9 +1,4 @@
-﻿///-------------------------------------------------------------------------------------------------
-// file:	Helpers\IFomanticComponentWithTooltipHelpers.cs
-//
-// summary:	Declares the IFomanticComponentWithTooltipHelpers interface
-///-------------------------------------------------------------------------------------------------
-
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;

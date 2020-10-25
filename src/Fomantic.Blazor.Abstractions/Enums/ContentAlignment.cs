@@ -1,9 +1,4 @@
-﻿///-------------------------------------------------------------------------------------------------
-// file:	Enums\ContentAlignment.cs
-//
-// summary:	Implements the content alignment class
-///-------------------------------------------------------------------------------------------------
-
+﻿
 namespace Fomantic.Blazor.UI
 {
     /// <summary>   Fomantic UI content alignment. </summary>

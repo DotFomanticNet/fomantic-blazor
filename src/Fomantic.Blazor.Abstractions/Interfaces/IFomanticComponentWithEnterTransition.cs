@@ -36,5 +36,8 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         int EnterTransitionDuration { get; set; }
 
+
+         bool IsEnterAnimationDone { get; internal set; }
+
     }
 }

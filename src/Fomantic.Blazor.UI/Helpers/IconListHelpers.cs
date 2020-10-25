@@ -1,9 +1,4 @@
-﻿///-------------------------------------------------------------------------------------------------
-// file:	Helpers\IconListHelpers.cs
-//
-// summary:	Implements the icon list helpers class
-///-------------------------------------------------------------------------------------------------
-
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;

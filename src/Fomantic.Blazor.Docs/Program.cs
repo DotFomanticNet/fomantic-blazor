@@ -1,4 +1,6 @@
 using Fomantic.Blazor.Docs.Helpers;
+using Fomantic.Blazor.UI;
+
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,10 +19,10 @@ namespace Fomantic.Blazor.Docs
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
-
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.UseFomantic();
             DocumenationExtensions.Client = new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) };
-           
+
             await builder.Build().RunAsync();
         }
     }

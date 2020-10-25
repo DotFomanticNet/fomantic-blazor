@@ -18,8 +18,7 @@ namespace Fomantic
 
     public interface IFomanticComponentWithDividingStyle : IFomanticComponentWithClass
     {
-        /// <summary>   class given to the component to divide itself from the content below it. </summary>
-        const string DividingClass = "dividing";
+      
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>

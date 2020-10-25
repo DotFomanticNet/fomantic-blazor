@@ -20,9 +20,7 @@ namespace Fomantic.Blazor.UI
 
     public interface IVisibleFomanticComponent : IFomanticComponentWithClass
     {
-        /// <summary>   class given to the component to invert its color. </summary>
-        const string HiddenClass = "transition hidden";
-
+       
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Animator responsible for animating the component. </summary>
         ///

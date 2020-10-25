@@ -17,6 +17,6 @@ namespace Fomantic.Blazor.UI
         /// <value> The j query element reference. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        public IJSObjectReference JQueryElementRef { get; }
+        public IJSObjectReference JQueryElementRef { get; internal set; }
     }
 }

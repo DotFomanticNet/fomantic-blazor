@@ -17,8 +17,7 @@ namespace Fomantic
 
     public interface IFomanticComponentWithLoadingIndicator : IFomanticComponentWithClass
     {
-        /// <summary>   class given to make component appear as loading. </summary>
-        const string LoadingClass = "loading";
+      
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Determine if the component should be appear as loading or not. </summary>

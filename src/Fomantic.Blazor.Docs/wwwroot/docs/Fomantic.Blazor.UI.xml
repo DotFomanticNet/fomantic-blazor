@@ -183,6 +183,264 @@
             A segment can be formatted to look like a pile of pages
             </summary>
         </member>
+        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.AttachedClass">
+            <summary>   class given to attached. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.TopAttachedClass">
+            <summary>   class given to attached. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.BottomAttachedClass">
+            <summary>   class given to attached. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.AttachingDirection})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.AttachingDirection"/> to given class. </summary>
+            
+             <param name="attachingDirection">   attaching direction Value. </param>
+            
+             <returns>   given class from <paramref name="attachingDirection"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.Features.IFeatureDefinition">
+            <summary>   Interface for feature definition. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.Features.IFeatureDefinition.Type">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the type. </summary>
+            
+             <value> The type. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition.OnAfterEachRender(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'after each render' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask&lt;bool&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition.OnAfterFirstRender(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'after first render' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask&lt;bool&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition.OnInitialized(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'initialized' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition.ProvideCssClasses(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Provide CSS classes. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A string[]. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition.ProvideCssClass(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Provide CSS class. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A string. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.Features.IFeatureDefinition.AdditionalFragment">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the additional fragment. </summary>
+            
+             <value> The additional fragment. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.Features.IFeatureDefinition`1">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Interface for feature definition. </summary>
+            
+             <typeparam name="TFeatureInterface">    Type of the feature interface. </typeparam>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition`1.OnAfterEachRender(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'after each render' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask&lt;bool&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition`1.OnAfterFirstRender(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'after first render' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask&lt;bool&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition`1.OnInitialized(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'initialized' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition`1.ProvideCssClasses(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Provide CSS classes. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A string[]. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition`1.ProvideCssClass(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Provide CSS class. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A string. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentCanBeDisabledFeature.DisabledClass">
+            <summary>   class given to disable component. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.VisibleFomanticComponentFeature.HiddenClass">
+            <summary>   class given to the component to invert its color. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.LeftFloatedClass">
+            <summary>   class given to Left Float. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.RightFloatedClass">
+            <summary>   class given to Right Float. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.FloatAlignment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.FloatAlignment"/> to given class. </summary>
+            
+             <param name="alignment">    Alignment Value. </param>
+            
+             <returns>   given class from <paramref name="alignment"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCircularStyleFeature.CircularClass">
+            <summary>   class given to make component circular. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithColorFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.Color})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Color"/> to given class. </summary>
+            
+             <param name="color">    Color Value. </param>
+            
+             <returns>   Given class from <paramref name="color"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCompactStyleFeature.CompactClass">
+            <summary>   class given to make component compact. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.RightAlignedClass">
+            <summary>   class given to make component right aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.LeftAlignedClass">
+            <summary>   class given to make component left aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.CenterAlignedClass">
+            <summary>   class given to make component center aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.JustifiedClass">
+            <summary>   class given to make component justified. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentAlignment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentAlignment"/> to given class. </summary>
+            
+             <param name="contentAlignment"> ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.PaddedClass">
+            <summary>   class given to make component content padded. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.VeryPaddedClass">
+            <summary>   class given to make component content very padded. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.FittedClass">
+            <summary>   class given to remove component content padding. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.HorizontallyFittedClass">
+            <summary>   class given to remove component content horizontal padding only. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.VerticallyFittedClass">
+            <summary>   class given to remove component content vertical padding only. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentSpace})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentSpace"/> to given class. </summary>
+            
+             <param name="contentSpace"> ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="contentSpace"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithDividingStyleFeature.DividingClass">
+            <summary>   class given to the component to divide itself from the content below it. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithFittedStyleFeature.FittedClass">
+            <summary>   class given to make component fitted. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithInvertedStyleFeature.InvertedClass">
+            <summary>   class given to the component to invert its color. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithLoadingIndicatorFeature.LoadingClass">
+            <summary>   class given to make component appear as loading. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MiniClass">
+            <summary>   Determine if the component should be mini. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.TinyClass">
+            <summary>   Determine if the component should be tiny. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.SmallClass">
+            <summary>   Determine if the component should be small. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MediumClass">
+            <summary>   Determine if the component should be medium. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.LargeClass">
+            <summary>   Determine if the component should be large. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.BigClass">
+            <summary>   Determine if the component should be big. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.HugeClass">
+            <summary>   Determine if the component should be huge. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MassiveClass">
+            <summary>   Determine if the component should be massive. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.ToClass(Fomantic.Blazor.UI.Size)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Size"/> to given class. </summary>
+            
+             <param name="size"> Size Value. </param>
+            
+             <returns>   Given class from <paramref name="size"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="T:Fomantic.Blazor.UI.FomanticComponentBase">
             <summary>   Base class for all Fomantic Component. </summary>
         </member>
@@ -204,9 +462,6 @@
         </member>
         <member name="F:Fomantic.Blazor.UI.FomanticComponentBase._cssClass">
             <summary>   The CSS class. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.isEnterAnimationPlayed">
-            <summary>   True if is enter animation played, false if not. </summary>
         </member>
         <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.inputAttributes">
             <summary>   The input attributes. </summary>
@@ -325,9 +580,6 @@
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ConstractClasses">
             <summary>   Used to add inherited components classes. </summary>
         </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnInitialized">
-            <inheritdoc/>
-        </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnAfterRender(System.Boolean)">
             <inheritdoc/>
         </member>
@@ -399,6 +651,9 @@
              <value> The CSS classes. </value>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Fomantic#Blazor#UI#IFomanticComponentWithEnterTransition#IsEnterAnimationDone">
+            <summary>   True if is enter animation played, false if not. </summary>
+        </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ExecuteOnClassChangedEvent(System.String,System.String)">
             -------------------------------------------------------------------------------------------------
              <summary>   Executes the on class changed event operation. </summary>
@@ -417,6 +672,9 @@
             <inheritdoc/>
         </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.DisposeAsync">
             <inheritdoc/>
         </member>
         <member name="T:Fomantic.Blazor.UI.FomanticComponentWithContentBase">
@@ -797,6 +1055,23 @@
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.Dispose">
             <inheritdoc/>
         </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticConfiguration">
+            <summary>   A fomantic startup configuration. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticConfiguration.UseFomantic(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Call at startup to register fomantic UI services. </summary>
+            
+             <param name="services"> The services to act on. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticConfiguration.UseFomantic(Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Call at startup to register fomantic UI services . </summary>
+            
+             <param name="builder">  The builder to act on. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="T:Fomantic.Blazor.UI.IconListHelpers">
             <summary>   An icon list helpers. </summary>
         </member>
@@ -812,208 +1087,24 @@
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers">
             <summary>   A fomantic component with class helpers. </summary>
         </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.UpdateComponentFeaturesClasses``1(``0)">
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddClass``1(``0,System.String[])">
             -------------------------------------------------------------------------------------------------
-             <summary>   called on construct class to add/update features classess. </summary>
+             <summary>   A T extension method that adds the class to 'classes'. </summary>
             
              <typeparam name="T">    Generic type parameter. </typeparam>
              <param name="component">    The component to act on. </param>
+             <param name="classes">      A variable-length parameters list containing classes to be added. </param>
             
              <returns>   A T. </returns>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.UpdateComponentFeaturesAfterRender``1(``0)">
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.RemoveClass``1(``0,System.String[])">
             -------------------------------------------------------------------------------------------------
-             <summary>   called on AfterRender to add/update features. </summary>
+             <summary>   A T extension method that removes the class. </summary>
             
              <typeparam name="T">    Generic type parameter. </typeparam>
              <param name="component">    The component to act on. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddTooltip``1(``0)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a tooltip. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddHiddenClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a hidden class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddColorClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a color class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddSegmentStyleClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a segment style class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddSizeClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a size class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddAlignmentClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds an alignment class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddContentAlignmentClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a content alignment class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddContentSpacingClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a content spacing class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddDisabledClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a disabled class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddInvertedClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds an inverted class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddLoadingIndicatorClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a loading indicator class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddCompactClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a compact class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddAttachClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds an attach class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddUnselectableClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds an unselectable class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddFittedClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a fitted class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddCircularClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a circular class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddDividingClass``1(``0,System.Nullable{System.Int32})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds a dividing class to 'index'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="index">        (Optional) Zero-based index of the. </param>
+             <param name="classes">      A variable-length parameters list containing classes to be removed. </param>
             
              <returns>   A T. </returns>
             -------------------------------------------------------------------------------------------------
@@ -1059,7 +1150,7 @@
              </returns>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.AddOrUpdateAttribute``1(``0,System.String,System.Object)">
+        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.AddOrUpdateAttribute``1(``0,System.String,System.Object,System.Boolean@)">
             -------------------------------------------------------------------------------------------------
              <summary>   A T extension method that adds an or update attribute. </summary>
             

@@ -6,6 +6,7 @@
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using System;
 using System.Collections.Generic;
 
 namespace Fomantic.Blazor.UI
@@ -16,7 +17,7 @@ namespace Fomantic.Blazor.UI
     /// </summary>
     ///-------------------------------------------------------------------------------------------------
 
-    public interface IFomanticComponentWithClass : IFomanticComponent
+    public interface IFomanticComponentWithClass : IFomanticComponent,IAsyncDisposable
     {
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   List of main element class. </summary>

@@ -1,9 +1,5 @@
-﻿///-------------------------------------------------------------------------------------------------
-// file:	FomanticBase\FomanticComponentBase.cs
-//
-// summary:	Implements the fomantic component base class
-///-------------------------------------------------------------------------------------------------
-
+﻿
+using Fomantic.Blazor.UI.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
@@ -21,6 +17,9 @@ namespace Fomantic.Blazor.UI
         IFomanticComponentWithEnterTransition,
         IFomanticComponentWithClass
     {
+        [Inject]
+        FeaturesService FeaturesService { get; set; }
+
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Return the Component Attributes. </summary>
         ///
@@ -43,8 +42,8 @@ namespace Fomantic.Blazor.UI
         private Lazy<ViewportVisibility> lazyViewportVisibility;
         /// <summary>   The CSS class. </summary>
         private string _cssClass;
-        /// <summary>   True if is enter animation played, false if not. </summary>
-        private bool isEnterAnimationPlayed = false;
+
+
         /// <summary>   The input attributes. </summary>
         private Dictionary<string, object> inputAttributes = new Dictionary<string, object>();
         #endregion
@@ -159,6 +158,8 @@ namespace Fomantic.Blazor.UI
 
         /// <inheritdoc/>
         public IJSObjectReference JQueryElementRef { get; private set; }
+        IJSObjectReference IFomanticComponentWithJQuery.JQueryElementRef { get => JQueryElementRef; set => JQueryElementRef = value; }
+
         /// <inheritdoc/>
         public ElementReference RootElement { get; protected set; }
 
@@ -184,8 +185,8 @@ namespace Fomantic.Blazor.UI
             get
             {
                 ConstractClasses();
-                var newCssClass = string.Join(" ", CssClasses.Where(d=>!string.IsNullOrEmpty(d)));
-               
+                var newCssClass = string.Join(" ", CssClasses.Where(d => !string.IsNullOrEmpty(d)));
+
                 if (_cssClass != newCssClass)
                 {
                     ExecuteOnClassChangedEvent(_cssClass, newCssClass);
@@ -202,30 +203,24 @@ namespace Fomantic.Blazor.UI
         internal protected virtual void ConstractClasses()
         {
             CssClasses = new List<string>();
-            this.UpdateComponentFeaturesClasses();
+
+            CssClasses.AddRange(FeaturesService.OnConstractClasses(this));
+
             if (InputAttributes.ContainsKey("class"))
             {
                 CssClasses.Add(InputAttributes["class"].ToString());
             }
 
         }
-        /// <inheritdoc/>
-        protected override void OnInitialized()
+        protected async override Task OnInitializedAsync()
         {
-            base.OnInitialized();
-
-            if (EnterTransition.HasValue)
-            {
-                IsHidden = true;
-            }
-
-            this.UpdateComponentFeaturesAfterRender();
-
+            await base.OnInitializedAsync();
+            await FeaturesService.OnInitialized(this);
         }
+
         /// <inheritdoc/>
         protected override void OnAfterRender(bool firstRender)
         {
-            base.OnAfterRender(firstRender);
             if (firstRender)
             {
                 lazyAnimator = new Lazy<FomanticComponentAnimator<FomanticComponentBase>>(() => new FomanticComponentAnimator<FomanticComponentBase>(this));
@@ -345,43 +340,22 @@ namespace Fomantic.Blazor.UI
                     return x;
                 });
             }
-
-            this.UpdateComponentFeaturesAfterRender();
-
+            base.OnAfterRender(firstRender);
         }
         /// <inheritdoc/>
         protected async override Task OnAfterRenderAsync(bool firstRender)
         {
+            var shouldRerender = false;
             await base.OnAfterRenderAsync(firstRender);
             if (firstRender)
             {
-                JQueryElementRef = await JsRuntime.InvokeAsync<IJSObjectReference>("$", RootElement);
-                //if (EnterTransition.HasValue )//to do add paramter
-                //{
-                //    ViewportVisibility.Apply();
-                //    OnTopVisibilityEvent += async d =>
-                //    {
-                //        Console.WriteLine("Should Play Animation");
-                //        if (!isEnterAnimationPlayed)
-                //        {
-                //            await Animator.AnimatedShow(EnterTransition.Value, EnterTransitionDuration);
-                //            isEnterAnimationPlayed = true;
-                //        }
-                //    };
-                //}
-                //else 
-                if (EnterTransition.HasValue)
-                {
-
-                    if (!isEnterAnimationPlayed)
-                    {
-                        await Animator.AnimatedShow(EnterTransition.Value, EnterTransitionDuration);
-                        isEnterAnimationPlayed = true;
-                    }
-
-                }
+                shouldRerender = shouldRerender || await FeaturesService.OnAfterFirstRender(this);
             }
-
+            shouldRerender = shouldRerender || await FeaturesService.OnAfterEachRender(this);
+            if (shouldRerender)
+            {
+                this.StateHasChanged();
+            }
         }
 
         #endregion
@@ -458,6 +432,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         List<string> IFomanticComponentWithClass.CssClasses { get => CssClasses; }
+        /// <summary>   True if is enter animation played, false if not. </summary>
+        bool IFomanticComponentWithEnterTransition.IsEnterAnimationDone { get; set; }
+
 
         #endregion
 
@@ -521,6 +498,11 @@ namespace Fomantic.Blazor.UI
                 lazyViewportVisibility.Value.Dispose();
             }
             GC.SuppressFinalize(this);
+        }
+        /// <inheritdoc/>
+        public async ValueTask DisposeAsync()
+        {
+            await FeaturesService.DisposeAsync(this);
         }
 
 

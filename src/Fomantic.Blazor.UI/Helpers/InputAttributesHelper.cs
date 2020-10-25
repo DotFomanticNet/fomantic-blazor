@@ -29,7 +29,7 @@ namespace Fomantic.Blazor.UI
 
         public static IEnumerable<KeyValuePair<string, object>> GetMainElementAttributes(this Dictionary<string, object> attributes)
         {
-           
+
             return attributes.Where(d => !d.Key.Contains("."));
         }
 
@@ -64,18 +64,22 @@ namespace Fomantic.Blazor.UI
         /// <returns>   A T. </returns>
         ///-------------------------------------------------------------------------------------------------
 
-        internal static T AddOrUpdateAttribute<T>(this T component, string key, object value) where T : IFomanticComponent
+        internal static T AddOrUpdateAttribute<T>(this T component, string key, object value, ref bool hasChanged) where T : IFomanticComponent
         {
 
 
             if (component.Attributes.ContainsKey(key))
             {
-
-                component.Attributes[key] = value;
+                if (component.Attributes[key] != value)
+                {
+                    component.Attributes[key] = value;
+                    hasChanged = true;
+                }
             }
             else
             {
                 component.Attributes.Add(key, value);
+                hasChanged = true;
             }
 
             return component;

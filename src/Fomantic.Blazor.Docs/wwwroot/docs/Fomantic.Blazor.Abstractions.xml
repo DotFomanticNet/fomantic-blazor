@@ -6912,26 +6912,11 @@
              </summary>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithAlignment.LeftFloatedClass">
-            <summary>   class given to Left Float. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithAlignment.RightFloatedClass">
-            <summary>   class given to Right Float. </summary>
-        </member>
         <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithAlignment.Alignment">
             -------------------------------------------------------------------------------------------------
              <summary>   Determine how the component should align to its parent. </summary>
             
              <value> The alignment. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithAlignment.ToClass(System.Nullable{Fomantic.Blazor.UI.FloatAlignment})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.FloatAlignment"/> to given class. </summary>
-            
-             <param name="alignment">    Alignment Value. </param>
-            
-             <returns>   given class from <paramref name="alignment"/> </returns>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithClass">
@@ -6980,44 +6965,14 @@
              <value> The color. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithColor.ToClass(System.Nullable{Fomantic.Blazor.UI.Color})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Color"/> to given class. </summary>
-            
-             <param name="color">    Color Value. </param>
-            
-             <returns>   Given class from <paramref name="color"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment">
             <summary>   Base interface for all fomantic component  align thier content. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.RightAlignedClass">
-            <summary>   class given to make component right aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.LeftAlignedClass">
-            <summary>   class given to make component left aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.CenterAlignedClass">
-            <summary>   class given to make component center aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.JustifiedClass">
-            <summary>   class given to make component justified. </summary>
         </member>
         <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.ContentAlignment">
             -------------------------------------------------------------------------------------------------
              <summary>   Determine how the component should  align its content. </summary>
             
              <value> The content alignment. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentAlignment})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentAlignment"/> to given class. </summary>
-            
-             <param name="contentAlignment"> ContentSpace Value. </param>
-            
-             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing">
@@ -7027,35 +6982,11 @@
              </summary>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.PaddedClass">
-            <summary>   class given to make component content padded. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.VeryPaddedClass">
-            <summary>   class given to make component content very padded. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.FittedClass">
-            <summary>   class given to remove component content padding. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.HorizontallyFittedClass">
-            <summary>   class given to remove component content horizontal padding only. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.VerticallyFittedClass">
-            <summary>   class given to remove component content vertical padding only. </summary>
-        </member>
         <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.ContentSpace">
             -------------------------------------------------------------------------------------------------
              <summary>   Determine the space between  the component and its content. </summary>
             
              <value> The content space. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentSpace})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentSpace"/> to given class. </summary>
-            
-             <param name="contentSpace"> ContentSpace Value. </param>
-            
-             <returns>   Given class from <paramref name="contentSpace"/> </returns>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithEnterTransition">
@@ -7094,44 +7025,11 @@
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithSize">
             <summary>   Base interface for all fomantic component that can have many sizes. </summary>
         </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.MiniClass">
-            <summary>   Determine if the component should be mini. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.TinyClass">
-            <summary>   Determine if the component should be tiny. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.SmallClass">
-            <summary>   Determine if the component should be small. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.MediumClass">
-            <summary>   Determine if the component should be medium. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.LargeClass">
-            <summary>   Determine if the component should be large. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.BigClass">
-            <summary>   Determine if the component should be big. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.HugeClass">
-            <summary>   Determine if the component should be huge. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticComponentWithSize.MassiveClass">
-            <summary>   Determine if the component should be massive. </summary>
-        </member>
         <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithSize.Size">
             -------------------------------------------------------------------------------------------------
              <summary>   Determine the size of the component. </summary>
             
              <value> The size. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithSize.ToClass(Fomantic.Blazor.UI.Size)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Size"/> to given class. </summary>
-            
-             <param name="size"> Size Value. </param>
-            
-             <returns>   Given class from <paramref name="size"/> </returns>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithTooltip">
@@ -7268,9 +7166,6 @@
             
              <remarks>   A Salah, 24/10/2020. </remarks>
             -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IVisibleFomanticComponent.HiddenClass">
-            <summary>   class given to the component to invert its color. </summary>
         </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.Animator">
             -------------------------------------------------------------------------------------------------
@@ -7474,15 +7369,6 @@
              </summary>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="F:Fomantic.IAttachableFomanticComponent.AttachedClass">
-            <summary>   class given to attached. </summary>
-        </member>
-        <member name="F:Fomantic.IAttachableFomanticComponent.TopAttachedClass">
-            <summary>   class given to attached. </summary>
-        </member>
-        <member name="F:Fomantic.IAttachableFomanticComponent.BottomAttachedClass">
-            <summary>   class given to attached. </summary>
-        </member>
         <member name="P:Fomantic.IAttachableFomanticComponent.Attaching">
             -------------------------------------------------------------------------------------------------
              <summary>   Determine if the comonent should be attached to other content on a page. </summary>
@@ -7490,20 +7376,8 @@
              <value> The attaching. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Fomantic.IAttachableFomanticComponent.ToClass(System.Nullable{Fomantic.Blazor.UI.AttachingDirection})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.AttachingDirection"/> to given class. </summary>
-            
-             <param name="attachingDirection">   attaching direction Value. </param>
-            
-             <returns>   given class from <paramref name="attachingDirection"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="T:Fomantic.IFomanticComponentCanBeDisabled">
             <summary>   Base interface for all fomantic component can be disabled. </summary>
-        </member>
-        <member name="F:Fomantic.IFomanticComponentCanBeDisabled.DisabledClass">
-            <summary>   class given to disable component. </summary>
         </member>
         <member name="P:Fomantic.IFomanticComponentCanBeDisabled.IsDisabled">
             -------------------------------------------------------------------------------------------------
@@ -7528,9 +7402,6 @@
         <member name="T:Fomantic.IFomanticComponentWithCircularStyle">
             <summary>   Base interface for all fomantic component can be circular. </summary>
         </member>
-        <member name="F:Fomantic.IFomanticComponentWithCircularStyle.CircularClass">
-            <summary>   class given to make component circular. </summary>
-        </member>
         <member name="P:Fomantic.IFomanticComponentWithCircularStyle.IsCircular">
             -------------------------------------------------------------------------------------------------
              <summary>   Determine if the component should be circular or not. </summary>
@@ -7540,9 +7411,6 @@
         </member>
         <member name="T:Fomantic.IFomanticComponentWithCompactStyle">
             <summary>   Base interface for all fomantic component can be compact. </summary>
-        </member>
-        <member name="F:Fomantic.IFomanticComponentWithCompactStyle.CompactClass">
-            <summary>   class given to make component compact. </summary>
         </member>
         <member name="P:Fomantic.IFomanticComponentWithCompactStyle.IsCompact">
             -------------------------------------------------------------------------------------------------
@@ -7558,9 +7426,6 @@
              content below it.
              </summary>
             -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.IFomanticComponentWithDividingStyle.DividingClass">
-            <summary>   class given to the component to divide itself from the content below it. </summary>
         </member>
         <member name="P:Fomantic.IFomanticComponentWithDividingStyle.IsDividing">
             -------------------------------------------------------------------------------------------------
@@ -7589,9 +7454,6 @@
         <member name="T:Fomantic.IFomanticComponentWithInvertedStyle">
             <summary>   Base interface for all fomantic component that can invert its color. </summary>
         </member>
-        <member name="F:Fomantic.IFomanticComponentWithInvertedStyle.InvertedClass">
-            <summary>   class given to the component to invert its color. </summary>
-        </member>
         <member name="P:Fomantic.IFomanticComponentWithInvertedStyle.IsInverted">
             -------------------------------------------------------------------------------------------------
              <summary>   Determine if the component should has inverted color or not. </summary>
@@ -7605,9 +7467,6 @@
              Base interface for all fomantic component that can have loading indecator in it.
              </summary>
             -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.IFomanticComponentWithLoadingIndicator.LoadingClass">
-            <summary>   class given to make component appear as loading. </summary>
         </member>
         <member name="P:Fomantic.IFomanticComponentWithLoadingIndicator.IsLoading">
             -------------------------------------------------------------------------------------------------

@@ -1,9 +1,4 @@
-﻿///-------------------------------------------------------------------------------------------------
-// file:	Enums\AttachingDirection.cs
-//
-// summary:	Implements the attaching direction class
-///-------------------------------------------------------------------------------------------------
-
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
