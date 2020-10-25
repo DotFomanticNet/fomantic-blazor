@@ -91,7 +91,7 @@ namespace Fomantic.Blazor.UI
             {
                 OnVisibilityUpdated?.Invoke(eventArgs);
             }
-           // Console.WriteLine("Visibility Updated");
+        
         }
 
         ///-------------------------------------------------------------------------------------------------

@@ -43,7 +43,7 @@ namespace Fomantic.Blazor.UI.Features
 
         public async virtual ValueTask DisposeAsync(TFeatureInterface component)
         {
-            Console.WriteLine($"Dispose for {typeof(TFeatureInterface).Name}");
+            
         }
 
 
@@ -51,14 +51,14 @@ namespace Fomantic.Blazor.UI.Features
         /// <inheritdoc/>
         public async virtual ValueTask<bool> OnAfterEachRender(TFeatureInterface component)
         {
-            Console.WriteLine($"OnAfterEachRender for {typeof(TFeatureInterface).Name}");
+           
             return false;
         }
 
         /// <inheritdoc/>
         public async virtual ValueTask<bool> OnAfterFirstRender(TFeatureInterface component)
         {
-            Console.WriteLine($"OnAfterFirstRender for {typeof(TFeatureInterface).Name}");
+           
             return false;
         }
 
@@ -75,7 +75,7 @@ namespace Fomantic.Blazor.UI.Features
         /// <inheritdoc/>
         public async virtual ValueTask OnInitialized(TFeatureInterface component)
         {
-            Console.WriteLine($"OnInitialized  for {typeof(TFeatureInterface).Name}");
+          
         }
 
         /// <inheritdoc/>

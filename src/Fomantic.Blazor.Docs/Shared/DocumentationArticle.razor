@@ -198,7 +198,6 @@
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
         await base.OnAfterRenderAsync(firstRender);
-        Console.WriteLine(Children.Count);
         if (firstRender)
         {
             var samples = Children.SelectMany(d => d.Children);

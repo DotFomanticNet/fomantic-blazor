@@ -786,7 +786,7 @@ namespace Fomantic.Blazor.Docs.Shared
              .Where(prop => Attribute.IsDefined(prop, typeof(ComponentActionAttribute)))
              .Select(d => new Tuple<string, object, MethodInfo>(item.Name, item.GetValue(this.currentComponent.ThisComponent), d)).ToList();
 
-                    Console.WriteLine($"adding {item.Name}({nt.Name}) nested param with Nested {nestedMethods.Count} methods");
+                  
                     Methods.AddRange(nestedMethods);
                 }
 

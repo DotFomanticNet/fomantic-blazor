@@ -41,18 +41,14 @@ namespace Fomantic.Blazor.Docs.Helpers
                 if (parameterInfo.IsParams())
                 {
                     var fullname = parameterInfo.ParameterType?.GetElementType()?.FullName;
-                    //   Console.WriteLine(methodInfo.Name + $" has Params named {parameterInfo.Name} , {fullname}");
+                   
                     if (fullname != null)
                     {
                         fullname = Regex.Replace(fullname, @"\[\[.*\]\]", "");
 
                         parametersString += fullname;
                     }
-                    else
-                    {
-                        //  Console.WriteLine(methodInfo.Name + $" has Params named {parameterInfo.Name} , fullname is null");
-                    }
-
+                   
 
                 }
                 else
@@ -151,17 +147,17 @@ namespace Fomantic.Blazor.Docs.Helpers
                 var text = element.InnerXml.Split(@"/param>").FirstOrDefault(d => d.Contains(paramName));
                 if (text != null)
                 {
-                    Console.WriteLine($"param splits {paramName} is {text}");
+                   
                     var x = Regex.Match(text, $"<param name=\"{paramName}\">.*<");
                     if (x.Success)
                     {
                         var value = x.Value.Replace($"<param name=\"{paramName}\">", "").Replace(@"<", "");
-                        Console.WriteLine($"param {paramName} is {value}");
+                       
                         return value;
                     }
 
                 }
-                Console.WriteLine($"param {paramName} is null");
+               
                 return "";
 
 
@@ -276,9 +272,9 @@ namespace Fomantic.Blazor.Docs.Helpers
                 fullName = prefix + ":" + Regex.Replace(type.FullName, @"\[\[.*\]\]", "") + "." + name;
 
             var xmlDocument = await XmlFromAssembly(type.Assembly);
-            //Console.WriteLine(fullName);
+            
             var matchedElement = xmlDocument["doc"]["members"].SelectSingleNode("member[@name='" + fullName + "']");
-            // Console.WriteLine(fullName);
+           
             if (matchedElement != null && matchedElement.InnerXml.Contains("<inheritdoc />"))
             {
 
@@ -293,7 +289,7 @@ namespace Fomantic.Blazor.Docs.Helpers
                         {
                             return d.GetMethodFullname() == name;
                         }));
-                        //  Console.WriteLine($"method {fullName} in {typec?.Name}");
+                      
                     }
                     else if (prefix == 'E')
 
@@ -310,7 +306,7 @@ namespace Fomantic.Blazor.Docs.Helpers
                         return null;
                     }
                     matchedElement = await XmlFromName(typec, prefix, name);
-                    // Console.WriteLine(matchedElement.InnerXml); 
+                   
                 }
 
             }

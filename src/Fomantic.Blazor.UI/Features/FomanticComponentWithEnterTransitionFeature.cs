@@ -12,7 +12,6 @@ namespace Fomantic.Blazor.UI.Features
             //    ViewportVisibility.Apply();
             //    OnTopVisibilityEvent += async d =>
             //    {
-            //        Console.WriteLine("Should Play Animation");
             //        if (!isEnterAnimationPlayed)
             //        {
             //            await Animator.AnimatedShow(EnterTransition.Value, EnterTransitionDuration);

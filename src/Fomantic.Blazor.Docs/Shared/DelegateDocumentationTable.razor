@@ -49,10 +49,10 @@
             if (Type != null)
             {
                 MethodInfo method = Type.GetMethod("Invoke");
-            //Console.WriteLine(method.ReturnType.Name + " (ret)");
+          
             foreach (ParameterInfo param in method.GetParameters())
                 {
-                    Console.WriteLine("{0} {1}", param.ParameterType.Name, param.Name);
+                    
                     var desc = "";
                     Docs.Add(new Tuple<string, Type, string>(param.Name, param.ParameterType, desc));
                 }
