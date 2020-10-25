@@ -20,4 +20,8 @@ jobs:
           uses: robvanderleek/create-issue-branch@master
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            branchName: 'features/${issue.number}-${issue.title}'
+          with:
+            branchName: 'features/${issue.number}-${issue.title,}'
+            gitSafeReplacementChar: '-'
+            
+   
