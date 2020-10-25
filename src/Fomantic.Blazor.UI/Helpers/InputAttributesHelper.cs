@@ -60,6 +60,7 @@ namespace Fomantic.Blazor.UI
         /// <param name="component">    The component to act on. </param>
         /// <param name="key">          The key. </param>
         /// <param name="value">        The value. </param>
+        /// <param name="hasChanged">will be true of the attribute value changed</param>
         ///
         /// <returns>   A T. </returns>
         ///-------------------------------------------------------------------------------------------------

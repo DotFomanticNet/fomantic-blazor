@@ -212,6 +212,7 @@ namespace Fomantic.Blazor.UI
             }
 
         }
+        /// <inheritdoc/>
         protected async override Task OnInitializedAsync()
         {
             await base.OnInitializedAsync();

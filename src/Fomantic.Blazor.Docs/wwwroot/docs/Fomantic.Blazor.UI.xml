@@ -315,6 +315,69 @@
              <returns>   A string. </returns>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="T:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A feature definition. </summary>
+            
+             <typeparam name="TFeatureInterface">    Type of the feature interface. </typeparam>
+            
+             <seealso cref="T:Fomantic.Blazor.UI.Features.IFeatureDefinition`1"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.AdditionalFragment">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Type">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.DisposeAsync(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Dispose asynchronous. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnAfterEachRender(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnAfterFirstRender(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.ProvideCssClasses(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.ProvideCssClass(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnInitialized(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#OnAfterEachRender(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#OnAfterFirstRender(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#ProvideCssClasses(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#ProvideCssClass(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#OnInitialized(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#DisposeAsync(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>  Dispose asynchronous. </summary>
+            
+             <param name="component">   The component. </param>
+            
+             <returns>  A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentCanBeDisabledFeature.DisabledClass">
             <summary>   class given to disable component. </summary>
         </member>
@@ -580,6 +643,9 @@
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ConstractClasses">
             <summary>   Used to add inherited components classes. </summary>
         </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnInitializedAsync">
+            <inheritdoc/>
+        </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnAfterRender(System.Boolean)">
             <inheritdoc/>
         </member>
@@ -835,8 +901,7 @@
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnUpdate">
             -------------------------------------------------------------------------------------------------
              <summary>   Method executed by Javascript to trigger Visibility Updated events. </summary>
-            
-             ### <param name="calculation">  new calculation after update. </param>
+                   
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.UpdateSubscribed">
@@ -853,7 +918,6 @@
             -------------------------------------------------------------------------------------------------
              <summary>   Method executed by Javascript to trigger On Top Visible Updated events. </summary>
             
-             ### <param name="calculation">  new calculation after update. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleSubscribed">
@@ -870,7 +934,6 @@
             -------------------------------------------------------------------------------------------------
              <summary>   Method executed by Javascript to trigger On Top Passed Updated events. </summary>
             
-             ### <param name="calculation">  new calculation after update. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedSubscribed">
@@ -887,7 +950,6 @@
             -------------------------------------------------------------------------------------------------
              <summary>   Method executed by Javascript to trigger On Bottom Visible Updated events. </summary>
             
-             ### <param name="calculation">  new calculation after update. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleSubscribed">
@@ -904,7 +966,6 @@
             -------------------------------------------------------------------------------------------------
              <summary>   Method executed by Javascript to trigger On Passing Updated events. </summary>
             
-             ### <param name="calculation">  new calculation after update. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingSubscribed">
@@ -921,7 +982,6 @@
             -------------------------------------------------------------------------------------------------
              <summary>   Method executed by Javascript to trigger On Bottom Passed Updated events. </summary>
             
-             ### <param name="calculation">  new calculation after update. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedSubscribed">
@@ -944,7 +1004,6 @@
              Method executed by Javascript to trigger On TopVisibl Reverse Updated events.
              </summary>
             
-             ### <param name="calculation">  new calculation after update. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverseSubscribed">
@@ -969,7 +1028,6 @@
              Method executed by Javascript to trigger On Top Passed Reverse Updated events.
              </summary>
             
-             ### <param name="calculation">  new calculation after update. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverseSubscribed">
@@ -992,7 +1050,6 @@
              Method executed by Javascript to trigger On Bottom Visible Reverse Updated events.
              </summary>
             
-             ### <param name="calculation">  new calculation after update. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverseSubscribed">
@@ -1017,7 +1074,6 @@
              Method executed by Javascript to trigger On Passing Reverse Updated events.
              </summary>
             
-             ### <param name="calculation">  new calculation after update. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverseSubscribed">
@@ -1040,7 +1096,6 @@
              Method executed by Javascript to trigger On Bottom Passed Reverse Updated events.
              </summary>
             
-             ### <param name="calculation">  new calculation after update. </param>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverseSubscribed">
@@ -1158,6 +1213,7 @@
              <param name="component">    The component to act on. </param>
              <param name="key">          The key. </param>
              <param name="value">        The value. </param>
+             <param name="hasChanged">will be true of the attribute value changed</param>
             
              <returns>   A T. </returns>
             -------------------------------------------------------------------------------------------------

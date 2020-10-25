@@ -60,7 +60,7 @@ namespace Fomantic.Blazor.UI
         ///
         /// <value> The tooltip text. </value>
         ///-------------------------------------------------------------------------------------------------
-        string? TooltipText { get; set; }
+        string TooltipText { get; set; }
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Gets or sets the tooltip position. </summary>

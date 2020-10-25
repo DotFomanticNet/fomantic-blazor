@@ -361,7 +361,7 @@ namespace Fomantic.Blazor.Docs.Helpers
             catch (Exception exception)
             {
                 FailCache[assembly] = exception;
-                throw exception;
+                throw;
             }
         }
 

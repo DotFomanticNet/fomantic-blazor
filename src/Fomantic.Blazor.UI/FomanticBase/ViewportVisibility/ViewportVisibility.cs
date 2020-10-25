@@ -78,8 +78,7 @@ namespace Fomantic.Blazor.UI
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger Visibility Updated events. </summary>
-        ///
-        /// ### <param name="calculation">  new calculation after update. </param>
+        ///       
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
@@ -115,7 +114,6 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger On Top Visible Updated events. </summary>
         ///
-        /// ### <param name="calculation">  new calculation after update. </param>
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
@@ -150,7 +148,6 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger On Top Passed Updated events. </summary>
         ///
-        /// ### <param name="calculation">  new calculation after update. </param>
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
@@ -187,7 +184,6 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger On Bottom Visible Updated events. </summary>
         ///
-        /// ### <param name="calculation">  new calculation after update. </param>
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
@@ -224,7 +220,6 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger On Passing Updated events. </summary>
         ///
-        /// ### <param name="calculation">  new calculation after update. </param>
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
@@ -261,7 +256,6 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger On Bottom Passed Updated events. </summary>
         ///
-        /// ### <param name="calculation">  new calculation after update. </param>
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
@@ -306,7 +300,6 @@ namespace Fomantic.Blazor.UI
         /// Method executed by Javascript to trigger On TopVisibl Reverse Updated events.
         /// </summary>
         ///
-        /// ### <param name="calculation">  new calculation after update. </param>
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
@@ -353,7 +346,6 @@ namespace Fomantic.Blazor.UI
         /// Method executed by Javascript to trigger On Top Passed Reverse Updated events.
         /// </summary>
         ///
-        /// ### <param name="calculation">  new calculation after update. </param>
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
@@ -398,7 +390,6 @@ namespace Fomantic.Blazor.UI
         /// Method executed by Javascript to trigger On Bottom Visible Reverse Updated events.
         /// </summary>
         ///
-        /// ### <param name="calculation">  new calculation after update. </param>
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
@@ -445,7 +436,6 @@ namespace Fomantic.Blazor.UI
         /// Method executed by Javascript to trigger On Passing Reverse Updated events.
         /// </summary>
         ///
-        /// ### <param name="calculation">  new calculation after update. </param>
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
@@ -490,7 +480,6 @@ namespace Fomantic.Blazor.UI
         /// Method executed by Javascript to trigger On Bottom Passed Reverse Updated events.
         /// </summary>
         ///
-        /// ### <param name="calculation">  new calculation after update. </param>
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]

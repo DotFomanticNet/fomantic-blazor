@@ -36,8 +36,15 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         int EnterTransitionDuration { get; set; }
 
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Gets or sets a value indicating whether this object entery animation is done.
+        /// </summary>
+        ///
+        /// <value>    True if this object entery animation is done, false if not. </value>
+        ///-------------------------------------------------------------------------------------------------
 
-         bool IsEnterAnimationDone { get; internal set; }
+        bool IsEnterAnimationDone { get; internal set; }
 
     }
 }
