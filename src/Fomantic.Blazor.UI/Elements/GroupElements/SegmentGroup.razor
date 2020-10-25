@@ -2,9 +2,10 @@
 @using Fomantic.Blazor.UI
 @inherits SegmentGroupBase
 
-
+@RenderBeforeRootElementFragments()
 <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
-    <CascadingValue  Value=this IsFixed="true">     
-            @ChildContent      
+    <CascadingValue Value=this IsFixed="true">
+        @ChildContent
     </CascadingValue>
 </div>
+@RenderAfterRootElementFragments()

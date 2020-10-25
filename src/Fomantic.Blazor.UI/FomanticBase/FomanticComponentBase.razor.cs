@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Fomantic.Blazor.UI
 {
     /// <summary>   Base class for all Fomantic Component. </summary>
-    public abstract class FomanticComponentBase : ComponentBase,
+    public abstract partial class FomanticComponentBase : ComponentBase,
         IFomanticComponentWithJQuery,
         IVisibleFomanticComponent,
         IFomanticComponentWithEnterTransition,
@@ -435,6 +435,8 @@ namespace Fomantic.Blazor.UI
         List<string> IFomanticComponentWithClass.CssClasses { get => CssClasses; }
         /// <summary>   True if is enter animation played, false if not. </summary>
         bool IFomanticComponentWithEnterTransition.IsEnterAnimationDone { get; set; }
+        /// <inheritdoc/>
+        public List<ComponentFragment> AdditionalFragments { get; set; } = new List<ComponentFragment>();
 
 
         #endregion

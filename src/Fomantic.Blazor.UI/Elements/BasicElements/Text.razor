@@ -2,6 +2,8 @@
 @using Fomantic.Blazor.UI
 @inherits TextBase
 
+@RenderBeforeRootElementFragments()
 <span @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
     @ChildContent
 </span>
+@RenderAfterRootElementFragments()

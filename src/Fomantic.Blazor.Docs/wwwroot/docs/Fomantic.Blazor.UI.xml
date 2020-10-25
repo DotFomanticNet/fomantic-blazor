@@ -256,7 +256,7 @@
              <returns>   A string. </returns>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.Blazor.UI.Features.IFeatureDefinition.AdditionalFragment">
+        <member name="P:Fomantic.Blazor.UI.Features.IFeatureDefinition.AdditionalFragments">
             -------------------------------------------------------------------------------------------------
              <summary>   Gets the additional fragment. </summary>
             
@@ -324,7 +324,7 @@
              <seealso cref="T:Fomantic.Blazor.UI.Features.IFeatureDefinition`1"/>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.AdditionalFragment">
+        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.AdditionalFragments">
             <inheritdoc/>
         </member>
         <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Type">
@@ -719,6 +719,9 @@
         </member>
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Fomantic#Blazor#UI#IFomanticComponentWithEnterTransition#IsEnterAnimationDone">
             <summary>   True if is enter animation played, false if not. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.AdditionalFragments">
+            <inheritdoc/>
         </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ExecuteOnClassChangedEvent(System.String,System.String)">
             -------------------------------------------------------------------------------------------------
@@ -1141,6 +1144,20 @@
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers">
             <summary>   A fomantic component with class helpers. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddAdditionalFragment``1(Fomantic.Blazor.UI.Features.UIFeatureDefinition{``0},System.String,System.Func{``0,Microsoft.AspNetCore.Components.RenderFragment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             An UIFeatureDefinition&lt;T&gt; extension method that adds an additional fragment.
+             </summary>
+            
+             <typeparam name="T">    Generic type parameter. </typeparam>
+             <param name="feature">  The feature to act on. </param>
+             <param name="loc">      The location to render fragment. </param>
+             <param name="func">     The fragment function. </param>
+            
+             <returns>   An UIFeatureDefinition&lt;T&gt; </returns>
+            -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddClass``1(``0,System.String[])">
             -------------------------------------------------------------------------------------------------

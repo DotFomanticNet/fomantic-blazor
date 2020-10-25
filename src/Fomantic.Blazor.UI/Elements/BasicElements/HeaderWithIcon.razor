@@ -15,6 +15,7 @@
     [Parameter]
     public RenderFragment IconTemplate { get; set; }
 }
+@RenderBeforeRootElementFragments()
 @if (this.Type == HeaderType.Content)
 {
     <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass.Replace("ui ","ui icon ").Replace("ui ","ui icon ")">
@@ -57,7 +58,7 @@
         @GetInner()
     </h6>
 }
-
+@RenderAfterRootElementFragments()
 @code{
     RenderFragment GetInner()
     {

@@ -10,6 +10,30 @@
         <member name="T:Fomantic.Blazor.UI.NestedParamterAttribute">
             <summary>   Attribute for nested paramter. </summary>
         </member>
+        <member name="T:Fomantic.Blazor.UI.ComponentFragment">
+            <summary>   A component fragment. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ComponentFragment.Location">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the location. </summary>
+            
+             <value> The location. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ComponentFragment.Fragment">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the fragment. </summary>
+            
+             <value> The fragment. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ComponentFragment.Order">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the order. </summary>
+            
+             <value> The order. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="T:Fomantic.Blazor.UI.AttachingDirection">
             <summary>   Mark the attachable element type. </summary>
         </member>
@@ -6816,6 +6840,13 @@
              <summary>   List Of Fomantic Component Extensions. </summary>
             
              <value> The extensions. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponent.AdditionalFragments">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the additional fragment. </summary>
+            
+             <value> The additional fragment. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentExtension">

@@ -2,6 +2,7 @@
 @using Fomantic.Blazor.UI
 @inherits IconBase
 
+@RenderBeforeRootElementFragments()
 <i @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass" />
-
+@RenderAfterRootElementFragments()
 

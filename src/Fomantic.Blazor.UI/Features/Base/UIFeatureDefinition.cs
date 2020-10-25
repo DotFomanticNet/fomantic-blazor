@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Fomantic.Blazor.UI.Features
 {
+
     ///-------------------------------------------------------------------------------------------------
     /// <summary>   A feature definition. </summary>
     ///
@@ -28,7 +29,7 @@ namespace Fomantic.Blazor.UI.Features
     public abstract class UIFeatureDefinition<TFeatureInterface> : IFeatureDefinition<TFeatureInterface> where TFeatureInterface : IFomanticComponent
     {
         /// <inheritdoc/>
-        public IEnumerable<KeyValuePair<string, RenderFragment>> AdditionalFragment { get; set; } = new List<KeyValuePair<string, RenderFragment>>();
+        public List<ComponentFragment> AdditionalFragments { get; set; } = new List<ComponentFragment>();
 
         /// <inheritdoc/>
         public Type Type => typeof(TFeatureInterface);
@@ -75,7 +76,7 @@ namespace Fomantic.Blazor.UI.Features
         /// <inheritdoc/>
         public async virtual ValueTask OnInitialized(TFeatureInterface component)
         {
-          
+            component.AdditionalFragments.AddRange(this.AdditionalFragments);
         }
 
         /// <inheritdoc/>

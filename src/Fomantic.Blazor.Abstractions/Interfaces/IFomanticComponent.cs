@@ -36,7 +36,7 @@ namespace Fomantic.Blazor.UI
         /// <value> The attributes. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        Dictionary<string, object> Attributes { get;  }
+        Dictionary<string, object> Attributes { get; }
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   List Of Fomantic Component Extensions. </summary>
@@ -45,6 +45,14 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         public List<IFomanticComponentExtension> Extensions { get; }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Gets or sets the additional fragment. </summary>
+        ///
+        /// <value> The additional fragment. </value>
+        ///-------------------------------------------------------------------------------------------------
+
+        List<ComponentFragment> AdditionalFragments { get; set; }
 
     }
 }

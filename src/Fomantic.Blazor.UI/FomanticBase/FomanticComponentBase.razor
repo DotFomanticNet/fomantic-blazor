@@ -1,0 +1,33 @@
+﻿@namespace Fomantic.Blazor.UI
+
+@code {
+    public const string BeforeRootElementAreaName = "BeforeRootElementArea";
+    public const string AfterRootElementAreaName = "AfterRootElementArea";
+    public const string BeforeContentElementAreaName = "BeforeContentElementArea";
+    public const string AfterContentElementAreaName = "AfterContentElementArea";
+
+    protected RenderFragment RenderBeforeRootElementFragments()
+    {
+        return __builder =>
+        {
+            foreach (var item in this.AdditionalFragments.Where(d => d.Location == BeforeRootElementAreaName))
+            {
+            @item.Fragment(this)
+            }
+        };
+    }
+
+    protected RenderFragment RenderAfterRootElementFragments()
+    {
+        return __builder =>
+        {
+            foreach (var item in this.AdditionalFragments.Where(d => d.Location == AfterRootElementAreaName))
+            {
+
+            @item.Fragment(this)
+
+
+            }
+        };
+    }
+}

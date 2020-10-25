@@ -88,7 +88,7 @@ namespace Fomantic.Blazor.UI.Features
         /// <value> The additional fragment. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        IEnumerable<KeyValuePair<string, RenderFragment>> AdditionalFragment { get; }
+        List<ComponentFragment> AdditionalFragments { get; }
     }
 
     ///-------------------------------------------------------------------------------------------------

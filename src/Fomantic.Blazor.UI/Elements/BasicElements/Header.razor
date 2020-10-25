@@ -2,6 +2,7 @@
 @using Fomantic.Blazor.UI
 @inherits HeaderBase
 
+@RenderBeforeRootElementFragments()
 
 @if (this.Type == HeaderType.Content)
 {
@@ -45,3 +46,5 @@
         @ChildContent
     </h6>
 }
+
+@RenderAfterRootElementFragments()

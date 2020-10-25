@@ -1,8 +1,8 @@
 ﻿@namespace Fomantic
 @using Fomantic.Blazor.UI
 @inherits SegmentBase
-
+@RenderBeforeRootElementFragments()
 <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
     @ChildContent
 </div>
-
+@RenderAfterRootElementFragments()
