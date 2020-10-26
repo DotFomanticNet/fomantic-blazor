@@ -4,6 +4,10 @@
 
 @RenderBeforeRootElementFragments()
 <span @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
-    @ChildContent
+    @RenderBeforeContentFragments()
+    <CascadingValue Name="Parent" Value="this">
+        @ChildContent
+    </CascadingValue>
+    @RenderAfterContentFragments()
 </span>
 @RenderAfterRootElementFragments()

@@ -12,7 +12,7 @@ using Microsoft.JSInterop;
 namespace Fomantic.Blazor.UI
 {
     /// <summary>   Base interface for all Fomantic Blazor Components. </summary>
-    public interface IFomanticComponent : IComponent, IDisposable
+    public interface IFomanticComponent :  IDisposable
     {
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Js runtime object to run javascript interops functions. </summary>
@@ -44,7 +44,7 @@ namespace Fomantic.Blazor.UI
         /// <value> The extensions. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        public List<IFomanticComponentExtension> Extensions { get; }
+        public List<IFomanticExtension> Extensions { get; }
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Gets or sets the additional fragment. </summary>

@@ -29,7 +29,11 @@
     @if (HeaderWithIconElementTemplate == null)
     {
         <HeaderWithIcon @ref="Header" @attributes='InputAttributes.GetMainElementAttributes("Header")' Icon="Icon" IsIconCircular="IsIconCircular" Color="HeaderColor??Color" IconColor="IconColor??Color" IsDisabled="IsDisabled" IsInverted="IsInverted">
-            @ChildContent
+            @RenderBeforeContentFragments()
+            <CascadingValue Name="Parent" Value="this">
+                @ChildContent
+            </CascadingValue>
+            @RenderAfterContentFragments()
         </HeaderWithIcon>
     }
     else

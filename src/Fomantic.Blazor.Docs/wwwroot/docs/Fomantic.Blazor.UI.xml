@@ -4,1329 +4,6 @@
         <name>Fomantic.Blazor.UI</name>
     </assembly>
     <members>
-        <member name="T:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator">
-            <summary>   Class responsibe for animating a <see cref="T:Microsoft.AspNetCore.Components.ElementReference"/> </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.#ctor(Microsoft.JSInterop.IJSRuntime,Microsoft.AspNetCore.Components.ElementReference[])">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Create An instant of Animator. </summary>
-            
-             <param name="jsRuntime">        used jsRuntime to call js animation function. </param>
-             <param name="elementToAnimate"> <see cref="T:Microsoft.AspNetCore.Components.ElementReference"/> to animate. </param>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.ElementToAnimate">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the element to animate. </summary>
-            
-             <value> The element to animate. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.JsRuntime">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the js runtime. </summary>
-            
-             <value> The js runtime. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.AnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.StopAllAnimation">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.StopCurrentAnimation">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Dispose">
-            <inheritdoc/>
-        </member>
-        <member name="T:Fomantic.Blazor.UI.FomanticComponentAnimator`1">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Class responsibe for animating a <see cref="T:Fomantic.Blazor.UI.IFomanticComponent"/> </summary>
-            
-             <typeparam name="TFomanticComponent">   Type of the fomantic component. </typeparam>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Components">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the components. </summary>
-            
-             <value> The components. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.#ctor(`0[])">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Create An instant of Animator. </summary>
-            
-             <param name="component">    Fomantic component to animate. </param>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Animate(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.AnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            <inheritdoc/>
-        </member>
-        <member name="T:Fomantic.Blazor.UI.HeaderType">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             A header type oriented to give some importance of a section in the context of the content
-             that surrounds it.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.HeaderType.Content">
-            <summary>
-            Content header oriented to give the lowest importance of a section in the context of the content that surrounds it
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.HeaderType.H1">
-            <summary>
-            H1 header oriented to give the most importance of a section in the context of the content that surrounds it
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.HeaderType.H2">
-            <summary>
-            H1 header oriented to give the secound most importance of a section in the context of the content that surrounds it
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.HeaderType.H3">
-            <summary>
-            H1 header oriented to give the third most importance of a section in the context of the content that surrounds it
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.HeaderType.H4">
-            <summary>
-            H1 header oriented to give the forth most importance of a section in the context of the content that surrounds it
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.HeaderType.H5">
-            <summary>
-            H1 header oriented to give the fifth most importance of a section in the context of the content that surrounds it
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.HeaderType.H6">
-            <summary>
-            H1 header oriented to give the sixth most importance of a section in the context of the content that surrounds it
-            </summary>
-        </member>
-        <member name="T:Fomantic.Blazor.UI.SegmentStyle">
-            <summary>   A segment or segment group may be formatted to be in different style. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Normal">
-            <summary>
-            Normal Style of segment or segment group 
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Basic">
-            <summary>
-            A basic segment or segment group has no special formatting
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Raised">
-            <summary>
-            A segment or segment group may be formatted to raise above the page.
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Stacked">
-            <summary>
-            A segment or segment group can be formatted to show it contains multiple pages
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.SegmentStyle.TallStacked">
-            <summary>
-            A segment can be formatted to show it contains multiple pages
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Piled">
-            <summary>
-            A segment can be formatted to look like a pile of pages
-            </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.AttachedClass">
-            <summary>   class given to attached. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.TopAttachedClass">
-            <summary>   class given to attached. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.BottomAttachedClass">
-            <summary>   class given to attached. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.AttachingDirection})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.AttachingDirection"/> to given class. </summary>
-            
-             <param name="attachingDirection">   attaching direction Value. </param>
-            
-             <returns>   given class from <paramref name="attachingDirection"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.Features.IFeatureDefinition">
-            <summary>   Interface for feature definition. </summary>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.Features.IFeatureDefinition.Type">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the type. </summary>
-            
-             <value> The type. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition.OnAfterEachRender(Fomantic.Blazor.UI.IFomanticComponent)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Executes the 'after each render' action. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A ValueTask&lt;bool&gt; </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition.OnAfterFirstRender(Fomantic.Blazor.UI.IFomanticComponent)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Executes the 'after first render' action. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A ValueTask&lt;bool&gt; </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition.OnInitialized(Fomantic.Blazor.UI.IFomanticComponent)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Executes the 'initialized' action. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A ValueTask. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition.ProvideCssClasses(Fomantic.Blazor.UI.IFomanticComponent)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Provide CSS classes. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A string[]. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition.ProvideCssClass(Fomantic.Blazor.UI.IFomanticComponent)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Provide CSS class. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A string. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.Features.IFeatureDefinition.AdditionalFragments">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the additional fragment. </summary>
-            
-             <value> The additional fragment. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.Features.IFeatureDefinition`1">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Interface for feature definition. </summary>
-            
-             <typeparam name="TFeatureInterface">    Type of the feature interface. </typeparam>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition`1.OnAfterEachRender(`0)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Executes the 'after each render' action. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A ValueTask&lt;bool&gt; </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition`1.OnAfterFirstRender(`0)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Executes the 'after first render' action. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A ValueTask&lt;bool&gt; </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition`1.OnInitialized(`0)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Executes the 'initialized' action. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A ValueTask. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition`1.ProvideCssClasses(`0)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Provide CSS classes. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A string[]. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.IFeatureDefinition`1.ProvideCssClass(`0)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Provide CSS class. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A string. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A feature definition. </summary>
-            
-             <typeparam name="TFeatureInterface">    Type of the feature interface. </typeparam>
-            
-             <seealso cref="T:Fomantic.Blazor.UI.Features.IFeatureDefinition`1"/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.AdditionalFragments">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Type">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.DisposeAsync(`0)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Dispose asynchronous. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A ValueTask. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnAfterEachRender(`0)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnAfterFirstRender(`0)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.ProvideCssClasses(`0)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.ProvideCssClass(`0)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnInitialized(`0)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#OnAfterEachRender(Fomantic.Blazor.UI.IFomanticComponent)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#OnAfterFirstRender(Fomantic.Blazor.UI.IFomanticComponent)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#ProvideCssClasses(Fomantic.Blazor.UI.IFomanticComponent)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#ProvideCssClass(Fomantic.Blazor.UI.IFomanticComponent)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#OnInitialized(Fomantic.Blazor.UI.IFomanticComponent)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#Features#IFeatureDefinition#DisposeAsync(Fomantic.Blazor.UI.IFomanticComponent)">
-            -------------------------------------------------------------------------------------------------
-             <summary>  Dispose asynchronous. </summary>
-            
-             <param name="component">   The component. </param>
-            
-             <returns>  A ValueTask. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentCanBeDisabledFeature.DisabledClass">
-            <summary>   class given to disable component. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.VisibleFomanticComponentFeature.HiddenClass">
-            <summary>   class given to the component to invert its color. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.LeftFloatedClass">
-            <summary>   class given to Left Float. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.RightFloatedClass">
-            <summary>   class given to Right Float. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.FloatAlignment})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.FloatAlignment"/> to given class. </summary>
-            
-             <param name="alignment">    Alignment Value. </param>
-            
-             <returns>   given class from <paramref name="alignment"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCircularStyleFeature.CircularClass">
-            <summary>   class given to make component circular. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithColorFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.Color})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Color"/> to given class. </summary>
-            
-             <param name="color">    Color Value. </param>
-            
-             <returns>   Given class from <paramref name="color"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCompactStyleFeature.CompactClass">
-            <summary>   class given to make component compact. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.RightAlignedClass">
-            <summary>   class given to make component right aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.LeftAlignedClass">
-            <summary>   class given to make component left aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.CenterAlignedClass">
-            <summary>   class given to make component center aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.JustifiedClass">
-            <summary>   class given to make component justified. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentAlignment})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentAlignment"/> to given class. </summary>
-            
-             <param name="contentAlignment"> ContentSpace Value. </param>
-            
-             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.PaddedClass">
-            <summary>   class given to make component content padded. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.VeryPaddedClass">
-            <summary>   class given to make component content very padded. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.FittedClass">
-            <summary>   class given to remove component content padding. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.HorizontallyFittedClass">
-            <summary>   class given to remove component content horizontal padding only. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.VerticallyFittedClass">
-            <summary>   class given to remove component content vertical padding only. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentSpace})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentSpace"/> to given class. </summary>
-            
-             <param name="contentSpace"> ContentSpace Value. </param>
-            
-             <returns>   Given class from <paramref name="contentSpace"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithDividingStyleFeature.DividingClass">
-            <summary>   class given to the component to divide itself from the content below it. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithFittedStyleFeature.FittedClass">
-            <summary>   class given to make component fitted. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithInvertedStyleFeature.InvertedClass">
-            <summary>   class given to the component to invert its color. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithLoadingIndicatorFeature.LoadingClass">
-            <summary>   class given to make component appear as loading. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MiniClass">
-            <summary>   Determine if the component should be mini. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.TinyClass">
-            <summary>   Determine if the component should be tiny. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.SmallClass">
-            <summary>   Determine if the component should be small. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MediumClass">
-            <summary>   Determine if the component should be medium. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.LargeClass">
-            <summary>   Determine if the component should be large. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.BigClass">
-            <summary>   Determine if the component should be big. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.HugeClass">
-            <summary>   Determine if the component should be huge. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MassiveClass">
-            <summary>   Determine if the component should be massive. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.ToClass(Fomantic.Blazor.UI.Size)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Size"/> to given class. </summary>
-            
-             <param name="size"> Size Value. </param>
-            
-             <returns>   Given class from <paramref name="size"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.FomanticComponentBase">
-            <summary>   Base class for all Fomantic Component. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.GetRootElementAttributes">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Return the Component Attributes. </summary>
-            
-             <returns>
-             An enumerator that allows foreach to be used to process the root element attributes in this
-             collection.
-             </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.lazyAnimator">
-            <summary>   The lazy animator. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.lazyViewportVisibility">
-            <summary>   The lazy viewport visibility. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase._cssClass">
-            <summary>   The CSS class. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.inputAttributes">
-            <summary>   The input attributes. </summary>
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityChangeEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Event queue for all listeners interested in onViewportVisibilityChange events.
-             </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onTopVisible events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onTopPassed events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onBottomVisible events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onPassing events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onBottomPassed events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onTopVisibleReverse events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onTopPassedReverse events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onBottomVisibleReverse events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onPassingReverse events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onBottomPassedReverse events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnClassChangedEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onClassChanged events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.JsRuntime">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.JQueryElementRef">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.RootElement">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Extensions">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Animator">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.ViewportVisibility">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Object responsible for Viewport Visibility tracking. </summary>
-            
-             <value> The viewport visibility. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.CssClass">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ConstractClasses">
-            <summary>   Used to add inherited components classes. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnInitializedAsync">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnAfterRender(System.Boolean)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnAfterRenderAsync(System.Boolean)">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Attributes">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.InputAttributes">
-            -------------------------------------------------------------------------------------------------
-             <summary>   List of all arbitrary attributes. </summary>
-            
-             <value> The input attributes. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassed">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisible">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnPassing">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassed">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverse">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverse">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverse">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverse">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverse">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityChange">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisible">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnClassChanged">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.EnterTransition">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.IsHidden">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.EnterTransitionDuration">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.CssClasses">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Fomantic#Blazor#UI#IFomanticComponentWithClass#CssClasses">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the CSS classes. </summary>
-            
-             <value> The CSS classes. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Fomantic#Blazor#UI#IFomanticComponentWithEnterTransition#IsEnterAnimationDone">
-            <summary>   True if is enter animation played, false if not. </summary>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.AdditionalFragments">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ExecuteOnClassChangedEvent(System.String,System.String)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Executes the on class changed event operation. </summary>
-            
-             <param name="oldClass">     The old class. </param>
-             <param name="currentClass"> The current class. </param>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Show">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Hide">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ToggleVisibility">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Dispose">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.DisposeAsync">
-            <inheritdoc/>
-        </member>
-        <member name="T:Fomantic.Blazor.UI.FomanticComponentWithContentBase">
-            <summary>   Base class for all Fomantic Component. </summary>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentWithContentBase.ChildContent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Content of the component.   </summary>
-            
-             <value> The child content. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentWithContentBase.Content">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Content of the component.   </summary>
-            
-             <value> The content. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.ViewPortCalculation">
-            <summary>   Contains all element viewport calculation. </summary>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.BottomPassed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is  parent element of the component bottom not visibile on the viewport. </summary>
-            
-             <value> The bottom passed. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.BottomVisible">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is parent element of the component bottom visibile on the viewport. </summary>
-            
-             <value> The bottom visible. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Fits">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets or sets the fits. </summary>
-            
-             <value> The fits. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Height">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Height value of the parent element of the component. </summary>
-            
-             <value> The height. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.OffScreen">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is the parent element of the component not visibile on the viewport. </summary>
-            
-             <value> The off screen. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.OnScreen">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is the parent element of the component visibile on the viewport. </summary>
-            
-             <value> The on screen. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Passing">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is the parent element of the component passing on the viewport. </summary>
-            
-             <value> The passing. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.PercentagePassed">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             A distance from the top of parent element of the component content has been passed as
-             percentage.
-             </summary>
-            
-             <value> The percentage passed. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.PixelsPassed">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             A distance from the top of parent element of the component content has been passed as pixels.
-             </summary>
-            
-             <value> The pixels passed. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.TopVisible">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is parent element of the component top visibile on the viewport. </summary>
-            
-             <value> The top visible. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.TopPassed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is parent element of the component top passed on the viewport. </summary>
-            
-             <value> The top passed. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Width">
-            -------------------------------------------------------------------------------------------------
-             <summary>   css top value of the parent element of the component. </summary>
-             <summary>   Width value of the parent element of the component. </summary>
-            
-             <value> The width. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.ViewportVisibility">
-            <summary>   Implementation Responsible for Viewport Visibility tracking. </summary>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewportVisibility.ElementToSubscripeFunc">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the element to subscripe function. </summary>
-            
-             <value> A function delegate that yields an ElementReference. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewportVisibility.JsRuntime">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the js runtime. </summary>
-            
-             <value> The js runtime. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewportVisibility.Calculation">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Current View Port Calculations. </summary>
-            
-             <value> The calculation. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.#ctor(System.Func{Microsoft.AspNetCore.Components.ElementReference},Microsoft.JSInterop.IJSRuntime)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Create new Viewport Visibility. </summary>
-            
-             <param name="elementToSubscripeFunc">   function to get element to track Visibility. </param>
-             <param name="jsRuntime">                js run time to execute javascript interops. </param>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewportVisibility.Element">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets or sets the element. </summary>
-            
-             <value> The element. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.Apply">
-            <summary>   Applies this.  </summary>
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnVisibilityUpdated">
-            <summary>   Event queue for all listeners interested in OnVisibilityUpdated events. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnUpdate">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method executed by Javascript to trigger Visibility Updated events. </summary>
-                   
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.UpdateSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method determine if visibility updated event Subscribed or not. </summary>
-            
-             <returns>   whether visibility updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleUpdated">
-            <summary>   Event queue for all listeners interested in OnTopVisibleUpdated events. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisible">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method executed by Javascript to trigger On Top Visible Updated events. </summary>
-            
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method determine if On Top Visible updated event Subscribed or not. </summary>
-            
-             <returns>   whether On Top Visible updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedUpdated">
-            <summary>   Event queue for all listeners interested in OnTopPassedUpdated events. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method executed by Javascript to trigger On Top Passed Updated events. </summary>
-            
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method determine if On Top Passed updated event Subscribed or not. </summary>
-            
-             <returns>   whether On Top Passed updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleUpdated">
-            <summary>   Event queue for all listeners interested in OnBottomVisibleUpdated events. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisible">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method executed by Javascript to trigger On Bottom Visible Updated events. </summary>
-            
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method determine if On Bottom Visible updated event Subscribed or not. </summary>
-            
-             <returns>   whether  On Bottom Visible updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnPassingUpdated">
-            <summary>   Event queue for all listeners interested in OnPassingUpdated events. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassing">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method executed by Javascript to trigger On Passing Updated events. </summary>
-            
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method determine if On Passing updated event Subscribed or not. </summary>
-            
-             <returns>   whether On Passing updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedUpdated">
-            <summary>   Event queue for all listeners interested in OnBottomPassedUpdated events. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method executed by Javascript to trigger On Bottom Passed Updated events. </summary>
-            
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method determine if On Bottom Passed updated event Subscribed or not. </summary>
-            
-             <returns>   whether On Bottom Passed updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverseUpdated">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Event queue for all listeners interested in OnTopVisibleReverseUpdated events.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverse">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Method executed by Javascript to trigger On TopVisibl Reverse Updated events.
-             </summary>
-            
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverseSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Method determine if On Top Visible Reverse updated event Subscribed or not.
-             </summary>
-            
-             <returns>   whether On Top Visible Reverse updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverseUpdated">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Event queue for all listeners interested in OnTopPassedReverseUpdated events.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverse">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Method executed by Javascript to trigger On Top Passed Reverse Updated events.
-             </summary>
-            
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverseSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method determine if On Top Passed Reverse updated event Subscribed or not. </summary>
-            
-             <returns>   whether  On Top Passed Reverse updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverseUpdated">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Event queue for all listeners interested in OnBottomVisibleReverseUpdated events.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverse">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Method executed by Javascript to trigger On Bottom Visible Reverse Updated events.
-             </summary>
-            
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverseSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Method determine if On Bottom Visible Reverse updated event Subscribed or not.
-             </summary>
-            
-             <returns>   whether On Bottom Visible Reverse updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverseUpdated">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Event queue for all listeners interested in OnPassingReverseUpdated events.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverse">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Method executed by Javascript to trigger On Passing Reverse Updated events.
-             </summary>
-            
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverseSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Method determine if On Passing Reverse updated event Subscribed or not. </summary>
-            
-             <returns>   whether  On Passing Reverse updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverseUpdated">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Event queue for all listeners interested in OnBottomPassedReverseUpdated events.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverse">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Method executed by Javascript to trigger On Bottom Passed Reverse Updated events.
-             </summary>
-            
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverseSubscribed">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Method determine if On Bottom Passed Reverse updated event Subscribed or not.
-             </summary>
-            
-             <returns>   whether  On Bottom Passed Reverse updated event Subscribed or not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.Dispose">
-            <inheritdoc/>
-        </member>
-        <member name="T:Fomantic.Blazor.UI.FomanticConfiguration">
-            <summary>   A fomantic startup configuration. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticConfiguration.UseFomantic(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Call at startup to register fomantic UI services. </summary>
-            
-             <param name="services"> The services to act on. </param>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticConfiguration.UseFomantic(Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Call at startup to register fomantic UI services . </summary>
-            
-             <param name="builder">  The builder to act on. </param>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.IconListHelpers">
-            <summary>   An icon list helpers. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IconListHelpers.ToCssClass(Fomantic.Blazor.UI.IconList)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   An IconList extension method that converts an icon to the CSS class. </summary>
-            
-             <param name="icon"> The icon to act on. </param>
-            
-             <returns>   Icon as a string. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers">
-            <summary>   A fomantic component with class helpers. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddAdditionalFragment``1(Fomantic.Blazor.UI.Features.UIFeatureDefinition{``0},System.String,System.Func{``0,Microsoft.AspNetCore.Components.RenderFragment})">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             An UIFeatureDefinition&lt;T&gt; extension method that adds an additional fragment.
-             </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="feature">  The feature to act on. </param>
-             <param name="loc">      The location to render fragment. </param>
-             <param name="func">     The fragment function. </param>
-            
-             <returns>   An UIFeatureDefinition&lt;T&gt; </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddClass``1(``0,System.String[])">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds the class to 'classes'. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="classes">      A variable-length parameters list containing classes to be added. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.RemoveClass``1(``0,System.String[])">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that removes the class. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="classes">      A variable-length parameters list containing classes to be removed. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithTooltipHelpers">
-            <summary>   A fomantic component with tooltip helpers. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithTooltipHelpers.HasTooltip``1(``0)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that query if 'component' has tooltip. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-            
-             <returns>   True if tooltip, false if not. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.InputAttributesHelper">
-            <summary>   An input attributes helper. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.GetMainElementAttributes(System.Collections.Generic.Dictionary{System.String,System.Object})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the main element attributes in this collection. </summary>
-            
-             <param name="attributes">   The attributes to act on. </param>
-            
-             <returns>
-             An enumerator that allows foreach to be used to process the main element attributes in this
-             collection.
-             </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.GetMainElementAttributes(System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the main element attributes in this collection. </summary>
-            
-             <param name="attributes">   The attributes to act on. </param>
-             <param name="element">      The element. </param>
-            
-             <returns>
-             An enumerator that allows foreach to be used to process the main element attributes in this
-             collection.
-             </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.AddOrUpdateAttribute``1(``0,System.String,System.Object,System.Boolean@)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that adds an or update attribute. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="key">          The key. </param>
-             <param name="value">        The value. </param>
-             <param name="hasChanged">will be true of the attribute value changed</param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.RemoveAttribute``1(``0,System.String)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A T extension method that removes the attribute. </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="key">          The key. </param>
-            
-             <returns>   A T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.ISegmantGroupHelpers">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Helper Utitities for <see cref="T:Fomantic.Blazor.UI.IFomanticGroupComponent`1" />  as T is
-             <see cref="T:Fomantic.Blazor.UI.ISegmantGroupChild"/>
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ISegmantGroupHelpers.GetChildrenSegments(Fomantic.Blazor.UI.IFomanticGroupComponent{Fomantic.Blazor.UI.ISegmantGroupChild})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Get list of children segments inside a segmant group. </summary>
-            
-             <param name="segmantGroup"> Parent segmant group. </param>
-            
-             <returns>   list of children segments. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.ISegmantGroupHelpers.GetChildrenSegmentGroups(Fomantic.Blazor.UI.IFomanticGroupComponent{Fomantic.Blazor.UI.ISegmantGroupChild})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Get list of children segment groups inside a segmant group. </summary>
-            
-             <param name="segmantGroup"> Parent segmant group. </param>
-            
-             <returns>   list of children segment groups. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.JqueryOffset">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A jquery offset. </summary>
-              
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.JqueryOffset.Top">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets or sets the top. </summary>
-            
-             <value> The top. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.JqueryOffset.Left">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets or sets the left. </summary>
-            
-             <value> The left. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.JQueryHelpers">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A query helpers. </summary>
-                
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.JQueryHelpers.Jump``1(``0,System.Int32,System.Int32)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Make Viewport animated scroll to a component </summary>
-                   
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="component">    The component to act on. </param>
-             <param name="margintop">    (Optional) The margintop. </param>
-             <param name="jumpTime">     (Optional) The jump time. </param>
-            
-             <returns>   An asynchronous result that yields a T. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.JQueryHelpers.JumpToTopOf(Microsoft.AspNetCore.Components.ElementReference,Microsoft.JSInterop.IJSRuntime,System.Int32,System.Int32)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   An ElementReference extension method that jump to top of. </summary>
-                  
-            
-             <param name="element">      The element to act on. </param>
-             <param name="jSRuntime">    The s runtime. </param>
-             <param name="margintop">    (Optional) The margintop. </param>
-             <param name="jumpTime">     (Optional) The jump time. </param>
-            
-             <returns>   An asynchronous result that yields an ElementReference. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.ISegmantGroupChild">
-            <summary>   Base interface for all fomantic component that has parent segmant group. </summary>
-        </member>
         <member name="T:Fomantic.HeaderBase">
             -------------------------------------------------------------------------------------------------
              <summary>   A text is used to style some inline text with a simple color. </summary>
@@ -1883,6 +560,1263 @@
             
              ### <inheritdoc/>
             -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.HeaderType">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             A header type oriented to give some importance of a section in the context of the content
+             that surrounds it.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.Content">
+            <summary>
+            Content header oriented to give the lowest importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H1">
+            <summary>
+            H1 header oriented to give the most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H2">
+            <summary>
+            H1 header oriented to give the secound most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H3">
+            <summary>
+            H1 header oriented to give the third most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H4">
+            <summary>
+            H1 header oriented to give the forth most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H5">
+            <summary>
+            H1 header oriented to give the fifth most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.HeaderType.H6">
+            <summary>
+            H1 header oriented to give the sixth most importance of a section in the context of the content that surrounds it
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.SegmentStyle">
+            <summary>   A segment or segment group may be formatted to be in different style. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Normal">
+            <summary>
+            Normal Style of segment or segment group 
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Basic">
+            <summary>
+            A basic segment or segment group has no special formatting
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Raised">
+            <summary>
+            A segment or segment group may be formatted to raise above the page.
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Stacked">
+            <summary>
+            A segment or segment group can be formatted to show it contains multiple pages
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.TallStacked">
+            <summary>
+            A segment can be formatted to show it contains multiple pages
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.SegmentStyle.Piled">
+            <summary>
+            A segment can be formatted to look like a pile of pages
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator">
+            <summary>   Class responsibe for animating a <see cref="T:Microsoft.AspNetCore.Components.ElementReference"/> </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.#ctor(Microsoft.JSInterop.IJSRuntime,Microsoft.AspNetCore.Components.ElementReference[])">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Create An instant of Animator. </summary>
+            
+             <param name="jsRuntime">        used jsRuntime to call js animation function. </param>
+             <param name="elementToAnimate"> <see cref="T:Microsoft.AspNetCore.Components.ElementReference"/> to animate. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.ElementToAnimate">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the element to animate. </summary>
+            
+             <value> The element to animate. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.JsRuntime">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the js runtime. </summary>
+            
+             <value> The js runtime. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.AnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.StopAllAnimation">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.StopCurrentAnimation">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticComponentAnimator`1">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Class responsibe for animating a <see cref="T:Fomantic.Blazor.UI.IFomanticComponent"/> </summary>
+            
+             <typeparam name="TFomanticComponent">   Type of the fomantic component. </typeparam>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Components">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the components. </summary>
+            
+             <value> The components. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.#ctor(`0[])">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Create An instant of Animator. </summary>
+            
+             <param name="component">    Fomantic component to animate. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Animate(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.AnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ViewPortCalculation">
+            <summary>   Contains all element viewport calculation. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.BottomPassed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is  parent element of the component bottom not visibile on the viewport. </summary>
+            
+             <value> The bottom passed. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.BottomVisible">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is parent element of the component bottom visibile on the viewport. </summary>
+            
+             <value> The bottom visible. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Fits">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the fits. </summary>
+            
+             <value> The fits. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Height">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Height value of the parent element of the component. </summary>
+            
+             <value> The height. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.OffScreen">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is the parent element of the component not visibile on the viewport. </summary>
+            
+             <value> The off screen. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.OnScreen">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is the parent element of the component visibile on the viewport. </summary>
+            
+             <value> The on screen. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Passing">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is the parent element of the component passing on the viewport. </summary>
+            
+             <value> The passing. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.PercentagePassed">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             A distance from the top of parent element of the component content has been passed as
+             percentage.
+             </summary>
+            
+             <value> The percentage passed. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.PixelsPassed">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             A distance from the top of parent element of the component content has been passed as pixels.
+             </summary>
+            
+             <value> The pixels passed. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.TopVisible">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is parent element of the component top visibile on the viewport. </summary>
+            
+             <value> The top visible. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.TopPassed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is parent element of the component top passed on the viewport. </summary>
+            
+             <value> The top passed. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Width">
+            -------------------------------------------------------------------------------------------------
+             <summary>   css top value of the parent element of the component. </summary>
+             <summary>   Width value of the parent element of the component. </summary>
+            
+             <value> The width. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ViewportVisibility">
+            <summary>   Implementation Responsible for Viewport Visibility tracking. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewportVisibility.ElementToSubscripeFunc">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the element to subscripe function. </summary>
+            
+             <value> A function delegate that yields an ElementReference. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewportVisibility.JsRuntime">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the js runtime. </summary>
+            
+             <value> The js runtime. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewportVisibility.Calculation">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Current View Port Calculations. </summary>
+            
+             <value> The calculation. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.#ctor(System.Func{Microsoft.AspNetCore.Components.ElementReference},Microsoft.JSInterop.IJSRuntime)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Create new Viewport Visibility. </summary>
+            
+             <param name="elementToSubscripeFunc">   function to get element to track Visibility. </param>
+             <param name="jsRuntime">                js run time to execute javascript interops. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewportVisibility.Element">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the element. </summary>
+            
+             <value> The element. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.Apply">
+            <summary>   Applies this.  </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnVisibilityUpdated">
+            <summary>   Event queue for all listeners interested in OnVisibilityUpdated events. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnUpdate">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method executed by Javascript to trigger Visibility Updated events. </summary>
+                   
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.UpdateSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method determine if visibility updated event Subscribed or not. </summary>
+            
+             <returns>   whether visibility updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleUpdated">
+            <summary>   Event queue for all listeners interested in OnTopVisibleUpdated events. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisible">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method executed by Javascript to trigger On Top Visible Updated events. </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method determine if On Top Visible updated event Subscribed or not. </summary>
+            
+             <returns>   whether On Top Visible updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedUpdated">
+            <summary>   Event queue for all listeners interested in OnTopPassedUpdated events. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method executed by Javascript to trigger On Top Passed Updated events. </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method determine if On Top Passed updated event Subscribed or not. </summary>
+            
+             <returns>   whether On Top Passed updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleUpdated">
+            <summary>   Event queue for all listeners interested in OnBottomVisibleUpdated events. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisible">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method executed by Javascript to trigger On Bottom Visible Updated events. </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method determine if On Bottom Visible updated event Subscribed or not. </summary>
+            
+             <returns>   whether  On Bottom Visible updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnPassingUpdated">
+            <summary>   Event queue for all listeners interested in OnPassingUpdated events. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassing">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method executed by Javascript to trigger On Passing Updated events. </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method determine if On Passing updated event Subscribed or not. </summary>
+            
+             <returns>   whether On Passing updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedUpdated">
+            <summary>   Event queue for all listeners interested in OnBottomPassedUpdated events. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method executed by Javascript to trigger On Bottom Passed Updated events. </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method determine if On Bottom Passed updated event Subscribed or not. </summary>
+            
+             <returns>   whether On Bottom Passed updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverseUpdated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in OnTopVisibleReverseUpdated events.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverse">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Method executed by Javascript to trigger On TopVisibl Reverse Updated events.
+             </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopVisibleReverseSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Method determine if On Top Visible Reverse updated event Subscribed or not.
+             </summary>
+            
+             <returns>   whether On Top Visible Reverse updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverseUpdated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in OnTopPassedReverseUpdated events.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverse">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Method executed by Javascript to trigger On Top Passed Reverse Updated events.
+             </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnTopPassedReverseSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method determine if On Top Passed Reverse updated event Subscribed or not. </summary>
+            
+             <returns>   whether  On Top Passed Reverse updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverseUpdated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in OnBottomVisibleReverseUpdated events.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverse">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Method executed by Javascript to trigger On Bottom Visible Reverse Updated events.
+             </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomVisibleReverseSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Method determine if On Bottom Visible Reverse updated event Subscribed or not.
+             </summary>
+            
+             <returns>   whether On Bottom Visible Reverse updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverseUpdated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in OnPassingReverseUpdated events.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverse">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Method executed by Javascript to trigger On Passing Reverse Updated events.
+             </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnPassingReverseSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Method determine if On Passing Reverse updated event Subscribed or not. </summary>
+            
+             <returns>   whether  On Passing Reverse updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverseUpdated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in OnBottomPassedReverseUpdated events.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverse">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Method executed by Javascript to trigger On Bottom Passed Reverse Updated events.
+             </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.OnBottomPassedReverseSubscribed">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Method determine if On Bottom Passed Reverse updated event Subscribed or not.
+             </summary>
+            
+             <returns>   whether  On Bottom Passed Reverse updated event Subscribed or not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.AttachedClass">
+            <summary>   class given to attached. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.TopAttachedClass">
+            <summary>   class given to attached. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.BottomAttachedClass">
+            <summary>   class given to attached. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.AttachingDirection})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.AttachingDirection"/> to given class. </summary>
+            
+             <param name="attachingDirection">   attaching direction Value. </param>
+            
+             <returns>   given class from <paramref name="attachingDirection"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A feature definition. </summary>
+            
+             <typeparam name="TFeatureInterface">    Type of the feature interface. </typeparam>
+            
+             <seealso cref="T:Fomantic.Blazor.UI.IFeatureDefinition`1"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.AdditionalFragments">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Type">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.DisposeAsync(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Dispose asynchronous. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnAfterEachRender(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnAfterFirstRender(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.ProvideCssClasses(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.ProvideCssClass(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnInitialized(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#OnAfterEachRender(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#OnAfterFirstRender(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#ProvideCssClasses(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#ProvideCssClass(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#OnInitialized(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#DisposeAsync(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>  Dispose asynchronous. </summary>
+            
+             <param name="component">   The component. </param>
+            
+             <returns>  A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentCanBeDisabledFeature.DisabledClass">
+            <summary>   class given to disable component. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.VisibleFomanticComponentFeature.HiddenClass">
+            <summary>   class given to the component to invert its color. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.LeftFloatedClass">
+            <summary>   class given to Left Float. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.RightFloatedClass">
+            <summary>   class given to Right Float. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.FloatAlignment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.FloatAlignment"/> to given class. </summary>
+            
+             <param name="alignment">    Alignment Value. </param>
+            
+             <returns>   given class from <paramref name="alignment"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCircularStyleFeature.CircularClass">
+            <summary>   class given to make component circular. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithColorFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.Color})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Color"/> to given class. </summary>
+            
+             <param name="color">    Color Value. </param>
+            
+             <returns>   Given class from <paramref name="color"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCompactStyleFeature.CompactClass">
+            <summary>   class given to make component compact. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.RightAlignedClass">
+            <summary>   class given to make component right aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.LeftAlignedClass">
+            <summary>   class given to make component left aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.CenterAlignedClass">
+            <summary>   class given to make component center aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.JustifiedClass">
+            <summary>   class given to make component justified. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentAlignment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentAlignment"/> to given class. </summary>
+            
+             <param name="contentAlignment"> ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.PaddedClass">
+            <summary>   class given to make component content padded. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.VeryPaddedClass">
+            <summary>   class given to make component content very padded. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.FittedClass">
+            <summary>   class given to remove component content padding. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.HorizontallyFittedClass">
+            <summary>   class given to remove component content horizontal padding only. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.VerticallyFittedClass">
+            <summary>   class given to remove component content vertical padding only. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentSpace})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentSpace"/> to given class. </summary>
+            
+             <param name="contentSpace"> ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="contentSpace"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithDividingStyleFeature.DividingClass">
+            <summary>   class given to the component to divide itself from the content below it. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithFittedStyleFeature.FittedClass">
+            <summary>   class given to make component fitted. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithInvertedStyleFeature.InvertedClass">
+            <summary>   class given to the component to invert its color. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithLoadingIndicatorFeature.LoadingClass">
+            <summary>   class given to make component appear as loading. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MiniClass">
+            <summary>   Determine if the component should be mini. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.TinyClass">
+            <summary>   Determine if the component should be tiny. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.SmallClass">
+            <summary>   Determine if the component should be small. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MediumClass">
+            <summary>   Determine if the component should be medium. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.LargeClass">
+            <summary>   Determine if the component should be large. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.BigClass">
+            <summary>   Determine if the component should be big. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.HugeClass">
+            <summary>   Determine if the component should be huge. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MassiveClass">
+            <summary>   Determine if the component should be massive. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.ToClass(Fomantic.Blazor.UI.Size)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Size"/> to given class. </summary>
+            
+             <param name="size"> Size Value. </param>
+            
+             <returns>   Given class from <paramref name="size"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticComponentBase">
+            <summary>   Base class for all Fomantic Component. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.GetRootElementAttributes">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Return the Component Attributes. </summary>
+            
+             <returns>
+             An enumerator that allows foreach to be used to process the root element attributes in this
+             collection.
+             </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.lazyAnimator">
+            <summary>   The lazy animator. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.lazyViewportVisibility">
+            <summary>   The lazy viewport visibility. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase._cssClass">
+            <summary>   The CSS class. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.inputAttributes">
+            <summary>   The input attributes. </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityChangeEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in onViewportVisibilityChange events.
+             </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onTopVisible events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onTopPassed events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onBottomVisible events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onPassing events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onBottomPassed events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverseEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onTopVisibleReverse events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverseEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onTopPassedReverse events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverseEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onBottomVisibleReverse events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverseEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onPassingReverse events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverseEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onBottomPassedReverse events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnClassChangedEvent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Event queue for all listeners interested in onClassChanged events. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.JsRuntime">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.JQueryElementRef">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.RootElement">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Extensions">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Animator">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.ViewportVisibility">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Object responsible for Viewport Visibility tracking. </summary>
+            
+             <value> The viewport visibility. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.CssClass">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ConstractClasses">
+            <summary>   Used to add inherited components classes. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnInitializedAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnAfterRender(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnAfterRenderAsync(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Attributes">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.InputAttributes">
+            -------------------------------------------------------------------------------------------------
+             <summary>   List of all arbitrary attributes. </summary>
+            
+             <value> The input attributes. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassed">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisible">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnPassing">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassed">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverse">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverse">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverse">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverse">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverse">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityChange">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisible">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnClassChanged">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.EnterTransition">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.IsHidden">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.EnterTransitionDuration">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.CssClasses">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Fomantic#Blazor#UI#IFomanticComponentWithClass#CssClasses">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the CSS classes. </summary>
+            
+             <value> The CSS classes. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Fomantic#Blazor#UI#IFomanticComponentWithEnterTransition#IsEnterAnimationDone">
+            <summary>   True if is enter animation played, false if not. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.AdditionalFragments">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ExecuteOnClassChangedEvent(System.String,System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the on class changed event operation. </summary>
+            
+             <param name="oldClass">     The old class. </param>
+             <param name="currentClass"> The current class. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Show">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Hide">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ToggleVisibility">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.DisposeAsync">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticComponentWithContentBase">
+            <summary>   Base class for all Fomantic Component. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentWithContentBase.ChildContent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Content of the component.   </summary>
+            
+             <value> The child content. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentWithContentBase.Content">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Content of the component.   </summary>
+            
+             <value> The content. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticConfiguration">
+            <summary>   A fomantic startup configuration. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticConfiguration.UseFomantic(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Call at startup to register fomantic UI services. </summary>
+            
+             <param name="services"> The services to act on. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticConfiguration.UseFomantic(Microsoft.AspNetCore.Components.WebAssembly.Hosting.WebAssemblyHostBuilder)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Call at startup to register fomantic UI services . </summary>
+            
+             <param name="builder">  The builder to act on. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IconListHelpers">
+            <summary>   An icon list helpers. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IconListHelpers.ToCssClass(Fomantic.Blazor.UI.IconList)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   An IconList extension method that converts an icon to the CSS class. </summary>
+            
+             <param name="icon"> The icon to act on. </param>
+            
+             <returns>   Icon as a string. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers">
+            <summary>   A fomantic component with class helpers. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddAdditionalFragment``1(Fomantic.Blazor.UI.Features.UIFeatureDefinition{``0},System.String,System.Func{``0,Microsoft.AspNetCore.Components.RenderFragment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             An UIFeatureDefinition&lt;T&gt; extension method that adds an additional fragment.
+             </summary>
+            
+             <typeparam name="T">    Generic type parameter. </typeparam>
+             <param name="feature">  The feature to act on. </param>
+             <param name="loc">      The location to render fragment. </param>
+             <param name="func">     The fragment function. </param>
+            
+             <returns>   An UIFeatureDefinition&lt;T&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddClass``1(``0,System.String[])">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A T extension method that adds the class to 'classes'. </summary>
+            
+             <typeparam name="T">    Generic type parameter. </typeparam>
+             <param name="component">    The component to act on. </param>
+             <param name="classes">      A variable-length parameters list containing classes to be added. </param>
+            
+             <returns>   A T. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.RemoveClass``1(``0,System.String[])">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A T extension method that removes the class. </summary>
+            
+             <typeparam name="T">    Generic type parameter. </typeparam>
+             <param name="component">    The component to act on. </param>
+             <param name="classes">      A variable-length parameters list containing classes to be removed. </param>
+            
+             <returns>   A T. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithTooltipHelpers">
+            <summary>   A fomantic component with tooltip helpers. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithTooltipHelpers.HasTooltip``1(``0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A T extension method that query if 'component' has tooltip. </summary>
+            
+             <typeparam name="T">    Generic type parameter. </typeparam>
+             <param name="component">    The component to act on. </param>
+            
+             <returns>   True if tooltip, false if not. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.InputAttributesHelper">
+            <summary>   An input attributes helper. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.GetMainElementAttributes(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the main element attributes in this collection. </summary>
+            
+             <param name="attributes">   The attributes to act on. </param>
+            
+             <returns>
+             An enumerator that allows foreach to be used to process the main element attributes in this
+             collection.
+             </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.GetMainElementAttributes(System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the main element attributes in this collection. </summary>
+            
+             <param name="attributes">   The attributes to act on. </param>
+             <param name="element">      The element. </param>
+            
+             <returns>
+             An enumerator that allows foreach to be used to process the main element attributes in this
+             collection.
+             </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.AddOrUpdateAttribute``1(``0,System.String,System.Object,System.Boolean@)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A T extension method that adds an or update attribute. </summary>
+            
+             <typeparam name="T">    Generic type parameter. </typeparam>
+             <param name="component">    The component to act on. </param>
+             <param name="key">          The key. </param>
+             <param name="value">        The value. </param>
+             <param name="hasChanged">will be true of the attribute value changed</param>
+            
+             <returns>   A T. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.RemoveAttribute``1(``0,System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A T extension method that removes the attribute. </summary>
+            
+             <typeparam name="T">    Generic type parameter. </typeparam>
+             <param name="component">    The component to act on. </param>
+             <param name="key">          The key. </param>
+            
+             <returns>   A T. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ISegmantGroupHelpers">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Helper Utitities for <see cref="T:Fomantic.Blazor.UI.IFomanticGroupComponent`1" />  as T is
+             <see cref="T:Fomantic.Blazor.UI.ISegmantGroupChild"/>
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ISegmantGroupHelpers.GetChildrenSegments(Fomantic.Blazor.UI.IFomanticGroupComponent{Fomantic.Blazor.UI.ISegmantGroupChild})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Get list of children segments inside a segmant group. </summary>
+            
+             <param name="segmantGroup"> Parent segmant group. </param>
+            
+             <returns>   list of children segments. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ISegmantGroupHelpers.GetChildrenSegmentGroups(Fomantic.Blazor.UI.IFomanticGroupComponent{Fomantic.Blazor.UI.ISegmantGroupChild})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Get list of children segment groups inside a segmant group. </summary>
+            
+             <param name="segmantGroup"> Parent segmant group. </param>
+            
+             <returns>   list of children segment groups. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.JqueryOffset">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A jquery offset. </summary>
+              
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.JqueryOffset.Top">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the top. </summary>
+            
+             <value> The top. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.JqueryOffset.Left">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the left. </summary>
+            
+             <value> The left. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.JQueryHelpers">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A query helpers. </summary>
+                
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.JQueryHelpers.Jump``1(``0,System.Int32,System.Int32)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Make Viewport animated scroll to a component </summary>
+                   
+            
+             <typeparam name="T">    Generic type parameter. </typeparam>
+             <param name="component">    The component to act on. </param>
+             <param name="margintop">    (Optional) The margintop. </param>
+             <param name="jumpTime">     (Optional) The jump time. </param>
+            
+             <returns>   An asynchronous result that yields a T. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.JQueryHelpers.JumpToTopOf(Microsoft.AspNetCore.Components.ElementReference,Microsoft.JSInterop.IJSRuntime,System.Int32,System.Int32)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   An ElementReference extension method that jump to top of. </summary>
+                  
+            
+             <param name="element">      The element to act on. </param>
+             <param name="jSRuntime">    The s runtime. </param>
+             <param name="margintop">    (Optional) The margintop. </param>
+             <param name="jumpTime">     (Optional) The jump time. </param>
+            
+             <returns>   An asynchronous result that yields an ElementReference. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ISegmantGroupChild">
+            <summary>   Base interface for all fomantic component that has parent segmant group. </summary>
+        </member>
+        <member name="T:Fomantic.ExtensionBase">
+            -------------------------------------------------------------------------------------------------
+             <summary>   An extention sample. </summary>
+            
+             <seealso cref="T:Microsoft.AspNetCore.Components.ComponentBase"/>
+             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
+             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.ExtensionBase.OnInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.ExtensionBase.Parent">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.ExtensionBase.ComponentAdditionalFragments">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.ExtensionBase.OnComponentAfterEachRender">
+            <inheritdoc/>
+        </member>
+        <member name="F:Fomantic.ExtensionBase.hasRenderOnce">
+            <summary>   True if has render once, false if not. </summary>
+        </member>
+        <member name="M:Fomantic.ExtensionBase.OnComponentAfterFirstRender">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.ExtensionBase.OnComponentInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.ExtensionBase.ProvideComponentCssClass">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.ExtensionBase.ProvideComponentCssClasses">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.ExtensionBase.ParentStateHasChanged">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.ExtensionBase.AllowedParentTypes">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.ExtensionBase.IsParentOptional">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.ExtensionBase.IsUnique">
+            <inheritdoc/>
         </member>
         <member name="T:Fomantic.ISegmentStyledFomanticComponent">
             -------------------------------------------------------------------------------------------------

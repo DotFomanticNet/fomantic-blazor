@@ -164,7 +164,7 @@ namespace Fomantic.Blazor.UI
         public ElementReference RootElement { get; protected set; }
 
         /// <inheritdoc/>
-        public List<IFomanticComponentExtension> Extensions { get; private set; }
+        public List<IFomanticExtension> Extensions { get; private set; } = new List<IFomanticExtension>();
 
         /// <inheritdoc/>
         [NestedParamter]
@@ -205,7 +205,11 @@ namespace Fomantic.Blazor.UI
             CssClasses = new List<string>();
 
             CssClasses.AddRange(FeaturesService.OnConstractClasses(this));
-
+            foreach (var extension in Extensions)
+            {
+                CssClasses.AddRange(extension.ProvideComponentCssClasses());
+                CssClasses.Add(extension.ProvideComponentCssClass());
+            }
             if (InputAttributes.ContainsKey("class"))
             {
                 CssClasses.Add(InputAttributes["class"].ToString());
@@ -216,7 +220,7 @@ namespace Fomantic.Blazor.UI
         protected async override Task OnInitializedAsync()
         {
             await base.OnInitializedAsync();
-            await FeaturesService.OnInitialized(this);
+            await FeaturesService.OnInitialized(this);                 
         }
 
         /// <inheritdoc/>
@@ -348,11 +352,23 @@ namespace Fomantic.Blazor.UI
         {
             var shouldRerender = false;
             await base.OnAfterRenderAsync(firstRender);
+
             if (firstRender)
             {
                 shouldRerender = shouldRerender || await FeaturesService.OnAfterFirstRender(this);
+                
+                foreach (var extension in Extensions)
+                {
+                    extension.ParentStateHasChanged = () => StateHasChanged();
+                    shouldRerender = shouldRerender || await extension.OnComponentAfterFirstRender();
+                }
             }
             shouldRerender = shouldRerender || await FeaturesService.OnAfterEachRender(this);
+           
+            foreach (var extension in Extensions)
+            {
+                shouldRerender = shouldRerender || await extension.OnComponentAfterEachRender();
+            }
             if (shouldRerender)
             {
                 this.StateHasChanged();

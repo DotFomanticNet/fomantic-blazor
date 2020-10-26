@@ -1,0 +1,27 @@
+﻿@inherits ExtensionBase
+@namespace Fomantic
+
+
+@code { 
+    public override IEnumerable<Type> AllowedParentTypes => new List<Type> { typeof(Text) , typeof(Segment) };
+    // public override bool IsUnique => true;
+    //public override bool IsParentOptional => true;
+    public MyExampleExtension()
+    {
+        this.ComponentAdditionalFragments.Add(new Blazor.UI.ComponentFragment
+        {
+            Fragment = d => GetHTML(),
+            Location = Fomantic.Blazor.UI.FomanticComponentBase.BeforeRootElementAreaName
+
+        });
+    }
+    RenderFragment GetHTML()
+    {
+        return __builder =>
+        {
+        @this.Parent.GetType().Name
+        @this.Parent.Extensions.Count
+        };
+    }
+}
+

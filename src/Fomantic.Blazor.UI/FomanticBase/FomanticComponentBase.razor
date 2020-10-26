@@ -3,30 +3,40 @@
 @code {
     public const string BeforeRootElementAreaName = "BeforeRootElementArea";
     public const string AfterRootElementAreaName = "AfterRootElementArea";
-    public const string BeforeContentElementAreaName = "BeforeContentElementArea";
-    public const string AfterContentElementAreaName = "AfterContentElementArea";
+    public const string BeforeContentAreaName = "BeforeContentElementArea";
+    public const string AfterContentAreaName = "AfterContentElementArea";
 
     protected RenderFragment RenderBeforeRootElementFragments()
     {
-        return __builder =>
-        {
-            foreach (var item in this.AdditionalFragments.Where(d => d.Location == BeforeRootElementAreaName))
-            {
-            @item.Fragment(this)
-            }
-        };
+        return RenderFragmentsIn(BeforeRootElementAreaName);
     }
 
     protected RenderFragment RenderAfterRootElementFragments()
     {
+        return RenderFragmentsIn(AfterRootElementAreaName);
+    }
+    protected RenderFragment RenderBeforeContentFragments()
+    {
+        return RenderFragmentsIn(BeforeContentAreaName);
+    }
+    protected RenderFragment RenderAfterContentFragments()
+    {
+        return RenderFragmentsIn(AfterContentAreaName);
+    }
+
+
+    protected RenderFragment RenderFragmentsIn(string areaName)
+    {
         return __builder =>
         {
-            foreach (var item in this.AdditionalFragments.Where(d => d.Location == AfterRootElementAreaName))
+            foreach (var item in this.AdditionalFragments.Where(d => d.Location == areaName))
             {
-
             @item.Fragment(this)
+            }
 
-
+            foreach (var item in this.Extensions.SelectMany(d => d.ComponentAdditionalFragments.Where(d => d.Location == areaName)))
+            {
+            @item.Fragment(this)
             }
         };
     }

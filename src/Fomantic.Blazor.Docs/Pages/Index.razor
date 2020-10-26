@@ -45,7 +45,15 @@
 
     <div class="main ui container">
         <input @bind-value="x" />
-        <Segment><Text TooltipText="@x"> @x</Text> </Segment>
+       
+        <Segment>
+            <Text TooltipText="@x">
+                @x
+                <MyExampleExtension> </MyExampleExtension>
+            </Text>
+
+           
+        </Segment>
 
 
     </div>

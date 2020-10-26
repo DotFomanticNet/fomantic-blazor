@@ -15,7 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 
-namespace Fomantic.Blazor.UI.Features
+namespace Fomantic.Blazor.UI
 {
     /// <summary>   Interface for feature definition. </summary>
     interface IFeatureDefinition

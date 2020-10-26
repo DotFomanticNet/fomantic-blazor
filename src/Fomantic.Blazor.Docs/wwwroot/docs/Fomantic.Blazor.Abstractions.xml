@@ -6519,298 +6519,6 @@
              <value> The calculation. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="T:Fomantic.Blazor.UI.IFomanticAnimator">
-            <summary>   Base Interface for a Fomantic Animators. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.ScaleAnimationName">
-            <summary>   Given animation name to scale. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.ZoomAnimationName">
-            <summary>   Given animation name to zoom. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeAnimationName">
-            <summary>   Given animation name to fade. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeUpAnimationName">
-            <summary>   Given animation name to fade up. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeDownAnimationName">
-            <summary>   Given animation name to fade down. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeLeftAnimationName">
-            <summary>   Given animation name to fade left. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeRightAnimationName">
-            <summary>   Given animation name to fade right. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.HorizontalFlipAnimationName">
-            <summary>   Given animation name to horizontal flip. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.VerticalFlipAnimationName">
-            <summary>   Given animation name to vertical flip. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.DropAnimationName">
-            <summary>   Given animation name to drop. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyUpAnimationName">
-            <summary>   Given animation name to fly up. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyDownAnimationName">
-            <summary>   Given animation name to fly down. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyRightAnimationName">
-            <summary>   Given animation name to fly right. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyLeftAnimationName">
-            <summary>   Given animation name to swing left. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingUpAnimationName">
-            <summary>   Given animation name to swing up. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingDownAnimationName">
-            <summary>   Given animation name to swing down. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingRightAnimationName">
-            <summary>   Given animation name to swing right. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingLeftAnimationName">
-            <summary>   Given animation name to swing left. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.BrowseAnimationName">
-            <summary>   Given animation name to browse. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.BrowseRightAnimationName">
-            <summary>   Given animation name to browse right. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideUpAnimationName">
-            <summary>   Given animation name to slide up. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideDownAnimationName">
-            <summary>   Given animation name to slide down. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideRightAnimationName">
-            <summary>   Given animation name to slide right. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideLeftAnimationName">
-            <summary>   Given animation name to slide left. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.ToClass(Fomantic.Blazor.UI.TransitionAnimation)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.TransitionAnimation"/> to given animation name. </summary>
-            
-             <param name="animation">    Animation value. </param>
-            
-             <returns>   given class from <paramref name="animation"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.JiggleAnimationName">
-            <summary>   Given animation name to jiggle. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlashAnimationName">
-            <summary>   Given animation name to flash. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.ShakeAnimationName">
-            <summary>   Given animation name to shake. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.PulseAnimationName">
-            <summary>   Given animation name to pulse. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.BounceAnimationName">
-            <summary>   Given animation name to bounce. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.TadaAnimationName">
-            <summary>   Given animation name to tada. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.GlowAnimationName">
-            <summary>   Given animation name to glow. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.ToClass(Fomantic.Blazor.UI.StaticAnimation)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.StaticAnimation"/> to given animation name. </summary>
-            
-             <param name="animation">    animation value. </param>
-            
-             <returns>   given class from <paramref name="animation"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target once with a static animation into a task and it will be done once
-             animation done.
-             </summary>
-            
-             <param name="animation">    A static animation to apply in the target. </param>
-             <param name="duration">     (Optional) The duration in MS of the animation. </param>
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-            
-             <returns>   An asynchronous result. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target with a sequence of static animations into a task and it will be done all
-             animation done.
-             </summary>
-            
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-             <param name="animations">   Tuples contain each static animation  to apply in the target and
-                                         its duration. </param>
-            
-             <returns>   An asynchronous result. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target once with a static animation into a task and it will be done once
-             animation done , Once animation done element will be transit into show or hiddin.  
-             </summary>
-            
-             <param name="animation">    A transition animation to apply on the target. </param>
-             <param name="duration">     (Optional) The duration in MS of the animation. </param>
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-            
-             <returns>   An asynchronous result. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target with a sequence of transition animations into a task and it will be done
-             all animation done , Once animation done element will be transit into show or hiddin.  
-             </summary>
-            
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-             <param name="animations">   Tuples contain each transition animation to apply on the target
-                                         and its duration. </param>
-            
-             <returns>   An asynchronous result. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target once with a static animation without waiting to be ended.
-             </summary>
-            
-             <param name="animation">    A transition animation to apply on the target. </param>
-             <param name="duration">     (Optional) The duration in MS of the animation. </param>
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-            
-             ### <returns>   . </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target with a sequence of static animations without waiting to be ended.
-             </summary>
-            
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-             <param name="animations">   Tuples contain each static animation  on apply in the target and
-                                         its duration. </param>
-            
-             ### <returns>   . </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target once with a static animation  without waiting to be ended.
-             </summary>
-            
-             <param name="animation">    A transition animation to apply on the target. </param>
-             <param name="duration">     (Optional) The duration in MS of the animation. </param>
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-            
-             ### <returns>   . </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target with a sequence of transition animations without waiting to be ended.
-             </summary>
-            
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-             <param name="animations">   Tuples contain each transition animation to apply on the target
-                                         and its duration. </param>
-            
-             ### <returns>   . </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target once with a static animation into a task and it will be done once
-             animation done , Once animation done element will be showen.
-             </summary>
-            
-             <param name="animation">    A transition animation to apply on the target. </param>
-             <param name="duration">     (Optional) The duration in MS of the animation. </param>
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-            
-             <returns>   An asynchronous result. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target once with a static animation without waiting to be ended, Once animation
-             done element will be showen.
-             </summary>
-            
-             <param name="animation">    A transition animation to apply on the target. </param>
-             <param name="duration">     (Optional) The duration in MS of the animation. </param>
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-            
-             ### <returns>   . </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.AnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target once with a static animation into a task and it will be done once
-             animation done , Once animation done element will be hiddin.
-             </summary>
-            
-             <param name="animation">    A transition animation to apply on the target. </param>
-             <param name="duration">     (Optional) The duration in MS of the animation. </param>
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-            
-             <returns>   An asynchronous result. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Animate the target once with a static animation into a task and it will be done once
-             animation done , Once animation done element will be hiddin.
-             </summary>
-            
-             <param name="animation">    A transition animation to apply on the target. </param>
-             <param name="duration">     (Optional) The duration in MS of the animation. </param>
-             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
-            
-             ### <returns>   . </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.StopCurrentAnimation">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Stop current animation and preserve queue. </summary>
-            
-             <returns>   An asynchronous result. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.StopAllAnimation">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Stop current animation and queued animations. </summary>
-            
-             <returns>   An asynchronous result. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponent">
             <summary>   Base interface for all Fomantic Blazor Components. </summary>
         </member>
@@ -6847,64 +6555,6 @@
              <summary>   Gets or sets the additional fragment. </summary>
             
              <value> The additional fragment. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.IFomanticComponentExtension">
-            <summary>   Base interface for all Fomantic Component Extensions. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentExtension.OnAfterRender(System.Boolean,Microsoft.AspNetCore.Components.ComponentBase)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Remarks:
-                  The Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)
-                  and Microsoft.AspNetCore.Components.ComponentBase.OnAfterRenderAsync(System.Boolean)
-                  lifecycle methods are useful for performing interop, or interacting with values received
-                  from @ref. Use the firstRender parameter to ensure that initialization work is only
-                  performed once.
-             </summary>
-             <param name="firstRender">  Set to true if this is the first time
-                                         Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)
-                                         has been invoked on this component instance; otherwise false. </param>
-             <param name="component">    The component. </param>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentExtension.OnAfterRenderAsync(System.Boolean,Microsoft.AspNetCore.Components.ComponentBase)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-                 Method invoked after each time the component has been rendered. Note that the component
-                 does not automatically re-render after the completion of any returned
-                 System.Threading.Tasks.Task, because that would cause an infinite render loop.
-             </summary>
-             <param name="firstRender">  Set to true if this is the first time
-                                         Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)
-                                         has been invoked on this component instance; otherwise false. </param>
-             <param name="component">    The component. </param>
-            
-             <returns>   An asynchronous result. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentExtension.OnInitialized(Microsoft.AspNetCore.Components.ComponentBase)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-                 Method invoked when the component is ready to start, having received its initial
-                 parameters from its parent in the render tree.
-             </summary>
-             <param name="component">    The component. </param>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentExtension.OnInitializedAsync(Microsoft.AspNetCore.Components.ComponentBase)">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-                 Method invoked when the component is ready to start, having received its initial
-                 parameters from its parent in the render tree. Override this method if you will perform
-                 an asynchronous operation and want the component to refresh when that operation is
-                 completed.
-             
-             </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   An asynchronous result. </returns>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithAlignment">
@@ -7031,6 +6681,46 @@
              <summary>   JQuery JS Object Reference , Used to call jquery methods. </summary>
             
              <value> The j query element reference. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithParent">
+            <summary>  Base interface for all fomantic component can has parent component.  </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithParent.AllowedParentTypes">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets a list of types of the allowed parents. </summary>
+            
+             <value> A list of types of the allowed parents. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithParent.IsParentOptional">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Gets or sets a value indicating whether this object is parent optional.
+             </summary>
+            
+             <value> True if this object is parent optional, false if not. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithParent.IsUnique">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets a value indicating whether this object is unique. </summary>
+            
+             <value> True if this object is unique, false if not. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithParent.ParentStateHasChanged">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the function that trigger the parent state has changed.  </summary>
+            
+             <value> The function trigger the parent state has changed. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithParent.Parent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the parent. </summary>
+            
+             <value> The parent. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithSize">
@@ -7371,6 +7061,477 @@
              <summary>
              Occurs each time when component patent element's bottom edge has not passed top of screen.
              </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFeatureDefinition">
+            <summary>   Interface for feature definition. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFeatureDefinition.Type">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the type. </summary>
+            
+             <value> The type. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFeatureDefinition.OnAfterEachRender(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'after each render' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask&lt;bool&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFeatureDefinition.OnAfterFirstRender(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'after first render' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask&lt;bool&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFeatureDefinition.OnInitialized(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'initialized' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFeatureDefinition.ProvideCssClasses(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Provide CSS classes. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A string[]. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFeatureDefinition.ProvideCssClass(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Provide CSS class. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A string. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFeatureDefinition.AdditionalFragments">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the additional fragment. </summary>
+            
+             <value> The additional fragment. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFeatureDefinition`1">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Interface for feature definition. </summary>
+            
+             <typeparam name="TFeatureInterface">    Type of the feature interface. </typeparam>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFeatureDefinition`1.OnAfterEachRender(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'after each render' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask&lt;bool&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFeatureDefinition`1.OnAfterFirstRender(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'after first render' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask&lt;bool&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFeatureDefinition`1.OnInitialized(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'initialized' action. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFeatureDefinition`1.ProvideCssClasses(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Provide CSS classes. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A string[]. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFeatureDefinition`1.ProvideCssClass(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Provide CSS class. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A string. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticAnimator">
+            <summary>   Base Interface for a Fomantic Animators. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.ScaleAnimationName">
+            <summary>   Given animation name to scale. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.ZoomAnimationName">
+            <summary>   Given animation name to zoom. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeAnimationName">
+            <summary>   Given animation name to fade. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeUpAnimationName">
+            <summary>   Given animation name to fade up. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeDownAnimationName">
+            <summary>   Given animation name to fade down. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeLeftAnimationName">
+            <summary>   Given animation name to fade left. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FadeRightAnimationName">
+            <summary>   Given animation name to fade right. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.HorizontalFlipAnimationName">
+            <summary>   Given animation name to horizontal flip. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.VerticalFlipAnimationName">
+            <summary>   Given animation name to vertical flip. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.DropAnimationName">
+            <summary>   Given animation name to drop. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyUpAnimationName">
+            <summary>   Given animation name to fly up. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyDownAnimationName">
+            <summary>   Given animation name to fly down. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyRightAnimationName">
+            <summary>   Given animation name to fly right. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlyLeftAnimationName">
+            <summary>   Given animation name to swing left. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingUpAnimationName">
+            <summary>   Given animation name to swing up. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingDownAnimationName">
+            <summary>   Given animation name to swing down. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingRightAnimationName">
+            <summary>   Given animation name to swing right. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SwingLeftAnimationName">
+            <summary>   Given animation name to swing left. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.BrowseAnimationName">
+            <summary>   Given animation name to browse. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.BrowseRightAnimationName">
+            <summary>   Given animation name to browse right. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideUpAnimationName">
+            <summary>   Given animation name to slide up. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideDownAnimationName">
+            <summary>   Given animation name to slide down. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideRightAnimationName">
+            <summary>   Given animation name to slide right. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.SlideLeftAnimationName">
+            <summary>   Given animation name to slide left. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.ToClass(Fomantic.Blazor.UI.TransitionAnimation)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.TransitionAnimation"/> to given animation name. </summary>
+            
+             <param name="animation">    Animation value. </param>
+            
+             <returns>   given class from <paramref name="animation"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.JiggleAnimationName">
+            <summary>   Given animation name to jiggle. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.FlashAnimationName">
+            <summary>   Given animation name to flash. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.ShakeAnimationName">
+            <summary>   Given animation name to shake. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.PulseAnimationName">
+            <summary>   Given animation name to pulse. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.BounceAnimationName">
+            <summary>   Given animation name to bounce. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.TadaAnimationName">
+            <summary>   Given animation name to tada. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.IFomanticAnimator.GlowAnimationName">
+            <summary>   Given animation name to glow. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.ToClass(Fomantic.Blazor.UI.StaticAnimation)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.StaticAnimation"/> to given animation name. </summary>
+            
+             <param name="animation">    animation value. </param>
+            
+             <returns>   given class from <paramref name="animation"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target once with a static animation into a task and it will be done once
+             animation done.
+             </summary>
+            
+             <param name="animation">    A static animation to apply in the target. </param>
+             <param name="duration">     (Optional) The duration in MS of the animation. </param>
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+            
+             <returns>   An asynchronous result. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target with a sequence of static animations into a task and it will be done all
+             animation done.
+             </summary>
+            
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+             <param name="animations">   Tuples contain each static animation  to apply in the target and
+                                         its duration. </param>
+            
+             <returns>   An asynchronous result. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target once with a static animation into a task and it will be done once
+             animation done , Once animation done element will be transit into show or hiddin.  
+             </summary>
+            
+             <param name="animation">    A transition animation to apply on the target. </param>
+             <param name="duration">     (Optional) The duration in MS of the animation. </param>
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+            
+             <returns>   An asynchronous result. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target with a sequence of transition animations into a task and it will be done
+             all animation done , Once animation done element will be transit into show or hiddin.  
+             </summary>
+            
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+             <param name="animations">   Tuples contain each transition animation to apply on the target
+                                         and its duration. </param>
+            
+             <returns>   An asynchronous result. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.StaticAnimation,System.Int32,System.Int32)">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target once with a static animation without waiting to be ended.
+             </summary>
+            
+             <param name="animation">    A transition animation to apply on the target. </param>
+             <param name="duration">     (Optional) The duration in MS of the animation. </param>
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+            
+             ### <returns>   . </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.StaticAnimation,System.Int32}[])">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target with a sequence of static animations without waiting to be ended.
+             </summary>
+            
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+             <param name="animations">   Tuples contain each static animation  on apply in the target and
+                                         its duration. </param>
+            
+             ### <returns>   . </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target once with a static animation  without waiting to be ended.
+             </summary>
+            
+             <param name="animation">    A transition animation to apply on the target. </param>
+             <param name="duration">     (Optional) The duration in MS of the animation. </param>
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+            
+             ### <returns>   . </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimation(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target with a sequence of transition animations without waiting to be ended.
+             </summary>
+            
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+             <param name="animations">   Tuples contain each transition animation to apply on the target
+                                         and its duration. </param>
+            
+             ### <returns>   . </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target once with a static animation into a task and it will be done once
+             animation done , Once animation done element will be showen.
+             </summary>
+            
+             <param name="animation">    A transition animation to apply on the target. </param>
+             <param name="duration">     (Optional) The duration in MS of the animation. </param>
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+            
+             <returns>   An asynchronous result. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target once with a static animation without waiting to be ended, Once animation
+             done element will be showen.
+             </summary>
+            
+             <param name="animation">    A transition animation to apply on the target. </param>
+             <param name="duration">     (Optional) The duration in MS of the animation. </param>
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+            
+             ### <returns>   . </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.AnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target once with a static animation into a task and it will be done once
+             animation done , Once animation done element will be hiddin.
+             </summary>
+            
+             <param name="animation">    A transition animation to apply on the target. </param>
+             <param name="duration">     (Optional) The duration in MS of the animation. </param>
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+            
+             <returns>   An asynchronous result. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.QueueAnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Animate the target once with a static animation into a task and it will be done once
+             animation done , Once animation done element will be hiddin.
+             </summary>
+            
+             <param name="animation">    A transition animation to apply on the target. </param>
+             <param name="duration">     (Optional) The duration in MS of the animation. </param>
+             <param name="interval">     (Optional) Interval in MS between each elements transition. </param>
+            
+             ### <returns>   . </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.StopCurrentAnimation">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Stop current animation and preserve queue. </summary>
+            
+             <returns>   An asynchronous result. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticAnimator.StopAllAnimation">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Stop current animation and queued animations. </summary>
+            
+             <returns>   An asynchronous result. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentExtension">
+            <summary>   Interface for fomantic component extension. </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticExtension">
+            <summary>   Base interface for all Fomantic Component Extensions. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticExtension.ParentStateHasChanged">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the parent state has changed. </summary>
+            
+             <value> The parent state has changed. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticExtension.Parent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the parent. </summary>
+            
+             <value> The parent. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticExtension.OnComponentAfterEachRender">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'after each render' action. </summary>
+            
+            
+             <returns>   A ValueTask&lt;bool&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticExtension.OnComponentAfterFirstRender">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'after first render' action. </summary>
+                    
+            
+             <returns>   A ValueTask&lt;bool&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticExtension.OnComponentInitialized">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the 'initialized' action. </summary>
+             <returns>   A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticExtension.ProvideComponentCssClasses">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Provide CSS classes. </summary>
+            
+            
+             <returns>   A string[]. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticExtension.ProvideComponentCssClass">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Provide CSS class. </summary>
+                  
+            
+             <returns>   A string. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticExtension.ComponentAdditionalFragments">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the additional fragment. </summary>
+            
+             <value> The additional fragment. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.IAttachableFomanticComponent">

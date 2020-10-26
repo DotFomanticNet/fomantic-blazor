@@ -5,7 +5,11 @@
 @RenderBeforeRootElementFragments()
 <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
     <CascadingValue Value=this IsFixed="true">
-        @ChildContent
+        @RenderBeforeContentFragments()
+        <CascadingValue Name="Parent" Value="this">
+            @ChildContent
+        </CascadingValue>
+        @RenderAfterContentFragments()
     </CascadingValue>
 </div>
 @RenderAfterRootElementFragments()

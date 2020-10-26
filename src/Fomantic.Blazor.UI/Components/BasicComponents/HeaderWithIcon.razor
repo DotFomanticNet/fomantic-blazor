@@ -73,7 +73,11 @@
             {
             <Icon @ref="IconElement" @attributes='InputAttributes.GetMainElementAttributes("icon")' Icon="Icon" IsCircular="IsIconCircular" IsHidden="IsHidden" Color="IconColor ?? Color" IsInverted="IsInverted"></Icon>
             }
-        @ChildContent
+        @RenderBeforeContentFragments()
+        <CascadingValue Name="Parent" Value="this">
+            @ChildContent
+        </CascadingValue>
+        @RenderAfterContentFragments()
         };
     }
 }

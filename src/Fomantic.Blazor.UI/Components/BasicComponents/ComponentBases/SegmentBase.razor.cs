@@ -6,6 +6,7 @@
 
 using Fomantic.Blazor.UI;
 using Microsoft.AspNetCore.Components;
+using System;
 
 namespace Fomantic
 {
@@ -39,6 +40,7 @@ namespace Fomantic
         protected override void OnInitialized()
         {
             base.OnInitialized();
+           
             ParentGroup?.SegmantGroupChildren.Add(this);
 
         }
