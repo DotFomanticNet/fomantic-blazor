@@ -1215,6 +1215,30 @@
              <returns>   given class from <paramref name="alignment"/> </returns>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.RaisedClass">
+            <summary>   class given to make segment styled raised. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.StackedClass">
+            <summary>   class given to make segment styled stacked. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.TallStackedClass">
+            <summary>   class given to make segment styled tall stacked. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.PiledClass">
+            <summary>   class given to make segment styled piled. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.BasicClass">
+            <summary>   class given to make segment styled basic. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.ToClass(Fomantic.Blazor.UI.SegmentStyle)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.SegmentStyle"/> to given class. </summary>
+            
+             <param name="style">    ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="style"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCircularStyleFeature.CircularClass">
             <summary>   class given to make component circular. </summary>
         </member>
@@ -1872,35 +1896,11 @@
              </summary>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="F:Fomantic.ISegmentStyledFomanticComponent.RaisedClass">
-            <summary>   class given to make segment styled raised. </summary>
-        </member>
-        <member name="F:Fomantic.ISegmentStyledFomanticComponent.StackedClass">
-            <summary>   class given to make segment styled stacked. </summary>
-        </member>
-        <member name="F:Fomantic.ISegmentStyledFomanticComponent.TallStackedClass">
-            <summary>   class given to make segment styled tall stacked. </summary>
-        </member>
-        <member name="F:Fomantic.ISegmentStyledFomanticComponent.PiledClass">
-            <summary>   class given to make segment styled piled. </summary>
-        </member>
-        <member name="F:Fomantic.ISegmentStyledFomanticComponent.BasicClass">
-            <summary>   class given to make segment styled basic. </summary>
-        </member>
         <member name="P:Fomantic.ISegmentStyledFomanticComponent.SegmentStyle">
             -------------------------------------------------------------------------------------------------
              <summary>   Determine how the segment should be styled. </summary>
             
              <value> The segment style. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.ISegmentStyledFomanticComponent.ToClass(Fomantic.Blazor.UI.SegmentStyle)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.SegmentStyle"/> to given class. </summary>
-            
-             <param name="style">    ContentSpace Value. </param>
-            
-             <returns>   Given class from <paramref name="style"/> </returns>
             -------------------------------------------------------------------------------------------------
         </member>
     </members>

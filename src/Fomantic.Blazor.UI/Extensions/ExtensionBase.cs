@@ -103,7 +103,7 @@ namespace Fomantic
         /// <inheritdoc/>
         public virtual async ValueTask<bool> OnComponentAfterEachRender()
         {
-            Console.WriteLine("OnComponentAfterEachRender  Base");
+           
             return false;
         }
         /// <summary>   True if has render once, false if not. </summary>
@@ -113,14 +113,14 @@ namespace Fomantic
         {
             var _hasRenderOnce = hasRenderOnce;
             hasRenderOnce = false;
-            Console.WriteLine("OnComponentAfterFirstRender Base");
+           
             return _hasRenderOnce;
         }
 
         /// <inheritdoc/>
         public virtual async ValueTask OnComponentInitialized()
         {
-            Console.WriteLine("OnComponentInitialized  Base");
+           
         }
 
         /// <inheritdoc/>
