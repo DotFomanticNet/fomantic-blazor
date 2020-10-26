@@ -2,10 +2,31 @@
 @namespace Fomantic
 
 
-@code { 
-    public override IEnumerable<Type> AllowedParentTypes => new List<Type> { typeof(Text) , typeof(Segment) };
+@code {
+    public override IEnumerable<Type> AllowedParentTypes => new List<Type> { typeof(Text), typeof(Segment) };
     // public override bool IsUnique => true;
     //public override bool IsParentOptional => true;
+
+    public override ValueTask OnComponentInitialized()
+    {
+        Console.WriteLine("OnComponentInitialized");
+        return base.OnComponentInitialized();
+    }
+    public override string ProvideComponentCssClass()
+    {
+        return "contain-extention";
+    }
+    public override ValueTask<bool> OnComponentAfterFirstRender()
+    {
+        Console.WriteLine("OnComponentAfterFirstRender");
+        return base.OnComponentAfterFirstRender();
+    }
+    public override ValueTask<bool> OnComponentAfterEachRender()
+    {
+        Console.WriteLine("OnComponentAfterEachRender");
+        return base.OnComponentAfterEachRender();
+    }
+
     public MyExampleExtension()
     {
         this.ComponentAdditionalFragments.Add(new Blazor.UI.ComponentFragment
@@ -21,6 +42,8 @@
         {
         @this.Parent.GetType().Name
         @this.Parent.Extensions.Count
+        @((this.Parent as Fomantic.Blazor.UI.IFomanticComponentWithClass).CssClass)
+
         };
     }
 }

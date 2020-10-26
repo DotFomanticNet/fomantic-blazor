@@ -6543,13 +6543,6 @@
              <value> The attributes. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.Blazor.UI.IFomanticComponent.Extensions">
-            -------------------------------------------------------------------------------------------------
-             <summary>   List Of Fomantic Component Extensions. </summary>
-            
-             <value> The extensions. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="P:Fomantic.Blazor.UI.IFomanticComponent.AdditionalFragments">
             -------------------------------------------------------------------------------------------------
              <summary>   Gets or sets the additional fragment. </summary>
@@ -6671,6 +6664,16 @@
              </summary>
             
              <value>    True if this object entery animation is done, false if not. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithExtensions">
+            <summary>   Base interface for all Fomantic Blazor Components that allow extentions inside. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithExtensions.Extensions">
+            -------------------------------------------------------------------------------------------------
+             <summary>   List Of Fomantic Component Extensions. </summary>
+            
+             <value> The extensions. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithJQuery">

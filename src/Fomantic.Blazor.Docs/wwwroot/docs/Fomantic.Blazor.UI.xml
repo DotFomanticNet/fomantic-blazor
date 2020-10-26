@@ -1683,7 +1683,7 @@
         <member name="T:Fomantic.Blazor.UI.InputAttributesHelper">
             <summary>   An input attributes helper. </summary>
         </member>
-        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.GetMainElementAttributes(System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.GetRootElementAttributes(System.Collections.Generic.Dictionary{System.String,System.Object})">
             -------------------------------------------------------------------------------------------------
              <summary>   Gets the main element attributes in this collection. </summary>
             
@@ -1695,7 +1695,7 @@
              </returns>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.GetMainElementAttributes(System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+        <member name="M:Fomantic.Blazor.UI.InputAttributesHelper.GetElementAttributes(System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
             -------------------------------------------------------------------------------------------------
              <summary>   Gets the main element attributes in this collection. </summary>
             
@@ -1821,6 +1821,9 @@
              <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
              <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
             -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.ExtensionBase.OnInitializedAsync">
+            <inheritdoc/>
         </member>
         <member name="M:Fomantic.ExtensionBase.OnInitialized">
             <inheritdoc/>

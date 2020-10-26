@@ -28,7 +28,7 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [CascadingParameter(Name ="Parent")]
-        public IFomanticComponent Parent { get; set; }
+        public IFomanticComponentWithExtensions Parent { get; set; }
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Executes the 'after each render' action. </summary>
         ///

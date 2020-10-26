@@ -24,11 +24,11 @@
     public RenderFragment ButtonTemplate { get; set; }
 }
 @RenderBeforeRootElementFragments()
-<div @ref="RootElement" @attributes='InputAttributes.GetMainElementAttributes()' class="@CssClass">
+<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
 
     @if (HeaderWithIconElementTemplate == null)
     {
-        <HeaderWithIcon @ref="Header" @attributes='InputAttributes.GetMainElementAttributes("Header")' Icon="Icon" IsIconCircular="IsIconCircular" Color="HeaderColor??Color" IconColor="IconColor??Color" IsDisabled="IsDisabled" IsInverted="IsInverted">
+        <HeaderWithIcon @ref="Header" @attributes='InputAttributes.GetElementAttributes("Header")' Icon="Icon" IsIconCircular="IsIconCircular" Color="HeaderColor??Color" IconColor="IconColor??Color" IsDisabled="IsDisabled" IsInverted="IsInverted">
             @RenderBeforeContentFragments()
             <CascadingValue Name="Parent" Value="this">
                 @ChildContent

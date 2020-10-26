@@ -30,7 +30,12 @@ namespace Fomantic
 
     public partial class ExtensionBase : FomanticComponentBase, IFomanticComponentExtension
     {
-       
+        /// <inheritdoc/>
+        protected async override Task OnInitializedAsync()
+        {
+            await this.OnComponentInitialized();
+            await base.OnInitializedAsync();
+        }
         /// <inheritdoc/>
         protected override void OnInitialized()
         {
@@ -39,8 +44,8 @@ namespace Fomantic
                 var parentType = Parent.GetType();
                 if (AllowedParentTypes != null && AllowedParentTypes.Any())
                 {
-                    
-                    if (!AllowedParentTypes.Any(d=>d.IsAssignableFrom(parentType)))
+
+                    if (!AllowedParentTypes.Any(d => d.IsAssignableFrom(parentType)))
                     {
                         if (AllowedParentTypes.Count() == 1)
                         {
@@ -52,7 +57,7 @@ namespace Fomantic
                         }
                     }
                 }
-                if (IsUnique&&Parent.Extensions.Any(d=>d.GetType().IsAssignableFrom(GetType())))
+                if (IsUnique && Parent.Extensions.Any(d => d.GetType().IsAssignableFrom(GetType())))
                 {
 
                     throw new Exception($"{this.GetType().Name} only allowed once in {parentType.Name}");
@@ -83,52 +88,54 @@ namespace Fomantic
 
                 }
             }
-
+           
             base.OnInitialized();
         }
         /// <inheritdoc/>
         [CascadingParameter(Name = "Parent")]
-        public IFomanticComponent Parent { get; set; }
+        public IFomanticComponentWithExtensions Parent { get; set; }
 
         /// <inheritdoc/>
         public List<ComponentFragment> ComponentAdditionalFragments { get; set; } = new List<ComponentFragment>();
 
-      
+
 
         /// <inheritdoc/>
-        public async ValueTask<bool> OnComponentAfterEachRender()
+        public virtual async ValueTask<bool> OnComponentAfterEachRender()
         {
+            Console.WriteLine("OnComponentAfterEachRender  Base");
             return false;
         }
         /// <summary>   True if has render once, false if not. </summary>
         bool hasRenderOnce = true;
         /// <inheritdoc/>
-        public async ValueTask<bool> OnComponentAfterFirstRender()
+        public virtual async ValueTask<bool> OnComponentAfterFirstRender()
         {
             var _hasRenderOnce = hasRenderOnce;
             hasRenderOnce = false;
+            Console.WriteLine("OnComponentAfterFirstRender Base");
             return _hasRenderOnce;
         }
 
         /// <inheritdoc/>
-        public async ValueTask OnComponentInitialized()
+        public virtual async ValueTask OnComponentInitialized()
         {
-
+            Console.WriteLine("OnComponentInitialized  Base");
         }
 
         /// <inheritdoc/>
-        public string ProvideComponentCssClass()
+        public virtual string ProvideComponentCssClass()
         {
             return string.Empty;
         }
 
         /// <inheritdoc/>
-        public string[] ProvideComponentCssClasses()
+        public virtual string[] ProvideComponentCssClasses()
         {
             return Array.Empty<string>();
         }
 
-    
+
         /// <inheritdoc/>
         public Action ParentStateHasChanged { get; set; }
 
@@ -139,6 +146,6 @@ namespace Fomantic
         public virtual bool IsParentOptional { get => false; }
         /// <inheritdoc/>
         public virtual bool IsUnique { get => false; }
-
+        IFomanticComponent IFomanticComponentWithParent.Parent { get => Parent; set => Parent = (IFomanticComponentWithExtensions)value; }
     }
 }

@@ -71,7 +71,7 @@
             }
             else
             {
-            <Icon @ref="IconElement" @attributes='InputAttributes.GetMainElementAttributes("icon")' Icon="Icon" IsCircular="IsIconCircular" IsHidden="IsHidden" Color="IconColor ?? Color" IsInverted="IsInverted"></Icon>
+            <Icon @ref="IconElement" @attributes='InputAttributes.GetElementAttributes("icon")' Icon="Icon" IsCircular="IsIconCircular" IsHidden="IsHidden" Color="IconColor ?? Color" IsInverted="IsInverted"></Icon>
             }
         @RenderBeforeContentFragments()
         <CascadingValue Name="Parent" Value="this">

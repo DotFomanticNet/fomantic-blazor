@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fomantic.Blazor.UI.Features
 {
+
     class FomanticComponentCanBeDisabledFeature : UIFeatureDefinition<IFomanticComponentCanBeDisabled>
     {
         /// <summary>   class given to disable component. </summary>

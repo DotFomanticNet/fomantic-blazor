@@ -37,7 +37,7 @@ namespace Fomantic.Blazor.UI.Services
             }
         }
 
-        public List<Type> GetAllFeatures()
+        static List<Type> GetAllFeatures()
         {
             return AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes())
                  .Where(x => typeof(IFeatureDefinition).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)

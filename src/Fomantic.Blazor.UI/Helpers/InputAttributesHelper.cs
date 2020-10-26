@@ -27,7 +27,7 @@ namespace Fomantic.Blazor.UI
         /// </returns>
         ///-------------------------------------------------------------------------------------------------
 
-        public static IEnumerable<KeyValuePair<string, object>> GetMainElementAttributes(this Dictionary<string, object> attributes)
+        public static IEnumerable<KeyValuePair<string, object>> GetRootElementAttributes(this Dictionary<string, object> attributes)
         {
 
             return attributes.Where(d => !d.Key.Contains("."));
@@ -45,7 +45,7 @@ namespace Fomantic.Blazor.UI
         /// </returns>
         ///-------------------------------------------------------------------------------------------------
 
-        public static IEnumerable<KeyValuePair<string, object>> GetMainElementAttributes(this Dictionary<string, object> attributes, string element)
+        public static IEnumerable<KeyValuePair<string, object>> GetElementAttributes(this Dictionary<string, object> attributes, string element)
         {
             var x = attributes.Where(d => d.Key.ToLower().StartsWith($"{element.ToLower()}."))
                 .Select(d => new KeyValuePair<string, object>(d.Key.Replace($"{element.ToLower()}.", ""), d.Value));

@@ -13,6 +13,7 @@ namespace Fomantic.Blazor.UI
     /// <summary>   Base class for all Fomantic Component. </summary>
     public abstract partial class FomanticComponentBase : ComponentBase,
         IFomanticComponentWithJQuery,
+        IFomanticComponentWithExtensions,
         IVisibleFomanticComponent,
         IFomanticComponentWithEnterTransition,
         IFomanticComponentWithClass
@@ -31,7 +32,7 @@ namespace Fomantic.Blazor.UI
 
         protected virtual IEnumerable<KeyValuePair<string, object>> GetRootElementAttributes()
         {
-            return InputAttributes.GetMainElementAttributes();
+            return InputAttributes.GetRootElementAttributes();
         }
 
 
@@ -203,13 +204,7 @@ namespace Fomantic.Blazor.UI
         internal protected virtual void ConstractClasses()
         {
             CssClasses = new List<string>();
-
-            CssClasses.AddRange(FeaturesService.OnConstractClasses(this));
-            foreach (var extension in Extensions)
-            {
-                CssClasses.AddRange(extension.ProvideComponentCssClasses());
-                CssClasses.Add(extension.ProvideComponentCssClass());
-            }
+            CssClasses.AddRange(FeaturesService.OnConstractClasses(this));           
             if (InputAttributes.ContainsKey("class"))
             {
                 CssClasses.Add(InputAttributes["class"].ToString());
@@ -220,7 +215,7 @@ namespace Fomantic.Blazor.UI
         protected async override Task OnInitializedAsync()
         {
             await base.OnInitializedAsync();
-            await FeaturesService.OnInitialized(this);                 
+            await FeaturesService.OnInitialized(this);
         }
 
         /// <inheritdoc/>
@@ -356,19 +351,16 @@ namespace Fomantic.Blazor.UI
             if (firstRender)
             {
                 shouldRerender = shouldRerender || await FeaturesService.OnAfterFirstRender(this);
-                
+
                 foreach (var extension in Extensions)
                 {
                     extension.ParentStateHasChanged = () => StateHasChanged();
-                    shouldRerender = shouldRerender || await extension.OnComponentAfterFirstRender();
                 }
+                
             }
             shouldRerender = shouldRerender || await FeaturesService.OnAfterEachRender(this);
+
            
-            foreach (var extension in Extensions)
-            {
-                shouldRerender = shouldRerender || await extension.OnComponentAfterEachRender();
-            }
             if (shouldRerender)
             {
                 this.StateHasChanged();
