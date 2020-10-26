@@ -740,6 +740,29 @@
         <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
             <inheritdoc/>
         </member>
+        <member name="T:Fomantic.Blazor.UI.ComponentFragmentLocations">
+            <summary>    A names of aviable component fragment locations. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ComponentFragmentLocations.BeforeRootElementAreaName">
+            <summary>
+            Before Root Element Area Name
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ComponentFragmentLocations.AfterRootElementAreaName">
+            <summary>
+            After Root Element AreaName
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ComponentFragmentLocations.BeforeContentAreaName">
+            <summary>
+            Before Content Area Name
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ComponentFragmentLocations.AfterContentAreaName">
+            <summary>
+            After Content AreaName
+            </summary>
+        </member>
         <member name="T:Fomantic.Blazor.UI.ViewPortCalculation">
             <summary>   Contains all element viewport calculation. </summary>
         </member>
@@ -1573,6 +1596,39 @@
              <param name="builder">  The builder to act on. </param>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="T:Fomantic.Blazor.UI.ExtensionClassHelpers">
+            <summary>   An extension class helpers. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ExtensionClassHelpers.AddComponentAdditionalFragment(Fomantic.Blazor.UI.IFomanticComponentExtension,System.String,Microsoft.AspNetCore.Components.RenderFragment)">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             An IFomanticComponentExtension extension method that adds an additional fragment.
+             </summary>
+            
+             <param name="extension">        The extension to act on. </param>
+             <param name="loc">              The location. </param>
+             <param name="renderFragment">   The render fragment. </param>
+            
+             <returns>   An IFomanticComponentExtension. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FeatureDefinitionClassHelpers">
+            <summary>   A feature definition class helpers. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FeatureDefinitionClassHelpers.AddAdditionalFragment``1(Fomantic.Blazor.UI.Features.UIFeatureDefinition{``0},System.String,System.Func{``0,Microsoft.AspNetCore.Components.RenderFragment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             An UIFeatureDefinition&lt;T&gt; extension method that adds an additional fragment.
+             </summary>
+            
+             <typeparam name="T">    Generic type parameter. </typeparam>
+             <param name="feature">  The feature to act on. </param>
+             <param name="loc">      The location to render fragment. </param>
+             <param name="func">     The fragment function. </param>
+            
+             <returns>   An UIFeatureDefinition&lt;T&gt; </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="T:Fomantic.Blazor.UI.IconListHelpers">
             <summary>   An icon list helpers. </summary>
         </member>
@@ -1587,20 +1643,6 @@
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers">
             <summary>   A fomantic component with class helpers. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddAdditionalFragment``1(Fomantic.Blazor.UI.Features.UIFeatureDefinition{``0},System.String,System.Func{``0,Microsoft.AspNetCore.Components.RenderFragment})">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             An UIFeatureDefinition&lt;T&gt; extension method that adds an additional fragment.
-             </summary>
-            
-             <typeparam name="T">    Generic type parameter. </typeparam>
-             <param name="feature">  The feature to act on. </param>
-             <param name="loc">      The location to render fragment. </param>
-             <param name="func">     The fragment function. </param>
-            
-             <returns>   An UIFeatureDefinition&lt;T&gt; </returns>
-            -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClassHelpers.AddClass``1(``0,System.String[])">
             -------------------------------------------------------------------------------------------------
@@ -1619,7 +1661,8 @@
             
              <typeparam name="T">    Generic type parameter. </typeparam>
              <param name="component">    The component to act on. </param>
-             <param name="classes">      A variable-length parameters list containing classes to be removed. </param>
+             <param name="classes">      A variable-length parameters list containing classes to be
+                                         removed. </param>
             
              <returns>   A T. </returns>
             -------------------------------------------------------------------------------------------------

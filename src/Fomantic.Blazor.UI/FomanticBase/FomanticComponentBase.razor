@@ -1,27 +1,23 @@
 ﻿@namespace Fomantic.Blazor.UI
 
 @code {
-    public const string BeforeRootElementAreaName = "BeforeRootElementArea";
-    public const string AfterRootElementAreaName = "AfterRootElementArea";
-    public const string BeforeContentAreaName = "BeforeContentElementArea";
-    public const string AfterContentAreaName = "AfterContentElementArea";
-
+ 
     protected RenderFragment RenderBeforeRootElementFragments()
     {
-        return RenderFragmentsIn(BeforeRootElementAreaName);
+        return RenderFragmentsIn(ComponentFragmentLocations.BeforeRootElementAreaName);
     }
 
     protected RenderFragment RenderAfterRootElementFragments()
     {
-        return RenderFragmentsIn(AfterRootElementAreaName);
+        return RenderFragmentsIn(ComponentFragmentLocations.AfterRootElementAreaName);
     }
     protected RenderFragment RenderBeforeContentFragments()
     {
-        return RenderFragmentsIn(BeforeContentAreaName);
+        return RenderFragmentsIn(ComponentFragmentLocations.BeforeContentAreaName);
     }
     protected RenderFragment RenderAfterContentFragments()
     {
-        return RenderFragmentsIn(AfterContentAreaName);
+        return RenderFragmentsIn(ComponentFragmentLocations.AfterContentAreaName);
     }
 
 

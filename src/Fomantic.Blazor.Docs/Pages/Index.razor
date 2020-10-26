@@ -44,16 +44,8 @@
 
 
     <div class="main ui container">
-        <input @bind-value="x" />
-       
-        <Segment>
-            <Text TooltipText="@x">
-                @x
-                <MyExampleExtension> </MyExampleExtension>
-            </Text>
-
-           
-        </Segment>
+      
+     
 
 
     </div>
@@ -64,7 +56,7 @@
 </div>
 
 @code{
-    string x = "aaa";
+ 
     protected override Task OnInitializedAsync()
     {
 
