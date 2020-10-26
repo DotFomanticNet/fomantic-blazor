@@ -15,20 +15,9 @@ namespace Fomantic.Blazor.UI
     /// Base interface for all Fomantic Blazor Components that Visible within view port.
     /// </summary>
     ///
-    /// <remarks>   A Salah, 24/10/2020. </remarks>
     ///-------------------------------------------------------------------------------------------------
-
     public interface IVisibleFomanticComponent : IFomanticComponentWithClass
     {
-       
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>   Animator responsible for animating the component. </summary>
-        ///
-        /// <value> The animator. </value>
-        ///-------------------------------------------------------------------------------------------------
-
-        [NestedParamter]
-        public IFomanticAnimator Animator { get; }
 
         /// <summary>   Show the entire component if hidden. </summary>
 

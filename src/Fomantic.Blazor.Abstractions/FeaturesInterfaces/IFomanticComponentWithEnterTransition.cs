@@ -14,7 +14,7 @@ namespace Fomantic.Blazor.UI
     /// </summary>
     ///-------------------------------------------------------------------------------------------------
 
-    public interface IFomanticComponentWithEnterTransition : IVisibleFomanticComponent
+    public interface IFomanticComponentWithEnterTransition : IAnimateableFomanticComponent
     {
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Transition used to show the component after the page initilized. </summary>

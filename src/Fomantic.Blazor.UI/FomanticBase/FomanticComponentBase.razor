@@ -1,7 +1,7 @@
 ﻿@namespace Fomantic.Blazor.UI
 
 @code {
- 
+
     protected RenderFragment RenderBeforeRootElementFragments()
     {
         return RenderFragmentsIn(ComponentFragmentLocations.BeforeRootElementAreaName);
@@ -25,14 +25,20 @@
     {
         return __builder =>
         {
-            foreach (var item in this.AdditionalFragments.Where(d => d.Location == areaName))
+            if (this.AdditionalFragments != null)
             {
-            @item.Fragment(this)
+                foreach (var item in this.AdditionalFragments.Where(d => d.Location == areaName))
+                {
+                @item.Fragment(this)
+                }
             }
 
-            foreach (var item in this.Extensions.SelectMany(d => d.ComponentAdditionalFragments.Where(d => d.Location == areaName)))
+            if (this.Extensions != null)
             {
-            @item.Fragment(this)
+                foreach (var item in this.Extensions.Where(d => d.ComponentAdditionalFragments != null).SelectMany(d => d.ComponentAdditionalFragments.Where(d => d.Location == areaName)))
+                {
+                @item.Fragment(this)
+                }
             }
         };
     }

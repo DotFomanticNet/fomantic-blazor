@@ -37,8 +37,6 @@ namespace Fomantic.Blazor.UI
 
 
         #region Members
-        /// <summary>   The lazy animator. </summary>
-        private Lazy<FomanticComponentsAnimator<FomanticComponentBase>> lazyAnimator;
         /// <summary>   The lazy viewport visibility. </summary>
         private Lazy<ViewportVisibility> lazyViewportVisibility;
         /// <summary>   The CSS class. </summary>
@@ -169,7 +167,7 @@ namespace Fomantic.Blazor.UI
 
         /// <inheritdoc/>
         [NestedParamter]
-        public IFomanticAnimator Animator => lazyAnimator.Value;
+        public IFomanticAnimator Animator => (IFomanticAnimator)Extensions.FirstOrDefault(d => d is FomanticComponentAnimator<IAnimateableFomanticComponent>);
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Object responsible for Viewport Visibility tracking. </summary>
@@ -204,7 +202,7 @@ namespace Fomantic.Blazor.UI
         internal protected virtual void ConstractClasses()
         {
             CssClasses = new List<string>();
-            CssClasses.AddRange(FeaturesService.OnConstractClasses(this));           
+            CssClasses.AddRange(FeaturesService.OnConstractClasses(this));
             if (InputAttributes.ContainsKey("class"))
             {
                 CssClasses.Add(InputAttributes["class"].ToString());
@@ -223,7 +221,6 @@ namespace Fomantic.Blazor.UI
         {
             if (firstRender)
             {
-                lazyAnimator = new Lazy<FomanticComponentsAnimator<FomanticComponentBase>>(() => new FomanticComponentsAnimator<FomanticComponentBase>(this));
 
                 lazyViewportVisibility = new Lazy<ViewportVisibility>(() =>
                 {
@@ -356,11 +353,11 @@ namespace Fomantic.Blazor.UI
                 {
                     extension.ParentStateHasChanged = () => StateHasChanged();
                 }
-                
+
             }
             shouldRerender = shouldRerender || await FeaturesService.OnAfterEachRender(this);
 
-           
+
             if (shouldRerender)
             {
                 this.StateHasChanged();
@@ -500,10 +497,7 @@ namespace Fomantic.Blazor.UI
         /// <inheritdoc/>
         public void Dispose()
         {
-            if (lazyAnimator.IsValueCreated)
-            {
-                lazyAnimator.Value.Dispose();
-            }
+
             if (lazyViewportVisibility.IsValueCreated)
             {
                 lazyViewportVisibility.Value.Dispose();

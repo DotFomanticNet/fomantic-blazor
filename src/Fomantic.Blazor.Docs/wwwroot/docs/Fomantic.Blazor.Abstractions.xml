@@ -6519,6 +6519,21 @@
              <value> The calculation. </value>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="T:Fomantic.Blazor.UI.IAnimateableFomanticComponent">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Base interface for all Fomantic Blazor Components that can be animated
+             </summary>
+            
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IAnimateableFomanticComponent.Animator">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Animator responsible for animating the component. </summary>
+            
+             <value> The animator. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponent">
             <summary>   Base interface for all Fomantic Blazor Components. </summary>
         </member>
@@ -6868,14 +6883,6 @@
              Base interface for all Fomantic Blazor Components that Visible within view port.
              </summary>
             
-             <remarks>   A Salah, 24/10/2020. </remarks>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.Animator">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Animator responsible for animating the component. </summary>
-            
-             <value> The animator. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="M:Fomantic.Blazor.UI.IVisibleFomanticComponent.Show">

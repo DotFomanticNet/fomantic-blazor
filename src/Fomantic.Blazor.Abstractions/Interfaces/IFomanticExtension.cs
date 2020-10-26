@@ -27,12 +27,12 @@ namespace Fomantic.Blazor.UI
         /// <value> The parent. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        [CascadingParameter(Name ="Parent")]
+        [CascadingParameter(Name = "Parent")]
         public IFomanticComponentWithExtensions Parent { get; set; }
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Executes the 'after each render' action. </summary>
         ///
-        
+
         ///
         /// <returns>   A ValueTask&lt;bool&gt; </returns>
         ///-------------------------------------------------------------------------------------------------
@@ -80,6 +80,7 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         List<ComponentFragment> ComponentAdditionalFragments { get; }
+
 
     }
 }

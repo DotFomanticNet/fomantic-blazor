@@ -707,6 +707,39 @@
         <member name="M:Fomantic.Blazor.UI.ElementReferenceFomanticAnimator.Dispose">
             <inheritdoc/>
         </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticComponentAnimator`1">
+            -------------------------------------------------------------------------------------------------
+             <summary> Extension class responsibe for animating a <see cref="T:Fomantic.Blazor.UI.IFomanticComponent"/> </summary>
+            
+             <typeparam name="TFomanticComponent">   Type of the fomantic component. </typeparam>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Parent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the component. </summary>
+            
+             <value> The component. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.#ctor(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Create An instant of Animator. </summary>
+            
+             <param name="component">    Fomantic component to animate. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Animate(System.Int32,System.Tuple{Fomantic.Blazor.UI.TransitionAnimation,System.Int32}[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.Animate(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.AnimatedHide(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentAnimator`1.AnimatedShow(Fomantic.Blazor.UI.TransitionAnimation,System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
         <member name="T:Fomantic.Blazor.UI.FomanticComponentsAnimator`1">
             -------------------------------------------------------------------------------------------------
              <summary>   Class responsibe for animating a <see cref="T:Fomantic.Blazor.UI.IFomanticComponent"/> </summary>
@@ -1356,9 +1389,6 @@
              collection.
              </returns>
             -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.lazyAnimator">
-            <summary>   The lazy animator. </summary>
         </member>
         <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.lazyViewportVisibility">
             <summary>   The lazy viewport visibility. </summary>
