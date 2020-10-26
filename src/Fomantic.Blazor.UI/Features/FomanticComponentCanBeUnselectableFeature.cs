@@ -9,22 +9,5 @@ namespace Fomantic.Blazor.UI.Features
     {
 
     }
-    class VisibleFomanticComponentFeature : UIFeatureDefinition<IVisibleFomanticComponent>
-    {
-        /// <summary>   class given to the component to invert its color. </summary>
-        const string HiddenClass = "transition hidden";
-
-        public override string ProvideCssClass(IVisibleFomanticComponent component)
-        {
-            if (component.IsHidden)
-            {
-                return HiddenClass;
-            }
-            else
-            {
-                return string.Empty;
-            }
-        }
-    }
 
 }

@@ -5,21 +5,25 @@
 ///-------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
 namespace Fomantic.Blazor.UI
 {
     /// <summary>   Implementation Responsible for Viewport Visibility tracking. </summary>
-    public class ViewportVisibility : IDisposable
+    public class ViewportVisibility : IViewportVisibility
     {
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>   Gets the element to subscripe function. </summary>
-        ///
-        /// <value> A function delegate that yields an ElementReference. </value>
-        ///-------------------------------------------------------------------------------------------------
 
-        internal Func<ElementReference> ElementToSubscripeFunc { get; }
+
+
+
+        Action IFomanticExtension.ParentStateHasChanged { get; set; }
+        IFomanticComponentWithExtensions IFomanticExtension.Parent { get; set; }
+
+        List<ComponentFragment> IFomanticExtension.ComponentAdditionalFragments { get; }
+
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Gets the js runtime. </summary>
@@ -38,32 +42,92 @@ namespace Fomantic.Blazor.UI
         public ViewPortCalculation Calculation { get; private set; } = new ViewPortCalculation();
 
         ///-------------------------------------------------------------------------------------------------
-        /// <summary>   Create new Viewport Visibility. </summary>
-        ///
-        /// <param name="elementToSubscripeFunc">   function to get element to track Visibility. </param>
-        /// <param name="jsRuntime">                js run time to execute javascript interops. </param>
-        ///-------------------------------------------------------------------------------------------------
-
-        public ViewportVisibility(Func<ElementReference> elementToSubscripeFunc, IJSRuntime jsRuntime)
-        {
-            ElementToSubscripeFunc = elementToSubscripeFunc;
-            JsRuntime = jsRuntime;
-
-        }
-
-        ///-------------------------------------------------------------------------------------------------
         /// <summary>   Gets or sets the element. </summary>
         ///
         /// <value> The element. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        private ElementReference? Element { get; set; }
+        private ElementReference? Element { get => (this as IFomanticExtension)?.Parent?.RootElement; }
         /// <summary>   Applies this.  </summary>
         internal async void Apply()
         {
-            Element = ElementToSubscripeFunc?.Invoke();
+            var parent = (this as IFomanticExtension).Parent as IVisibleFomanticComponent;
             if (Element != null)
             {
+                #region Viewport Visibility Events
+
+                if (parent.OnViewportVisibilityChange.HasDelegate)
+                {
+                    OnVisibilityUpdated += d => parent.OnViewportVisibilityChange.InvokeAsync(d);
+                }
+
+
+                if (parent.OnTopVisible.HasDelegate)
+                {
+                    OnTopVisibleUpdated += d => parent.OnTopVisible.InvokeAsync(d);
+                }
+
+
+                if (parent.OnTopPassed.HasDelegate)
+                {
+                    OnTopPassedUpdated += d => parent.OnTopPassed.InvokeAsync(d);
+                }
+
+
+                if (parent.OnBottomVisible.HasDelegate)
+                {
+                    OnBottomVisibleUpdated += d => parent.OnBottomVisible.InvokeAsync(d);
+                }
+
+
+                if (parent.OnPassing.HasDelegate)
+                {
+                    OnPassingUpdated += d => parent.OnPassing.InvokeAsync(d);
+                }
+
+
+                if (parent.OnBottomPassed.HasDelegate)
+                {
+                    OnBottomPassedUpdated += d => parent.OnBottomPassed.InvokeAsync(d);
+                }
+
+
+                if (parent.OnTopVisibleReverse.HasDelegate)
+                {
+                    OnTopVisibleReverseUpdated += d => parent.OnTopVisibleReverse.InvokeAsync(d);
+                }
+
+
+
+                if (parent.OnTopPassedReverse.HasDelegate)
+                {
+                    OnTopPassedReverseUpdated += d => parent.OnTopPassedReverse.InvokeAsync(d);
+                }
+
+
+
+                if (parent.OnBottomVisibleReverse.HasDelegate)
+                {
+                    OnBottomVisibleReverseUpdated += d => parent.OnBottomVisibleReverse.InvokeAsync(d);
+                }
+
+
+
+                if (parent.OnPassingReverse.HasDelegate)
+                {
+                    OnPassingReverseUpdated += d => parent.OnPassingReverse.InvokeAsync(d);
+                }
+
+
+                if (parent.OnBottomPassedReverse.HasDelegate)
+                {
+                    OnBottomPassedReverseUpdated += d => parent.OnBottomPassedReverse.InvokeAsync(d);
+                }
+
+
+                #endregion
+
+
                 await JsRuntime.InvokeVoidAsync("window.element.initVisibilityEvents",
                 Element,
                 DotNetObjectReference.Create(this)
@@ -71,10 +135,205 @@ namespace Fomantic.Blazor.UI
             }
         }
 
+        /// <summary>
+        /// Create a ViewportVisibility Component
+        /// </summary>
+        /// <param name="parentCompoent"></param>
+        public ViewportVisibility(IFomanticComponentWithExtensions parentCompoent)
+        {
+            (this as IFomanticExtension).Parent = parentCompoent;
+            JsRuntime = parentCompoent?.JsRuntime;
+
+        }
+        object objectLock;
+        event ViewportVisibilityUpdate IViewportVisibility.OnTopVisibleUpdated
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    OnTopVisibleUpdated += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    OnTopVisibleUpdated -= value;
+                }
+            }
+        }
+
+        event ViewportVisibilityUpdate IViewportVisibility.OnTopPassedUpdated
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    OnTopPassedUpdated += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    OnTopPassedUpdated -= value;
+                }
+            }
+        }
+
+        event ViewportVisibilityUpdate IViewportVisibility.OnBottomVisibleUpdated
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    OnBottomVisibleUpdated += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    OnBottomVisibleUpdated -= value;
+                }
+            }
+        }
+
+        event ViewportVisibilityUpdate IViewportVisibility.OnPassingUpdated
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    OnPassingUpdated += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    OnPassingUpdated -= value;
+                }
+            }
+        }
+
+        event ViewportVisibilityUpdate IViewportVisibility.OnBottomPassedUpdated
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    OnBottomPassedUpdated += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    OnBottomPassedUpdated -= value;
+                }
+            }
+        }
+
+        event ViewportVisibilityUpdate IViewportVisibility.OnTopVisibleReverseUpdated
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    OnTopVisibleReverseUpdated += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    OnTopVisibleReverseUpdated -= value;
+                }
+            }
+        }
+
+        event ViewportVisibilityUpdate IViewportVisibility.OnTopPassedReverseUpdated
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    OnTopPassedReverseUpdated += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    OnTopPassedReverseUpdated -= value;
+                }
+            }
+        }
+
+        event ViewportVisibilityUpdate IViewportVisibility.OnBottomVisibleReverseUpdated
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    OnBottomVisibleReverseUpdated += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    OnBottomVisibleReverseUpdated -= value;
+                }
+            }
+        }
+
+        event ViewportVisibilityUpdate IViewportVisibility.OnPassingReverseUpdated
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    OnPassingReverseUpdated += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    OnPassingReverseUpdated -= value;
+                }
+            }
+        }
+
+        event ViewportVisibilityUpdate IViewportVisibility.OnBottomPassedReverseUpdated
+        {
+            add
+            {
+                lock (objectLock)
+                {
+                    OnBottomPassedReverseUpdated += value;
+                }
+            }
+            remove
+            {
+                lock (objectLock)
+                {
+                    OnBottomPassedReverseUpdated -= value;
+                }
+            }
+        }
+
+      
+
+
+
 
         #region OnUpdate
         /// <summary>   Event queue for all listeners interested in OnVisibilityUpdated events. </summary>
-        internal event ViewportVisibilityUpdate OnVisibilityUpdated;
+        event ViewportVisibilityUpdate OnVisibilityUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger Visibility Updated events. </summary>
@@ -82,16 +341,16 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnUpdate()
+        public void OnUpdate()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnVisibilityUpdated != null)
             {
                 OnVisibilityUpdated?.Invoke(eventArgs);
             }
-        
+
         }
 
         ///-------------------------------------------------------------------------------------------------
@@ -109,7 +368,7 @@ namespace Fomantic.Blazor.UI
 
         #region OnTopVisible
         /// <summary>   Event queue for all listeners interested in OnTopVisibleUpdated events. </summary>
-        internal event ViewportVisibilityUpdate OnTopVisibleUpdated;
+        event ViewportVisibilityUpdate OnTopVisibleUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger On Top Visible Updated events. </summary>
@@ -117,9 +376,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnTopVisible()
+        public void OnTopVisible()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnTopVisibleUpdated != null)
@@ -143,7 +402,7 @@ namespace Fomantic.Blazor.UI
 
         #region OnTopPassed
         /// <summary>   Event queue for all listeners interested in OnTopPassedUpdated events. </summary>
-        internal event ViewportVisibilityUpdate OnTopPassedUpdated;
+        event ViewportVisibilityUpdate OnTopPassedUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger On Top Passed Updated events. </summary>
@@ -151,9 +410,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnTopPassed()
+        public void OnTopPassed()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnTopPassedUpdated != null)
@@ -179,7 +438,7 @@ namespace Fomantic.Blazor.UI
 
         #region OnBottomVisible
         /// <summary>   Event queue for all listeners interested in OnBottomVisibleUpdated events. </summary>
-        internal event ViewportVisibilityUpdate OnBottomVisibleUpdated;
+        event ViewportVisibilityUpdate OnBottomVisibleUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger On Bottom Visible Updated events. </summary>
@@ -187,9 +446,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnBottomVisible()
+        public void OnBottomVisible()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnBottomVisibleUpdated != null)
@@ -215,7 +474,7 @@ namespace Fomantic.Blazor.UI
 
         #region OnPassing
         /// <summary>   Event queue for all listeners interested in OnPassingUpdated events. </summary>
-        internal event ViewportVisibilityUpdate OnPassingUpdated;
+        event ViewportVisibilityUpdate OnPassingUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger On Passing Updated events. </summary>
@@ -223,9 +482,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnPassing()
+        public void OnPassing()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnPassingUpdated != null)
@@ -251,7 +510,7 @@ namespace Fomantic.Blazor.UI
 
         #region OnBottomPassed
         /// <summary>   Event queue for all listeners interested in OnBottomPassedUpdated events. </summary>
-        internal event ViewportVisibilityUpdate OnBottomPassedUpdated;
+        event ViewportVisibilityUpdate OnBottomPassedUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Method executed by Javascript to trigger On Bottom Passed Updated events. </summary>
@@ -259,9 +518,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnBottomPassed()
+        public void OnBottomPassed()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnBottomPassedUpdated != null)
@@ -293,7 +552,7 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         ///-------------------------------------------------------------------------------------------------
 
-        internal event ViewportVisibilityUpdate OnTopVisibleReverseUpdated;
+        event ViewportVisibilityUpdate OnTopVisibleReverseUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -303,9 +562,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnTopVisibleReverse()
+        public void OnTopVisibleReverse()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnTopVisibleReverseUpdated != null)
@@ -339,7 +598,7 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         ///-------------------------------------------------------------------------------------------------
 
-        internal event ViewportVisibilityUpdate OnTopPassedReverseUpdated;
+        event ViewportVisibilityUpdate OnTopPassedReverseUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -349,9 +608,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnTopPassedReverse()
+        public void OnTopPassedReverse()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnTopPassedReverseUpdated != null)
@@ -383,7 +642,7 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         ///-------------------------------------------------------------------------------------------------
 
-        internal event ViewportVisibilityUpdate OnBottomVisibleReverseUpdated;
+        event ViewportVisibilityUpdate OnBottomVisibleReverseUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -393,9 +652,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnBottomVisibleReverse()
+        public void OnBottomVisibleReverse()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnBottomVisibleReverseUpdated != null)
@@ -429,7 +688,7 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         ///-------------------------------------------------------------------------------------------------
 
-        internal event ViewportVisibilityUpdate OnPassingReverseUpdated;
+        event ViewportVisibilityUpdate OnPassingReverseUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -439,9 +698,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnPassingReverse()
+        public void OnPassingReverse()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnPassingReverseUpdated != null)
@@ -473,7 +732,7 @@ namespace Fomantic.Blazor.UI
         /// </summary>
         ///-------------------------------------------------------------------------------------------------
 
-        internal event ViewportVisibilityUpdate OnBottomPassedReverseUpdated;
+        event ViewportVisibilityUpdate OnBottomPassedReverseUpdated;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -483,9 +742,9 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [JSInvokable]
-        public  void OnBottomPassedReverse()
+        public void OnBottomPassedReverse()
         {
-           
+
             var eventArgs = new ViewPortEventArgs(Calculation);
 
             if (OnBottomPassedReverseUpdated != null)
@@ -510,8 +769,34 @@ namespace Fomantic.Blazor.UI
 
 
         #endregion
-        /// <inheritdoc/>
-        public async void Dispose()
+
+
+        async ValueTask<bool> IFomanticExtension.OnComponentAfterEachRender()
+        {
+            return false;
+        }
+
+        async ValueTask<bool> IFomanticExtension.OnComponentAfterFirstRender()
+        {
+            return false;
+        }
+
+        async ValueTask IFomanticExtension.OnComponentInitialized()
+        {
+
+        }
+
+        string[] IFomanticExtension.ProvideComponentCssClasses()
+        {
+            return Array.Empty<string>();
+        }
+
+        string IFomanticExtension.ProvideComponentCssClass()
+        {
+            return string.Empty;
+        }
+
+        async ValueTask IAsyncDisposable.DisposeAsync()
         {
             if (Element.HasValue)
             {

@@ -796,108 +796,8 @@
             After Content AreaName
             </summary>
         </member>
-        <member name="T:Fomantic.Blazor.UI.ViewPortCalculation">
-            <summary>   Contains all element viewport calculation. </summary>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.BottomPassed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is  parent element of the component bottom not visibile on the viewport. </summary>
-            
-             <value> The bottom passed. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.BottomVisible">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is parent element of the component bottom visibile on the viewport. </summary>
-            
-             <value> The bottom visible. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Fits">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets or sets the fits. </summary>
-            
-             <value> The fits. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Height">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Height value of the parent element of the component. </summary>
-            
-             <value> The height. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.OffScreen">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is the parent element of the component not visibile on the viewport. </summary>
-            
-             <value> The off screen. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.OnScreen">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is the parent element of the component visibile on the viewport. </summary>
-            
-             <value> The on screen. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Passing">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is the parent element of the component passing on the viewport. </summary>
-            
-             <value> The passing. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.PercentagePassed">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             A distance from the top of parent element of the component content has been passed as
-             percentage.
-             </summary>
-            
-             <value> The percentage passed. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.PixelsPassed">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             A distance from the top of parent element of the component content has been passed as pixels.
-             </summary>
-            
-             <value> The pixels passed. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.TopVisible">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is parent element of the component top visibile on the viewport. </summary>
-            
-             <value> The top visible. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.TopPassed">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Is parent element of the component top passed on the viewport. </summary>
-            
-             <value> The top passed. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Width">
-            -------------------------------------------------------------------------------------------------
-             <summary>   css top value of the parent element of the component. </summary>
-             <summary>   Width value of the parent element of the component. </summary>
-            
-             <value> The width. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="T:Fomantic.Blazor.UI.ViewportVisibility">
             <summary>   Implementation Responsible for Viewport Visibility tracking. </summary>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.ViewportVisibility.ElementToSubscripeFunc">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets the element to subscripe function. </summary>
-            
-             <value> A function delegate that yields an ElementReference. </value>
-            -------------------------------------------------------------------------------------------------
         </member>
         <member name="P:Fomantic.Blazor.UI.ViewportVisibility.JsRuntime">
             -------------------------------------------------------------------------------------------------
@@ -913,14 +813,6 @@
              <value> The calculation. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.#ctor(System.Func{Microsoft.AspNetCore.Components.ElementReference},Microsoft.JSInterop.IJSRuntime)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Create new Viewport Visibility. </summary>
-            
-             <param name="elementToSubscripeFunc">   function to get element to track Visibility. </param>
-             <param name="jsRuntime">                js run time to execute javascript interops. </param>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="P:Fomantic.Blazor.UI.ViewportVisibility.Element">
             -------------------------------------------------------------------------------------------------
              <summary>   Gets or sets the element. </summary>
@@ -930,6 +822,12 @@
         </member>
         <member name="M:Fomantic.Blazor.UI.ViewportVisibility.Apply">
             <summary>   Applies this.  </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.#ctor(Fomantic.Blazor.UI.IFomanticComponentWithExtensions)">
+            <summary>
+            Create a ViewportVisibility Component
+            </summary>
+            <param name="parentCompoent"></param>
         </member>
         <member name="E:Fomantic.Blazor.UI.ViewportVisibility.OnVisibilityUpdated">
             <summary>   Event queue for all listeners interested in OnVisibilityUpdated events. </summary>
@@ -1143,9 +1041,6 @@
              <returns>   whether  On Bottom Passed Reverse updated event Subscribed or not. </returns>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Fomantic.Blazor.UI.ViewportVisibility.Dispose">
-            <inheritdoc/>
-        </member>
         <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.AttachedClass">
             <summary>   class given to attached. </summary>
         </member>
@@ -1229,9 +1124,6 @@
         </member>
         <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentCanBeDisabledFeature.DisabledClass">
             <summary>   class given to disable component. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.VisibleFomanticComponentFeature.HiddenClass">
-            <summary>   class given to the component to invert its color. </summary>
         </member>
         <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.LeftFloatedClass">
             <summary>   class given to Left Float. </summary>
@@ -1377,6 +1269,9 @@
              <returns>   Given class from <paramref name="size"/> </returns>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="F:Fomantic.Blazor.UI.Features.VisibleFomanticComponentFeature.HiddenClass">
+            <summary>   class given to the component to invert its color. </summary>
+        </member>
         <member name="T:Fomantic.Blazor.UI.FomanticComponentBase">
             <summary>   Base class for all Fomantic Component. </summary>
         </member>
@@ -1390,99 +1285,15 @@
              </returns>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.lazyViewportVisibility">
-            <summary>   The lazy viewport visibility. </summary>
-        </member>
         <member name="F:Fomantic.Blazor.UI.FomanticComponentBase._cssClass">
             <summary>   The CSS class. </summary>
         </member>
         <member name="F:Fomantic.Blazor.UI.FomanticComponentBase.inputAttributes">
             <summary>   The input attributes. </summary>
         </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnViewportVisibilityChangeEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Event queue for all listeners interested in onViewportVisibilityChange events.
-             </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onTopVisible events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onTopPassed events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onBottomVisible events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onPassing events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onBottomPassed events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopVisibleReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onTopVisibleReverse events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnTopPassedReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onTopPassedReverse events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomVisibleReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onBottomVisibleReverse events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnPassingReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onPassingReverse events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnBottomPassedReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onBottomPassedReverse events. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="E:Fomantic.Blazor.UI.FomanticComponentBase.OnClassChangedEvent">
             -------------------------------------------------------------------------------------------------
-             <summary>   Event queue for all listeners interested in onClassChanged events. </summary>
-            
-             ### <inheritdoc/>
+            <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.JsRuntime">
@@ -1514,9 +1325,6 @@
             <summary>   Used to add inherited components classes. </summary>
         </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnInitializedAsync">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnAfterRender(System.Boolean)">
             <inheritdoc/>
         </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.OnAfterRenderAsync(System.Boolean)">
@@ -1608,9 +1416,6 @@
             <inheritdoc/>
         </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ToggleVisibility">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.Dispose">
             <inheritdoc/>
         </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.DisposeAsync">

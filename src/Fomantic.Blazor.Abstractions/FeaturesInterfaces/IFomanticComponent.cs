@@ -13,7 +13,7 @@ namespace Fomantic.Blazor.UI
 {
 
     /// <summary>   Base interface for all Fomantic Blazor Components. </summary>
-    public interface IFomanticComponent : IDisposable
+    public interface IFomanticComponent : IAsyncDisposable
     {
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Js runtime object to run javascript interops functions. </summary>

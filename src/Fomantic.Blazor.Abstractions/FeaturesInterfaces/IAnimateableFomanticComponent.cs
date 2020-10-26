@@ -24,4 +24,6 @@ namespace Fomantic.Blazor.UI
         [NestedParamter]
         public IFomanticAnimator Animator { get; }
     }
+
+
 }

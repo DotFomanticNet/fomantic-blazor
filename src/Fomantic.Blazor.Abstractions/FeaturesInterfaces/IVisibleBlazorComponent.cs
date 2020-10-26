@@ -16,7 +16,7 @@ namespace Fomantic.Blazor.UI
     /// </summary>
     ///
     ///-------------------------------------------------------------------------------------------------
-    public interface IVisibleFomanticComponent : IFomanticComponentWithClass
+    public interface IVisibleFomanticComponent : IFomanticComponentWithClass, IFomanticComponentWithExtensions
     {
 
         /// <summary>   Show the entire component if hidden. </summary>
@@ -53,13 +53,7 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnViewportVisibilityChange { get; set; }
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>
-        /// Occurs each time component patent element Viewport Visibility calculations are.
-        /// </summary>
-        ///-------------------------------------------------------------------------------------------------
 
-        public event ViewportVisibilityUpdate OnViewportVisibilityChangeEvent;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -72,13 +66,7 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnTopVisible { get; set; }
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>
-        /// Occurs each time when component patent element's top edge has passed bottom of screen.
-        /// </summary>
-        ///-------------------------------------------------------------------------------------------------
 
-        public event ViewportVisibilityUpdate OnTopVisibleEvent;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -91,13 +79,7 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnTopPassed { get; set; }
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>
-        /// Occurs each time when component patent element's top edge has passed top of the screen.
-        /// </summary>
-        ///-------------------------------------------------------------------------------------------------
 
-        public event ViewportVisibilityUpdate OnTopPassedEvent;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -110,13 +92,7 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnBottomVisible { get; set; }
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>
-        /// Occurs each time when component patent element's bottom edge has passed bottom of screen.
-        /// </summary>
-        ///-------------------------------------------------------------------------------------------------
 
-        public event ViewportVisibilityUpdate OnBottomVisibleEvent;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Occurs when Any part of an component patent element is visible on screen. </summary>
@@ -126,8 +102,7 @@ namespace Fomantic.Blazor.UI
 
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnPassing { get; set; }
-        /// <summary>   Occurs when Any part of an component patent element is visible on screen. </summary>
-        public event ViewportVisibilityUpdate OnPassingEvent;
+
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -140,13 +115,7 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnBottomPassed { get; set; }
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>
-        /// Occurs each time when component patent element's bottom edge has passed top of screen.
-        /// </summary>
-        ///-------------------------------------------------------------------------------------------------
 
-        public event ViewportVisibilityUpdate OnBottomPassedEvent;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -159,13 +128,7 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnTopVisibleReverse { get; set; }
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>
-        /// Occurs each time when component patent element's top edge has not passed bottom of screen.
-        /// </summary>
-        ///-------------------------------------------------------------------------------------------------
 
-        public event ViewportVisibilityUpdate OnTopVisibleReverseEvent;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -178,13 +141,7 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnTopPassedReverse { get; set; }
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>
-        /// Occurs each time when component patent element's top edge has not passed top of the screen.
-        /// </summary>
-        ///-------------------------------------------------------------------------------------------------
 
-        public event ViewportVisibilityUpdate OnTopPassedReverseEvent;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -197,13 +154,7 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnBottomVisibleReverse { get; set; }
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>
-        /// Occurs each time when component patent element's bottom edge has not passed bottom of screen.
-        /// </summary>
-        ///-------------------------------------------------------------------------------------------------
 
-        public event ViewportVisibilityUpdate OnBottomVisibleReverseEvent;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -217,14 +168,7 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnPassingReverse { get; set; }
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>
-        /// Occurs each time when component patent element's top has not passed top of screen but bottom
-        /// has.
-        /// </summary>
-        ///-------------------------------------------------------------------------------------------------
 
-        public event ViewportVisibilityUpdate OnPassingReverseEvent;
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
@@ -237,12 +181,14 @@ namespace Fomantic.Blazor.UI
         [Parameter]
         public EventCallback<ViewPortEventArgs> OnBottomPassedReverse { get; set; }
 
+
+
+
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Occurs each time when component patent element's bottom edge has not passed top of screen.
+        /// Object Responsible for Viewport Visibility tracking. 
         /// </summary>
         ///-------------------------------------------------------------------------------------------------
-
-        public event ViewportVisibilityUpdate OnBottomPassedReverseEvent;
+        IViewportVisibility ViewportVisibility { get; }
     }
 }

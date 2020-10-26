@@ -6910,13 +6910,6 @@
              <value> The on viewport visibility change. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnViewportVisibilityChangeEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Occurs each time component patent element Viewport Visibility calculations are.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisible">
             -------------------------------------------------------------------------------------------------
              <summary>
@@ -6924,13 +6917,6 @@
              </summary>
             
              <value> The on top visible. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibleEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Occurs each time when component patent element's top edge has passed bottom of screen.
-             </summary>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassed">
@@ -6942,13 +6928,6 @@
              <value> The on top passed. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Occurs each time when component patent element's top edge has passed top of the screen.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisible">
             -------------------------------------------------------------------------------------------------
              <summary>
@@ -6958,22 +6937,12 @@
              <value> The on bottom visible. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Occurs each time when component patent element's bottom edge has passed bottom of screen.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassing">
             -------------------------------------------------------------------------------------------------
              <summary>   Occurs when Any part of an component patent element is visible on screen. </summary>
             
              <value> The on passing. </value>
             -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingEvent">
-            <summary>   Occurs when Any part of an component patent element is visible on screen. </summary>
         </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassed">
             -------------------------------------------------------------------------------------------------
@@ -6982,13 +6951,6 @@
              </summary>
             
              <value> The on bottom passed. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Occurs each time when component patent element's bottom edge has passed top of screen.
-             </summary>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibleReverse">
@@ -7000,13 +6962,6 @@
              <value> The on top visible reverse. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopVisibleReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Occurs each time when component patent element's top edge has not passed bottom of screen.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedReverse">
             -------------------------------------------------------------------------------------------------
              <summary>
@@ -7016,13 +6971,6 @@
              <value> The on top passed reverse. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnTopPassedReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Occurs each time when component patent element's top edge has not passed top of the screen.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleReverse">
             -------------------------------------------------------------------------------------------------
              <summary>
@@ -7030,13 +6978,6 @@
              </summary>
             
              <value> The on bottom visible reverse. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomVisibleReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Occurs each time when component patent element's bottom edge has not passed bottom of screen.
-             </summary>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingReverse">
@@ -7049,14 +6990,6 @@
              <value> The on passing reverse. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnPassingReverseEvent">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             Occurs each time when component patent element's top has not passed top of screen but bottom
-             has.
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedReverse">
             -------------------------------------------------------------------------------------------------
              <summary>
@@ -7066,10 +6999,10 @@
              <value> The on bottom passed reverse. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="E:Fomantic.Blazor.UI.IVisibleFomanticComponent.OnBottomPassedReverseEvent">
+        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.ViewportVisibility">
             -------------------------------------------------------------------------------------------------
              <summary>
-             Occurs each time when component patent element's bottom edge has not passed top of screen.
+             Object Responsible for Viewport Visibility tracking. 
              </summary>
             -------------------------------------------------------------------------------------------------
         </member>
@@ -7542,6 +7475,159 @@
              <summary>   Gets the additional fragment. </summary>
             
              <value> The additional fragment. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IViewportVisibility">
+            <summary>   Extention Responsible for Viewport Visibility tracking. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IViewportVisibility.Calculation">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Current View Port Calculations. </summary>
+            
+             <value> The calculation. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IViewportVisibility.OnTopVisibleUpdated">
+            <summary>   Event queue for all listeners interested in OnTopVisibleUpdated events. </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IViewportVisibility.OnTopPassedUpdated">
+            <summary>   Event queue for all listeners interested in OnTopPassedUpdated events. </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IViewportVisibility.OnBottomVisibleUpdated">
+            <summary>   Event queue for all listeners interested in OnBottomVisibleUpdated events. </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IViewportVisibility.OnPassingUpdated">
+            <summary>   Event queue for all listeners interested in OnPassingUpdated events. </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IViewportVisibility.OnBottomPassedUpdated">
+            <summary>   Event queue for all listeners interested in OnBottomPassedUpdated events. </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IViewportVisibility.OnTopVisibleReverseUpdated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in OnTopVisibleReverseUpdated events.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IViewportVisibility.OnTopPassedReverseUpdated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in OnTopPassedReverseUpdated events.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IViewportVisibility.OnBottomVisibleReverseUpdated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in OnBottomVisibleReverseUpdated events.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IViewportVisibility.OnPassingReverseUpdated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in OnPassingReverseUpdated events.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="E:Fomantic.Blazor.UI.IViewportVisibility.OnBottomPassedReverseUpdated">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             Event queue for all listeners interested in OnBottomPassedReverseUpdated events.
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ViewPortCalculation">
+            <summary>   Contains all element viewport calculation. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.BottomPassed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is  parent element of the component bottom not visibile on the viewport. </summary>
+            
+             <value> The bottom passed. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.BottomVisible">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is parent element of the component bottom visibile on the viewport. </summary>
+            
+             <value> The bottom visible. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Fits">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the fits. </summary>
+            
+             <value> The fits. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Height">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Height value of the parent element of the component. </summary>
+            
+             <value> The height. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.OffScreen">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is the parent element of the component not visibile on the viewport. </summary>
+            
+             <value> The off screen. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.OnScreen">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is the parent element of the component visibile on the viewport. </summary>
+            
+             <value> The on screen. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Passing">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is the parent element of the component passing on the viewport. </summary>
+            
+             <value> The passing. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.PercentagePassed">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             A distance from the top of parent element of the component content has been passed as
+             percentage.
+             </summary>
+            
+             <value> The percentage passed. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.PixelsPassed">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             A distance from the top of parent element of the component content has been passed as pixels.
+             </summary>
+            
+             <value> The pixels passed. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.TopVisible">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is parent element of the component top visibile on the viewport. </summary>
+            
+             <value> The top visible. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.TopPassed">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Is parent element of the component top passed on the viewport. </summary>
+            
+             <value> The top passed. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ViewPortCalculation.Width">
+            -------------------------------------------------------------------------------------------------
+             <summary>   css top value of the parent element of the component. </summary>
+             <summary>   Width value of the parent element of the component. </summary>
+            
+             <value> The width. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.IAttachableFomanticComponent">
