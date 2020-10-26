@@ -49,15 +49,15 @@ namespace Fomantic.Blazor.UI
         [ComponentAction]
         public virtual async Task Animate(StaticAnimation animation, int duration = 800, int interval = 200)
         {
-           
-            if (ElementToAnimate.Count() > 1)
+
+            if (ElementToAnimate.Length > 1)
             {
 
                 await JsRuntime.InvokeVoidAsync("window.animator.animateElements", ElementToAnimate, IFomanticAnimator.ToClass(animation), duration, interval);
             }
             else
             {
-           
+
                 await JsRuntime.InvokeVoidAsync("window.animator.animate", ElementToAnimate[0], IFomanticAnimator.ToClass(animation), duration);
             }
 
@@ -67,7 +67,7 @@ namespace Fomantic.Blazor.UI
         [ComponentAction]
         public virtual async Task Animate(TransitionAnimation animation, int duration = 800, int interval = 200)
         {
-            if (ElementToAnimate.Count() > 1)
+            if (ElementToAnimate.Length > 1)
             {
                 await JsRuntime.InvokeVoidAsync("window.animator.animateElements", ElementToAnimate, IFomanticAnimator.ToClass(animation), duration, interval);
             }
@@ -82,7 +82,7 @@ namespace Fomantic.Blazor.UI
         [ComponentAction]
         public virtual async Task AnimatedHide(TransitionAnimation animation, int duration = 800, int interval = 200)
         {
-            if (ElementToAnimate.Count() > 1)
+            if (ElementToAnimate.Length > 1)
             {
                 await JsRuntime.InvokeVoidAsync("window.animator.animateElements", ElementToAnimate, IFomanticAnimator.ToClass(animation) + " out", duration, interval);
             }
@@ -95,7 +95,7 @@ namespace Fomantic.Blazor.UI
         [ComponentAction]
         public virtual async Task AnimatedShow(TransitionAnimation animation, int duration = 800, int interval = 200)
         {
-            if (ElementToAnimate.Count() > 1)
+            if (ElementToAnimate.Length > 1)
             {
                 await JsRuntime.InvokeVoidAsync("window.animator.animateElements", ElementToAnimate, IFomanticAnimator.ToClass(animation) + " in", duration, interval);
             }
@@ -121,7 +121,7 @@ namespace Fomantic.Blazor.UI
         [ComponentAction]
         public virtual void QueueAnimation(StaticAnimation animation, int duration = 800, int interval = 200)
         {
-            
+
             Task.Run(() => Animate(animation, duration, interval));
         }
         /// <inheritdoc/>
@@ -148,7 +148,7 @@ namespace Fomantic.Blazor.UI
         [ComponentAction]
         public virtual async Task Animate(int interval = 200, params Tuple<TransitionAnimation, int>[] animations)
         {
-            if (ElementToAnimate.Count() > 1)
+            if (ElementToAnimate.Length > 1)
             {
                 await JsRuntime.InvokeVoidAsync("window.animator.animateElementsMultible", ElementToAnimate, animations.Select(d => new { animation = IFomanticAnimator.ToClass(d.Item1), duration = d.Item2 }), interval);
             }
@@ -163,7 +163,7 @@ namespace Fomantic.Blazor.UI
         [ComponentAction]
         public virtual async Task Animate(int interval = 200, params Tuple<StaticAnimation, int>[] animations)
         {
-            if (ElementToAnimate.Count() > 1)
+            if (ElementToAnimate.Length > 1)
             {
                 await JsRuntime.InvokeVoidAsync("window.animator.animateElementsMultible", ElementToAnimate, animations.Select(d => new { animation = IFomanticAnimator.ToClass(d.Item1), duration = d.Item2 }), interval);
             }

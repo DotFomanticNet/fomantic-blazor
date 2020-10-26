@@ -17,7 +17,7 @@ namespace Fomantic.Blazor.UI
     /// <typeparam name="TFomanticComponent">   Type of the fomantic component. </typeparam>
     ///-------------------------------------------------------------------------------------------------
 
-    public class FomanticComponentAnimator<TFomanticComponent> : ElementReferenceFomanticAnimator where TFomanticComponent : IFomanticComponent
+    public class FomanticComponentsAnimator<TFomanticComponent> : ElementReferenceFomanticAnimator  where TFomanticComponent : IFomanticComponent
     {
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Gets the components. </summary>
@@ -25,7 +25,7 @@ namespace Fomantic.Blazor.UI
         /// <value> The components. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        public List<TFomanticComponent> Components { get;  }
+        public List<TFomanticComponent> Components { get; }
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Create An instant of Animator. </summary>
@@ -33,7 +33,7 @@ namespace Fomantic.Blazor.UI
         /// <param name="component">    Fomantic component to animate. </param>
         ///-------------------------------------------------------------------------------------------------
 
-        public FomanticComponentAnimator(params TFomanticComponent[] component) : base(component?.FirstOrDefault()?.JsRuntime, component?.Select(d => d.RootElement)?.ToArray())
+        public FomanticComponentsAnimator(params TFomanticComponent[] component) : base(component?.FirstOrDefault()?.JsRuntime, component?.Select(d => d.RootElement)?.ToArray())
         {
             Components = component.ToList();
         }

@@ -49,7 +49,7 @@ namespace Fomantic
         protected override void OnAfterRender(bool firstRender)
         {
             base.OnAfterRender(firstRender);
-            ChildrenAnimator = new FomanticComponentAnimator<ISegmantGroupChild>(Children?.ToArray());         
+            ChildrenAnimator = new FomanticComponentsAnimator<ISegmantGroupChild>(Children?.ToArray());         
         }
 
         /// <inheritdoc/>

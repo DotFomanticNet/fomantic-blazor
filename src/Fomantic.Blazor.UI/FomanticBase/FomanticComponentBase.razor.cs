@@ -38,7 +38,7 @@ namespace Fomantic.Blazor.UI
 
         #region Members
         /// <summary>   The lazy animator. </summary>
-        private Lazy<FomanticComponentAnimator<FomanticComponentBase>> lazyAnimator;
+        private Lazy<FomanticComponentsAnimator<FomanticComponentBase>> lazyAnimator;
         /// <summary>   The lazy viewport visibility. </summary>
         private Lazy<ViewportVisibility> lazyViewportVisibility;
         /// <summary>   The CSS class. </summary>
@@ -223,7 +223,7 @@ namespace Fomantic.Blazor.UI
         {
             if (firstRender)
             {
-                lazyAnimator = new Lazy<FomanticComponentAnimator<FomanticComponentBase>>(() => new FomanticComponentAnimator<FomanticComponentBase>(this));
+                lazyAnimator = new Lazy<FomanticComponentsAnimator<FomanticComponentBase>>(() => new FomanticComponentsAnimator<FomanticComponentBase>(this));
 
                 lazyViewportVisibility = new Lazy<ViewportVisibility>(() =>
                 {
