@@ -4,10 +4,10 @@ branches:
   - label: component-dev
     prefix: components/
   - label: component-feature-dev
-    prefix: component-feature/
+    prefix: component-features/
   - label: extension-dev
-    prefix: extension/
+    prefix: extensions/
   - label: bug
     prefix: bugfix/
   - label: '*'
-    prefix: feature/
+    prefix: features/
