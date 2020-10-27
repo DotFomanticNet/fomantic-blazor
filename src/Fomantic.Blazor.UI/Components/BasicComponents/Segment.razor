@@ -3,10 +3,6 @@
 @inherits SegmentBase
 @RenderBeforeRootElementFragments()
 <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
-    @RenderBeforeContentFragments()
-    <CascadingValue Name="Parent" Value="this">
-        @ChildContent
-    </CascadingValue>
-    @RenderAfterContentFragments()
+    @RenderContent()
 </div>
 @RenderAfterRootElementFragments()

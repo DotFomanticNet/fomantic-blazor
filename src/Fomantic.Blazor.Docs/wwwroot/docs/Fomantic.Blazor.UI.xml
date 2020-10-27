@@ -1431,13 +1431,6 @@
              <value> The child content. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentWithContentBase.Content">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Content of the component.   </summary>
-            
-             <value> The content. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="T:Fomantic.Blazor.UI.FomanticConfiguration">
             <summary>   A fomantic startup configuration. </summary>
         </member>
