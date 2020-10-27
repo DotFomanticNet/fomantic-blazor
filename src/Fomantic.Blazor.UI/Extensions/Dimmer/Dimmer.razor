@@ -22,11 +22,7 @@
         @RenderBeforeRootElementFragments()
         <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
             <div class="content">
-                @RenderBeforeContentFragments()
-                <CascadingValue Name="Parent" Value="this">
-                    @*@ChildContent*@
-                </CascadingValue>
-                @RenderAfterContentFragments()
+                @RenderContent()
             </div>
         </div>
         @RenderAfterRootElementFragments()

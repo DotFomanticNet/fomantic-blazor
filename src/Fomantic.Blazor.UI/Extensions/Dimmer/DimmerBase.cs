@@ -14,13 +14,13 @@ namespace Fomantic.Blazor.UI
     /// </summary>
     ///-------------------------------------------------------------------------------------------------
 
-    public abstract class DimmerBase : ExtensionBase, IFomanticComponentCanBeDisabled, IFomanticComponentWithContent
+    public abstract class DimmerBase : ExtensionWithContentBase,
+        IFomanticComponentCanBeDisabled
     {
         /// <inheritdoc/>       
         [Parameter]
         public bool IsDisabled { get; set; } = true;
-        /// <inheritdoc/>      
-        public RenderFragment ChildContent { get; set; }
+
 
         /// <inheritdoc/>  
         protected internal override void ConstractClasses()
