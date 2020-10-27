@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace Fomantic.Blazor.UI
 {
     /// <summary>   Base class for all Fomantic Component. </summary>
-    public abstract class FomanticComponentWithContentBase : FomanticComponentBase
+    public abstract class FomanticComponentWithContentBase : FomanticComponentBase, IFomanticComponentWithContent
 
     {
         ///-------------------------------------------------------------------------------------------------
@@ -24,16 +24,8 @@ namespace Fomantic.Blazor.UI
 
         [Parameter]
         public RenderFragment ChildContent { get; set; }
-        // just an alias for ChildContent
+       
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>   Content of the component.   </summary>
-        ///
-        /// <value> The content. </value>
-        ///-------------------------------------------------------------------------------------------------
-
-        [Parameter]
-        public RenderFragment Content { get { return ChildContent; } set { ChildContent = value; } }
 
     }
 }

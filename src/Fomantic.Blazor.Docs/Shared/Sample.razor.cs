@@ -50,7 +50,7 @@ namespace Fomantic.Blazor.Docs.Shared
             if (Component != null)
             {
                 OnComponentCreate?.Invoke(Component);
-                // Component.GetType().GetMethod("StateHasChanged").Invoke(Component,null);
+                
             }
 
         }
@@ -266,6 +266,14 @@ namespace Fomantic.Blazor.Docs.Shared
         public override List<string> GetNamespaces()
         {
             return new List<string>() { "Fomantic", "Fomantic.Blazor.UI" };
+        }
+        public override void InitComponent()
+        {
+            base.InitComponent();
+            foreach (var item in InternalComponents)
+            {
+                item?.InitComponent();
+            }
         }
     }
     public class SampleComponentAction<T>
