@@ -796,6 +796,26 @@
             After Content AreaName
             </summary>
         </member>
+        <member name="T:Fomantic.Blazor.UI.DimmerBase">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             A dimmer hides distractions to focus attention on particular content
+             <para><see href="https://fomantic-ui.com/modules/dimmer.html"></see></para>
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.IsDisabled">
+            <inheritdoc/>       
+        </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.ChildContent">
+            <inheritdoc/>      
+        </member>
+        <member name="M:Fomantic.Blazor.UI.DimmerBase.ConstractClasses">
+            <inheritdoc/>  
+        </member>
+        <member name="M:Fomantic.Blazor.UI.DimmerBase.ProvideComponentCssClass">
+            <inheritdoc/>  
+        </member>
         <member name="T:Fomantic.Blazor.UI.ViewportVisibility">
             <summary>   Implementation Responsible for Viewport Visibility tracking. </summary>
         </member>
@@ -1429,13 +1449,6 @@
              <summary>   Content of the component.   </summary>
             
              <value> The child content. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentWithContentBase.Content">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Content of the component.   </summary>
-            
-             <value> The content. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.FomanticConfiguration">
