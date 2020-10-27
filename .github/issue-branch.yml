@@ -1,9 +1,13 @@
 gitSafeReplacementChar: '-'
 branchName: '${issue.number}-${issue.title,}'
 branches:
-  - label: component-development
+  - label: component-dev
     prefix: components/
+  - label: component-feature-dev
+    prefix: component-features/
+  - label: extension-dev
+    prefix: extensions/
   - label: bug
     prefix: bugfix/
   - label: '*'
-    prefix: feature/
+    prefix: features/
