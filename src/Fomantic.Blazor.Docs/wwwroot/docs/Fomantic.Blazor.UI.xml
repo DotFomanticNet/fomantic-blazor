@@ -1716,6 +1716,22 @@
         <member name="P:Fomantic.ExtensionBase.IsUnique">
             <inheritdoc/>
         </member>
+        <member name="T:Fomantic.ExtensionWithContentBase">
+            -------------------------------------------------------------------------------------------------
+             <summary>   An extention with contentbase . </summary>
+            
+             <seealso cref="T:Microsoft.AspNetCore.Components.ComponentBase"/>
+             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
+             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.ExtensionWithContentBase.ChildContent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Content of the extension.   </summary>
+            
+             <value> The child content. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="T:Fomantic.ISegmentStyledFomanticComponent">
             -------------------------------------------------------------------------------------------------
              <summary>

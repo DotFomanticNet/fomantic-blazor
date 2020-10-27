@@ -1,0 +1,17 @@
+﻿@namespace Fomantic.Blazor.UI
+@inherits ExtensionBase
+
+@code {
+
+    protected RenderFragment RenderContent()
+    {
+        return __builder =>
+        {
+        @RenderBeforeContentFragments()
+        <CascadingValue Name="Parent" Value="this">
+            @ChildContent
+        </CascadingValue>
+        @RenderAfterContentFragments()
+        };
+    }
+}
