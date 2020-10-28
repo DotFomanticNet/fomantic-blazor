@@ -193,6 +193,16 @@
              <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="T:Fomantic.Segment">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A segment. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Segment.#ctor">
+            <summary>   Create new Segment. </summary>
+        </member>
         <member name="T:Fomantic.SegmentBase">
             -------------------------------------------------------------------------------------------------
              <summary>
@@ -322,76 +332,6 @@
              <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="T:Fomantic.TextBase">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A text is used to style some inline text with a simple color. </summary>
-            
-             <remarks>
-              <para>Reference : </para>
-             <para><see href="https://fomantic-ui.com/elements/text.html">https://fomantic-ui.com/elements/text.html</see></para>
-             </remarks>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.TextBase.OnInitialized">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.TextBase.OnAfterRender(System.Boolean)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.TextBase.ConstractClasses">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.Size">
-            -------------------------------------------------------------------------------------------------
-             <remarks>
-             <para>References : </para>
-             <para><see href="https://fomantic-ui.com/elements/text.html#size"></see></para>
-             </remarks>
-            
-             <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.TextBase.Color">
-            -------------------------------------------------------------------------------------------------
-             <remarks>
-             <para>References : </para>
-             <para><see href="https://fomantic-ui.com/elements/text.html#text"></see></para>
-             </remarks>
-            
-             <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.TextBase.IsInverted">
-            -------------------------------------------------------------------------------------------------
-             <remarks>
-             <para>References : </para>
-             <para><see href="https://fomantic-ui.com/elements/text.html#text"></see></para>
-             </remarks>
-            
-             <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.TextBase.IsUnselectable">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.IsTooltipHidden">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.IsTooltipBasicFormat">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.IsTooltipInverted">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.TooltipText">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.TooltipPosition">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.TooltipSize">
-            <inheritdoc/>
-        </member>
         <member name="T:Fomantic.SegmentDefaults">
             <summary>   Contains default values for the segmant creation. </summary>
         </member>
@@ -481,15 +421,75 @@
              <value> True if this  is placeholder default, false if not. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="T:Fomantic.Segment">
+        <member name="T:Fomantic.TextBase">
             -------------------------------------------------------------------------------------------------
-             <summary>   A segment. </summary>
+             <summary>   A text is used to style some inline text with a simple color. </summary>
             
-             ### <inheritdoc/>
+             <remarks>
+              <para>Reference : </para>
+             <para><see href="https://fomantic-ui.com/elements/text.html">https://fomantic-ui.com/elements/text.html</see></para>
+             </remarks>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Fomantic.Segment.#ctor">
-            <summary>   Create new Segment. </summary>
+        <member name="M:Fomantic.TextBase.OnInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.TextBase.OnAfterRender(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.TextBase.ConstractClasses">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.Size">
+            -------------------------------------------------------------------------------------------------
+             <remarks>
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/text.html#size"></see></para>
+             </remarks>
+            
+             <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.TextBase.Color">
+            -------------------------------------------------------------------------------------------------
+             <remarks>
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/text.html#text"></see></para>
+             </remarks>
+            
+             <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.TextBase.IsInverted">
+            -------------------------------------------------------------------------------------------------
+             <remarks>
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/text.html#text"></see></para>
+             </remarks>
+            
+             <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.TextBase.IsUnselectable">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.IsTooltipHidden">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.IsTooltipBasicFormat">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.IsTooltipInverted">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.TooltipText">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.TooltipPosition">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.TooltipSize">
+            <inheritdoc/>
         </member>
         <member name="T:Fomantic.SegmentGroupBase">
             -------------------------------------------------------------------------------------------------
@@ -795,6 +795,22 @@
             <summary>
             After Content AreaName
             </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ExtensionWithContentBase">
+            -------------------------------------------------------------------------------------------------
+             <summary>   An extention with contentbase . </summary>
+            
+             <seealso cref="T:Microsoft.AspNetCore.Components.ComponentBase"/>
+             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
+             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ExtensionWithContentBase.ChildContent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Content of the extension.   </summary>
+            
+             <value> The child content. </value>
+            -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.ViewportVisibility">
             <summary>   Implementation Responsible for Viewport Visibility tracking. </summary>
@@ -1715,22 +1731,6 @@
         </member>
         <member name="P:Fomantic.ExtensionBase.IsUnique">
             <inheritdoc/>
-        </member>
-        <member name="T:Fomantic.ExtensionWithContentBase">
-            -------------------------------------------------------------------------------------------------
-             <summary>   An extention with contentbase . </summary>
-            
-             <seealso cref="T:Microsoft.AspNetCore.Components.ComponentBase"/>
-             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
-             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.ExtensionWithContentBase.ChildContent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Content of the extension.   </summary>
-            
-             <value> The child content. </value>
-            -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.ISegmentStyledFomanticComponent">
             -------------------------------------------------------------------------------------------------
