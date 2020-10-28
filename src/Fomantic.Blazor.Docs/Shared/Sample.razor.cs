@@ -49,8 +49,7 @@ namespace Fomantic.Blazor.Docs.Shared
         {
             if (Component != null)
             {
-                OnComponentCreate?.Invoke(Component);
-                
+                OnComponentCreate?.Invoke(Component);            
             }
 
         }
@@ -270,10 +269,15 @@ namespace Fomantic.Blazor.Docs.Shared
         public override void InitComponent()
         {
             base.InitComponent();
-            foreach (var item in InternalComponents)
+            if (InternalComponents!=null&& InternalComponents.Any())
             {
-                item?.InitComponent();
+                foreach (var item in InternalComponents)
+                {
+                    item?.InitComponent();
+                }
+
             }
+          
         }
     }
     public class SampleComponentAction<T>

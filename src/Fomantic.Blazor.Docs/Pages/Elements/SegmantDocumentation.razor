@@ -418,6 +418,7 @@
             </ApiDocumentation>
         </Sample>
     </DocumentationArticleGroup>
+
     <DocumentationArticleGroup Title="Events">
 
 
@@ -458,6 +459,7 @@
 
         </Sample>
     </DocumentationArticleGroup>
+
     <DocumentationArticleGroup Title="Miscellaneous">
         <Sample PageUri="@PageUri" Id="JumpToSegment" ComponentsTypes="JumpToSegmentSampleData">
             <Title>
@@ -1085,7 +1087,7 @@
         ClipboardEventsSegmentSampleData.Add(clipboardSegmant);
 
         //ViewPortEventsSegmentSampleData
-        var ohterEventSegmant = new SampleComponentEventWithChildren<Segment>("Segmant1", null,d=> { var t = d.ViewportVisibility.Calculation; });
+        var ohterEventSegmant = new SampleComponentEventWithChildren<Segment>("Segmant1", null);
 
         ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnTopVisible" });
         ohterEventSegmant.Events.Add(new SampleComponentEvent<ViewPortEventArgs>() { Name = "OnTopPassed" });
