@@ -193,6 +193,86 @@
              <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="T:Fomantic.SegmentGroupBase">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             A Container group of segments can be formatted to appear together and could be nested.
+             </summary>
+            
+             <remarks>
+              <para>Reference : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#segments">https://fomantic-ui.com/elements/segment.html#segments</see></para>
+             </remarks>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.SegmentGroupBase.OnInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.SegmentGroupBase.OnAfterRender(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.SegmentGroupBase.ConstractClasses">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.ParentGroup">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.SegmentStyle">
+            -------------------------------------------------------------------------------------------------
+             <remarks>
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#raised-segments">https://fomantic-ui.com/elements/segment.html#raised-segments"&gt;</see></para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#stacked-segments">https://fomantic-ui.com/elements/segment.html#stacked-segments"&gt;</see></para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#piled-segments">https://fomantic-ui.com/elements/segment.html#piled-segments"&gt;</see></para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#segments">https://fomantic-ui.com/elements/segment.html#segments"&gt;</see></para>
+             </remarks>
+            
+             <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.StackDirection">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Determine if the segment group should appear horizontally or Verticaly. </summary>
+            
+             <remarks>
+             <para>A horizontal segment group can automatically stack on smaller screens</para>
+             <para>Reference : </para>
+             <para><see href="https://fomantic-ui.com/elements/segment.html#horizontal-segments"></see></para>
+             </remarks>
+            
+             <value> The stack direction. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.Children">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.ChildrenAnimator">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentGroupBase.SegmantGroupChildren">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets or sets the segmant group children. </summary>
+            
+             <value> The segmant group children. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Segments">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A segments. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Segment">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A segment. </summary>
+            
+             ### <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Segment.#ctor">
+            <summary>   Create new Segment. </summary>
+        </member>
         <member name="T:Fomantic.SegmentBase">
             -------------------------------------------------------------------------------------------------
              <summary>
@@ -322,76 +402,6 @@
              <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="T:Fomantic.TextBase">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A text is used to style some inline text with a simple color. </summary>
-            
-             <remarks>
-              <para>Reference : </para>
-             <para><see href="https://fomantic-ui.com/elements/text.html">https://fomantic-ui.com/elements/text.html</see></para>
-             </remarks>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.TextBase.OnInitialized">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.TextBase.OnAfterRender(System.Boolean)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.TextBase.ConstractClasses">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.Size">
-            -------------------------------------------------------------------------------------------------
-             <remarks>
-             <para>References : </para>
-             <para><see href="https://fomantic-ui.com/elements/text.html#size"></see></para>
-             </remarks>
-            
-             <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.TextBase.Color">
-            -------------------------------------------------------------------------------------------------
-             <remarks>
-             <para>References : </para>
-             <para><see href="https://fomantic-ui.com/elements/text.html#text"></see></para>
-             </remarks>
-            
-             <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.TextBase.IsInverted">
-            -------------------------------------------------------------------------------------------------
-             <remarks>
-             <para>References : </para>
-             <para><see href="https://fomantic-ui.com/elements/text.html#text"></see></para>
-             </remarks>
-            
-             <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.TextBase.IsUnselectable">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.IsTooltipHidden">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.IsTooltipBasicFormat">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.IsTooltipInverted">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.TooltipText">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.TooltipPosition">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.TextBase.TooltipSize">
-            <inheritdoc/>
-        </member>
         <member name="T:Fomantic.SegmentDefaults">
             <summary>   Contains default values for the segmant creation. </summary>
         </member>
@@ -481,85 +491,75 @@
              <value> True if this  is placeholder default, false if not. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="T:Fomantic.Segment">
+        <member name="T:Fomantic.TextBase">
             -------------------------------------------------------------------------------------------------
-             <summary>   A segment. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Segment.#ctor">
-            <summary>   Create new Segment. </summary>
-        </member>
-        <member name="T:Fomantic.SegmentGroupBase">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             A Container group of segments can be formatted to appear together and could be nested.
-             </summary>
+             <summary>   A text is used to style some inline text with a simple color. </summary>
             
              <remarks>
               <para>Reference : </para>
-             <para><see href="https://fomantic-ui.com/elements/segment.html#segments">https://fomantic-ui.com/elements/segment.html#segments</see></para>
+             <para><see href="https://fomantic-ui.com/elements/text.html">https://fomantic-ui.com/elements/text.html</see></para>
              </remarks>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="M:Fomantic.SegmentGroupBase.OnInitialized">
+        <member name="M:Fomantic.TextBase.OnInitialized">
             <inheritdoc/>
         </member>
-        <member name="M:Fomantic.SegmentGroupBase.OnAfterRender(System.Boolean)">
+        <member name="M:Fomantic.TextBase.OnAfterRender(System.Boolean)">
             <inheritdoc/>
         </member>
-        <member name="M:Fomantic.SegmentGroupBase.ConstractClasses">
+        <member name="M:Fomantic.TextBase.ConstractClasses">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.SegmentGroupBase.ParentGroup">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.SegmentGroupBase.SegmentStyle">
+        <member name="P:Fomantic.TextBase.Size">
             -------------------------------------------------------------------------------------------------
              <remarks>
              <para>References : </para>
-             <para><see href="https://fomantic-ui.com/elements/segment.html#raised-segments">https://fomantic-ui.com/elements/segment.html#raised-segments"&gt;</see></para>
-             <para><see href="https://fomantic-ui.com/elements/segment.html#stacked-segments">https://fomantic-ui.com/elements/segment.html#stacked-segments"&gt;</see></para>
-             <para><see href="https://fomantic-ui.com/elements/segment.html#piled-segments">https://fomantic-ui.com/elements/segment.html#piled-segments"&gt;</see></para>
-             <para><see href="https://fomantic-ui.com/elements/segment.html#segments">https://fomantic-ui.com/elements/segment.html#segments"&gt;</see></para>
+             <para><see href="https://fomantic-ui.com/elements/text.html#size"></see></para>
              </remarks>
             
              <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.SegmentGroupBase.StackDirection">
+        <member name="P:Fomantic.TextBase.Color">
             -------------------------------------------------------------------------------------------------
-             <summary>   Determine if the segment group should appear horizontally or Verticaly. </summary>
-            
              <remarks>
-             <para>A horizontal segment group can automatically stack on smaller screens</para>
-             <para>Reference : </para>
-             <para><see href="https://fomantic-ui.com/elements/segment.html#horizontal-segments"></see></para>
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/text.html#text"></see></para>
              </remarks>
             
-             <value> The stack direction. </value>
+             <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.SegmentGroupBase.Children">
+        <member name="P:Fomantic.TextBase.IsInverted">
+            -------------------------------------------------------------------------------------------------
+             <remarks>
+             <para>References : </para>
+             <para><see href="https://fomantic-ui.com/elements/text.html#text"></see></para>
+             </remarks>
+            
+             <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.TextBase.IsUnselectable">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.SegmentGroupBase.ChildrenAnimator">
+        <member name="P:Fomantic.TextBase.IsTooltipHidden">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.SegmentGroupBase.SegmantGroupChildren">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Gets or sets the segmant group children. </summary>
-            
-             <value> The segmant group children. </value>
-            -------------------------------------------------------------------------------------------------
+        <member name="P:Fomantic.TextBase.IsTooltipBasicFormat">
+            <inheritdoc/>
         </member>
-        <member name="T:Fomantic.Segments">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A segments. </summary>
-            
-             ### <inheritdoc/>
-            -------------------------------------------------------------------------------------------------
+        <member name="P:Fomantic.TextBase.IsTooltipInverted">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.TooltipText">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.TooltipPosition">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.TextBase.TooltipSize">
+            <inheritdoc/>
         </member>
         <member name="T:Fomantic.Blazor.UI.HeaderType">
             -------------------------------------------------------------------------------------------------
@@ -807,14 +807,27 @@
         <member name="P:Fomantic.Blazor.UI.DimmerBase.IsDisabled">
             <inheritdoc/>       
         </member>
-        <member name="P:Fomantic.Blazor.UI.DimmerBase.ChildContent">
-            <inheritdoc/>      
-        </member>
         <member name="M:Fomantic.Blazor.UI.DimmerBase.ConstractClasses">
             <inheritdoc/>  
         </member>
         <member name="M:Fomantic.Blazor.UI.DimmerBase.ProvideComponentCssClass">
             <inheritdoc/>  
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ExtensionWithContentBase">
+            -------------------------------------------------------------------------------------------------
+             <summary>   An extention with contentbase . </summary>
+            
+             <seealso cref="T:Microsoft.AspNetCore.Components.ComponentBase"/>
+             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
+             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.ExtensionWithContentBase.ChildContent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Content of the extension.   </summary>
+            
+             <value> The child content. </value>
+            -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.ViewportVisibility">
             <summary>   Implementation Responsible for Viewport Visibility tracking. </summary>
@@ -1735,22 +1748,6 @@
         </member>
         <member name="P:Fomantic.ExtensionBase.IsUnique">
             <inheritdoc/>
-        </member>
-        <member name="T:Fomantic.ExtensionWithContentBase">
-            -------------------------------------------------------------------------------------------------
-             <summary>   An extention with contentbase . </summary>
-            
-             <seealso cref="T:Microsoft.AspNetCore.Components.ComponentBase"/>
-             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
-             <seealso cref="T:Fomantic.Blazor.UI.IFomanticComponentExtension"/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.ExtensionWithContentBase.ChildContent">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Content of the extension.   </summary>
-            
-             <value> The child content. </value>
-            -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.ISegmentStyledFomanticComponent">
             -------------------------------------------------------------------------------------------------

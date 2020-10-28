@@ -20,12 +20,30 @@ namespace Fomantic.Blazor.Docs.Pages.Extensions
         void CreateDimmerSampleData()
         {
             var dimmerSampleDataContainerSegman = new SampleComponentWithChildren<Segment>(null);
-            var dimmerSampleDataText = new SampleComponentWithHtmlContent<Text>(dimmerSampleDataContainerSegman) { Content = "This content will be dimmed<br>This content will be dimmed<br>This content will be dimmed<br>This content will be dimmed <br>This content will be dimmed  " };
+            var dimmerSampleDataText = new SampleComponentWithHtmlContent<Text>(dimmerSampleDataContainerSegman) { Content = "<img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\"><img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\"><img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\">" };
             var dimmerSampleDataDimmer = new SampleComponentWithHtmlContent<Dimmer>(dimmerSampleDataContainerSegman, d => d.IsDisabled = false);
 
             dimmerSampleDataContainerSegman.InternalComponents.Add(dimmerSampleDataText);
             dimmerSampleDataContainerSegman.InternalComponents.Add(dimmerSampleDataDimmer);
             DimmerSampleData.Add(dimmerSampleDataContainerSegman);
+        }
+        #endregion DimmerSampleData
+
+        #region DimmerWithContentSampleData
+        public List<SampleComponent> DimmerWithContentSampleData { get; set; } = new List<SampleComponent>();
+
+
+
+        void CreateDimmerWithContentSampleData()
+        {
+            var dimmerSampleDataContainerSegman = new SampleComponentWithChildren<Segment>(null);
+            var dimmerSampleDataText = new SampleComponentWithHtmlContent<Text>(dimmerSampleDataContainerSegman) { Content = "<img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\"><img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\"><img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\">" };
+            var dimmerSampleDataDimmer = new SampleComponentWithHtmlContent<Dimmer>(dimmerSampleDataContainerSegman, d => d.IsDisabled = false)
+            { Content = " <h2 class=\"ui inverted icon header\"><i class=\"heart icon\"></i>Dimmed Message!</h2>" };
+
+            dimmerSampleDataContainerSegman.InternalComponents.Add(dimmerSampleDataText);
+            dimmerSampleDataContainerSegman.InternalComponents.Add(dimmerSampleDataDimmer);
+            DimmerWithContentSampleData.Add(dimmerSampleDataContainerSegman);
         }
         #endregion DimmerSampleData
 
@@ -37,6 +55,7 @@ namespace Fomantic.Blazor.Docs.Pages.Extensions
             base.OnInitialized();
 
             CreateDimmerSampleData();
+            CreateDimmerWithContentSampleData();
         }
 
 
