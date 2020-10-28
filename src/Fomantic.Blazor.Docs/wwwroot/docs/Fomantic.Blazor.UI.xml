@@ -828,8 +828,10 @@
              </summary>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.Blazor.UI.DimmerBase.IsDisabled">
-            <inheritdoc/>       
+        <member name="M:Fomantic.Blazor.UI.DimmerBase.#ctor">
+            <summary>
+            Create new instant of DimmerBase
+            </summary>
         </member>
         <member name="M:Fomantic.Blazor.UI.DimmerBase.ConstractClasses">
             <inheritdoc/>  

@@ -14,12 +14,15 @@ namespace Fomantic.Blazor.UI
     /// </summary>
     ///-------------------------------------------------------------------------------------------------
 
-    public abstract class DimmerBase : ExtensionWithContentBase,
-        IFomanticComponentCanBeDisabled
+    public abstract class DimmerBase : ExtensionWithContentBase
     {
-        /// <inheritdoc/>       
-        [Parameter]
-        public bool IsDisabled { get; set; } = true;
+        /// <summary>
+        /// Create new instant of DimmerBase
+        /// </summary>
+        public DimmerBase()
+        {
+            IsHidden = true;
+        }
 
 
         /// <inheritdoc/>  
@@ -34,7 +37,7 @@ namespace Fomantic.Blazor.UI
         /// <inheritdoc/>  
         public override string ProvideComponentCssClass()
         {
-            if (IsDisabled)
+            if (IsHidden)
             {
                 return string.Empty;
             }

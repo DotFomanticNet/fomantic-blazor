@@ -21,7 +21,7 @@ namespace Fomantic.Blazor.Docs.Pages.Extensions
         {
             var dimmerSampleDataContainerSegman = new SampleComponentWithChildren<Segment>(null);
             var dimmerSampleDataText = new SampleComponentWithHtmlContent<Text>(dimmerSampleDataContainerSegman) { Content = "<img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\"><img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\"><img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\">" };
-            var dimmerSampleDataDimmer = new SampleComponentWithHtmlContent<Dimmer>(dimmerSampleDataContainerSegman, d => d.IsDisabled = false);
+            var dimmerSampleDataDimmer = new SampleComponentWithHtmlContent<Dimmer>(dimmerSampleDataContainerSegman, d => d.IsHidden = false);
 
             dimmerSampleDataContainerSegman.InternalComponents.Add(dimmerSampleDataText);
             dimmerSampleDataContainerSegman.InternalComponents.Add(dimmerSampleDataDimmer);
@@ -38,7 +38,7 @@ namespace Fomantic.Blazor.Docs.Pages.Extensions
         {
             var dimmerSampleDataContainerSegman = new SampleComponentWithChildren<Segment>(null);
             var dimmerSampleDataText = new SampleComponentWithHtmlContent<Text>(dimmerSampleDataContainerSegman) { Content = "<img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\"><img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\"><img class=\"ui wireframe image\" src=\"/images/short-paragraph.png\">" };
-            var dimmerSampleDataDimmer = new SampleComponentWithHtmlContent<Dimmer>(dimmerSampleDataContainerSegman, d => d.IsDisabled = false)
+            var dimmerSampleDataDimmer = new SampleComponentWithHtmlContent<Dimmer>(dimmerSampleDataContainerSegman, d => d.IsHidden = false)
             { Content = " <h2 class=\"ui inverted icon header\"><i class=\"heart icon\"></i>Dimmed Message!</h2>" };
 
             dimmerSampleDataContainerSegman.InternalComponents.Add(dimmerSampleDataText);
