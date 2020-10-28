@@ -15,7 +15,6 @@ namespace Fomantic.Blazor.UI
         IFomanticComponentWithJQuery,
         IFomanticComponentWithExtensions,
         IVisibleFomanticComponent,
-        IFomanticComponentWithEnterTransition,
         IFomanticComponentWithClass
     {
         [Inject]
@@ -75,18 +74,10 @@ namespace Fomantic.Blazor.UI
         /// <inheritdoc/>
         public List<IFomanticExtension> Extensions { get; private set; } = new List<IFomanticExtension>();
 
-        /// <inheritdoc/>
-        [NestedParamter]
-        public IFomanticAnimator Animator => (IFomanticAnimator)Extensions.FirstOrDefault(d => d is FomanticComponentAnimator<IAnimateableFomanticComponent>);
+      
+       
 
-        ///-------------------------------------------------------------------------------------------------
-        /// <summary>   Object responsible for Viewport Visibility tracking. </summary>
-        ///
-        /// <value> The viewport visibility. </value>
-        ///-------------------------------------------------------------------------------------------------
-
-        [NestedParamter]
-        public IViewportVisibility ViewportVisibility => (IViewportVisibility)Extensions.FirstOrDefault(d => d is IViewportVisibility);
+       
         /// <inheritdoc/>
         public string CssClass
         {
@@ -201,16 +192,12 @@ namespace Fomantic.Blazor.UI
         /// <inheritdoc/>
         [Parameter]
         public EventCallback<ParamterChangedArgs<string>> OnClassChanged { get; set; }
-        /// <inheritdoc/>
-        [Parameter]
-        public TransitionAnimation? EnterTransition { get; set; }
+      
 
         /// <inheritdoc/>
         [Parameter]
         public bool IsHidden { get; set; }
-        /// <inheritdoc/>
-        [Parameter]
-        public int EnterTransitionDuration { get; set; }
+     
 
 
 
@@ -225,7 +212,8 @@ namespace Fomantic.Blazor.UI
 
         List<string> IFomanticComponentWithClass.CssClasses { get => CssClasses; }
         /// <summary>   True if is enter animation played, false if not. </summary>
-        bool IFomanticComponentWithEnterTransition.IsEnterAnimationDone { get; set; }
+      
+      
         /// <inheritdoc/>
         public List<ComponentFragment> AdditionalFragments { get; set; } = new List<ComponentFragment>();
 
@@ -265,22 +253,23 @@ namespace Fomantic.Blazor.UI
         [ComponentAction]
         public void Show()
         {
-            // await JsRuntime.InvokeVoidAsync("window.element.show", RootElement);
             IsHidden = false;
+            StateHasChanged();
         }
         /// <inheritdoc/>
         [ComponentAction]
         public void Hide()
-        {
-            //   await JsRuntime.InvokeVoidAsync("window.element.hide", RootElement);
+        {       
             IsHidden = true;
+            StateHasChanged();
         }
         /// <inheritdoc/>
         [ComponentAction]
         public void ToggleVisibility()
         {
-            //  await JsRuntime.InvokeVoidAsync("window.element.toggleVisibility", RootElement);
-            IsHidden = !IsHidden;
+        
+            IsHidden = !IsHidden; 
+            StateHasChanged();
         }
         /// <inheritdoc/>
         public async ValueTask DisposeAsync()

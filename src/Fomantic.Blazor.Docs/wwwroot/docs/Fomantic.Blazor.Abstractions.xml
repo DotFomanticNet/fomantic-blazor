@@ -6625,6 +6625,23 @@
              <value> The color. </value>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithContent">
+            <summary>   Base interface for all Fomantic Blazor Components that may have content inside it. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithContent.ChildContent">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Content of the component.   </summary>
+            
+             <value> The child content. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithContent.Content">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Content of the component.   </summary>
+            
+             <value> The content. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment">
             <summary>   Base interface for all fomantic component  align thier content. </summary>
         </member>
@@ -7001,9 +7018,9 @@
         </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.ViewportVisibility">
             -------------------------------------------------------------------------------------------------
-             <summary>
-             Object Responsible for Viewport Visibility tracking. 
-             </summary>
+             <summary>   Object responsible for Viewport Visibility tracking. </summary>
+            
+             <value> The viewport visibility. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFeatureDefinition">

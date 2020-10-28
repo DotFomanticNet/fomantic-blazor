@@ -26,6 +26,8 @@ namespace Fomantic
     ///-------------------------------------------------------------------------------------------------
 
     public abstract class HeaderBase : FomanticComponentWithContentBase,
+        IAnimateableFomanticComponent,
+        IFomanticComponentWithEnterTransition,
         IFomanticComponentWithColor,
         IFomanticComponentCanBeDisabled,
         IAttachableFomanticComponent,
@@ -39,8 +41,8 @@ namespace Fomantic
 
         /// <inheritdoc/>
         protected internal override void ConstractClasses()
-        {           
-           
+        {
+
             base.ConstractClasses();
             CssClasses.Insert(0, "ui");
             CssClasses.Add("header");
@@ -150,5 +152,19 @@ namespace Fomantic
 
         [Parameter]
         public AttachingDirection? Attaching { get; set; }
+
+        /// <inheritdoc/>
+        public TransitionAnimation? EnterTransition { get; set; }
+        /// <inheritdoc/>
+        public int EnterTransitionDuration { get; set; }
+        bool IFomanticComponentWithEnterTransition.IsEnterAnimationDone { get; set; }
+
+        /// <inheritdoc/>
+        [NestedParamter]
+        public IFomanticAnimator Animator => ((IAnimateableFomanticComponent)this).Animator;
+
+        /// <inheritdoc/>
+        [NestedParamter]
+        public IViewportVisibility ViewportVisibility => ((IVisibleFomanticComponent)this).ViewportVisibility;
     }
 }
