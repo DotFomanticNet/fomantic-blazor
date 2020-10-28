@@ -269,6 +269,7 @@ namespace Fomantic.Blazor.Docs.Shared
         public override void InitComponent()
         {
             base.InitComponent();
+
             if (InternalComponents!=null&& InternalComponents.Any())
             {
                 foreach (var item in InternalComponents)
@@ -277,7 +278,6 @@ namespace Fomantic.Blazor.Docs.Shared
                 }
 
             }
-          
         }
     }
     public class SampleComponentAction<T>

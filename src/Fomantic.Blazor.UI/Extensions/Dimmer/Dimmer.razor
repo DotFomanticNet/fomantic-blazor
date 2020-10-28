@@ -1,0 +1,30 @@
+﻿@inherits Fomantic.Blazor.UI.DimmerBase
+@namespace Fomantic
+@code {
+    public Dimmer()
+    {
+        this.ComponentAdditionalFragments.Add(new Blazor.UI.ComponentFragment
+        {
+            Fragment = d => GetHTML(),
+            Location = Fomantic.Blazor.UI.ComponentFragmentLocations.BeforeContentAreaName
+
+        });
+    }
+    RenderFragment GetHTML()
+    {
+        return __builder =>
+        {
+        @RenderBeforeRootElementFragments()
+        <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass" @onclick="d=>HideDimmer()">
+            <div class="content">
+                @RenderContent()
+            </div>
+        </div>
+        @RenderAfterRootElementFragments()
+        };
+    }
+}
+@if (Parent==null)
+{
+    @GetHTML()
+} 

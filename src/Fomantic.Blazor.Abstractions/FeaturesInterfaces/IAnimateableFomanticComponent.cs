@@ -23,12 +23,10 @@ namespace Fomantic.Blazor.UI
         ///
         /// <returns> The animator. </returns>
         ///-------------------------------------------------------------------------------------------------
-
         public IFomanticAnimator GetAnimator()
         {
           return  (IFomanticAnimator)Extensions.FirstOrDefault(d => d is IFomanticAnimator);
         }
-            
             
     }
 

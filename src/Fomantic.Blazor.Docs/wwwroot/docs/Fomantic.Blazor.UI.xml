@@ -820,6 +820,358 @@
             After Content AreaName
             </summary>
         </member>
+        <member name="T:Fomantic.Blazor.UI.DimmerBase">
+            -------------------------------------------------------------------------------------------------
+             <summary>
+             A dimmer hides distractions to focus attention on particular content
+             <para><see href="https://fomantic-ui.com/modules/dimmer.html"></see></para>
+             </summary>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.IsParentOptional">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.ContentVerticalAlignment">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.IsBlurring">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.IsInverted">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.Shade">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.HideOnClick">
+            <summary>
+            Enable hide dimmer on click
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.DimmerBase.#ctor">
+            <summary>
+            Create new instant of DimmerBase
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.DimmerBase.ConstractClasses">
+            <inheritdoc/>  
+        </member>
+        <member name="M:Fomantic.Blazor.UI.DimmerBase.HideDimmer">
+            <summary>
+            Hide dimmer if <see cref="P:Fomantic.Blazor.UI.DimmerBase.HideOnClick"/> enabled 
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.DimmerBase.ProvideComponentCssClass">
+            <inheritdoc/>  
+        </member>
+        <member name="T:Fomantic.Blazor.UI.DimmerShade">
+            <summary>
+            Dimmer formatted to have a different depth of background shading
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.DimmerShade.Dark">
+            <summary>
+            Dark Shade
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.DimmerShade.Medium">
+            <summary>
+            Medium Shade
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.DimmerShade.Light">
+            <summary>
+            Light Shade
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.DimmerShade.VeryLight">
+            <summary>
+            Very light Shade
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticDimmerWithShadeDegreeFeature.DarkShadeClass">
+            <summary>   class given to make dimmer dark shaded. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticDimmerWithShadeDegreeFeature.MediumShadeClass">
+            <summary>   class given to make dimmer medium shaded. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticDimmerWithShadeDegreeFeature.LightShadeClass">
+            <summary>   class given to make dimmer light shaded. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticDimmerWithShadeDegreeFeature.VeryLightShadeClass">
+            <summary>   class given to make dimmer very light shaded. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticDimmerWithShadeDegreeFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.DimmerShade})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.DimmerShade"/> to given class. </summary>
+            
+             <param name="shade"> Dimmer shade value. </param>
+            
+             <returns>   Given class from <paramref name="shade"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.AttachedClass">
+            <summary>   class given to attached. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.TopAttachedClass">
+            <summary>   class given to attached. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.BottomAttachedClass">
+            <summary>   class given to attached. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.AttachingDirection})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.AttachingDirection"/> to given class. </summary>
+            
+             <param name="attachingDirection">   attaching direction Value. </param>
+            
+             <returns>   given class from <paramref name="attachingDirection"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1">
+            -------------------------------------------------------------------------------------------------
+             <summary>   A feature definition. </summary>
+            
+             <typeparam name="TFeatureInterface">    Type of the feature interface. </typeparam>
+            
+             <seealso cref="T:Fomantic.Blazor.UI.IFeatureDefinition`1"/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.AdditionalFragments">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Type">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.DisposeAsync(`0)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Dispose asynchronous. </summary>
+            
+             <param name="component">    The component. </param>
+            
+             <returns>   A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnAfterEachRender(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnAfterFirstRender(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.ProvideCssClasses(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.ProvideCssClass(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnInitialized(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#OnAfterEachRender(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#OnAfterFirstRender(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#ProvideCssClasses(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#ProvideCssClass(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#OnInitialized(Fomantic.Blazor.UI.IFomanticComponent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#DisposeAsync(Fomantic.Blazor.UI.IFomanticComponent)">
+            -------------------------------------------------------------------------------------------------
+             <summary>  Dispose asynchronous. </summary>
+            
+             <param name="component">   The component. </param>
+            
+             <returns>  A ValueTask. </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentCanBeDisabledFeature.DisabledClass">
+            <summary>   class given to disable component. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.LeftFloatedClass">
+            <summary>   class given to Left Float. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.RightFloatedClass">
+            <summary>   class given to Right Float. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.FloatAlignment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.FloatAlignment"/> to given class. </summary>
+            
+             <param name="alignment">    Alignment Value. </param>
+            
+             <returns>   given class from <paramref name="alignment"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithBlurEffectFeature.BlurringClass">
+            <summary>   class given to make component appear as loading. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.RaisedClass">
+            <summary>   class given to make segment styled raised. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.StackedClass">
+            <summary>   class given to make segment styled stacked. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.TallStackedClass">
+            <summary>   class given to make segment styled tall stacked. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.PiledClass">
+            <summary>   class given to make segment styled piled. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.BasicClass">
+            <summary>   class given to make segment styled basic. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.ToClass(Fomantic.Blazor.UI.SegmentStyle)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.SegmentStyle"/> to given class. </summary>
+            
+             <param name="style">    ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="style"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCircularStyleFeature.CircularClass">
+            <summary>   class given to make component circular. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithColorFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.Color})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Color"/> to given class. </summary>
+            
+             <param name="color">    Color Value. </param>
+            
+             <returns>   Given class from <paramref name="color"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCompactStyleFeature.CompactClass">
+            <summary>   class given to make component compact. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.PaddedClass">
+            <summary>   class given to make component content padded. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.VeryPaddedClass">
+            <summary>   class given to make component content very padded. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.FittedClass">
+            <summary>   class given to remove component content padding. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.HorizontallyFittedClass">
+            <summary>   class given to remove component content horizontal padding only. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.VerticallyFittedClass">
+            <summary>   class given to remove component content vertical padding only. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentSpace})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentSpace"/> to given class. </summary>
+            
+             <param name="contentSpace"> ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="contentSpace"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithDividingStyleFeature.DividingClass">
+            <summary>   class given to the component to divide itself from the content below it. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithFittedStyleFeature.FittedClass">
+            <summary>   class given to make component fitted. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.RightAlignedClass">
+            <summary>   class given to make component right aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.LeftAlignedClass">
+            <summary>   class given to make component left aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.CenterAlignedClass">
+            <summary>   class given to make component center aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.JustifiedClass">
+            <summary>   class given to make component justified. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentHorizontalAlignment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentHorizontalAlignment"/> to given class. </summary>
+            
+             <param name="contentAlignment"> ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithInvertedStyleFeature.InvertedClass">
+            <summary>   class given to the component to invert its color. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithLoadingIndicatorFeature.LoadingClass">
+            <summary>   class given to make component appear as loading. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MiniClass">
+            <summary>   Determine if the component should be mini. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.TinyClass">
+            <summary>   Determine if the component should be tiny. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.SmallClass">
+            <summary>   Determine if the component should be small. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MediumClass">
+            <summary>   Determine if the component should be medium. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.LargeClass">
+            <summary>   Determine if the component should be large. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.BigClass">
+            <summary>   Determine if the component should be big. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.HugeClass">
+            <summary>   Determine if the component should be huge. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MassiveClass">
+            <summary>   Determine if the component should be massive. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.ToClass(Fomantic.Blazor.UI.Size)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Size"/> to given class. </summary>
+            
+             <param name="size"> Size Value. </param>
+            
+             <returns>   Given class from <paramref name="size"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.TopAlignedClass">
+            <summary>   class given to make component top aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.BottomAlignedClass">
+            <summary>   class given to make component bottom aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.CenterAlignedClass">
+            <summary>   class given to make component center aligned. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentVerticalAlignment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentVerticalAlignment"/> to given class. </summary>
+            
+             <param name="contentAlignment"> ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.VisibleFomanticComponentFeature.HiddenClass">
+            <summary>   class given to the component to invert its color. </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticDimmerWithShadeDegree">
+            <summary>   Base interface for dimmer with shade degree. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticDimmerWithShadeDegree.Shade">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Determine how dark the dimmer shade is. </summary>
+            
+             <value> The dimmer shade. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="T:Fomantic.Blazor.UI.ExtensionWithContentBase">
             -------------------------------------------------------------------------------------------------
              <summary>   An extention with contentbase . </summary>
@@ -1080,255 +1432,6 @@
             
              <returns>   whether  On Bottom Passed Reverse updated event Subscribed or not. </returns>
             -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.AttachedClass">
-            <summary>   class given to attached. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.TopAttachedClass">
-            <summary>   class given to attached. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.BottomAttachedClass">
-            <summary>   class given to attached. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.AttachableFomanticComponentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.AttachingDirection})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.AttachingDirection"/> to given class. </summary>
-            
-             <param name="attachingDirection">   attaching direction Value. </param>
-            
-             <returns>   given class from <paramref name="attachingDirection"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="T:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1">
-            -------------------------------------------------------------------------------------------------
-             <summary>   A feature definition. </summary>
-            
-             <typeparam name="TFeatureInterface">    Type of the feature interface. </typeparam>
-            
-             <seealso cref="T:Fomantic.Blazor.UI.IFeatureDefinition`1"/>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.AdditionalFragments">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Type">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.DisposeAsync(`0)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Dispose asynchronous. </summary>
-            
-             <param name="component">    The component. </param>
-            
-             <returns>   A ValueTask. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnAfterEachRender(`0)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnAfterFirstRender(`0)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.ProvideCssClasses(`0)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.ProvideCssClass(`0)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.OnInitialized(`0)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#OnAfterEachRender(Fomantic.Blazor.UI.IFomanticComponent)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#OnAfterFirstRender(Fomantic.Blazor.UI.IFomanticComponent)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#ProvideCssClasses(Fomantic.Blazor.UI.IFomanticComponent)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#ProvideCssClass(Fomantic.Blazor.UI.IFomanticComponent)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#OnInitialized(Fomantic.Blazor.UI.IFomanticComponent)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.UIFeatureDefinition`1.Fomantic#Blazor#UI#IFeatureDefinition#DisposeAsync(Fomantic.Blazor.UI.IFomanticComponent)">
-            -------------------------------------------------------------------------------------------------
-             <summary>  Dispose asynchronous. </summary>
-            
-             <param name="component">   The component. </param>
-            
-             <returns>  A ValueTask. </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentCanBeDisabledFeature.DisabledClass">
-            <summary>   class given to disable component. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.LeftFloatedClass">
-            <summary>   class given to Left Float. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.RightFloatedClass">
-            <summary>   class given to Right Float. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.FloatAlignment})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.FloatAlignment"/> to given class. </summary>
-            
-             <param name="alignment">    Alignment Value. </param>
-            
-             <returns>   given class from <paramref name="alignment"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.RaisedClass">
-            <summary>   class given to make segment styled raised. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.StackedClass">
-            <summary>   class given to make segment styled stacked. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.TallStackedClass">
-            <summary>   class given to make segment styled tall stacked. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.PiledClass">
-            <summary>   class given to make segment styled piled. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.BasicClass">
-            <summary>   class given to make segment styled basic. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.SegmentStyledFomanticComponentFeature.ToClass(Fomantic.Blazor.UI.SegmentStyle)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.SegmentStyle"/> to given class. </summary>
-            
-             <param name="style">    ContentSpace Value. </param>
-            
-             <returns>   Given class from <paramref name="style"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCircularStyleFeature.CircularClass">
-            <summary>   class given to make component circular. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithColorFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.Color})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Color"/> to given class. </summary>
-            
-             <param name="color">    Color Value. </param>
-            
-             <returns>   Given class from <paramref name="color"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCompactStyleFeature.CompactClass">
-            <summary>   class given to make component compact. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.PaddedClass">
-            <summary>   class given to make component content padded. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.VeryPaddedClass">
-            <summary>   class given to make component content very padded. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.FittedClass">
-            <summary>   class given to remove component content padding. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.HorizontallyFittedClass">
-            <summary>   class given to remove component content horizontal padding only. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.VerticallyFittedClass">
-            <summary>   class given to remove component content vertical padding only. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentSpace})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentSpace"/> to given class. </summary>
-            
-             <param name="contentSpace"> ContentSpace Value. </param>
-            
-             <returns>   Given class from <paramref name="contentSpace"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithDividingStyleFeature.DividingClass">
-            <summary>   class given to the component to divide itself from the content below it. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithFittedStyleFeature.FittedClass">
-            <summary>   class given to make component fitted. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.RightAlignedClass">
-            <summary>   class given to make component right aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.LeftAlignedClass">
-            <summary>   class given to make component left aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.CenterAlignedClass">
-            <summary>   class given to make component center aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.JustifiedClass">
-            <summary>   class given to make component justified. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentHorizontalAlignment})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentHorizontalAlignment"/> to given class. </summary>
-            
-             <param name="contentAlignment"> ContentSpace Value. </param>
-            
-             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithInvertedStyleFeature.InvertedClass">
-            <summary>   class given to the component to invert its color. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithLoadingIndicatorFeature.LoadingClass">
-            <summary>   class given to make component appear as loading. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MiniClass">
-            <summary>   Determine if the component should be mini. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.TinyClass">
-            <summary>   Determine if the component should be tiny. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.SmallClass">
-            <summary>   Determine if the component should be small. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MediumClass">
-            <summary>   Determine if the component should be medium. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.LargeClass">
-            <summary>   Determine if the component should be large. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.BigClass">
-            <summary>   Determine if the component should be big. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.HugeClass">
-            <summary>   Determine if the component should be huge. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.MassiveClass">
-            <summary>   Determine if the component should be massive. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithSizeFeature.ToClass(Fomantic.Blazor.UI.Size)">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.Size"/> to given class. </summary>
-            
-             <param name="size"> Size Value. </param>
-            
-             <returns>   Given class from <paramref name="size"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.TopAlignedClass">
-            <summary>   class given to make component top aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.BottomAlignedClass">
-            <summary>   class given to make component bottom aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.CenterAlignedClass">
-            <summary>   class given to make component center aligned. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentVerticalAlignment})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentVerticalAlignment"/> to given class. </summary>
-            
-             <param name="contentAlignment"> ContentSpace Value. </param>
-            
-             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.VisibleFomanticComponentFeature.HiddenClass">
-            <summary>   class given to the component to invert its color. </summary>
         </member>
         <member name="T:Fomantic.Blazor.UI.FomanticComponentBase">
             <summary>   Base class for all Fomantic Component. </summary>

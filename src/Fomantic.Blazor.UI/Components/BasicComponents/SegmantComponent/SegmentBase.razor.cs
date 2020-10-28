@@ -204,15 +204,13 @@ namespace Fomantic
         public int EnterTransitionDuration { get; set; }
         bool IFomanticComponentWithEnterTransition.IsEnterAnimationDone { get; set; }
 
-        ///// <inheritdoc/>
-        //[NestedParamter]
-        //public IFomanticAnimator Animator => ((IAnimateableFomanticComponent)this).Animator;
-
         /// <inheritdoc/>
         [NestedParamter]
         public IViewportVisibility ViewportVisibility => ((IVisibleFomanticComponent)this).GetViewportVisibility();
+        
         /// <inheritdoc/>
          [NestedParamter]
         public IFomanticAnimator Animator => (this as IAnimateableFomanticComponent).GetAnimator();
+
     }
 }

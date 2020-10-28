@@ -44,10 +44,15 @@
 
 
     <div class="main ui container">
-      
-     
 
+        <Segment ContentSpace="ContentSpace.VeryPadded">
 
+            <Text> ahmed </Text>  <Text> is  </Text>  <Text> here  </Text>
+        </Segment>
+
+        <Dimmer IsHidden="false" HideOnClick="true">
+            <h2 class="ui inverted icon header"><i class="heart icon"></i>Dimmed Message!</h2>
+        </Dimmer>
     </div>
     <Footer />
 
@@ -56,7 +61,7 @@
 </div>
 
 @code{
- 
+
     protected override Task OnInitializedAsync()
     {
 
