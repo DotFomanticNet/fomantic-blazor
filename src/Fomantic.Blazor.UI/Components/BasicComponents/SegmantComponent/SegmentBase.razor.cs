@@ -27,7 +27,7 @@ namespace Fomantic
         IFomanticComponentWithInvertedStyle,
         IFomanticComponentWithCompactStyle,
         IFomanticComponentWithLoadingIndicator,
-        IFomanticComponentWithContentAlignment,
+        IFomanticComponentWithHorizontalContentAlignment,
         IFomanticComponentWithContentSpacing,
         IFomanticComponentWithCircularStyle,
         IAttachableFomanticComponent,
@@ -168,7 +168,7 @@ namespace Fomantic
 
         /// <inheritdoc/>
         [Parameter]
-        public ContentAlignment? ContentAlignment { get; set; }
+        public ContentHorizontalAlignment? ContentHorizontalAlignment { get; set; }
 
         /// <inheritdoc/>
         [Parameter]

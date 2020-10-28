@@ -60,7 +60,7 @@
              <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.HeaderBase.ContentAlignment">
+        <member name="P:Fomantic.HeaderBase.ContentHorizontalAlignment">
             -------------------------------------------------------------------------------------------------
              <remarks>
              <para>References : </para>
@@ -388,7 +388,7 @@
              <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.SegmentBase.ContentAlignment">
+        <member name="P:Fomantic.SegmentBase.ContentHorizontalAlignment">
             <inheritdoc/>
         </member>
         <member name="P:Fomantic.SegmentBase.ContentSpace">
@@ -1238,27 +1238,6 @@
         <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithCompactStyleFeature.CompactClass">
             <summary>   class given to make component compact. </summary>
         </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.RightAlignedClass">
-            <summary>   class given to make component right aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.LeftAlignedClass">
-            <summary>   class given to make component left aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.CenterAlignedClass">
-            <summary>   class given to make component center aligned. </summary>
-        </member>
-        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.JustifiedClass">
-            <summary>   class given to make component justified. </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithContentAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentAlignment})">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentAlignment"/> to given class. </summary>
-            
-             <param name="contentAlignment"> ContentSpace Value. </param>
-            
-             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithContentSpacingFeature.PaddedClass">
             <summary>   class given to make component content padded. </summary>
         </member>
@@ -1288,6 +1267,27 @@
         </member>
         <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithFittedStyleFeature.FittedClass">
             <summary>   class given to make component fitted. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.RightAlignedClass">
+            <summary>   class given to make component right aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.LeftAlignedClass">
+            <summary>   class given to make component left aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.CenterAlignedClass">
+            <summary>   class given to make component center aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.JustifiedClass">
+            <summary>   class given to make component justified. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithHorizontalContentAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentHorizontalAlignment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentHorizontalAlignment"/> to given class. </summary>
+            
+             <param name="contentAlignment"> ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
+            -------------------------------------------------------------------------------------------------
         </member>
         <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithInvertedStyleFeature.InvertedClass">
             <summary>   class given to the component to invert its color. </summary>
@@ -1326,6 +1326,24 @@
              <param name="size"> Size Value. </param>
             
              <returns>   Given class from <paramref name="size"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.TopAlignedClass">
+            <summary>   class given to make component top aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.BottomAlignedClass">
+            <summary>   class given to make component bottom aligned. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.CenterAlignedClass">
+            <summary>   class given to make component center aligned. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.Features.FomanticComponentWithVerticalContentAlignmentFeature.ToClass(System.Nullable{Fomantic.Blazor.UI.ContentVerticalAlignment})">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Convert <see cref="T:Fomantic.Blazor.UI.ContentVerticalAlignment"/> to given class. </summary>
+            
+             <param name="contentAlignment"> ContentSpace Value. </param>
+            
+             <returns>   Given class from <paramref name="contentAlignment"/> </returns>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="F:Fomantic.Blazor.UI.Features.VisibleFomanticComponentFeature.HiddenClass">

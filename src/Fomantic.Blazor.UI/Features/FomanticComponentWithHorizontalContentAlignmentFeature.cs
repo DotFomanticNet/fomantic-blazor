@@ -1,6 +1,6 @@
 ﻿namespace Fomantic.Blazor.UI.Features
 {
-    class FomanticComponentWithContentAlignmentFeature : UIFeatureDefinition<IFomanticComponentWithContentAlignment>
+    class FomanticComponentWithHorizontalContentAlignmentFeature : UIFeatureDefinition<IFomanticComponentWithHorizontalContentAlignment>
     {
         /// <summary>   class given to make component right aligned. </summary>
         const string RightAlignedClass = "right aligned";
@@ -12,18 +12,18 @@
         /// <summary>   class given to make component justified. </summary>
         const string JustifiedClass = "justified";
 
-        public override string ProvideCssClass(IFomanticComponentWithContentAlignment component)
+        public override string ProvideCssClass(IFomanticComponentWithHorizontalContentAlignment component)
         {
-            return ToClass(component.ContentAlignment);
+            return ToClass(component.ContentHorizontalAlignment);
         }
         ///-------------------------------------------------------------------------------------------------
-        /// <summary>   Convert <see cref="Fomantic.Blazor.UI.ContentAlignment"/> to given class. </summary>
+        /// <summary>   Convert <see cref="Fomantic.Blazor.UI.ContentHorizontalAlignment"/> to given class. </summary>
         ///
         /// <param name="contentAlignment"> ContentSpace Value. </param>
         ///
         /// <returns>   Given class from <paramref name="contentAlignment"/> </returns>
         ///-------------------------------------------------------------------------------------------------
-        public static string ToClass(ContentAlignment? contentAlignment)
+        public static string ToClass(ContentHorizontalAlignment? contentAlignment)
         {
             if (!contentAlignment.HasValue)
             {
@@ -31,13 +31,12 @@
             }
             return contentAlignment.Value switch
             {
-                UI.ContentAlignment.Right => RightAlignedClass,
-                UI.ContentAlignment.Left => LeftAlignedClass,
-                UI.ContentAlignment.Center => CenterAlignedClass,
-                UI.ContentAlignment.justified => JustifiedClass,
+                UI.ContentHorizontalAlignment.Right => RightAlignedClass,
+                UI.ContentHorizontalAlignment.Left => LeftAlignedClass,
+                UI.ContentHorizontalAlignment.Center => CenterAlignedClass,
+                UI.ContentHorizontalAlignment.justified => JustifiedClass,
                 _ => string.Empty,
             };
         }
     }
-
 }
