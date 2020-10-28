@@ -828,6 +828,9 @@
              </summary>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.ContentVerticalAlignment">
+            <inheritdoc/>
+        </member>
         <member name="M:Fomantic.Blazor.UI.DimmerBase.#ctor">
             <summary>
             Create new instant of DimmerBase

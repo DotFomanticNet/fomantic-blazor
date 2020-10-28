@@ -14,8 +14,13 @@ namespace Fomantic.Blazor.UI
     /// </summary>
     ///-------------------------------------------------------------------------------------------------
 
-    public abstract class DimmerBase : ExtensionWithContentBase
+    public abstract class DimmerBase : ExtensionWithContentBase,
+        IFomanticComponentWithVerticalContentAlignment
+
     {
+        /// <inheritdoc/>
+        public ContentVerticalAlignment? ContentVerticalAlignment { get; set; }
+
         /// <summary>
         /// Create new instant of DimmerBase
         /// </summary>
