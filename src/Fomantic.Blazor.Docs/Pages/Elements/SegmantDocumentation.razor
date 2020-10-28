@@ -933,7 +933,7 @@
         {
             OnComponentCreate = d =>
             {
-                d.ContentAlignment = ContentAlignment.Center;
+                d.ContentHorizontalAlignment = ContentHorizontalAlignment.Center;
             },
             HtmlContent = new MarkupString(@"Center")
         });
@@ -941,15 +941,15 @@
         {
             OnComponentCreate = d =>
             {
-                d.ContentAlignment = ContentAlignment.Left;
+                d.ContentHorizontalAlignment = ContentHorizontalAlignment.Left;
             },
             HtmlContent = new MarkupString(@"Left")
         });
         TextAlignmentSegmentSampleData.Add(new SampleComponentWithHtmlContent<Segment>(null)
         {
-            OnComponentCreate = d =>
+            OnComponentCreate = d =>    
             {
-                d.ContentAlignment = ContentAlignment.Right;
+                d.ContentHorizontalAlignment = ContentHorizontalAlignment.Right;
             },
             HtmlContent = new MarkupString(@"Right")
         });
