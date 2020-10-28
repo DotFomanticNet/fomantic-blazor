@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Fomantic.Blazor.UI.Features;
 using Microsoft.AspNetCore.Components;
 
 namespace Fomantic.Blazor.UI
@@ -15,11 +16,27 @@ namespace Fomantic.Blazor.UI
     ///-------------------------------------------------------------------------------------------------
 
     public abstract class DimmerBase : ExtensionWithContentBase,
-        IFomanticComponentWithVerticalContentAlignment
+        IFomanticComponentWithVerticalContentAlignment,
+        IFomanticComponentWithBlurEffect,
+        IFomanticComponentWithInvertedStyle,
+        IFomanticDimmerWithShadeDegree
 
     {
+        
         /// <inheritdoc/>
+        [Parameter]
         public ContentVerticalAlignment? ContentVerticalAlignment { get; set; }
+
+        /// <inheritdoc/>
+        [Parameter]
+        public bool IsBlurring { get; set; }
+
+        /// <inheritdoc/>
+        [Parameter]
+        public bool IsInverted { get; set; }
+        /// <inheritdoc/>
+        [Parameter]
+        public DimmerShade? Shade { get; set; }
 
         /// <summary>
         /// Create new instant of DimmerBase
@@ -48,8 +65,14 @@ namespace Fomantic.Blazor.UI
             }
             else
             {
-                return "dimmable dimmed";
+                var cssclass = "dimmable dimmed ";
+                if (IsBlurring)
+                {
+                    cssclass += FomanticComponentWithBlurEffectFeature.BlurringClass;
+                }
+                return cssclass;
             }
+            
 
         }
     }

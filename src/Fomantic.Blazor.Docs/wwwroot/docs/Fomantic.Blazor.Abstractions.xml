@@ -7712,6 +7712,16 @@
              <value> True if this  is unselectable, false if not. </value>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="T:Fomantic.IFomanticComponentWithBlurEffect">
+            <summary>   Base interface for all fomantic component that can have blur effect. </summary>
+        </member>
+        <member name="P:Fomantic.IFomanticComponentWithBlurEffect.IsBlurring">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Determine if the component should has blur effect or not. </summary>
+            
+             <value> True if this  is blurring, false if not. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
         <member name="T:Fomantic.IFomanticComponentWithCircularStyle">
             <summary>   Base interface for all fomantic component can be circular. </summary>
         </member>
