@@ -420,10 +420,10 @@
         <member name="P:Fomantic.SegmentBase.EnterTransitionDuration">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.SegmentBase.Animator">
+        <member name="P:Fomantic.SegmentBase.ViewportVisibility">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.SegmentBase.ViewportVisibility">
+        <member name="P:Fomantic.SegmentBase.Animator">
             <inheritdoc/>
         </member>
         <member name="T:Fomantic.SegmentDefaults">

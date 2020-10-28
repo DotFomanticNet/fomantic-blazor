@@ -766,45 +766,57 @@ namespace Fomantic.Blazor.Docs.Shared
         }
         public async void Select(SampleComponent x)
         {
-
-            currentComponent = x;
-            if (currentComponent != null)
+          
+            try
             {
-                var t = currentComponent.ThisComponent.GetType();
-
-                var NestedClasses = t.GetProperties().Where(
-         prop => Attribute.IsDefined(prop, typeof(NestedParamterAttribute))).ToList();
-
-                Prop = t.GetProperties().Where(
-            prop => Attribute.IsDefined(prop, typeof(ParameterAttribute)))
-            .Select(d => new Tuple<string, object, PropertyInfo>("", this.currentComponent.ThisComponent, d)).ToList();
-
-
-
-                Methods = t.GetMethods().Where(
-          prop => Attribute.IsDefined(prop, typeof(ComponentActionAttribute)))
-                    .Select(d => new Tuple<string, object, MethodInfo>("", this.currentComponent.ThisComponent, d)).ToList();
-
-                foreach (var item in NestedClasses)
+                currentComponent = x;
+                if (currentComponent != null)
                 {
-                    var nt = item.PropertyType;
+                    var t = currentComponent.ThisComponent.GetType();
 
-
-                    Prop.AddRange(nt.GetProperties().Where(
+             
+                    Prop = t.GetProperties().Where(
                 prop => Attribute.IsDefined(prop, typeof(ParameterAttribute)))
-                .Select(d => new Tuple<string, object, PropertyInfo>(item.Name, item.GetValue(this.currentComponent.ThisComponent), d)).ToList());
+                .Select(d => new Tuple<string, object, PropertyInfo>("", this.currentComponent.ThisComponent, d)).ToList();
 
-                    var nestedMethods = nt.GetMethods()
-             .Where(prop => Attribute.IsDefined(prop, typeof(ComponentActionAttribute)))
-             .Select(d => new Tuple<string, object, MethodInfo>(item.Name, item.GetValue(this.currentComponent.ThisComponent), d)).ToList();
 
-                  
-                    Methods.AddRange(nestedMethods);
+
+                    Methods = t.GetMethods().Where(
+              prop => Attribute.IsDefined(prop, typeof(ComponentActionAttribute)))
+                        .Select(d => new Tuple<string, object, MethodInfo>("", this.currentComponent.ThisComponent, d)).ToList();
+
+
+                    var NestedClasses = t.GetProperties().Where(
+      prop => Attribute.IsDefined(prop, typeof(NestedParamterAttribute))).ToList();
+
+                    foreach (var item in NestedClasses)
+                    {
+                        var nt = item.PropertyType;
+
+
+                        Prop.AddRange(nt.GetProperties().Where(
+                    prop => Attribute.IsDefined(prop, typeof(ParameterAttribute)))
+                    .Select(d => new Tuple<string, object, PropertyInfo>(item.Name, item.GetValue(this.currentComponent.ThisComponent), d)).ToList());
+
+                        var nestedMethods = nt.GetMethods()
+                 .Where(prop => Attribute.IsDefined(prop, typeof(ComponentActionAttribute)))
+                 .Select(d => new Tuple<string, object, MethodInfo>(item.Name, item.GetValue(this.currentComponent.ThisComponent), d)).ToList();
+
+
+                        Methods.AddRange(nestedMethods);
+                    }
+
+                    this.StateHasChanged();
+                    await JsRuntime.InvokeVoidAsync("window.demo.initPropSheetElements");
                 }
-
-                this.StateHasChanged();
-                await JsRuntime.InvokeVoidAsync("window.demo.initPropSheetElements");
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
+           
 
 
         }

@@ -16,14 +16,20 @@ namespace Fomantic.Blazor.UI
     ///-------------------------------------------------------------------------------------------------
     public interface IAnimateableFomanticComponent : IVisibleFomanticComponent, IFomanticComponentWithExtensions
     {
+
+
         ///-------------------------------------------------------------------------------------------------
-        /// <summary>   Animator responsible for animating the component. </summary>
+        /// <summary>  Get Animator responsible for animating the component. </summary>
         ///
-        /// <value> The animator. </value>
+        /// <returns> The animator. </returns>
         ///-------------------------------------------------------------------------------------------------
 
-        [NestedParamter]
-        public IFomanticAnimator Animator => (IFomanticAnimator)Extensions.FirstOrDefault(d => d is IFomanticAnimator);
+        public IFomanticAnimator GetAnimator()
+        {
+          return  (IFomanticAnimator)Extensions.FirstOrDefault(d => d is IFomanticAnimator);
+        }
+            
+            
     }
 
 

@@ -6545,11 +6545,11 @@
             
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.Blazor.UI.IAnimateableFomanticComponent.Animator">
+        <member name="M:Fomantic.Blazor.UI.IAnimateableFomanticComponent.GetAnimator">
             -------------------------------------------------------------------------------------------------
-             <summary>   Animator responsible for animating the component. </summary>
+             <summary>  Get Animator responsible for animating the component. </summary>
             
-             <value> The animator. </value>
+             <returns> The animator. </returns>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponent">
@@ -7044,7 +7044,7 @@
              <value> The on bottom passed reverse. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.ViewportVisibility">
+        <member name="M:Fomantic.Blazor.UI.IVisibleFomanticComponent.GetViewportVisibility">
             -------------------------------------------------------------------------------------------------
              <summary>   Object responsible for Viewport Visibility tracking. </summary>
             
