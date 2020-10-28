@@ -1,7 +1,5 @@
 ﻿@inherits Fomantic.Blazor.UI.DimmerBase
 @namespace Fomantic
-
-
 @code {
     public Dimmer()
     {
@@ -17,7 +15,7 @@
         return __builder =>
         {
         @RenderBeforeRootElementFragments()
-        <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+        <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass" @onclick="d=>HideDimmer()">
             <div class="content">
                 @RenderContent()
             </div>
@@ -26,4 +24,7 @@
         };
     }
 }
-
+@if (Parent==null)
+{
+    @GetHTML()
+} 

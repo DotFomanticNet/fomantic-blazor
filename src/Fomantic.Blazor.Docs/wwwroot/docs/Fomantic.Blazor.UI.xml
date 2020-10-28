@@ -828,6 +828,9 @@
              </summary>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.IsParentOptional">
+            <inheritdoc/>
+        </member>
         <member name="P:Fomantic.Blazor.UI.DimmerBase.ContentVerticalAlignment">
             <inheritdoc/>
         </member>
@@ -840,6 +843,11 @@
         <member name="P:Fomantic.Blazor.UI.DimmerBase.Shade">
             <inheritdoc/>
         </member>
+        <member name="P:Fomantic.Blazor.UI.DimmerBase.HideOnClick">
+            <summary>
+            Enable hide dimmer on click
+            </summary>
+        </member>
         <member name="M:Fomantic.Blazor.UI.DimmerBase.#ctor">
             <summary>
             Create new instant of DimmerBase
@@ -847,6 +855,11 @@
         </member>
         <member name="M:Fomantic.Blazor.UI.DimmerBase.ConstractClasses">
             <inheritdoc/>  
+        </member>
+        <member name="M:Fomantic.Blazor.UI.DimmerBase.HideDimmer">
+            <summary>
+            Hide dimmer if <see cref="P:Fomantic.Blazor.UI.DimmerBase.HideOnClick"/> enabled 
+            </summary>
         </member>
         <member name="M:Fomantic.Blazor.UI.DimmerBase.ProvideComponentCssClass">
             <inheritdoc/>  

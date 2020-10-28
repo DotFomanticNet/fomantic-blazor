@@ -22,7 +22,9 @@ namespace Fomantic.Blazor.UI
         IFomanticDimmerWithShadeDegree
 
     {
-        
+        /// <inheritdoc/>
+        public override bool IsParentOptional => true;
+
         /// <inheritdoc/>
         [Parameter]
         public ContentVerticalAlignment? ContentVerticalAlignment { get; set; }
@@ -39,6 +41,13 @@ namespace Fomantic.Blazor.UI
         public DimmerShade? Shade { get; set; }
 
         /// <summary>
+        /// Enable hide dimmer on click
+        /// </summary>
+        [Parameter]
+        public bool HideOnClick { get; set; }
+
+
+        /// <summary>
         /// Create new instant of DimmerBase
         /// </summary>
         public DimmerBase()
@@ -51,9 +60,32 @@ namespace Fomantic.Blazor.UI
         protected internal override void ConstractClasses()
         {
             base.ConstractClasses();
+            if (Parent == null)
+            {
+                if (!IsHidden)
+                {
+                    CssClasses.Add("page transition visible active");
+                }
 
-            CssClasses.Insert(0, "ui simple");
+            }
+            else
+            {
+                CssClasses.Insert(0, "simple");
+            }
+            CssClasses.Insert(0, "ui ");
             CssClasses.Add("dimmer");
+        }
+        /// <summary>
+        /// Hide dimmer if <see cref="HideOnClick"/> enabled 
+        /// </summary>
+        protected void HideDimmer()
+        {
+         
+            if (HideOnClick)
+            {
+                this.Hide();
+                ParentStateHasChanged?.Invoke();
+            }
         }
 
         /// <inheritdoc/>  
@@ -72,7 +104,7 @@ namespace Fomantic.Blazor.UI
                 }
                 return cssclass;
             }
-            
+
 
         }
     }

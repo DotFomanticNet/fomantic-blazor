@@ -261,6 +261,7 @@ namespace Fomantic.Blazor.UI
         public void Hide()
         {       
             IsHidden = true;
+            ConstractClasses();
             StateHasChanged();
         }
         /// <inheritdoc/>
@@ -268,7 +269,8 @@ namespace Fomantic.Blazor.UI
         public void ToggleVisibility()
         {
         
-            IsHidden = !IsHidden; 
+            IsHidden = !IsHidden;
+            ConstractClasses();
             StateHasChanged();
         }
         /// <inheritdoc/>
