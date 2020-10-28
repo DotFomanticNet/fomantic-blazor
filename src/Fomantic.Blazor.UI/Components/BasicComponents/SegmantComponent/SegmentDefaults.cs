@@ -25,7 +25,7 @@ namespace Fomantic
         /// <value> The content alignment default. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        public static ContentAlignment? ContentAlignmentDefault { set; get; }
+        public static ContentHorizontalAlignment? ContentAlignmentDefault { set; get; }
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Default segment content space assgined when creating any segment. </summary>

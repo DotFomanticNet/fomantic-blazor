@@ -150,27 +150,45 @@
             Default theme black Color (#000000)
             </summary>
         </member>
-        <member name="T:Fomantic.Blazor.UI.ContentAlignment">
-            <summary>   Fomantic UI content alignment. </summary>
+        <member name="T:Fomantic.Blazor.UI.ContentHorizontalAlignment">
+            <summary>   Fomantic UI content horizontal alignment. </summary>
         </member>
-        <member name="F:Fomantic.Blazor.UI.ContentAlignment.Left">
+        <member name="F:Fomantic.Blazor.UI.ContentHorizontalAlignment.Left">
             <summary>
             Align content to left
             </summary>
         </member>
-        <member name="F:Fomantic.Blazor.UI.ContentAlignment.Right">
+        <member name="F:Fomantic.Blazor.UI.ContentHorizontalAlignment.Right">
             <summary>
             Align content to right
-            </summary>
+            </summary>  
         </member>
-        <member name="F:Fomantic.Blazor.UI.ContentAlignment.Center">
+        <member name="F:Fomantic.Blazor.UI.ContentHorizontalAlignment.Center">
             <summary>
             Align content in the center
             </summary>
         </member>
-        <member name="F:Fomantic.Blazor.UI.ContentAlignment.justified">
+        <member name="F:Fomantic.Blazor.UI.ContentHorizontalAlignment.justified">
             <summary>
             Align content to be justified
+            </summary>
+        </member>
+        <member name="T:Fomantic.Blazor.UI.ContentVerticalAlignment">
+            <summary>   Fomantic UI content vertical alignment. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentVerticalAlignment.Center">
+            <summary>
+            Align content in the center
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentVerticalAlignment.Top">
+            <summary>
+            Align content to Top
+            </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.ContentVerticalAlignment.Bottom">
+            <summary>
+            Align content in the Bottom
             </summary>
         </member>
         <member name="T:Fomantic.Blazor.UI.ContentSpace">
@@ -6642,16 +6660,6 @@
              <value> The content. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment">
-            <summary>   Base interface for all fomantic component  align thier content. </summary>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithContentAlignment.ContentAlignment">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Determine how the component should  align its content. </summary>
-            
-             <value> The content alignment. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithContentSpacing">
             -------------------------------------------------------------------------------------------------
              <summary>
@@ -6706,6 +6714,16 @@
              <summary>   List Of Fomantic Component Extensions. </summary>
             
              <value> The extensions. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithHorizontalContentAlignment">
+            <summary>   Base interface for all fomantic component horizontally align thier content. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithHorizontalContentAlignment.ContentHorizontalAlignment">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Determine how the component should  align its content. </summary>
+            
+             <value> The content alignment. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithJQuery">
@@ -6848,6 +6866,16 @@
              <param name="tooltipPosition">  tooltip Position Value. </param>
             
              <returns>   Given class from <paramref name="tooltipPosition"/> </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.IFomanticComponentWithVerticalContentAlignment">
+            <summary>   Base interface for all fomantic component Vertically align thier content. </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithVerticalContentAlignment.ContentVerticalAlignment">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Determine how the component should  align its content. </summary>
+            
+             <value> The content alignment. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFomanticGroupComponent`1">

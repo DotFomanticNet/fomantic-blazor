@@ -27,7 +27,7 @@ namespace Fomantic
         public Segment()
         {
             Color = SegmentDefaults.ColorDefault;
-            ContentAlignment = SegmentDefaults.ContentAlignmentDefault;
+            ContentHorizontalAlignment = SegmentDefaults.ContentAlignmentDefault;
             ContentSpace = SegmentDefaults.ContentSpaceDefault;
             EnterTransition = SegmentDefaults.EnterTransitionDefault;
             EnterTransitionDuration = SegmentDefaults.EnterTransitionDurationDefault;

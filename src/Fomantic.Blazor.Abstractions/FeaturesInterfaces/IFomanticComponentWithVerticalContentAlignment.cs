@@ -8,10 +8,10 @@ using Microsoft.AspNetCore.Components;
 
 namespace Fomantic.Blazor.UI
 {
-    /// <summary>   Base interface for all fomantic component  align thier content. </summary>
-    public interface IFomanticComponentWithContentAlignment : IFomanticComponentWithClass
+    /// <summary>   Base interface for all fomantic component Vertically align thier content. </summary>
+    public interface IFomanticComponentWithVerticalContentAlignment : IFomanticComponentWithClass
     {
-      
+
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Determine how the component should  align its content. </summary>
@@ -20,8 +20,8 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [Parameter]
-        public ContentAlignment? ContentAlignment { get; set; }
+        public ContentVerticalAlignment? ContentVerticalAlignment { get; set; }
 
-     
+
     }
 }

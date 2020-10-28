@@ -34,7 +34,7 @@ namespace Fomantic
         IFomanticComponentCanBeUnselectable,
         IFomanticComponentWithInvertedStyle,
         IFomanticComponentWithAlignment,
-        IFomanticComponentWithContentAlignment,
+        IFomanticComponentWithHorizontalContentAlignment,
         IFomanticComponentWithDividingStyle
     {
 
@@ -110,7 +110,7 @@ namespace Fomantic
         ///-------------------------------------------------------------------------------------------------
 
         [Parameter]
-        public ContentAlignment? ContentAlignment { get; set; }
+        public ContentHorizontalAlignment? ContentHorizontalAlignment { get; set; }
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
