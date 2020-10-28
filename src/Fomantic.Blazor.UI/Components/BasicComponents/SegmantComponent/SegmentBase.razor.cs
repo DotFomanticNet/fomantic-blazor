@@ -20,6 +20,8 @@ namespace Fomantic
     public abstract class SegmentBase : FomanticComponentWithContentBase,
         IFomanticGroupComponentChild<SegmentGroup>,
         ISegmantGroupChild,
+          IAnimateableFomanticComponent,
+        IFomanticComponentWithEnterTransition,
         IFomanticComponentWithColor,
         IFomanticComponentCanBeDisabled,
         IFomanticComponentWithInvertedStyle,
@@ -34,21 +36,21 @@ namespace Fomantic
     {
         /// <summary>   The placeholder class. </summary>
         const string PlaceholderClass = "placeholder";
-      
+
 
         /// <inheritdoc/>
         protected override void OnInitialized()
         {
             base.OnInitialized();
-           
+
             ParentGroup?.SegmantGroupChildren.Add(this);
 
         }
         /// <inheritdoc/>
         protected internal override void ConstractClasses()
         {
-           
-          
+
+
             base.ConstractClasses();
             if (IsPlaceholder)
             {
@@ -60,7 +62,7 @@ namespace Fomantic
         /// <inheritdoc/>
         protected override void OnAfterRender(bool firstRender)
         {
-            
+
             base.OnAfterRender(firstRender);
 
 
@@ -195,5 +197,19 @@ namespace Fomantic
 
         [Parameter]
         public AttachingDirection? Attaching { get; set; }
+
+        /// <inheritdoc/>
+        public TransitionAnimation? EnterTransition { get; set; }
+        /// <inheritdoc/>
+        public int EnterTransitionDuration { get; set; }
+        bool IFomanticComponentWithEnterTransition.IsEnterAnimationDone { get; set; }
+
+        /// <inheritdoc/>
+        [NestedParamter]
+        public IFomanticAnimator Animator => ((IAnimateableFomanticComponent)this).Animator;
+
+        /// <inheritdoc/>
+        [NestedParamter]
+        public IViewportVisibility ViewportVisibility => ((IVisibleFomanticComponent)this).ViewportVisibility;
     }
 }

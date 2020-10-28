@@ -4,6 +4,7 @@
 // summary:	Declares the IVisibleBlazorComponent interface
 ///-------------------------------------------------------------------------------------------------
 
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Components;
@@ -184,11 +185,14 @@ namespace Fomantic.Blazor.UI
 
 
 
+
         ///-------------------------------------------------------------------------------------------------
-        /// <summary>
-        /// Object Responsible for Viewport Visibility tracking. 
-        /// </summary>
+        /// <summary>   Object responsible for Viewport Visibility tracking. </summary>
+        ///
+        /// <value> The viewport visibility. </value>
         ///-------------------------------------------------------------------------------------------------
-        IViewportVisibility ViewportVisibility { get; }
+
+        [NestedParamter]
+         IViewportVisibility ViewportVisibility => (IViewportVisibility)Extensions.FirstOrDefault(d => d is IViewportVisibility);
     }
 }

@@ -105,6 +105,18 @@
              <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="P:Fomantic.HeaderBase.EnterTransition">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.HeaderBase.EnterTransitionDuration">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.HeaderBase.Animator">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.HeaderBase.ViewportVisibility">
+            <inheritdoc/>
+        </member>
         <member name="T:Fomantic.IconBase">
             -------------------------------------------------------------------------------------------------
              <summary>   An icon is a glyph used to represent something else. </summary>
@@ -401,6 +413,18 @@
             
              <inheritdoc/>
             -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.SegmentBase.EnterTransition">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentBase.EnterTransitionDuration">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentBase.Animator">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.SegmentBase.ViewportVisibility">
+            <inheritdoc/>
         </member>
         <member name="T:Fomantic.SegmentDefaults">
             <summary>   Contains default values for the segmant creation. </summary>
@@ -1341,16 +1365,6 @@
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Extensions">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Animator">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.ViewportVisibility">
-            -------------------------------------------------------------------------------------------------
-             <summary>   Object responsible for Viewport Visibility tracking. </summary>
-            
-             <value> The viewport visibility. </value>
-            -------------------------------------------------------------------------------------------------
-        </member>
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.CssClass">
             <inheritdoc/>
         </member>
@@ -1409,13 +1423,7 @@
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.OnClassChanged">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.EnterTransition">
-            <inheritdoc/>
-        </member>
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.IsHidden">
-            <inheritdoc/>
-        </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.EnterTransitionDuration">
             <inheritdoc/>
         </member>
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.CssClasses">
@@ -1428,10 +1436,8 @@
              <value> The CSS classes. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Fomantic#Blazor#UI#IFomanticComponentWithEnterTransition#IsEnterAnimationDone">
-            <summary>   True if is enter animation played, false if not. </summary>
-        </member>
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.AdditionalFragments">
+            <summary>   True if is enter animation played, false if not. </summary>
             <inheritdoc/>
         </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ExecuteOnClassChangedEvent(System.String,System.String)">

@@ -1,10 +1,11 @@
-﻿///-------------------------------------------------------------------------------------------------
-// file:	Interfaces\IVisibleBlazorComponent.cs
+﻿// file:	Interfaces\IVisibleBlazorComponent.cs
 //
 // summary:	Declares the IVisibleBlazorComponent interface
+
+
+using System.Linq;
 ///-------------------------------------------------------------------------------------------------
-
-
+///-------------------------------------------------------------------------------------------------
 namespace Fomantic.Blazor.UI
 {
     ///-------------------------------------------------------------------------------------------------
@@ -22,7 +23,7 @@ namespace Fomantic.Blazor.UI
         ///-------------------------------------------------------------------------------------------------
 
         [NestedParamter]
-        public IFomanticAnimator Animator { get; }
+        public IFomanticAnimator Animator => (IFomanticAnimator)Extensions.FirstOrDefault(d => d is IFomanticAnimator);
     }
 
 

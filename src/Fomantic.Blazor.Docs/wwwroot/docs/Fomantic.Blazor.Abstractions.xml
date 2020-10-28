@@ -7018,9 +7018,9 @@
         </member>
         <member name="P:Fomantic.Blazor.UI.IVisibleFomanticComponent.ViewportVisibility">
             -------------------------------------------------------------------------------------------------
-             <summary>
-             Object Responsible for Viewport Visibility tracking. 
-             </summary>
+             <summary>   Object responsible for Viewport Visibility tracking. </summary>
+            
+             <value> The viewport visibility. </value>
             -------------------------------------------------------------------------------------------------
         </member>
         <member name="T:Fomantic.Blazor.UI.IFeatureDefinition">
