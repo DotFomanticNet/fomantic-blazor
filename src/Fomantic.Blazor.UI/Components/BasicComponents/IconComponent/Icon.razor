@@ -2,7 +2,14 @@
 @using Fomantic.Blazor.UI
 @inherits IconBase
 
+@*before root element fragments that provided by component features and extensions*@
 @RenderBeforeRootElementFragments()
-<i @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass" />
-@RenderAfterRootElementFragments()
 
+@*the root element of the component*@
+@*CssClass represent all CSS classes that provided by the component itself and its feature and extensions*@
+@*GetRootElementAttributes() returns all root element attributes classes that provided by the component itself and its feature and extensions*@
+@*root element should be captured into RootElement by @ref *@
+<i @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass" />
+
+@*after root element fragments that provided by component features and extensions*@
+@RenderAfterRootElementFragments()
