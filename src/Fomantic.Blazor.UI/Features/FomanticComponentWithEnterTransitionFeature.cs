@@ -24,7 +24,7 @@ namespace Fomantic.Blazor.UI.Features
             {
                 if (!component.IsEnterAnimationDone)
                 {
-                    await component.Animator.AnimatedShow(component.EnterTransition.Value, component.EnterTransitionDuration);
+                    await component.GetAnimator().AnimatedShow(component.EnterTransition.Value, component.EnterTransitionDuration);
                     component.IsEnterAnimationDone = true;
                 }
 

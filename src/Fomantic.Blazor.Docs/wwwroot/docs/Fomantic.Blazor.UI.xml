@@ -820,28 +820,6 @@
             After Content AreaName
             </summary>
         </member>
-        <member name="T:Fomantic.Blazor.UI.DimmerBase">
-            -------------------------------------------------------------------------------------------------
-             <summary>
-             A dimmer hides distractions to focus attention on particular content
-             <para><see href="https://fomantic-ui.com/modules/dimmer.html"></see></para>
-             </summary>
-            -------------------------------------------------------------------------------------------------
-        </member>
-        <member name="P:Fomantic.Blazor.UI.DimmerBase.ContentVerticalAlignment">
-            <inheritdoc/>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.DimmerBase.#ctor">
-            <summary>
-            Create new instant of DimmerBase
-            </summary>
-        </member>
-        <member name="M:Fomantic.Blazor.UI.DimmerBase.ConstractClasses">
-            <inheritdoc/>  
-        </member>
-        <member name="M:Fomantic.Blazor.UI.DimmerBase.ProvideComponentCssClass">
-            <inheritdoc/>  
-        </member>
         <member name="T:Fomantic.Blazor.UI.ExtensionWithContentBase">
             -------------------------------------------------------------------------------------------------
              <summary>   An extention with contentbase . </summary>

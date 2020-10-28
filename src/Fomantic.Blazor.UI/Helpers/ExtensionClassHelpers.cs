@@ -11,6 +11,15 @@ namespace Fomantic.Blazor.UI
     /// <summary>   An extension class helpers. </summary>
     public static class ExtensionClassHelpers
     {
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="component"></param>
+        ///// <returns></returns>
+        //public static IFomanticAnimator GetAnimator(this IAnimateableFomanticComponent component)
+        //{
+        //    return component.Animator;
+        //}
         ///-------------------------------------------------------------------------------------------------
         /// <summary>
         /// An IFomanticComponentExtension extension method that adds an additional fragment.

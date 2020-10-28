@@ -161,10 +161,10 @@ namespace Fomantic
 
         /// <inheritdoc/>
         [NestedParamter]
-        public IFomanticAnimator Animator => ((IAnimateableFomanticComponent)this).Animator;
-
+        public IFomanticAnimator Animator => ((IAnimateableFomanticComponent)this).GetAnimator();
+        
         /// <inheritdoc/>
         [NestedParamter]
-        public IViewportVisibility ViewportVisibility => ((IVisibleFomanticComponent)this).ViewportVisibility;
+        public IViewportVisibility ViewportVisibility => ((IVisibleFomanticComponent)this).GetViewportVisibility();
     }
 }

@@ -191,8 +191,7 @@ namespace Fomantic.Blazor.UI
         ///
         /// <value> The viewport visibility. </value>
         ///-------------------------------------------------------------------------------------------------
+        IViewportVisibility GetViewportVisibility() { return (IViewportVisibility)Extensions.FirstOrDefault(d => d is IViewportVisibility); }
 
-        [NestedParamter]
-         IViewportVisibility ViewportVisibility => (IViewportVisibility)Extensions.FirstOrDefault(d => d is IViewportVisibility);
     }
 }
