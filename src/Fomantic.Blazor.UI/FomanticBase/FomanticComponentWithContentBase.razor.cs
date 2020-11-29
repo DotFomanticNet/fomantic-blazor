@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace Fomantic.Blazor.UI
 {
     /// <summary>   Base class for all Fomantic Component. </summary>
-    public abstract partial class FomanticComponentWithContentBase : IFomanticComponentWithContent
+    public abstract partial class FomanticComponentWithContentBase : FomanticComponentBase, IFomanticComponentWithContent
 
     {
         ///-------------------------------------------------------------------------------------------------

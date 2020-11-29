@@ -2,6 +2,14 @@
 @inherits ExtensionBase
 
 @code {
+    protected RenderFragment RenderBeforeContentFragments()
+    {
+        return RenderFragmentsIn(ComponentFragmentLocations.BeforeContentAreaName);
+    }
+    protected RenderFragment RenderAfterContentFragments()
+    {
+        return RenderFragmentsIn(ComponentFragmentLocations.AfterContentAreaName);
+    }
 
     protected RenderFragment RenderContent()
     {

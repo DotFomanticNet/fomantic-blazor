@@ -13,9 +13,7 @@ namespace Fomantic.Blazor.UI
     /// <summary>   Base class for all Fomantic Component. </summary>
     public abstract partial class FomanticComponentBase : ComponentBase,
         IFomanticComponentWithJQuery,
-        IFomanticComponentWithExtensions,
-        IVisibleFomanticComponent,
-        IFomanticComponentWithClass
+        IVisibleFomanticComponent
     {
         [Inject]
         FeaturesService FeaturesService { get; set; }

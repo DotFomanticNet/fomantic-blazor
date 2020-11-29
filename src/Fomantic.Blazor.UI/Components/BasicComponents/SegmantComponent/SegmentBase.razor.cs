@@ -18,9 +18,7 @@ namespace Fomantic
     ///-------------------------------------------------------------------------------------------------
 
     public abstract class SegmentBase : FomanticComponentWithContentBase,
-        IFomanticGroupComponentChild<SegmentGroup>,
         ISegmantGroupChild,
-          IAnimateableFomanticComponent,
         IFomanticComponentWithEnterTransition,
         IFomanticComponentWithColor,
         IFomanticComponentCanBeDisabled,
