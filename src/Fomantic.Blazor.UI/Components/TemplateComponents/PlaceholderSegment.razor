@@ -24,7 +24,7 @@
     public RenderFragment ButtonTemplate { get; set; }
 }
 @RenderBeforeRootElementFragments()
-<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
 
     @if (HeaderWithIconElementTemplate == null)
     {

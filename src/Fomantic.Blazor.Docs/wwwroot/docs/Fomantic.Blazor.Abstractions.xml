@@ -6606,14 +6606,21 @@
         </member>
         <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithClass.CssClasses">
             -------------------------------------------------------------------------------------------------
-             <summary>   List of main element class. </summary>
+             <summary>   List of main element classes. </summary>
             
              <value> The CSS classes. </value>
             -------------------------------------------------------------------------------------------------
         </member>
-        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithClass.CssClass">
+        <member name="P:Fomantic.Blazor.UI.IFomanticComponentWithClass.ElementsCssClasses">
             -------------------------------------------------------------------------------------------------
-             <summary>   The value of main element class (this should be used to bind on ui) </summary>
+             <summary>   List of other elements classes. </summary>
+            
+             <value> The CSS classes. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.IFomanticComponentWithClass.GetCssClass(System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary> The value of main element class (this should be used to bind on ui). Derived components should typically use this value for the primary HTML element's 'class' attribute.</summary>
             
              <value> The CSS class. </value>
             -------------------------------------------------------------------------------------------------

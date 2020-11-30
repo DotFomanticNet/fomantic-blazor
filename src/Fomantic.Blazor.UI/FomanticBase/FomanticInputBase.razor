@@ -1,0 +1,41 @@
+﻿@namespace Fomantic.Blazor.UI
+@typeparam T
+@inherits Microsoft.AspNetCore.Components.Forms.InputBase<T>
+
+@code {
+
+    protected RenderFragment RenderBeforeRootElementFragments()
+    {
+        return RenderFragmentsIn(ComponentFragmentLocations.BeforeRootElementAreaName);
+    }
+
+    protected RenderFragment RenderAfterRootElementFragments()
+    {
+        return RenderFragmentsIn(ComponentFragmentLocations.AfterRootElementAreaName);
+    }
+
+
+
+    protected RenderFragment RenderFragmentsIn(string areaName)
+    {
+
+        return __builder =>
+        {
+            if (this.AdditionalFragments != null)
+            {
+                foreach (var item in this.AdditionalFragments.Where(d => d.Location == areaName))
+                {
+                @item.Fragment(this)
+                }
+            }
+
+            if (this.Extensions != null)
+            {
+                foreach (var item in this.Extensions.Where(d => d.ComponentAdditionalFragments != null).SelectMany(d => d.ComponentAdditionalFragments.Where(d => d.Location == areaName)))
+                {
+                @item.Fragment(this)
+                }
+            }
+        };
+    }
+}

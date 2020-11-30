@@ -1,0 +1,13 @@
+﻿@namespace Fomantic.Blazor.UI
+@inherits FomanticInputBase<string>
+
+
+<div class="@GetCssClass("field")">
+    <label>@GetDisplayName()</label>
+    <input @attributes='GetRootElementAttributes()' placeholder="@GetDisplayName()" value="@BindConverter.FormatValue(CurrentValue)" @onchange="EventCallback.Factory.CreateBinder<string>(this, __value => CurrentValueAsString = __value, CurrentValueAsString)" class="@GetCssClass()" type="text">
+</div>
+
+@code {
+
+
+}

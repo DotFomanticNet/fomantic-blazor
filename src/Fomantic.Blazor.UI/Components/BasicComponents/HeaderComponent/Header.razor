@@ -6,43 +6,43 @@
 
 @if (this.Type == HeaderType.Content)
 {
-<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     @RenderContent()
 </div>
 }
 @if (this.Type == HeaderType.H1)
 {
-<h1 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<h1 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     @RenderContent()
 </h1>
 }
 @if (this.Type == HeaderType.H2)
 {
-<h2 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<h2 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     @RenderContent()
 </h2>
 }
 @if (this.Type == HeaderType.H3)
 {
-<h3 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<h3 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     @RenderContent()
 </h3>
 }
 @if (this.Type == HeaderType.H4)
 {
-<h4 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<h4 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     @RenderContent()
 </h4>
 }
 @if (this.Type == HeaderType.H5)
 {
-<h5 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<h5 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     @RenderContent()
 </h5>
 }
 @if (this.Type == HeaderType.H6)
 {
-<h6 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<h6 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     @RenderContent()
 </h6>
 }

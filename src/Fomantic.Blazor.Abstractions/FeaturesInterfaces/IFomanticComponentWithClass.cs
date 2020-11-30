@@ -17,23 +17,30 @@ namespace Fomantic.Blazor.UI
     /// </summary>
     ///-------------------------------------------------------------------------------------------------
 
-    public interface IFomanticComponentWithClass : IFomanticComponent,IAsyncDisposable
+    public interface IFomanticComponentWithClass : IFomanticComponent, IAsyncDisposable
     {
         ///-------------------------------------------------------------------------------------------------
-        /// <summary>   List of main element class. </summary>
+        /// <summary>   List of main element classes. </summary>
         ///
         /// <value> The CSS classes. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        public List<string> CssClasses { get;  }
+        public List<string> CssClasses { get; }
 
         ///-------------------------------------------------------------------------------------------------
-        /// <summary>   The value of main element class (this should be used to bind on ui) </summary>
+        /// <summary>   List of other elements classes. </summary>
+        ///
+        /// <value> The CSS classes. </value>
+        ///-------------------------------------------------------------------------------------------------
+        public Dictionary<string, List<string>> ElementsCssClasses { get; }
+
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary> The value of main element class (this should be used to bind on ui). Derived components should typically use this value for the primary HTML element's 'class' attribute.</summary>
         ///
         /// <value> The CSS class. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        public string CssClass { get; }
+        public string GetCssClass(string element = "");
 
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Occures when Css Class Changed. </summary>

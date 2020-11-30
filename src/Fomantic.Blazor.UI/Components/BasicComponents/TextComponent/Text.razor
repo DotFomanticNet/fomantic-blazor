@@ -3,7 +3,7 @@
 @inherits TextBase
 
 @RenderBeforeRootElementFragments()
-<span @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<span @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     @RenderContent()
 </span>
 @RenderAfterRootElementFragments()

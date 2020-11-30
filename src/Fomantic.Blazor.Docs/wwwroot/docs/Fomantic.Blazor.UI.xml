@@ -585,6 +585,12 @@
         <member name="P:Fomantic.TextBase.TooltipSize">
             <inheritdoc/>
         </member>
+        <member name="T:Fomantic.Blazor.UI.SampleTextField">
+            <summary> Specifies the top-level model object for the form. An edit context will be constructed for this model. If using this parameter, do not also supply a value for <see cref="!:EditContext"/>. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.SampleTextField.TryParseValueFromString(System.String,System.String@,System.String@)">
+            <inheritdoc/>
+        </member>
         <member name="T:Fomantic.Blazor.UI.HeaderType">
             -------------------------------------------------------------------------------------------------
              <summary>
@@ -1354,6 +1360,9 @@
             <inheritdoc/>
             -------------------------------------------------------------------------------------------------
         </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.ElementsCssClasses">
+            <inheritdoc/>
+        </member>
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.JsRuntime">
             <inheritdoc/>
         </member>
@@ -1366,7 +1375,7 @@
         <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.Extensions">
             <inheritdoc/>
         </member>
-        <member name="P:Fomantic.Blazor.UI.FomanticComponentBase.CssClass">
+        <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.GetCssClass(System.String)">
             <inheritdoc/>
         </member>
         <member name="M:Fomantic.Blazor.UI.FomanticComponentBase.ConstractClasses">
@@ -1470,6 +1479,210 @@
             
              <value> The child content. </value>
             -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticFormBase`1">
+            <summary>   Base class for all Fomantic Form Component. </summary>
+            src : https://github.com/dotnet/aspnetcore/blob/master/src/Components/Web/src/Forms/EditForm.cs
+        </member>
+        <member name="F:Fomantic.Blazor.UI.FomanticFormBase`1.HandleSubmitDelegate">
+            <summary>
+            Func To handle Submiting form
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticFormBase`1.#ctor">
+            <summary>
+            Constructs an instance of <see cref="T:Microsoft.AspNetCore.Components.Forms.EditForm"/>.
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticFormBase`1.AdditionalAttributes">
+            <summary>
+            Gets or sets a collection of additional attributes that will be applied to the created <c>form</c> element.
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticFormBase`1.EditContext">
+            <summary>
+            Supplies the edit context explicitly. If using this parameter, do not
+            also supply <see cref="P:Fomantic.Blazor.UI.FomanticFormBase`1.Model"/>, since the model value will be taken
+            from the <see cref="P:Microsoft.AspNetCore.Components.Forms.EditContext.Model"/> property.
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticFormBase`1.Model">
+            <summary>
+            Specifies the top-level model object for the form. An edit context will
+            be constructed for this model. If using this parameter, do not also supply
+            a value for <see cref="P:Fomantic.Blazor.UI.FomanticFormBase`1.EditContext"/>.
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticFormBase`1.ChildContent">
+            <summary>
+            Specifies the content to be rendered inside this <see cref="T:Microsoft.AspNetCore.Components.Forms.EditForm"/>.
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticFormBase`1.OnSubmit">
+             <summary>
+             A callback that will be invoked when the form is submitted.
+            
+             If using this parameter, you are responsible for triggering any validation
+             manually, e.g., by calling <see cref="M:Microsoft.AspNetCore.Components.Forms.EditContext.Validate"/>.
+             </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticFormBase`1.OnValidSubmit">
+            <summary>
+            A callback that will be invoked when the form is submitted and the
+            <see cref="P:Fomantic.Blazor.UI.FomanticFormBase`1.EditContext"/> is determined to be valid.
+            </summary>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticFormBase`1.OnInvalidSubmit">
+            <summary>
+            A callback that will be invoked when the form is submitted and the
+            <see cref="P:Fomantic.Blazor.UI.FomanticFormBase`1.EditContext"/> is determined to be invalid.
+            </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticFormBase`1.OnParametersSet">
+            <inheritdoc />
+        </member>
+        <member name="T:Fomantic.Blazor.UI.FomanticInputBase`1">
+            <summary>   Base class for all Fomantic Input Component. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.GetDisplayName">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Return  display name. </summary>
+            
+             <returns>
+             display name.
+             </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.GetRootElementAttributes">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Return the Component Attributes. </summary>
+            
+             <returns>
+             An enumerator that allows foreach to be used to process the root element attributes in this
+             collection.
+             </returns>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Fomantic.Blazor.UI.FomanticInputBase`1._cssClass">
+            <summary>   The CSS class. </summary>
+        </member>
+        <member name="F:Fomantic.Blazor.UI.FomanticInputBase`1.inputAttributes">
+            <summary>   The input attributes. </summary>
+        </member>
+        <member name="E:Fomantic.Blazor.UI.FomanticInputBase`1.OnClassChangedEvent">
+            -------------------------------------------------------------------------------------------------
+            <inheritdoc/>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.JsRuntime">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.JQueryElementRef">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.RootElement">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.Extensions">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.GetCssClass(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.ConstractClasses">
+            <summary>   Used to add inherited components classes. </summary>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.OnInitializedAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.OnAfterRenderAsync(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.Attributes">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.InputAttributes">
+            -------------------------------------------------------------------------------------------------
+             <summary>   List of all arbitrary attributes. </summary>
+            
+             <value> The input attributes. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnTopPassed">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnBottomVisible">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnPassing">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnBottomPassed">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnTopVisibleReverse">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnTopPassedReverse">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnBottomVisibleReverse">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnPassingReverse">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnBottomPassedReverse">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnViewportVisibilityChange">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnTopVisible">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.OnClassChanged">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.IsHidden">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.CssClasses">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.Fomantic#Blazor#UI#IFomanticComponentWithClass#CssClasses">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Gets the CSS classes. </summary>
+            
+             <value> The CSS classes. </value>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.AdditionalFragments">
+            <summary>   True if is enter animation played, false if not. </summary>
+            <inheritdoc/>
+        </member>
+        <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.ElementsCssClasses">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.ExecuteOnClassChangedEvent(System.String,System.String)">
+            -------------------------------------------------------------------------------------------------
+             <summary>   Executes the on class changed event operation. </summary>
+            
+             <param name="oldClass">     The old class. </param>
+             <param name="currentClass"> The current class. </param>
+            -------------------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.Show">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.Hide">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.ToggleVisibility">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.DisposeAsync">
+            <inheritdoc/>
         </member>
         <member name="T:Fomantic.Blazor.UI.FomanticConfiguration">
             <summary>   A fomantic startup configuration. </summary>

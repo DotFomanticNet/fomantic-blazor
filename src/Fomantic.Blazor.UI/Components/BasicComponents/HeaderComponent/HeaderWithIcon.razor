@@ -18,43 +18,43 @@
 @RenderBeforeRootElementFragments()
 @if (this.Type == HeaderType.Content)
 {
-    <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass.Replace("ui ","ui icon ").Replace("ui ","ui icon ")">
+    <div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass().Replace("ui ","ui icon ").Replace("ui ","ui icon ")">
         @GetInner()
     </div>
 }
 @if (this.Type == HeaderType.H1)
 {
-    <h1 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass.Replace("ui ","ui icon ")">
+    <h1 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass().Replace("ui ","ui icon ")">
         @GetInner()
     </h1>
 }
 @if (this.Type == HeaderType.H2)
 {
-    <h2 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass.Replace("ui ","ui icon ")">
+    <h2 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass().Replace("ui ","ui icon ")">
         @GetInner()
     </h2>
 }
 @if (this.Type == HeaderType.H3)
 {
-    <h3 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass.Replace("ui ","ui icon ")">
+    <h3 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass().Replace("ui ","ui icon ")">
         @GetInner()
     </h3>
 }
 @if (this.Type == HeaderType.H4)
 {
-    <h4 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass.Replace("ui ","ui icon ")">
+    <h4 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass().Replace("ui ","ui icon ")">
         @GetInner()
     </h4>
 }
 @if (this.Type == HeaderType.H5)
 {
-    <h5 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass.Replace("ui ","ui icon ")">
+    <h5 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass().Replace("ui ","ui icon ")">
         @GetInner()
     </h5>
 }
 @if (this.Type == HeaderType.H6)
 {
-    <h6 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass.Replace("ui ","ui icon ")">
+    <h6 @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass().Replace("ui ","ui icon ")">
         @GetInner()
     </h6>
 }

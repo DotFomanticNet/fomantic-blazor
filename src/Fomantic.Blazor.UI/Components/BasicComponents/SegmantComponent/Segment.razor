@@ -2,7 +2,7 @@
 @using Fomantic.Blazor.UI
 @inherits SegmentBase
 @RenderBeforeRootElementFragments()
-<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     @RenderContent()
 </div>
 @RenderAfterRootElementFragments()

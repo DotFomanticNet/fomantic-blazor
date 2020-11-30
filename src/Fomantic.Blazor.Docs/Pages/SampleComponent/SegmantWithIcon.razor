@@ -1,7 +1,7 @@
 ﻿@namespace Fomantic
 @using Fomantic.Blazor.UI
 @inherits SegmentBase
-<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     <Icon Icon="@this.Icon" Color="@base.Color" IsInverted="@base.IsInverted" />
     @ChildContent
 </div>

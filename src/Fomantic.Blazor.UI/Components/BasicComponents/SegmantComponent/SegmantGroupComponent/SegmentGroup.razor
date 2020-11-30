@@ -3,7 +3,7 @@
 @inherits SegmentGroupBase
 
 @RenderBeforeRootElementFragments()
-<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@CssClass">
+<div @ref="RootElement" @attributes='GetRootElementAttributes()' class="@GetCssClass()">
     <CascadingValue Value=this IsFixed="true">
         @RenderContent()
     </CascadingValue>

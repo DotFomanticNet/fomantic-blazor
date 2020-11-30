@@ -27,8 +27,6 @@
 
 
 
-
-
             @*<div class="ui two item stackable tabs menu">
 
                     <a class="active item" data-tab="icon">Icons</a>
@@ -44,8 +42,19 @@
 
 
     <div class="main ui container">
-      
-     
+
+
+        <FomanticForm Model="CurrentPerson">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <SampleTextField @bind-Value="CurrentPerson.Name" />
+            <SampleTextField @bind-Value="CurrentPerson.Address" />
+
+
+            <button class="ui primary button" type="submit">Submit</button>
+        </FomanticForm>
+
 
 
     </div>
@@ -56,7 +65,20 @@
 </div>
 
 @code{
- 
+
+    public Person CurrentPerson { get; set; } = new Person();
+    public class Person
+    {
+        [System.ComponentModel.DataAnnotations.Required]
+        [System.ComponentModel.DataAnnotations.RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$",
+         ErrorMessage = "Characters are not allowed.")]
+        [System.ComponentModel.DataAnnotations.MinLength(3)]
+        [System.ComponentModel.DataAnnotations.MaxLength(40)]
+        public string Name { get; set; }
+        [System.ComponentModel.DataAnnotations.Required]
+
+        public string Address { get; set; }
+    }
     protected override Task OnInitializedAsync()
     {
 

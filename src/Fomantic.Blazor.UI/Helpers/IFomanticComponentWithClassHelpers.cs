@@ -30,7 +30,7 @@ namespace Fomantic.Blazor.UI
         {
             foreach (var item in classes)
             {
-                if (!component.CssClass.Contains(item))
+                if (!component.GetCssClass().Contains(item))
                 {
                     component.CssClasses.Add(item);
                 }
@@ -53,7 +53,7 @@ namespace Fomantic.Blazor.UI
         {
             foreach (var item in classes)
             {
-                if (component.CssClass.Contains(item))
+                if (component.GetCssClass().Contains(item))
                 {
                     component.CssClasses.Remove(item);
                 }

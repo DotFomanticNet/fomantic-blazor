@@ -1,4 +1,4 @@
-﻿
+﻿using Microsoft.AspNetCore.Components.Forms;
 using Fomantic.Blazor.UI.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
@@ -10,11 +10,28 @@ using System.Threading.Tasks;
 
 namespace Fomantic.Blazor.UI
 {
-    /// <summary>   Base class for all Fomantic Component. </summary>
-    public abstract partial class FomanticComponentBase : ComponentBase,
+    /// <summary>   Base class for all Fomantic Input Component. </summary>
+    public abstract partial class FomanticInputBase<T> : InputBase<T>,
         IFomanticComponentWithJQuery,
         IVisibleFomanticComponent
     {
+        ///-------------------------------------------------------------------------------------------------
+        /// <summary>   Return  display name. </summary>
+        ///
+        /// <returns>
+        /// display name.
+        /// </returns>
+        ///-------------------------------------------------------------------------------------------------
+        protected string GetDisplayName()
+        {
+            if (string.IsNullOrWhiteSpace(DisplayName))
+            {
+                return FieldIdentifier.FieldName;
+            }
+            return DisplayName;
+
+        }
+
         [Inject]
         FeaturesService FeaturesService { get; set; }
 
@@ -57,13 +74,6 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region Props
-
-        /// <inheritdoc/>
-        public Dictionary<string, List<string>> ElementsCssClasses { get; set; } = new Dictionary<string, List<string>>();
-
-
-
-
         /// <inheritdoc/>
         [Inject]
         public IJSRuntime JsRuntime { get; private set; }
@@ -79,11 +89,6 @@ namespace Fomantic.Blazor.UI
         /// <inheritdoc/>
         public List<IFomanticExtension> Extensions { get; private set; } = new List<IFomanticExtension>();
 
-
-
-
-
-
         /// <inheritdoc/>
         protected string GetCssClass(string element = "")
         {
@@ -91,7 +96,7 @@ namespace Fomantic.Blazor.UI
             if (string.IsNullOrEmpty(element))
             {
                 var newCssClass = string.Join(" ", CssClasses.Where(d => !string.IsNullOrEmpty(d)));
-             
+                newCssClass += base.CssClass;
                 if (_cssClass != newCssClass)
                 {
                     ExecuteOnClassChangedEvent(_cssClass, newCssClass);
@@ -115,6 +120,9 @@ namespace Fomantic.Blazor.UI
             return GetCssClass(element);
         }
 
+
+
+
         #endregion
 
         #region overrides
@@ -122,7 +130,24 @@ namespace Fomantic.Blazor.UI
         internal protected virtual void ConstractClasses()
         {
             CssClasses = new List<string>();
+            ElementsCssClasses = new Dictionary<string, List<string>>();
+
             CssClasses.AddRange(FeaturesService.OnConstractClasses(this));
+
+            var fieldCssClasses = new List<string>();
+
+            fieldCssClasses.Add("field");
+            if (this.EditContext.IsModified(this.FieldIdentifier))
+            {
+                fieldCssClasses.Add("modified");
+            }
+            if (this.EditContext.GetValidationMessages(this.FieldIdentifier).Any())
+            {
+                fieldCssClasses.Add("error");
+            }
+            ElementsCssClasses.Add("field", fieldCssClasses);
+
+
             if (InputAttributes.ContainsKey("class"))
             {
                 CssClasses.Add(InputAttributes["class"].ToString());
@@ -144,7 +169,7 @@ namespace Fomantic.Blazor.UI
 
             if (firstRender)
             {
-                shouldRerender =  await FeaturesService.OnAfterFirstRender(this);
+                shouldRerender = await FeaturesService.OnAfterFirstRender(this);
 
                 foreach (var extension in Extensions)
                 {
@@ -164,7 +189,7 @@ namespace Fomantic.Blazor.UI
         #endregion
 
         #region Parameters
-       
+
         /// <inheritdoc/>
         public Dictionary<string, object> Attributes { get; protected set; } = new Dictionary<string, object>();
 
@@ -174,7 +199,7 @@ namespace Fomantic.Blazor.UI
         /// <value> The input attributes. </value>
         ///-------------------------------------------------------------------------------------------------
 
-        [Parameter(CaptureUnmatchedValues = true)]
+        //  [Parameter(CaptureUnmatchedValues = true)]
         public Dictionary<string, object> InputAttributes { get => inputAttributes.Union(Attributes).ToDictionary(pair => pair.Key, pair => pair.Value); set => inputAttributes = value; }
         /// <inheritdoc/>
         [Parameter]
@@ -224,6 +249,8 @@ namespace Fomantic.Blazor.UI
         /// <inheritdoc/>
         protected List<string> CssClasses { get; set; } = new List<string>();
 
+
+
         ///-------------------------------------------------------------------------------------------------
         /// <summary>   Gets the CSS classes. </summary>
         ///
@@ -236,6 +263,9 @@ namespace Fomantic.Blazor.UI
 
         /// <inheritdoc/>
         public List<ComponentFragment> AdditionalFragments { get; set; } = new List<ComponentFragment>();
+
+        /// <inheritdoc/>
+        public Dictionary<string, List<string>> ElementsCssClasses { get; set; } = new Dictionary<string, List<string>>();
 
 
 
@@ -305,7 +335,9 @@ namespace Fomantic.Blazor.UI
 
 
 
-        #endregion
 
+
+
+        #endregion
     }
 }
