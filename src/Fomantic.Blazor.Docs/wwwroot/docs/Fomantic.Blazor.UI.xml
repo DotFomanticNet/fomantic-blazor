@@ -1598,6 +1598,15 @@
         <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.OnAfterRenderAsync(System.Boolean)">
             <inheritdoc/>
         </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.OnParametersSetAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fomantic.Blazor.UI.FomanticInputBase`1.Validate">
+            <summary>
+            Validate The Field
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:Fomantic.Blazor.UI.FomanticInputBase`1.Attributes">
             <inheritdoc/>
         </member>

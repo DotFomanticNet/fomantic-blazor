@@ -186,6 +186,49 @@ namespace Fomantic.Blazor.UI
             }
         }
 
+        private ValidationMessageStore ValidationMessageStore;
+        private EditContext PreviousEditContext = null;
+        /// <inheritdoc/>
+        protected async override Task OnParametersSetAsync()
+        {
+
+            await base.OnParametersSetAsync();
+
+            if (EditContext != PreviousEditContext)
+                EditContextChanged();
+
+        }
+
+        private async void EditContext_OnFieldChanged(object sender, FieldChangedEventArgs e)
+        {
+            var f = e.FieldIdentifier;
+
+            if (f.Equals(FieldIdentifier))
+            {
+                await ValidateAsync();
+            }
+
+        }
+        private async void EditContext_OnValidationRequested(object sender, ValidationRequestedEventArgs args)
+        {
+            await ValidateAsync();
+        }
+        /// <summary>
+        /// Validate The Field
+        /// </summary>
+        /// <returns></returns>
+        public async Task ValidateAsync()
+        {
+            ValidationMessageStore.Clear(FieldIdentifier);
+            //call extrenal validate awaitable
+            AddValidationError($"Error be in {GetDisplayName()}");
+            EditContext.NotifyValidationStateChanged();
+        }
+        void AddValidationError(string error)
+        {
+            ValidationMessageStore.Add(FieldIdentifier, error);
+        }
+       
         #endregion
 
         #region Parameters
@@ -339,5 +382,13 @@ namespace Fomantic.Blazor.UI
 
 
         #endregion
+
+        void EditContextChanged()
+        {
+            PreviousEditContext = EditContext;
+            ValidationMessageStore = new ValidationMessageStore(EditContext);
+            this.EditContext.OnValidationRequested += EditContext_OnValidationRequested;
+            this.EditContext.OnFieldChanged += EditContext_OnFieldChanged;
+        }
     }
 }
